@@ -1,2 +1,3 @@
-t=input("please insert a text with caps on: \n")
-lower.print(t)
+t=input.lower("please insert a text with caps on: \n")
+print(t)
+
