@@ -1,2 +1,2 @@
-t=input("Please insert a text with caps on - or not - at the end it will be the same ;)...: \n")
+t=input("Please insert a text with caps on ...: \n")
 print(t.lower())
