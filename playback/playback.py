@@ -1,3 +1,3 @@
-t=input("Write something...\n")
-print(t)
-print(t.strip, sep='...')
+#t=input("Write something...\n")
+#print(t)
+print("This is CS50", sep='...')
