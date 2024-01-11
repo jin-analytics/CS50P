@@ -1,1 +1,2 @@
-print(input("Give me input por favor... \n"))
+s=input("Give me input por favor... \n")
+print(s,sep='...')
