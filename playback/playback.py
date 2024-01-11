@@ -1,3 +1,4 @@
 #s=input("Give me input por favor... \n")
 #print(s,sep=' ')
-print(*objects, sep=' ', end='\n', file=None, flush=False)
+s=input()
+print(s, sep='___', end='\n\n',)
