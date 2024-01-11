@@ -1,2 +1,3 @@
 t=input("Write something...\n")
-print(t, sep='...')
+print(t)
+print(t.strip, sep='...')
