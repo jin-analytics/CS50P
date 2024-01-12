@@ -1,2 +1,2 @@
-string=input("Please insert a text with caps on: \n")
+string=input("\n")
 print(string.lower())
