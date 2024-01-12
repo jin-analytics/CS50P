@@ -2,7 +2,7 @@
 sentence=input("Write 'This is CS50'""\n")
 
 # Use a string method to add "..." between white space
-sentence = sentence.
+sentence = sentence.center()
 
 # Print the new sentence
-print("This is CS50", sep='')
+print("...{sentence}")
