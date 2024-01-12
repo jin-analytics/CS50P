@@ -2,7 +2,7 @@
 sentence=input('Write "This is CS50"\n')
 
 # Use a string method to add "..." between white space
-sentence = sentence.center()
+sentence = sentence.encode()
 
 # Print the new sentence
-print("...{sentence}")
+print(f"...{sentence}")
