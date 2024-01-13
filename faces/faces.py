@@ -1,5 +1,5 @@
 # Create a function called convert
-def convert():
+def convert(face):
 
     #hello = input()
 
@@ -9,8 +9,7 @@ def convert():
     hello = hello.replace(f":)","\U0001F642").replace(f":(","\U0001F641")
 
     # print out smiley with converted
-    print(hello)
-face=input()
-convert(face)
+face=input() #1 Input "Hello :)"
+convert(face) #2 Gives "Hello :)" to function convert()
 
 
