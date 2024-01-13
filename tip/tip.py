@@ -11,7 +11,7 @@ def dollars_to_float(d):
     # string input which has to replace the "$"
     dollars=dollars.replace('$','')
     # string input which has to be converted to a float number
-    dollars=float(dollars, 5)
+    dollars=float(dollars)
     print (dollars)
 
 
