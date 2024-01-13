@@ -19,7 +19,7 @@ def percent_to_float(p):
     print(p)
     percent=p
     percent=float(p)
-    percent=p/100
+    percent=percent/100
     print (percent)
 
 
