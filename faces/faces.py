@@ -6,6 +6,7 @@
     #Slightly Frowning Faces - Unicode: "U+1F641" - Shortcode ":slightly_frowning_face:"
 
 
-face=input("U+1F642")
+face=input("")
 
-print(f"{face}")
+print("\U+1F642")
+#print(f"{face}")
