@@ -6,6 +6,6 @@
     #Slightly Frowning Faces - Unicode: "U+1F641" - Shortcode ":slightly_frowning_face:"
 
 
-input()
+face=input()
 
-print()
+print(face)
