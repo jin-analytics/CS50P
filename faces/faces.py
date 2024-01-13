@@ -9,8 +9,8 @@ def convert():
     hello = hello.replace(f":)","\U0001F642").replace(f":(","\U0001F641")
 
     # print out smiley with converted
-    #print(hello)
-
-convert()
+    print(hello)
+face=input()
+convert(face)
 
 
