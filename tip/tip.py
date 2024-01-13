@@ -7,13 +7,13 @@ def main():
 
 def dollars_to_float(d):
     # string input which has to be converted to a float number
-    dollar = float(d)
-    print(dollar)
+    a = float(d)
+    print(a)
 
 
 def percent_to_float(p):
-    percentage = float(p)
-    print(percentage)
+    b = float(p)
+    print(b)
 
 
 main()
