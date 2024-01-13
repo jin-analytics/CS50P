@@ -18,6 +18,8 @@ def dollars_to_float(d):
 def percent_to_float(p):
     print(p)
     percent=float(p)
+    percent=p/100
+    print (percent)
 
 
 
