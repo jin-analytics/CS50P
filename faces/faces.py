@@ -1,3 +1,5 @@
 # Create a function called convert
-#def convert()
-print(f"hello :)")
+def convert()
+
+input()
+#print(f"hello :)")
