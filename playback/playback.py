@@ -2,7 +2,7 @@
 sentence=input('Write "This is CS50"\n')
 
 # Use a string method to add "..." between white space
-sentence = sentence.replace(' ', '...'[3])
+sentence = sentence.replace(' ', '...',3)
 
 # Print the new sentence
 print(f"{sentence}")
