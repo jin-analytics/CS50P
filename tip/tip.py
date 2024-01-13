@@ -9,7 +9,7 @@ def dollars_to_float(d):
     # string input which has to be converted to a float number
     #dollars = float(d)
     print(d)
-    money=d.remove('$','')
+    money=d.replace('$','')
     money=float(d)
     print (money)
     print (dollars)
