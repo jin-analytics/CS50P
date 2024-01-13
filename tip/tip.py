@@ -10,12 +10,14 @@ def dollars_to_float(d):
     d=d.replace('$','')
     # string input which has to be converted to a float number
     d=float(d)
+    return d
 
 
 def percent_to_float(p):
     # string input which has to be converted to a float number and divided to %
     p=p.replace('%','')
     p=float(p)/100
+    return p
 
 
 main()
