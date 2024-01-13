@@ -1,2 +1,3 @@
 # Create a function called convert
-def convert()
+#def convert()
+print(f"hello :)")
