@@ -6,3 +6,4 @@ m = int(input())
 
 # calculate the energy with einstein sformula E= m x c²
 E = m * c * c
+print(E)
