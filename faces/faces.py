@@ -7,6 +7,6 @@ def convert(smile):
     #Slightly Frowning Faces - Unicode: "U+1F641" - In Python: "\U0001F641"
     hello = hello.replace(f":(","\U0001F641")
 
-
-print("\U+1F642")
+convert()
+print(smile)
 
