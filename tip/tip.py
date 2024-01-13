@@ -7,17 +7,18 @@ def main():
 
 def dollars_to_float(d):
     # string input which has to be converted to a float number
-    #dollars = float(d)
-    print(d)
     dollars = d
+    # string input which has to replace the "$"
     dollars=dollars.replace('$','')
-    dollars=float(dollars)
+    # string input which has to be converted to a float number
+    dollars=float(dollars, 5)
     print (dollars)
 
 
 def percent_to_float(p):
-    percent = float(p)
-    print(percent)
+    print(p)
+    percent=float(p)
+
 
 
 main()
