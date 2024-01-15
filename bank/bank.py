@@ -5,6 +5,7 @@ if greeting[0] == " ":
 
 
 match greeting:
+    
     case greeting == "hello" | "Hello":
         print("$0")
     case _:
