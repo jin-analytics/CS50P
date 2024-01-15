@@ -1,6 +1,6 @@
 # Get whatever greeting and split it in a matrix (1 x n) | n= number of words
 greeting = input().lower()
-greeting = input().split()
+greeting = greeting.split()
 # Lowers all letters in the first colum of the matrix
 print(greeting)
 
