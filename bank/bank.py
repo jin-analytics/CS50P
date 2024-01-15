@@ -13,6 +13,6 @@ match greeting:
         else:
             print("$100")
 
-greeting = greeting.join()
-
+greeting = ' '.join(greeting)
+print(greeting)
 
