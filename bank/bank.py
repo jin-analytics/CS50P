@@ -5,7 +5,7 @@ if greeting[0] == " ":
     print(greeting)
 
 match greeting:
-    case "hello" | "Hello":
+    case greeting[0:4] == "hello" | "Hello":
         print("$0")
     case _:
         if greeting[0] == "h":
