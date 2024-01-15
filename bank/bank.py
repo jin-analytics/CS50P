@@ -1,7 +1,7 @@
-# Get whatever greeting
+# Get whatever greeting and split it in a matrix (1 x n) | n= number of words
 greeting = input().split()
-print(greeting[0])
-#greeting = greeting.replace(' ','')
+# Removes the white space from the first column in the string matrix
+greeting = greeting[0].replace(' ','')
 
 match greeting:
     case ["hello" | "Hello", *rest]:
