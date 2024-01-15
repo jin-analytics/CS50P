@@ -12,9 +12,15 @@ match question:
         print ("yes")
     # if the input start with a " ", then go into this case
     case _:
+        # All letters of question will be lowered
+        question = question.lower()
+        # if the input start with a " ", then go into this case
         if question[0] == " ":
         question = question.replace(" ","")
+            if question == "42"
+            print ("yes")
+        elif question == "forty two":
         print ("yes")
-        question = question.replace(" ","")
-        test = question
-        print (test)
+        else:
+        print ("no")
+
