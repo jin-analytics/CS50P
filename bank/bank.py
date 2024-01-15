@@ -2,6 +2,7 @@
 greeting = input().split()
 # Removes the white space from the first column in the string matrix
 greeting = greeting[0].replace(' ','')
+print(greeting)
 
 match greeting:
     case ["hello" | "Hello", *rest]:
