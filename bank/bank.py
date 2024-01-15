@@ -6,4 +6,6 @@ match greeting:
         print("$0")
     case _:
         if greeting[0] == "h":
-        print("$20")
+            print("$20")
+        else:
+            print("$100")
