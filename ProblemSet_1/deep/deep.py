@@ -10,15 +10,14 @@ question = input("What is the Answer to the Great Question of Life, the Universe
 #else:
 #    print ("no")
 
-def answer(q):
-
-    if q == "42":
+def answer():
+    if question == "42":
         print ("yes")
-    elif q == "forty-two":
+    elif question == "forty-two":
         print ("yes")
-    elif q == "forty two":
+    elif question == "forty two":
         print ("yes")
     else:
         print ("no")
-    return q
+
 answer()
