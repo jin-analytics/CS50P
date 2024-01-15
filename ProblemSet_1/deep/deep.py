@@ -1,52 +1,14 @@
 # Get input
 question = input("What is the Answer to the Great Question of Life, the Universe, and Everything? ")
-#print(question[0])
+print(question[0])
 
+# use match function for different input cases
 match question:
-    case "42" | "forty two" | "forty two":
+    # if the input is "42", "forty two" or "forty-two", then go into this case and print "yes"
+    case "42" | "forty two" | "forty-two":
         print ("yes")
-    case question[0] == " ":
-        question = question.replace(" ","")
-        test = question
-        print (test)
-    case _:
-
-        question = question.replace(" ","")
-        test = question
-        print (test)
-        if question == "42":
-            print ("yes")
-        elif question == "forty two":
-            print ("yes")
-        else:
-            print ("no")
-
-#question = question.replace(" ","")
-
-#if question == "42":
-#    print ("yes")
-#elif question == "forty-two":
-#    print ("yes")
-#elif question == "forty two":
-#    print ("yes")
-#else:
-#    print ("no")
-
-#def answer():
- #   if question == "42":
-  #      print ("yes")
- #   elif question == "forty-two":
-  #      print ("yes")
-  #  elif question == "forty two":
-  #      print ("yes")
-  #  elif question == "FoRty TwO":
-   #     print ("yes")
-  #  elif question == "  42  ":
-    #    print ("yes")
-    #else:
-     #   print ("no")
-
-
-
-#answer()
-
+    # if the input start with a " ", then go into this case
+   # case question[0] == " ":
+    #    question = question.replace(" ","")
+    #    test = question
+    #    print (test)
