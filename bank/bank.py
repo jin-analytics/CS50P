@@ -4,8 +4,11 @@ greeting = input().split()
 #greeting = greeting.replace(' ','')
 
 match greeting:
-    case ["hello" | "Hello*, *rest]:
-        print("$100")
+    case ["hello" | "Hello", *rest]:
+        print("$0")
     case _:
-        print
+        if greeting[0] == "h":
+            print("$20")
+        else:
+            print("$100")
 
