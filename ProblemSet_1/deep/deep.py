@@ -1,13 +1,19 @@
 # Get input
 question = input("What is the Answer to the Great Question of Life, the Universe, and Everything? ")
+#print(question[0])
 
 match question:
     case "42" | "forty two" | "forty two":
         print ("yes")
+    case question[0] == " ":
+        question = question.replace(" ","")
+        test = question
+        print (test)
     case _:
-        question = question.replace(" ","",1).lower()
-       # test = question
-        #print (test)
+
+        question = question.replace(" ","")
+        test = question
+        print (test)
         if question == "42":
             print ("yes")
         elif question == "forty two":
