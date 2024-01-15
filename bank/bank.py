@@ -1,11 +1,13 @@
 # Get whatever greeting
 greeting = input()
+greeting=greeting.split()
+print(greeting)
 if greeting[0] == " ":
     greeting = greeting[0].replace(' ','')
 
 
 match greeting:
-    
+
     case greeting == "hello" | "Hello":
         print("$0")
     case _:
