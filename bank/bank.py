@@ -1,6 +1,6 @@
 # Get whatever greeting
 greeting = input()
-greeting = greeting[0].replace(' ','')
+greeting = greeting[0:2].replace(' ','')
 
 match greeting:
     case "hello" | "Hello":
