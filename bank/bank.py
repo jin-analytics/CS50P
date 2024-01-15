@@ -1,7 +1,6 @@
 # Get whatever greeting and split it in a matrix (1 x n) | n= number of words
 greeting = input().lower.split()
 # Lowers all letters in the first colum of the matrix
-greeting[0] = greeting[0].lower
 print(greeting)
 
 match greeting:
