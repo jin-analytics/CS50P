@@ -2,10 +2,10 @@
 greeting = input()
 if greeting[0] == " ":
     greeting = greeting[0].replace(' ','')
-    print(greeting)
+
 
 match greeting:
-    case greeting[0:4] == "hello" | "Hello":
+    case greeting == "hello" | "Hello":
         print("$0")
     case _:
         if greeting[0] == "h":
