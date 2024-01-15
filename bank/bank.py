@@ -1,6 +1,7 @@
 # Get whatever greeting
 greeting = input()
-greeting = greeting[0:2].replace(' ','').lower()
+if greeting[0] == " ":
+greeting = greeting[0].replace(' ','').lower()
 print(greeting)
 
 match greeting:
