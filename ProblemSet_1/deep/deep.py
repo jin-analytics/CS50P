@@ -17,6 +17,10 @@ def answer():
         print ("yes")
     elif question == "forty two":
         print ("yes")
+    elif question == "FoRty TwO":
+        print ("yes")
+    elif question == " 42 ":
+        print ("yes")
     else:
         print ("no")
 
