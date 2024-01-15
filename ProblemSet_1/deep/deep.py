@@ -6,8 +6,8 @@ match question:
         print ("yes")
     case _:
         question = question.replace(" ","").lower()
-        test = question
-        print (test)
+       # test = question
+        #print (test)
         if question == "42":
             print ("yes")
         elif question == "forty two":
