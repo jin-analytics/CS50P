@@ -1,5 +1,6 @@
 # Get whatever greeting
 greeting = input()
+greetin
 
 match greeting:
     case "hello" | "Hello":
