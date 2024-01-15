@@ -6,6 +6,6 @@ greeting = input().split()
 match greeting:
     case ["hello" | "Hello*, *rest]:
         print("$100")
-
     case _:
-    
+        print
+
