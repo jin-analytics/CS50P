@@ -3,3 +3,5 @@ question = input("What is the Answer to the Great Question of Life, the Universe
 
 def fortytwo():
     case 42 | forty-two | forty two
+        return true
+else: false
