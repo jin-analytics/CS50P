@@ -1,7 +1,7 @@
 # Get input
 question = input("What is the Answer to the Great Question of Life, the Universe, and Everything? ")
 
-match question
+match question:
     case " ":
         print("true")
 #question = question.replace(" ","")
@@ -31,4 +31,4 @@ match question
 
 
 
-answer()
+#answer()
