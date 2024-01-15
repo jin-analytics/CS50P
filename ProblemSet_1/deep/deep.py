@@ -12,6 +12,7 @@ question = input("What is the Answer to the Great Question of Life, the Universe
 
 def answer():
     if question == "42":
+        question = question.remove(" ","")
         print ("yes")
     elif question == "forty-two":
         print ("yes")
