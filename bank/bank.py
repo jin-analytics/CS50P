@@ -4,7 +4,7 @@ greeting = input().capitalize()
 greeting = greeting.split()
 
 match greeting:
-    case ["hello" | "Hello", *rest]:
+    case ["Hello," | "Hello", *rest]:
         print("$0")
     case _:
         if greeting[0] == "H":
