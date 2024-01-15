@@ -18,13 +18,14 @@ match question:
 
             # Replace all " " with no spaces
             question = question.replace(" ","")
-            if question == "42"
-            print ("yes")
+            
+            if question == "42":
+                print ("yes")
 
         # If the input "Forty Two" had caps on, then they are lowered now and can be detected
         elif question == "forty two":
-        print ("yes")
+            print ("yes")
         # If still no match, then print "no"
         else:
-        print ("no")
+            print ("no")
 
