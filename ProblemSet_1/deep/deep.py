@@ -1,6 +1,7 @@
 # Get input
 question = input("What is the Answer to the Great Question of Life, the Universe, and Everything? ")
-question = question.replace(" ","")
+#question = question.replace(" ","")
+
 #if question == "42":
 #    print ("yes")
 #elif question == "forty-two":
@@ -19,7 +20,7 @@ def answer():
         print ("yes")
     elif question == "FoRty TwO":
         print ("yes")
-    elif question == " 42 ":
+    elif question == "  42  ":
         print ("yes")
     else:
         print ("no")
