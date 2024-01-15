@@ -3,5 +3,5 @@ greeting = input().split()
 print(greeting)
 
 match greeting:
-    case ["hello" | "Hello"]:
+    case ["hello" | "Hello", *rest]:
         print("$100")
