@@ -1,6 +1,6 @@
 # Get whatever greeting
 greeting = input().split()
-#print(greeting)
+print(greeting[0])
 #greeting = greeting.replace(' ','')
 
 match greeting:
