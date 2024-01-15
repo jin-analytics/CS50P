@@ -5,7 +5,7 @@ match question:
     case "42" | "forty two" | "forty two":
         print ("yes")
     case _:
-        question = question.replace(" ","").lower()
+        question = question.replace(" ","",1).lower()
        # test = question
         #print (test)
         if question == "42":
