@@ -5,7 +5,8 @@
 input("What time is it? ")
 
 def main():
-    ...
+    print("TEST MAIN")
+    convert()
 
 
 def convert(time):
@@ -15,3 +16,5 @@ def convert(time):
 # of we call main() inside there
 if __name__ == "__main__":
     main()
+    print("TEST function")
+
