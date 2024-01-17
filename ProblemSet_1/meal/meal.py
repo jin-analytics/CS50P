@@ -11,8 +11,9 @@ def main():
     t = convert(t)
     print("After convert function ",t)
 
-    if 7 > t < 8:
-        print("Breakfast time")
+        if 7 > t < 8:
+            print("Breakfast time")
+
 
 
 
