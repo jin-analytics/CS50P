@@ -18,7 +18,7 @@ def main():
 
 def convert(time):
     #print(time)
-    time = time.split
+    time = time.split()
     #time = float(time)
     print(time)
     return time
