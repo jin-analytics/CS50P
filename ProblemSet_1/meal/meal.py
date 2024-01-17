@@ -22,12 +22,11 @@ def convert(time):
     time = time.split()
     time[0] = float(time[0])
     time[1] = float(time[1])
-    time[1] = time[1]*1.66666
+    time[1] = round(time[1]*1.666)
 
     # 1 minute = 1.66666... %
     #time = float(time)
-    print("Erste Spalte ",time[0])
-    print("Zweite Spalte ",time[1])
+    print("Check: ",time)
     return time
 
 
