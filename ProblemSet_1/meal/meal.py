@@ -11,7 +11,7 @@ def main():
     t=input("What time is it? ")
     print("Before convert function ",t)
     convert(t)
-    print("After convert function ",t)
+    print("After convert function ",time)
 
 
 
