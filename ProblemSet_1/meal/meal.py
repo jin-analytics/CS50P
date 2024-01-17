@@ -37,6 +37,7 @@ def convert(time):
     # Adds both colums into a string
     time[0] = str(time[0])
     time[1] = str(time[1])
+    time[2] = str(time[2])
 
     # Join the string back together
     time[0:1] = '.'.join(time[0:1])
