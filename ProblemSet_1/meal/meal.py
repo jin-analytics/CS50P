@@ -9,9 +9,9 @@ def main():
 
     # Gives the variable "t" to the convert funciton
     t=input("What time is it? ")
-    print("Before convert function ",t)
+   # print("Before convert function ",t)
     convert(t)
-    print("After convert function ",t)
+    #print("After convert function ",t)
 
 
 
@@ -20,8 +20,8 @@ def convert(time):
     #print(time)
     time = time.replace(':',' ')
     time = time.split()
-    #time[1] = time[1].float()
-    #time[1] = time[1]*1.66666
+    time[1] = float(time[1])
+    time[1] = time[1]*1.66666
 
     # 1 minute = 1.66666... %
     #time = float(time)
@@ -34,5 +34,5 @@ def convert(time):
 # global variables yet of we call main() inside there
 if __name__ == "__main__":
     main()
-    print("TEST function")
+    #print("TEST function")
 
