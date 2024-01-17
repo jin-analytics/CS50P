@@ -26,13 +26,14 @@ def convert(time):
     time[1] = float(time[1])
     # multiplies the minutes (1 minute = 1.666...%) to get the percentage of a full hour
     time[1] = round(time[1]*1.666)
-    # Adds both colums into a string
-    time[0] = str(time[0])
-    time[1] = str(time[1])
-
+    # allows also the am / pm entree
     if time[2] == "pm":
         time[0] = time[0] + 12
         print("Check ob case geht", time)
+
+    # Adds both colums into a string
+    time[0] = str(time[0])
+    time[1] = str(time[1])
 
     # Join the string back together
     time = '.'.join(time)
