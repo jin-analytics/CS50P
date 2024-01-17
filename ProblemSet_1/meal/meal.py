@@ -19,6 +19,7 @@ def convert(time):
     time = time.replace(':',' ')
     # splits the time variable
     time = time.split()
+    print("Was geht bei split ab? ",time)
     # frist column to an integer
     time[0] = int(time[0])
     # second cloumn to a float, so that we can later compare the number and not the time
