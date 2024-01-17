@@ -20,9 +20,13 @@ def convert(time):
     #print(time)
     time = time.replace(':',' ')
     time = time.split()
+    time = time.float()
+    time[1] = time[1]*1.66666
+
     # 1 minute = 1.66666... %
     #time = float(time)
-    print(time)
+    print("Erste Spalte ",time[0])
+    print("Zweite Spalte ",time[1])
     return time
 
 
