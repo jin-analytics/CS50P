@@ -26,8 +26,9 @@ def convert(time):
     # multiplies the minutes (1 minute = 1.666...%) to get the percentage of a full hour
     time[1] = round(time[1]*1.666)
 
-    case time[]
-    case _:
+    if not time[2]:
+
+    elif:
         # allows also the am / pm entree
         case time[2] == "p.m.":
             time[0] = time[0] + 12
