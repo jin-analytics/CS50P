@@ -11,7 +11,7 @@ def main():
     t=input("What time is it? ")
     print("Before convert function ",t)
     convert(t)
-    print("After convert function ",time)
+
 
 
 
@@ -42,5 +42,6 @@ def convert(time):
 # if __name__ == "__main__": - helps to prevent errors due to not defined global variables yet of we call main() inside there
 if __name__ == "__main__":
     main()
+    print("After convert function ",t)
     #print("TEST function")
 
