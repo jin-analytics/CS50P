@@ -3,7 +3,7 @@ def main():
     t=input("What time is it? ")
     # defines the t variable with the returned variable (time) from the convert() function
     t = convert(t)
-    #print("After convert function ",t)
+    print("After convert function ",t)
 
     if 7 <= t <= 8:          # breakfasttime [07:00;08:00]
         print("Breakfast time")
@@ -19,7 +19,6 @@ def convert(time):
     time = time.replace(':',' ')
     # splits the time variable
     time = time.split()
-    print("JO?? ", time)
     # frist column to an integer
     time[0] = int(time[0])
     # second cloumn to a float, so that we can later compare the number and not the time
