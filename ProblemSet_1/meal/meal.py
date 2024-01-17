@@ -14,8 +14,8 @@ def main():
     #print("After convert function ",t)
 
     # Join the float number back together to a string
+    t = ' '.join(t)
 
-    
 
 
 
