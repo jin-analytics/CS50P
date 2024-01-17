@@ -18,6 +18,7 @@ def main():
 
 def convert(time):
     #print(time)
+    time = time.replace(':',' ')
     time = time.split()
     #time = float(time)
     print(time)
