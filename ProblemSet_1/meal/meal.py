@@ -20,6 +20,7 @@ def convert(time):
     #print(time)
     time = time.replace(':',' ')
     time = time.split()
+    time[0] = float(time[0])
     time[1] = float(time[1])
     time[1] = time[1]*1.66666
 
