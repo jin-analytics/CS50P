@@ -3,7 +3,7 @@ def main():
     t=input("What time is it? ")
     # defines the t variable with the returned variable (time) from the convert() function
     t = convert(t)
-    #print("After convert function ",t)
+    print("After convert function ",t)
 
     if 7 <= t <= 8:          # breakfasttime [07:00;08:00]
         print("Breakfast time")
@@ -26,17 +26,12 @@ def convert(time):
     # multiplies the minutes (1 minute = 1.666...%) to get the percentage of a full hour
     time[1] = round(time[1]*1.666)
 
-    if not time[2]:
-
-    elif:
-        # allows also the am / pm entree
-        case time[2] == "p.m.":
-            time[0] = time[0] + 12
-            time.remove(time[2])
-        case time[2] == "a.m.":
-            time.remove(time[2])
-
-
+ #   # allows also the am / pm entree
+  #  if time[2] == "p.m.":
+  #      time[0] = time[0] + 12
+  #      time.remove(time[2])
+  #  elif time[2] == "a.m.":
+  #      time.remove(time[2])
 
     # Adds both colums into a string
     time[0] = str(time[0])
