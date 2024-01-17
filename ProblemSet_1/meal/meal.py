@@ -19,30 +19,28 @@ def convert(time):
     time = time.replace(':',' ')
     # splits the time variable
     time = time.split()
-    print("Was geht bei split ab? ",time)
+    print("JO?? ", time)
     # frist column to an integer
     time[0] = int(time[0])
     # second cloumn to a float, so that we can later compare the number and not the time
     time[1] = float(time[1])
     # multiplies the minutes (1 minute = 1.666...%) to get the percentage of a full hour
     time[1] = round(time[1]*1.666)
+
     # allows also the am / pm entree
-    if time[2] == "pm":
+    if time[2] == "p.m.":
         time[0] = time[0] + 12
         time.remove(time[2])
-        print("Check ob case geht", time)
-    elif time[2] == "am":
+    elif time[2] == "a.m.":
         time.remove(time[2])
 
     # Adds both colums into a string
     time[0] = str(time[0])
     time[1] = str(time[1])
-    time[2] = str(time[2])
 
     # Join the string back together
-    time[0:1] = '.'.join(time[0:1])
+    time = '.'.join(time)
     # convert it back to a float number as a single number now with the estimated percentage per hour
-    print("Was geht? ",time)
     time = float(time)
     #print("Check: ",time)
     return time
