@@ -13,12 +13,13 @@ def main():
     convert(t)
     print("After convert function ",t)
 
-    if t <
+
 
 
 def convert(time):
     #print(time)
-
+    time = float.time
+    print(time)
     return time
 
 
