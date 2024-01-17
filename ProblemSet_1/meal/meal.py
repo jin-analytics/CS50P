@@ -3,7 +3,7 @@ def main():
     t=input("What time is it? ")
     # defines the t variable with the returned variable (time) from the convert() function
     t = convert(t)
-    print("After convert function ",t)
+    #print("After convert function ",t)
 
     if 7 <= t <= 8:          # breakfasttime [07:00;08:00]
         print("Breakfast time")
