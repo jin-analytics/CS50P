@@ -27,6 +27,8 @@ def convert(time):
     time[0] = int(time[0])
     time[1] = float(time[1])
     time[1] = round(time[1]*1.666)
+    # Adds both colums into one number
+    time = time[0] + time[1]
 
 
     # 1 minute = 1.66666... %
