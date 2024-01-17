@@ -29,6 +29,11 @@ def convert(time):
     # Adds both colums into a string
     time[0] = str(time[0])
     time[1] = str(time[1])
+
+    if time[2] == "pm":
+        time[0] = time[0] + 12
+        print("Check ob case geht", time)
+
     # Join the string back together
     time = '.'.join(time)
     # convert it back to a float number as a single number now with the estimated percentage per hour
