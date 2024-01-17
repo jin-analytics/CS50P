@@ -2,18 +2,26 @@
 # lunch      time [12:00;13:00]
 # dinner     time [18:00;19:00]
 
-input("What time is it? ")
+
 
 def main():
-    print("TEST MAIN")
-    convert()
+    #print("TEST MAIN")
+
+    # Gives the variable "t" to the convert funciton
+    t=input("What time is it? ")
+    print("Before convert function ",t)
+    convert(t)
+    print("After convert function ",t)
 
 
 def convert(time):
-    print(time)
+    #print(time)
 
-# main function - helps to prevent errors due to not defined variables yet
-# of we call main() inside there
+    return time
+
+
+# if __name__ == "__main__": - helps to prevent errors due to not defined
+# global variables yet of we call main() inside there
 if __name__ == "__main__":
     main()
     print("TEST function")
