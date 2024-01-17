@@ -29,7 +29,10 @@ def convert(time):
     # allows also the am / pm entree
     if time[2] == "pm":
         time[0] = time[0] + 12
+        time.remove(time[2])
         print("Check ob case geht", time)
+    elif time[2] == "am":
+        time.remove(time[2])
 
     # Adds both colums into a string
     time[0] = str(time[0])
