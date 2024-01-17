@@ -1,6 +1,4 @@
-# breakfast  time [07:00;08:00]
-# lunch      time [12:00;13:00]
-# dinner     time [18:00;19:00]
+
 
 
 
@@ -9,11 +7,14 @@ def main():
     t=input("What time is it? ")
     # defines the t variable with the returned variable (time) from the convert() function
     t = convert(t)
-    print("After convert function ",t)
+    #print("After convert function ",t)
 
-    #if 7 <= t <= 8:
-   # print("Breakfast time")
-
+    if 7 <= t <= 8:          # breakfasttime [07:00;08:00]
+        print("Breakfast time")
+    elif 12 <= t <= 13:        # lunchtime [12:00;13:00]
+        print("lunch time")
+    elif 18 <= t <= 19:        # dinnertime [18:00;19:00]
+        print("dinner time")
 
 
 
