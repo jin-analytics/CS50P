@@ -34,7 +34,7 @@ def convert(time):
     # Join the string back together
     time = '.'.join(time)
     # convert it back to a float number as a single number now with the estimated percentage per hour
-    time = float(time)+1
+    time = float(time)
     #print("Check: ",time)
     return time
 
