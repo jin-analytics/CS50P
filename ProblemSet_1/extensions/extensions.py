@@ -1,10 +1,10 @@
 # input something like xyz.jpg, where the suffix has a spezific extension
 # lower the input and remove given spaces
 filelist =  input("File name: ").lower().replace(" ","")
-#filelist = filelist.split(".")
+filelist = filelist.split(".")
 # Get the last element of the list with [-N:], where "N" equals the number of last entrees
-#N = 1
-ext = filelist
+N = 1
+ext = filelist[-N:]
 #print(ext)
 
 
