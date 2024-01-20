@@ -9,8 +9,10 @@ ext = ext[-N:]
 ext = ext[0]
 
 match ext:
-    case "gif" | "jpeg" | "png" | "jpg":
-              print("image/", ext, sep='')
+    case "gif" | "png":
+            print("image/", ext, sep='')
+    case "jpeg" | "jpg":
+            print("image/jpeg", sep='')
     case "txt":
             print("text/plain")
     case "zip" | "pdf":
