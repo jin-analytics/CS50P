@@ -10,10 +10,7 @@ ext = ext[0]
 
 match ext:
     case "gif" | "jpeg" | "png" | "jpg":
-            if ext == "jpeg":
-                   print("image/jpg")
-            else:
-                   print("image/", ext, sep='')
+              print("image/", ext, sep='')
     case "txt":
             print("text/plain")
     case "zip" | "pdf":
