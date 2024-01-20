@@ -1,20 +1,19 @@
 # input something like xyz.jpg, where the suffix has a spezific extension
 # lower the input and remove given spaces
-filelist =  input("File name: ").lower().replace(" ","")
-filelist = filelist.split(".", 1)
-# Get the last element of the list with [-N:], where "N" equals the number of last entrees
+ext =  input("File name: ").lower().replace(" ","")
+ext = ext.split(".")
+# Get the last elements of the list with [-N:], where "N" equals the number of last entrees
 N = 1
-ext = filelist
-print(ext)
-
+ext = ext[-N:]
+# case cant see a list, so the list entree has to be defined as a single string (at this example)
+ext = ext[0]
 
 match ext:
     case "gif" | "jpeg" | "png" | "jpg":
-#if ext[1] == "gif" or "jpeg" or "png" or "jpg":
-     #   if ext == "jpeg":
-            print("image/jpg")
-    #    else:
-            print("image/", ext, sep='')
+            if ext == "jpeg":
+                   print("image/jpg")
+            else:
+                   print("image/", ext, sep='')
     case "txt":
             print("text/plain")
     case "zip" | "pdf":
