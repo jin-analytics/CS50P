@@ -5,10 +5,10 @@ filelist = filelist.split(".")
 # Get the last element of the list with [-N:], where "N" equals the number of last entrees
 N = 1
 ext = filelist[-N:]
-#print(ext)
+print(ext)
 
 
-match filelist:
+match ext:
     case "gif" | "jpeg" | "png" | "jpg":
 #if ext[1] == "gif" or "jpeg" or "png" or "jpg":
      #   if ext == "jpeg":
