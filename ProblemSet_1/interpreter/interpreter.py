@@ -6,7 +6,7 @@ def main():
     #print("was geht" ,expression[0],expression[1],expression[2])
     int2float(expression)
     #int2float(expression[0],expression[1],expression[2])
-
+    print(expression)
     #solution = x y z
 
 def int2float(expression):
@@ -19,12 +19,17 @@ def int2float(expression):
     z = float(z)
 
     if y == '+':
-        expression = x y z
+        expression = x + z
     elif y == '-':
+        expression = x - z
     elif y == '*':
+        expression = x * z
     elif y == '/':
-    expression = eval("x y z")
-    print (expression)
+        expression = x / z
+    else:
+        print("Not a supported math comband")
+
+    return expression
 
 
 
