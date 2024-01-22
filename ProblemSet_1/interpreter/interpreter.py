@@ -24,7 +24,7 @@ def int2float(expression):
         solution = x / z
     else:
         print("Not a supported math comband")
-
+    # round the soultion to 1 decimal point and then returns it to main function
     solution = round(solution,1)
     return solution
 
