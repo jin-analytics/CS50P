@@ -25,6 +25,7 @@ def int2float(expression):
     else:
         print("Not a supported math comband")
 
+    solution = round(solution,1)
     return solution
 
 if __name__ == "__main__":
