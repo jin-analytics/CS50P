@@ -3,8 +3,8 @@ def main():
 # Input will be like "x y z"
 # Where x and z is an integer and y an calculation command
     expression = input("Expression: ").split()
-    int2float(expression)
-    print (solution)
+   #int2float(expression)
+    print (int2float(expression))
 
 def int2float(expression):
     x = int(expression[0])
