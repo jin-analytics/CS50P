@@ -3,11 +3,8 @@ def main():
 # Input will be like "x y z"
 # Where x and z is an integer and y an calculation command
     expression = input("Expression: ").split()
-    #print("was geht" ,expression[0],expression[1],expression[2])
     int2float(expression)
-    #int2float(expression[0],expression[1],expression[2])
     print (solution)
-    #solution = x y z
 
 def int2float(expression):
     x = int(expression[0])
@@ -19,14 +16,16 @@ def int2float(expression):
 
     if y == '+':
         solution = x + z
-        print(solution)
         return solution
     elif y == '-':
-        expression = x - z
+        solution = x - z
+        return solution
     elif y == '*':
-        expression = x * z
+        solution = x * z
+        return solution
     elif y == '/':
-        expression = x / z
+        solution = x / z
+        return solution
     else:
         print("Not a supported math comband")
 
