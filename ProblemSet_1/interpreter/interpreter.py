@@ -16,23 +16,16 @@ def int2float(expression):
 
     if y == '+':
         solution = x + z
-        return solution
     elif y == '-':
         solution = x - z
-        return solution
     elif y == '*':
         solution = x * z
-        return solution
     elif y == '/':
         solution = x / z
-        return solution
     else:
         print("Not a supported math comband")
 
-
-
-
-
+    return solution
 
 if __name__ == "__main__":
     main()
