@@ -18,6 +18,11 @@ def int2float(expression):
     x = float(x)
     z = float(z)
 
+    if y == '+':
+        expression = x y z
+    elif y == '-':
+    elif y == '*':
+    elif y == '/':
     expression = eval("x y z")
     print (expression)
 
