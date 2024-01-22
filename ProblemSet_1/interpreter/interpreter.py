@@ -17,8 +17,9 @@ def int2float(expression):
 
     x = float(x)
     z = float(z)
-    print(x y z)
+
     expression = x y z
+    print (expression)
 
 
 
