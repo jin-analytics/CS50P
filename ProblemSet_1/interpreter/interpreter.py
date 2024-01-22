@@ -6,11 +6,10 @@ def main():
     #print("was geht" ,expression[0],expression[1],expression[2])
     int2float(expression)
     #int2float(expression[0],expression[1],expression[2])
-    print("Solutiuon",expression)
+    print eval(expression)
     #solution = x y z
 
 def int2float(expression):
-    print(expression)
     x = int(expression[0])
     y = expression[1]
     z = int(expression[2])
