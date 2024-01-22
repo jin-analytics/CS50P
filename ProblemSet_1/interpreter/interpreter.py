@@ -4,7 +4,8 @@ def main():
 # Where x and z is an integer and y an calculation command
     expression = input("Expression: ").split()
     print("vor join" ,expression)
-    expression = expression.join()
+    command = expression[1]
+    expression = 'f./command'.join(expression)
     print("nach join" ,expression)
    # int2float(expression)
 
