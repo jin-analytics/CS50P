@@ -1,2 +1,11 @@
 # This Program changes the CamelCase input to Snake_Case input
-CC = input ("camelCase: ")
+CamelCase = input ("camelCase: ")
+
+def splitAtUpperCase(CamelCase):
+    result = ""
+    for char in CamelCase:
+        if char.isupper():
+            result += " " + char
+        else:
+            result += char
+    return result.split()
