@@ -7,8 +7,9 @@ for char in CamelCase:
         result=""
         if char.isupper():
             result += " " + char
-            print ("if",result)
+          #  print ("if",result)
         else:
             result += char
-            print ("else",result)
+           # print ("else",result)
 
+print(result)
