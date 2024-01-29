@@ -1,19 +1,16 @@
 # This Program changes the CamelCase input to Snake_Case input
 CamelCase = input ("camelCase: ")
-
+print ("erste",CamelCase)
 # print (snake)
 
 for char in CamelCase:
+        Camelcase = ""
+        print ("zweite",CamelCase)
         if char.isupper():
             # "+=" adds another variable to the previous one.
-            # Example:
-            # x = 5
-            # x += 2
-            # X is now 7 ...
             result += " " + char
-          #  print ("if",result)
+            print ("dritte",CamelCase)
         else:
             result += char
-           # print ("else",result)
+           print ("vierte",CamelCase)
 
-print(result)
