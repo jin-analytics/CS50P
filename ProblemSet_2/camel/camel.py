@@ -4,7 +4,6 @@ CamelCase = input ("camelCase: ")
 # print (snake)
 
 for char in CamelCase:
-        result=""
         if char.isupper():
             result += " " + char
           #  print ("if",result)
