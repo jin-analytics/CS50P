@@ -3,14 +3,14 @@ CamelCase = input ("camelCase: ")
 print ("erste",CamelCase)
 # print (snake)
 
-for char in CamelCase:
+for upperLetter in CamelCase:
         Camelcase = ""
         print ("zweite",CamelCase)
-        if char.isupper():
+        if upperLetter.isupper():
             # "+=" adds another variable to the previous one.
-            CamelCase += " " + char
+            CamelCase += " " + upperLetter
             print ("dritte",CamelCase)
         else:
-            CamelCase += char
+            CamelCase += upperLetter
             print ("vierte",CamelCase)
 
