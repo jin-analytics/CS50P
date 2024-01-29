@@ -8,9 +8,9 @@ for char in CamelCase:
         print ("zweite",CamelCase)
         if char.isupper():
             # "+=" adds another variable to the previous one.
-            result += " " + char
+            CamelCase += " " + char
             print ("dritte",CamelCase)
         else:
-            result += char
-           print ("vierte",CamelCase)
+            CamelCase += char
+            print ("vierte",CamelCase)
 
