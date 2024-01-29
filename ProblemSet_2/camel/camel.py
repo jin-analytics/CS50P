@@ -5,6 +5,11 @@ CamelCase = input ("camelCase: ")
 
 for char in CamelCase:
         if char.isupper():
+            # "+=" adds another variable to the previous one.
+            # Example:
+            # x = 5
+            # x += 2
+            # X is now 7 ...
             result += " " + char
           #  print ("if",result)
         else:
