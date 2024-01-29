@@ -4,7 +4,7 @@ print ("erste",CamelCase)
 # print (snake)
 
 for upperLetter in CamelCase:
-        Camelcase = ""
+        #Camelcase = ""
         print ("zweite",CamelCase)
         if upperLetter.isupper():
             # "+=" adds another variable to the previous one.
