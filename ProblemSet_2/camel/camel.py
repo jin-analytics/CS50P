@@ -1,5 +1,7 @@
 # This Program changes the CamelCase input to Snake_Case input
 CamelCase = input ("camelCase: ")
+splitAtUpperCase(result)
+ print (result)
 
 def splitAtUpperCase(CamelCase):
     result = ""
