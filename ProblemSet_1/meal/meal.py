@@ -47,3 +47,4 @@ def convert(time):
 # if __name__ == "__main__": - helps to prevent errors due to not defined global variables yet of we call main() inside there
 if __name__ == "__main__":
     main()
+
