@@ -2,9 +2,8 @@ def main():
     # This Program changes the CamelCase input to Snake_Case input
     cc = input ("camelCase: ")
     #print ("erste",CamelCase)
-    cc = snake_case(cc)
-    #print(cc)
-    #print(snake_case(cc))
+    sc = snake_case(cc)
+    print(sc)
 
 def snake_case(CamelCase):
     for upperLetter in CamelCase:
@@ -12,8 +11,7 @@ def snake_case(CamelCase):
             # finds upperletter in string and adds a "_" to it
             CamelCase = CamelCase.replace(str(upperLetter), "_" + str(upperLetter))
             CamelCase = CamelCase.lower()
-            print ("->", CamelCase)
-            # breaks the for loop, otherwise there are n iterations for the number of upperletters
+            # breaks the for-loop, otherwise there are n iterations for the number of upperletters
             break
         else:
             break
