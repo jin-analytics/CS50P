@@ -13,8 +13,6 @@ def snake_case(CamelCase):
             CamelCase = CamelCase.lower()
             # breaks the for-loop, otherwise there are n iterations for the number of upperletters
             break
-        else:
-            break
     return CamelCase
 
 if __name__ == "__main__":
