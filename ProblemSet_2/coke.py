@@ -9,10 +9,12 @@ while True:
     pay = int(input("Insert Coin: "))
     # calculates the price which has to be paid after inserting the coin
     price = price - pay
-    # prints out which money still has to be paid
-    print("Amount Due:", price)
+
+    if price > 0:
+
+        print("Amount Due:", price)
     # if the paid amount is 50 or more, the lopp stops
-    if price <= 0:
+    elif price <= 0:
         print("Change Owed:", -1*(price))
         break
 
