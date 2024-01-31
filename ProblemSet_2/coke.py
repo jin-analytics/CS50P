@@ -1,8 +1,9 @@
 
 while True:
     price = int(50)
-    pay = int(input("Amount Due: "))
-    payed = price - pay
+    print("Amount Due: ", price)
+    pay = int(input("Insert Coin: "))
+    price = price - pay
     print(payed)
     if payed >= price:
         break
