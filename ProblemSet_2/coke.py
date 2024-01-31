@@ -1,8 +1,6 @@
 def main():
     # Initial price is 50 cent
-    price = int(50)
-    # Asks for the initial amount which is 50
-    #print("Amount Due:", price)
+    price = 50
     coin_machine(price)
 
 def coin_machine(price):
