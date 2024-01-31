@@ -10,7 +10,8 @@ def coin_machine(price):
     while True:
         # insert a coin
         pay = int(input("Insert Coin: "))
-        if pay != 25 | 10 | 5:
+        match pay:
+            case 25 | 10 | 5:
             continue
         else:
             # calculates the price which has to be paid after inserting the coin
