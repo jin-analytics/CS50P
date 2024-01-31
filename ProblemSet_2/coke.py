@@ -16,10 +16,10 @@ def coin_machine(price):
             case 25 | 10 | 5:
                 price = price - pay
                 # prints out which money still has to be paid
-                if price > 0:
-                    print("Amount Due:", price)
+              #  if price > 0:
+                    #print("Amount Due:", price)
                 # if the paid amount is 50 or more, the loop stops
-                elif price <= 0:
+                if price <= 0:
                     print("Change Owed:", -1*(price))
                     break
 
