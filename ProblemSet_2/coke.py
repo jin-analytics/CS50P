@@ -2,13 +2,14 @@ def main():
     # Initial price is 50 cent
     price = int(50)
     # Asks for the initial amount which is 50
-    print("Amount Due:", price)
+    #print("Amount Due:", price)
     coin_machine(price)
 
 def coin_machine(price):
     # as long the price which has to be payed is bigger than 0, the loop continues
     while True:
         # insert a coin
+        print("Amount Due:", price)
         pay = int(input("Insert Coin: "))
         # accepted coins 25, 10 or 5 cent
         match pay:
