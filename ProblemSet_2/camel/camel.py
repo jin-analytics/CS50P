@@ -15,6 +15,8 @@ def snake_case(CamelCase):
             print ("->", CamelCase)
             # breaks the for loop, otherwise there are n iterations for the number of upperletters
             break
+        else:
+            break
     return CamelCase
 
 if __name__ == "__main__":
