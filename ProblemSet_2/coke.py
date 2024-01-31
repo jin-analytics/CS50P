@@ -13,5 +13,6 @@ while True:
     print("Amount Due:", price)
     # if the paid amount is 50 or more, the lopp stops
     if price <= 0:
+        print("Change Owed:", -1*(price))
         break
 
