@@ -10,7 +10,9 @@ def coin_machine(price):
     while True:
         # insert a coin
         pay = int(input("Insert Coin: "))
-        if pay == 25 | 10 | 5:
+        if pay != 25 | 10 | 5:
+            continue
+        else:
             # calculates the price which has to be paid after inserting the coin
             price = price - pay
             # prints out which money still has to be paid
@@ -20,8 +22,6 @@ def coin_machine(price):
             elif price <= 0:
                 print("Change Owed:", -1*(price))
                 break
-        else:
-            continue
 
 # if __name__ == "__main__": - helps to prevent errors due to not defined global variables yet, if we call main() inside there
 if __name__ == "__main__":
