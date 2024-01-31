@@ -8,11 +8,12 @@ def main():
 def snake_case(CamelCase):
     for upperLetter in CamelCase:
         if upperLetter.isupper():
-            # finds upperletter in string and adds a "_" to it
+            # finds in each loop upperletter in string and adds a "_" to it
+            # if 5 upperletter, then 5 iterations
             CamelCase = CamelCase.replace(str(upperLetter), "_" + str(upperLetter))
-            CamelCase = CamelCase.lower()
-            # breaks the for-loop, otherwise there are n iterations for the number of upperletters
-            break
+    # lowers all upperletters
+    CamelCase = CamelCase.lower()
+    # returns CamelCase to main(), which then will be called "sc" for snakecase
     return CamelCase
 
 if __name__ == "__main__":
