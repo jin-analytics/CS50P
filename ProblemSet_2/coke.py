@@ -4,6 +4,6 @@ while True:
     pay = int(input("Amount Due: "))
     payed = price - pay
     print(payed)
-    if payed <= price:
+    if payed >= price:
         break
 
