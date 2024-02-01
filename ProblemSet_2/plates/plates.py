@@ -36,6 +36,9 @@ def is_valid(s):
     # checks if the letter block (#1) has atleast two characters
     print(length_letter(plate_split))
 
+    if length and plate_order == True:
+        return True
+
 
 
 # check if the length of the plate is between [2;6]
