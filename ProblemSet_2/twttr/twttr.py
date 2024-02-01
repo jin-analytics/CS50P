@@ -4,7 +4,8 @@ def main():
     print("Output")
 
 def ommiter(twt):
-    
+    for vowels in twt
+        
 
 
 
