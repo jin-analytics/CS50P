@@ -6,7 +6,7 @@ def main():
 def omitter(twt):
     for vowels in twt:
         print("1",vowels)
-        twt += twt - vowels
+        twt = twt.replace(vowels,"")
         print("2",twt)
 
 
