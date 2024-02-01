@@ -13,12 +13,12 @@ def main():
 
 
 def is_valid(s):
-    len(s) = range(2,6)
-    print(s)
+    if 2 <= len(s) <= 6:
+        pass
     #return True
 
     else:
-    return False
+        return False
 
 
 main()
