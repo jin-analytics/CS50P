@@ -64,16 +64,14 @@ def plate_order_zero(split):
 
 # Checks for signs, spaces, punctuation in the number block #2
 def sign_alarm_number(split):
-    number_split = split[1]
-    for sign_detection in number_split:
-        if sign_detection != False:
+    sign_detection = split[1]
+        if sign_detection.isdigit() != False:
             return True
 
 # Checks for signs, spaces, punctuation in the letter block #1
 def sign_alarm_letter(split):
-    letter_split = split[1]
-    for sign_detection in letter_split:
-        if sign_detection != False:
+    sign_detection = split[1]
+        if sign_detection.isalpha() != False:
             return True
 
 
