@@ -35,7 +35,7 @@ def is_valid(s):
 
 
 
-
+# check if the length of the plate is between [2;6]
 def length(plate_length):
     if 2 <= len(plate_length) <= 6:
         return True
@@ -50,6 +50,7 @@ def seperator(plate_raw):
             break
     return plate_split
 
+# 
 def plate_order(split):
     test = split[1]
     if test.isdigit() == True:
