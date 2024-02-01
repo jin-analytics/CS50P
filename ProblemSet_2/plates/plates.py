@@ -39,13 +39,11 @@ def seperator(plate_raw):
     return plate_split
 
 def plate_order(split):
-    if split[1] == split.isnumber():
-        return True
+    print(split)
+   # if split[1] != split.isalpha():
+    #    return True
 
 
-    for numbers in s:
-        n = numbers.isdigit()
-        print(n)
 
 
 
