@@ -25,7 +25,10 @@ def is_valid(s):
     # check if there is a "0" as the first number, if not - returns True
     print(plate_order_zero(plate_split))
 
-    print(sign_alarm(s))
+    # checks if there is a sign in the second list entree of "plate_split"
+    print(sign_alarm_number(plate_split))
+    # checks if there is a sign in the second list entree of "plate_split"
+    print(sign_alarm_letter(plate_split))
 
 
 
@@ -53,17 +56,17 @@ def plate_order_zero(split):
     if test[0] != "0":
         return True
 
-def sign_alarm(split):
-    letter_split = split[0]
+def sign_alarm_number(split):
     number_split = split[1]
-    # checks if there is not a number or letter, does not - return True
-
-
     for sign_detection in number_split:
-        if sign_detection.isaplha() == True:
-            
+        if sign_detection != False:
+            return True
 
-    return True
+def sign_alarm_letter(split):
+    letter_split = split[1]
+    for sign_detection in letter_split:
+        if sign_detection != False:
+            return True
 
 
 
