@@ -53,10 +53,10 @@ def plate_order_zero(split):
     if test[0] != "0":
         return True
 
-def sign_alarm(signs)
+def sign_alarm(signs):
     # checks if there is not a number or letter, does not - return True
     for sign_detection in signs:
-        detect = sign_detection.isdigit()
+        detect = sign_detection.isdigit().isalpha()
         if detect == True:
             return true
 
