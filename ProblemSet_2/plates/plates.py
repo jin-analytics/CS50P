@@ -7,7 +7,10 @@ def main():
 
 
 def is_valid(s):
-    ...
+
+    return True
+
+    return False
 
 
 main()
