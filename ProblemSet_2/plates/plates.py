@@ -16,9 +16,9 @@ def is_valid(s):
     # filtering length between 2 and 6 characters
     if 2 <= len(s) <= 6:
         print("länge passt")
-    for signs in s:
-        match signs:
-            case 
+    for numbers in s:
+        n = numbers.isdigit()
+        print(n)
 
 
 
