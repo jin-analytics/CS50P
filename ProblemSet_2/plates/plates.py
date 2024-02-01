@@ -25,7 +25,7 @@ def is_valid(s):
     # check if there is a "0" as the first number, if not - returns True
     print(plate_order_zero(plate_split))
 
-    sign_alarm(s)
+    print(sign_alarm(s))
 
 
 
@@ -56,9 +56,9 @@ def plate_order_zero(split):
 def sign_alarm(signs):
     # checks if there is not a number or letter, does not - return True
     for sign_detection in signs:
-        detect = sign_detection.isdigit().isalpha()
+        detect = sign_detection.isdigit()
         if detect == True:
-            return true
+            return True
 
 
 
