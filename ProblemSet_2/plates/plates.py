@@ -14,7 +14,8 @@ def main():
 
 def is_valid(s):
     if 2 <= len(s) <= 6:
-        pass
+        print("länge passt")
+    for 
     #return True
 
     else:
