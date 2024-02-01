@@ -10,6 +10,7 @@ def omitter(twt):
                 print("case",vowels)
                 twt = twt.replace(vowels,"")
                 print("case2",twt)
+                break
     print("case3",twt)
 
 
