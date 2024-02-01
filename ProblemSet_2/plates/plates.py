@@ -67,7 +67,7 @@ def sign_alarm(split):
         print("bool alpha",sign_detect)
         if sign_detect != False:
 
-        return True
+    return True
 
 
 
