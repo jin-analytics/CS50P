@@ -57,15 +57,11 @@ def sign_alarm(split):
     letter_split = split[0]
     number_split = split[1]
     # checks if there is not a number or letter, does not - return True
-    for sign_detection in letter_split:
-        sign_detect = sign_detection.isdigit()
-        print("bool number",sign_detect)
-        if sign_detect != False:
+
 
     for sign_detection in number_split:
-        sign_detect = sign_detection.isaplha()
-        print("bool alpha",sign_detect)
-        if sign_detect != False:
+        if sign_detection.isaplha() == True:
+            
 
     return True
 
