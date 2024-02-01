@@ -57,7 +57,6 @@ def sign_alarm(signs)
     # checks if there is not a number or letter, does not - return True
     for sign_detection in signs:
         if sign_detection.isdigit():
-            or sign_detection.isalpha():
             return True
 
 
