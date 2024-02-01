@@ -40,7 +40,7 @@ def length(plate_length):
     if 2 <= len(plate_length) <= 6:
         return True
 
-# Seperates first letter block and number block
+# Seperates first letter block and number block and returns variable "plate_split"
 def seperator(plate_raw):
     for letters in plate_raw:
         l = letters.isalpha()
@@ -50,31 +50,31 @@ def seperator(plate_raw):
             break
     return plate_split
 
-# 
+# Checks if there are only numbers in the number block (#2) and returns True
 def plate_order(split):
     test = split[1]
     if test.isdigit() == True:
         return True
 
+# checks if there is a "0" as first number in the number block, returns if not - True
 def plate_order_zero(split):
     test = split[1]
     if test[0] != "0":
         return True
 
+# Checks for signs, spaces, punctuation in the number block #2
 def sign_alarm_number(split):
     number_split = split[1]
     for sign_detection in number_split:
         if sign_detection != False:
             return True
 
+# Checks for signs, spaces, punctuation in the letter block #1
 def sign_alarm_letter(split):
     letter_split = split[1]
     for sign_detection in letter_split:
         if sign_detection != False:
             return True
-
-
-
 
 
 main()
