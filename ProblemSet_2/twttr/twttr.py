@@ -1,11 +1,11 @@
 def main():
     tweet = input("Input: ")
     omitter(tweet)
-    print("Output")
+   # print("Output")
 
-def ommiter(twt):
-    for vowels in twt
-        
+def omitter(twt):
+    for vowels in twt:
+        print(vowels)
 
 
 
