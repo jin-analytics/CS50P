@@ -33,6 +33,9 @@ def is_valid(s):
     # checks if there is a sign in the second list entree of "plate_split"
     print(sign_alarm_number(plate_split))
 
+    # checks if the letter block (#1) has atleast two characters
+    print(length_letter(plate_split))
+
 
 
 # check if the length of the plate is between [2;6]
@@ -65,14 +68,25 @@ def plate_order_zero(split):
 # Checks for signs, spaces, punctuation in the number block #2
 def sign_alarm_number(split):
     sign_detection = split[1]
-        if sign_detection.isdigit() != False:
+    for signs in sign_detection:
+        signs = sign_detection.isdigit()
+        if signs != False:
             return True
 
 # Checks for signs, spaces, punctuation in the letter block #1
 def sign_alarm_letter(split):
-    sign_detection = split[1]
-        if sign_detection.isalpha() != False:
+    sign_detection = split[0]
+    for signs in sign_detection:
+        signs = sign_detection.isalpha()
+        if signs != False:
             return True
+
+# check if the length of the plate is between [2;6]
+def length_letter(split):
+    letter_block = split[0]
+    if  len(letter_block) < 2:
+        print(letter_block)
+        return True
 
 
 main()
