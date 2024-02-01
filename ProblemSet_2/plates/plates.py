@@ -58,6 +58,7 @@ def sign_alarm(signs):
     for sign_detection in signs:
         detect = sign_detection.isdigit()
         if detect == True:
+            print(detect)
             return True
 
 
