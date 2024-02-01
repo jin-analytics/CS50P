@@ -15,13 +15,15 @@ def main():
 
 def is_valid(s):
 
-    # filtering length between 2 and 6 characters
+    # filtering length between 2 and 6 characters, if so - return True
     print(length(s))
 
     # seperates the first letter block and uses the "plate_order" function
-    # to see if there is a letter after the number block
+    # to see if there is a letter in the number block via function "plate_order", if not - returns True
     plate_split = seperator(s)
     print(plate_order(plate_split))
+    # check if there is a "0" as the first number, if not - returns True
+    print(plate_order_zero(plate_split))
 
 
 
@@ -46,7 +48,8 @@ def plate_order(split):
 
 def plate_order_zero(split):
     test = split[1]
-    
+    if test[0] != "0":
+        return True
 
 
 
