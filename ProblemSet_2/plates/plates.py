@@ -13,13 +13,13 @@ def main():
 
 
 def is_valid(s):
+    # filtering length between 2 and 6 characters
     if 2 <= len(s) <= 6:
         print("länge passt")
-    for
-    #return True
+    for signs in s:
+        match signs:
+            case 
 
-    else:
-        return False
 
 
 main()
