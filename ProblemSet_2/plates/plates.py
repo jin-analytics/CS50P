@@ -13,8 +13,9 @@ def main():
 
 
 def is_valid(s):
-    if len(s) < 2
-    return True
+    len(s) = range(2,6)
+    print(s)
+    #return True
 
     else:
     return False
