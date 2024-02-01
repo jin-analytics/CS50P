@@ -24,7 +24,7 @@ def is_valid(s):
     # Looks up if there is a letter in the number block via function "plate_order", if not - returns True
     print(plate_order(plate_split))
 
-    # check if there is a "0" as the first number, if not - returns True
+    # check if there is a "0" as the first number in Block #2, if not - returns True
     print(plate_order_zero(plate_split))
 
     # checks if there is a sign in the first list entree of "plate_split"
