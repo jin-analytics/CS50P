@@ -16,7 +16,7 @@ def main():
 def is_valid(s):
 
     # filtering length between 2 and 6 characters, if so - return True
-    print(length(s))
+    length(s)
 
     # seperates the plate string from main() to a letter block (#1) and a number block (#2) through the variable "plate_split"
     plate_split = seperator(s)
@@ -36,8 +36,12 @@ def is_valid(s):
     # checks if the letter block (#1) has atleast two characters
     print(length_letter(plate_split))
 
-    if length(s) == True:
-    return True
+    if length(s) == True ...
+        & length_letter(plate_split) == True ...
+        & sign_alarm_number == True
+        & ...
+
+        return True
 
 
 
