@@ -22,9 +22,11 @@ def is_valid(s):
     for letters in s:
         l = letters.isalpha()
         if l == False:
-            s = s.replace(letters," " + letters)
-            print("test",s)
+            s = s.replace(str(letters)," " + str(letters))
+            print(letters)
+            print(s)
             break
+
 
     for numbers in s:
         n = numbers.isdigit()
