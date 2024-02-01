@@ -14,10 +14,12 @@ def main():
 
 def is_valid(s):
     # filtering length between 2 and 6 characters
-    if 2 <= len(s) <= 6:
-        print("länge pass")
-    plate_raw = seperator(s)
-    plate_split = plate_raw.split(" ")
+    length(s)
+    seperator(s)
+
+def length(plate_length):
+    if 2 <= len(plate_length) <= 6:
+        return True
 
 # Seperates first letter block and number block
 def seperator(plate_raw):
