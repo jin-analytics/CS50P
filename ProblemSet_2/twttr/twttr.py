@@ -5,9 +5,13 @@ def main():
 
 def omitter(twt):
     for vowels in twt:
-        print("1",vowels)
-        twt = twt.replace(vowels,"")
-        print("2",twt)
+
+        match twt:
+            case "a" | "e" | "i" | "o" | "u":
+                print("case",vowels)
+                twt = twt.replace(vowels,"")
+                print("case2",twt)
+
 
 
 
