@@ -17,6 +17,7 @@ def is_valid(s):
     if 2 <= len(s) <= 6:
         print("länge pass")
 
+    print("Separieren geht",seperator(s))
 
 # Seperates first letter block and number block
 def seperator(plate_raw):
@@ -26,6 +27,7 @@ def seperator(plate_raw):
             plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
             #print(plate_raw)
             break
+        print(plate_raw.split(" "))
     return plate_raw
 
 
