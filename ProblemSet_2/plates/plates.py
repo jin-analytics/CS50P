@@ -18,15 +18,15 @@ def is_valid(s):
         print("länge pass")
 
 
-
-    for letters in s:
+# Seperates first letter block and number block
+def seperator(plate_raw):
+    for letters in plate_raw:
         l = letters.isalpha()
         if l == False:
-            s = s.replace(str(letters)," " + str(letters))
-            print(letters)
-            print(s)
+            plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
+            #print(plate_raw)
             break
-        print(s)
+    return plate_raw
 
 
     for numbers in s:
