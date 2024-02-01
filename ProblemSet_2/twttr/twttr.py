@@ -3,8 +3,11 @@ def main():
     # print out what the function gives as return, in this case "twt"
     print("Output:", omitter(tweet))
 
+# funtion which removes vowels (Vokale)
 def omitter(twt):
+    # Checks each letter in "twt" string
     for vowels in twt:
+        # checks if any vowel is inside the "twt" and removes it
         match vowels:
             case "a" | "e" | "i" | "o" | "u":
                 twt = twt.replace(vowels,"")
