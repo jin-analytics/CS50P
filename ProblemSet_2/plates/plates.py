@@ -17,9 +17,13 @@ def is_valid(s):
     if 2 <= len(s) <= 6:
         print("länge pass")
 
+
+
     for letters in s:
         l = letters.isalpha()
-        print(l)
+        if l == False:
+            s = l.replace(l,l + " ")
+            print("test",s)
 
     for numbers in s:
         n = numbers.isdigit()
