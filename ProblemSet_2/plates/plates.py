@@ -27,7 +27,8 @@ def seperator(plate_raw):
         l = letters.isalpha()
         if l == False:
             plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
-            #print(plate_raw)
+            plate_split = plate_raw.split(" ")
+            
             break
     return plate_raw
 
