@@ -6,8 +6,8 @@ def main():
 def omitter(twt):
     for vowels in twt:
         print("1",vowels)
-        vowels += "" + vowels
-        print("2",vowels)
+        twt += twt - vowels
+        print("2",twt)
 
 
 
