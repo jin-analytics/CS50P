@@ -13,9 +13,16 @@ def main():
 
 
 def is_valid(s):
+
     # filtering length between 2 and 6 characters
     length(s)
-    seperator(s)
+
+    # seperates the first letter block and uses the "plate_order" function
+    # to see if there is a letter after the number block
+    plate_split = seperator(s)
+    plate_order(plate_split)
+
+
 
 def length(plate_length):
     if 2 <= len(plate_length) <= 6:
@@ -28,9 +35,12 @@ def seperator(plate_raw):
         if l == False:
             plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
             plate_split = plate_raw.split(" ")
-            
             break
-    return plate_raw
+    return plate_split
+
+def plate_order(split):
+    if split[1] == split.isnumber():
+        return True
 
 
     for numbers in s:
