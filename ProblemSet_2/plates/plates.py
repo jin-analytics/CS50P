@@ -26,6 +26,7 @@ def is_valid(s):
             print(letters)
             print(s)
             break
+        print(s)
 
 
     for numbers in s:
