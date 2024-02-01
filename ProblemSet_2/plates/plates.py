@@ -16,9 +16,13 @@ def is_valid(s):
     # filtering length between 2 and 6 characters
     if 2 <= len(s) <= 6:
         print("länge pass")
+
+    for letters in s:
+        l = letters.isalpha()
+        print(l)
+
     for numbers in s:
         n = numbers.isdigit()
-        n = n
         print(n)
 
 
