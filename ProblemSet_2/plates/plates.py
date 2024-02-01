@@ -22,7 +22,7 @@ def is_valid(s):
     for letters in s:
         l = letters.isalpha()
         if l == False:
-            s = s.replace(letters," " + letters)
+            s = s.replace(letters,"" + letters)
             print("test",s)
             break
 
