@@ -16,7 +16,7 @@ def is_valid(s):
     # filtering length between 2 and 6 characters
     if 2 <= len(s) <= 6:
         print("länge pass")
-    plate_split = seperator(s)
+    plate_raw = seperator(s)
     plate_split = plate_raw.split(" ")
 
 # Seperates first letter block and number block
