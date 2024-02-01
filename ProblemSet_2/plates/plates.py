@@ -37,7 +37,8 @@ def is_valid(s):
     print(length_letter(plate_split))
 
     if length and plate_order == True:
-        return True
+        s == True
+        return s
 
 
 
