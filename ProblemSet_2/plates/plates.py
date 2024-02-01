@@ -34,7 +34,7 @@ def is_valid(s):
     print(sign_alarm_number(plate_split))
 
     # checks if the letter block (#1) has atleast two characters
-    print(length_letter(plate_split))
+    print(length_letter("test",plate_split))
 
 
 
@@ -85,7 +85,7 @@ def sign_alarm_letter(split):
 def length_letter(split):
     letter_block = split[0]
     if  len(letter_block) < 2:
-        print(letter_block)
+        print(len(letter_block))
         return True
 
 
