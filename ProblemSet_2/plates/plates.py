@@ -80,8 +80,11 @@ def length(plate_length):
 
 # Seperates first letter block and number block and returns variable "plate_split"
 def seperator(plate_raw):
+    plate_split = plate_raw.split()
+    plate_split = plate_split.append("")
+    print(plate_split)
     for letters in plate_raw:
-        plate_split = plate_raw.split()
+
         l = letters.isalpha()
         if l == False:
             plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
