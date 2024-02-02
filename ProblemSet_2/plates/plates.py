@@ -54,6 +54,8 @@ def is_valid(s):
 def length(plate_length):
     if 2 <= len(plate_length) <= 6:
         return True
+    else:
+        exit("Invalid")
 
 # Seperates first letter block and number block and returns variable "plate_split"
 def seperator(plate_raw):
