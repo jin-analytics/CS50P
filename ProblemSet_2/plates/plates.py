@@ -97,7 +97,8 @@ def plate_order(split):
 
 # checks if there is a "0" as first number in the number block, returns if not - True
 def plate_order_zero(split):
-    if split[1] empty 
+    if not split[1]:
+        quit()
     test = split[1]
     if test[0] != "0":
         return True
