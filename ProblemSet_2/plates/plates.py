@@ -20,7 +20,6 @@ def is_valid(s):
 
     # seperates the plate string from main() to a letter block (#1) and a number block (#2) through the variable "plate_split"
     plate_split = seperator(s)
-    if len(plate_split) == 1
 
     # Looks up if there is a letter in the number block via function "plate_order", if not - returns True
     plate_order(plate_split)
@@ -46,22 +45,27 @@ def is_valid(s):
     print(length_letter(plate_split))
 
 
-    if (
-    length(s) == True and
-    length_letter(plate_split) == True and
-    sign_alarm_number(plate_split) == True and
-    sign_alarm_letter(plate_split) == True and
-    plate_order_zero(plate_split) == True and
-    plate_order(plate_split) == True
-    ):
-        return True
-    # In case there are just letters
-   # elif(
-   # sign_alarm_number(plate_split) == None and
-   # length(s) == True and
-   # sign_alarm_letter(plate_split) == True
-    #):
-   #     return True
+    if len(plate_split) == 2:
+        if (
+        length(s) == True and
+        length_letter(plate_split) == True and
+        sign_alarm_number(plate_split) == True and
+        sign_alarm_letter(plate_split) == True and
+        plate_order_zero(plate_split) == True and
+        plate_order(plate_split) == True
+        ):
+            return True
+
+    if len(plate_split) == 1:
+        if (
+        length(s) == True and
+        length_letter(plate_split) == None and
+        sign_alarm_number(plate_split) == True and
+        sign_alarm_letter(plate_split) == True and
+        plate_order_zero(plate_split) == None and
+        plate_order(plate_split) == None
+        ):
+            return True
     else:
         return False
 
