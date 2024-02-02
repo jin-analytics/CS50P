@@ -46,12 +46,12 @@ def is_valid(s):
     ):
         return True
     # In case there are just letters
-    elif(
-    sign_alarm_number(plate_split) == None and
-    length(s) == True and
-    sign_alarm_letter(plate_split) == True
-    ):
-        return True
+   # elif(
+   # sign_alarm_number(plate_split) == None and
+   # length(s) == True and
+   # sign_alarm_letter(plate_split) == True
+    #):
+   #     return True
     else:
         return False
 
