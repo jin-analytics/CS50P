@@ -82,6 +82,8 @@ def seperator(plate_raw):
             plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
             plate_split = plate_raw.split(" ")
             break
+        if len(plate_split) == 1
+        
     return plate_split
 
 # Checks if there are only numbers in the number block (#2) and returns True
