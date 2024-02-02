@@ -39,7 +39,7 @@ def is_valid(s):
     if (
     length(s) == True and
     length_letter(plate_split) == True and
-    sign_alarm_number(plate_split) == True and
+    sign_alarm_number(plate_split) == True or
     sign_alarm_letter(plate_split) == True and
     plate_order_zero(plate_split) == True and
     plate_order(plate_split) == True
