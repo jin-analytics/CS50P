@@ -81,10 +81,7 @@ def length(plate_length):
 # Seperates first letter block and number block and returns variable "plate_split"
 def seperator(plate_raw):
     plate_split = plate_raw.split()
-    plate_split = plate_split.append("0")
-    print(plate_split)
     for letters in plate_raw:
-
         l = letters.isalpha()
         if l == False:
             plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
@@ -94,9 +91,10 @@ def seperator(plate_raw):
 
 # Checks if there are only numbers in the number block (#2) and returns True
 def plate_order(split):
-    number_block = split[1]
-    if number_block.isdigit() == True:
-        return True
+    if split[1]:
+        number_block = split[1]
+        if number_block.isdigit() == True:
+            return True
 
 # checks if there is a "0" as first number in the number block, returns if not - True
 def plate_order_zero(split):
