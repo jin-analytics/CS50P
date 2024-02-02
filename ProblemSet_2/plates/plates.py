@@ -44,7 +44,7 @@ def is_valid(s):
     print(sign_alarm_number(plate_split))
     print(length_letter(plate_split))
 
-
+    print(len(plate_split))
     if len(plate_split) == 2:
         if (
         length(s) == True and
