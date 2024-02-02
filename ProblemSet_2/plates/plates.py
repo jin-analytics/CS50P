@@ -20,6 +20,7 @@ def is_valid(s):
 
     # seperates the plate string from main() to a letter block (#1) and a number block (#2) through the variable "plate_split"
     plate_split = seperator(s)
+    if len(plate_split) == 1
 
     # Looks up if there is a letter in the number block via function "plate_order", if not - returns True
     plate_order(plate_split)
@@ -82,8 +83,6 @@ def seperator(plate_raw):
             plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
             plate_split = plate_raw.split(" ")
             break
-        if len(plate_split) == 1
-        
     return plate_split
 
 # Checks if there are only numbers in the number block (#2) and returns True
