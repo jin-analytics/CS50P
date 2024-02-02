@@ -87,7 +87,7 @@ def seperator(plate_raw):
             plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
             plate_split = plate_raw.split(" ")
             break
-    plate_split = plate_split.append("")
+    plate_split = plate_raw.append('nn')
     print(plate_split)
     return plate_split
 
