@@ -36,6 +36,16 @@ def is_valid(s):
     # checks if the letter block (#1) has atleast two characters
     length_letter(plate_split)
 
+
+    print(length(s))
+    print(plate_split = seperator(s))
+    print(plate_order(plate_split))
+    print(plate_order_zero(plate_split))
+    print(sign_alarm_letter(plate_split))
+    print(sign_alarm_number(plate_split))
+    print(length_letter(plate_split))
+
+
     if (
     length(s) == True and
     length_letter(plate_split) == True and
