@@ -87,11 +87,11 @@ def seperator(plate_raw):
             plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
             plate_split = plate_raw.split(" ")
             break
+    print(plate_split)
     return plate_split
 
 # Checks if there are only numbers in the number block (#2) and returns True
 def plate_order(split):
-    if not split[1]:
         number_block = split[1]
         if number_block.isdigit() == True:
             return True
