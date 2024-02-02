@@ -25,13 +25,13 @@ def is_valid(s):
     plate_order(plate_split)
 
     # check if there is a "0" as the first number in Block #2, if not - returns True
-    print(plate_order_zero(plate_split))
+    plate_order_zero(plate_split)
 
     # checks if there is a sign in the first list entree of "plate_split"
-    print(sign_alarm_letter(plate_split))
+    sign_alarm_letter(plate_split)
 
     # checks if there is a sign in the second list entree of "plate_split"
-    print(sign_alarm_number(plate_split))
+    sign_alarm_number(plate_split)
 
     # checks if the letter block (#1) has atleast two characters
     length_letter(plate_split)
@@ -39,10 +39,17 @@ def is_valid(s):
     if (
     length(s) == True and
     length_letter(plate_split) == True and
-    sign_alarm_number(plate_split) == True or
+    sign_alarm_number(plate_split) == True and
     sign_alarm_letter(plate_split) == True and
     plate_order_zero(plate_split) == True and
     plate_order(plate_split) == True
+    ):
+        return True
+    # In case there are just letters
+    elif(
+    sign_alarm_number(plate_split) == None and
+    length(s) == True and
+    sign_alarm_letter(plate_split) == True
     ):
         return True
     else:
