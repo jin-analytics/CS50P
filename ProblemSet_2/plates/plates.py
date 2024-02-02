@@ -44,7 +44,7 @@ def is_valid(s):
     print(sign_alarm_number(plate_split))
     print(length_letter(plate_split))
 
-    print(len(plate_split[]))
+    print(len(plate_split))
     if len(plate_split) == 2:
         if (
         length(s) == True and
@@ -81,7 +81,7 @@ def length(plate_length):
 # Seperates first letter block and number block and returns variable "plate_split"
 def seperator(plate_raw):
     for letters in plate_raw:
-        plate_split = plate_raw
+        plate_split = plate_raw.split()
         l = letters.isalpha()
         if l == False:
             plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
