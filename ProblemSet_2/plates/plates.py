@@ -26,10 +26,11 @@ def is_valid(s):
     else:
         print("continue to look")
         plate_raw = s
-        for letters in plate_raw:
-            letters = letters.isalpha()
-            if letters == False:
-                plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
+        for numbers in plate_raw:
+            numbers = numbers.isalpha()
+            print(numbers)
+            if numbers == True:
+                plate_raw = plate_raw.replace(str(numbers)," " + str(numbers), 1)
                 plate_split = plate_raw.split(" ")
                 print(plate_split)
                 break
