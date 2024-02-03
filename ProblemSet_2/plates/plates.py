@@ -27,6 +27,11 @@ def is_valid(s):
         plate_split = splitter(s)
         print(plate_split)
 
+    # checks if there is a "0" as first number in the number block, returns if not - True
+    if plate_first_number_zero(plate_split) == False:
+        return False
+
+
 
 
 
