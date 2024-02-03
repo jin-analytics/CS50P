@@ -35,9 +35,9 @@ def sign_detection(plate_input):
         # punctuation() detects: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
         #signs = signs.punctuation()
         # whitespace detects: characters space, tab, linefeed, return, formfeed, and vertical tab
-        #signs = signs.whitespace()
+        signs = signs.whitespace()
         print(signs)
-        if signs in "!#$%&' (   )*+,-./:;<=>?@[\]^_`{|}~":
+        if signs in "!#$%&' ()*+,-./:;<=>?@[\]^_`{|}~":
             print("ups")
             return False
             break
