@@ -26,6 +26,7 @@ def is_valid(s):
     else:
         print("continue to look")
         plate_raw = s
+        print(plate_raw)
         for numbers in plate_raw:
             numbers = numbers.isalpha()
             print(numbers)
@@ -67,7 +68,6 @@ def sign_detection(plate_input):
 def number_detection(plate_input):
     for numbers in plate_input:
         if numbers.isdigit() == True:
-            print(numbers)
             return True
             break
     else:
