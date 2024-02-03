@@ -80,9 +80,12 @@ def splitter(plate_input):
             return plate_split
 
 # checks if there is a "0" as first number in the number block, returns if not - True
-def plate_order_zero(split):
-    number_block = split[1]
-    if number_block[0] != "0":
+def plate_first_number_zero(plate_split):
+    number_block = plate_split[1]
+    if number_block[0] == "0":
+        return False
+        break
+    else:
         return True
 
 
