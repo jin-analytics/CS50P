@@ -25,7 +25,7 @@ def is_valid(s):
 # Splits the plate input to a letter (#1) and number (#2) block to continue the proove of validation
     else:
         print("continue to look")
-        plate_raw = s
+        plate_raw = s.split()
         print(plate_raw)
         for numbers in plate_raw:
             numbers = numbers.isalpha()
