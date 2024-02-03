@@ -9,7 +9,7 @@ def main():
 def is_valid(s):
 
     length(s)
-    sign_detection
+    sign_detection(s)
 
 
 
@@ -18,12 +18,17 @@ def is_valid(s):
         if 2 <= len(plate_length) <= 6:
             return True
         else:
-            exit("Invalid")
+            exit()
 
     # Checks for periods, spaces and punctuation in the input
     def sign_detection(plate_input):
         for signs in plate_input:
-
+            # punctuation() detects: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
             signs = signs.punctuation()
-            
+            # whitespace detects: characters space, tab, linefeed, return, formfeed, and vertical tab
+            signs = signs.whitespace()
+            if signs == True:
+                exit()
+
+
 
