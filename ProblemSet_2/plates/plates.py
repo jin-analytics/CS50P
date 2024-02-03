@@ -64,16 +64,14 @@ def number_detection(plate_input):
         return False
 
 # Seperates first letter block and number block and returns variable "plate_split"
-def splitter(plate_input):
-    for number in plate_input:
+def splitter(plate_split):
+    for number in plate_split:
         #print(number)
         n = number.isdigit()
-        print(n)
-        print(number)
+        #print(n)
+        #print(number)
         if n == True:
-            plate_split = plate_input.replace(str(number)," " + str(number), 1)
-            print(plate_input)
-            plate_split = plate_input.split(" ")
+            plate_split = plate_split.replace(str(number)," " + str(number), 1)
             print(plate_split)
 
 
