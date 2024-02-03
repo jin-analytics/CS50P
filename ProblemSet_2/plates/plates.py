@@ -66,13 +66,6 @@ def number_detection(plate_input):
 # Seperates first letter block and number block and returns variable "plate_split"
 def seperator(plate_raw):
     plate_split = plate_raw.split()
-    for letters in plate_raw:
-        l = letters.isalpha()
-        if l == False:
-            plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
-            plate_split = plate_raw.split(" ")
-            break
-    plate_split = plate_raw.append('nn')
     print(plate_split)
     return plate_split
 
