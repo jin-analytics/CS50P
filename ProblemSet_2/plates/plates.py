@@ -84,7 +84,6 @@ def plate_first_number_zero(plate_split):
     number_block = plate_split[1]
     if number_block[0] == "0":
         return False
-        break
     else:
         return True
 
