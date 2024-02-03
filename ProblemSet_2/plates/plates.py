@@ -25,6 +25,9 @@ def is_valid(s):
 # Splits the plate input to a letter (#1) and number (#2) block to continue the proove of validation
     else:
         plate_split = splitter(s)
+        print(plate_split)
+
+
 
 
 
@@ -74,6 +77,13 @@ def splitter(plate_input):
             plate_input = plate_input.replace(str(number)," " + str(number), 1)
             print(plate_input)
             plate_split = plate_input.split(" ")
+            return plate_split
+
+# checks if there is a "0" as first number in the number block, returns if not - True
+def plate_order_zero(split):
+    number_block = split[1]
+    if number_block[0] != "0":
+        return True
 
 
 main()
