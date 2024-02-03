@@ -19,7 +19,7 @@ def length(plate_length):
     if 2 <= len(plate_length) <= 6:
         return True
     else:
-        exit()
+        return False
 
 # Checks for periods, spaces and punctuation in the input
 def sign_detection(plate_input):
@@ -28,8 +28,10 @@ def sign_detection(plate_input):
         signs = signs.punctuation()
         # whitespace detects: characters space, tab, linefeed, return, formfeed, and vertical tab
         signs = signs.whitespace()
-        if signs == True:
-            exit()
+        if signs != True:
+            return True
+        else:
+            return False
 
 
 main()
