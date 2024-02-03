@@ -11,16 +11,17 @@ def is_valid(s):
     length(s)
 #    sign_detection(s)
 
+    # If no functions used exit(), then the plate input is valid and return a "True"
+    return True
+
 
 
 # Check if the string Length of the input is in the allowed range from between 2 to 6
 def length(plate_length):
-    print(len(plate_length))
     if 2 <= len(plate_length) <= 6:
-        print("drin")
         return True
     else:
-        return False
+        quit()
 
 # Checks for periods, spaces and punctuation in the input
 #def sign_detection(plate_input):
