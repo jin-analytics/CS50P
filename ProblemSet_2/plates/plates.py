@@ -48,7 +48,7 @@ def sign_detection(plate_input):
     else:
         return True
 
-# Checks for numbers in the input - if no number detected, function returns True else the proove of validation continues
+# Checks for numbers in the input - if a number is detected, function returns True... else returns False
 def number_detection(plate_input):
     for numbers in plate_input:
         if numbers.isdigit() == True:
