@@ -68,6 +68,7 @@ def splitter(plate_input):
     for number in plate_input:
         #print(number)
         number = number.isdigit()
+        print(number)
         if number == True:
             plate_split = plate_input.replace(str(number)," " + str(number), 1)
             print(plate_split)
