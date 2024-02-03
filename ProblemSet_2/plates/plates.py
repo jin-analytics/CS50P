@@ -22,11 +22,16 @@ def is_valid(s):
     if number_detection(s) == False:
         print(number_detection(s))
         return True
-# Splits the input to a letter (#1) and number (#2) block to continue the proove of validation
+# Splits the plate input to a letter (#1) and number (#2) block to continue the proove of validation
     else:
         print("continue to look")
-        plate_split = s.split()
-    print(plate_split)
+        for letters in s:
+            letters = letters.isalpha()
+            if letters == False:
+                plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
+                plate_split = plate_raw.split(" ")
+                break
+            print(plate_split)
 
 
 
