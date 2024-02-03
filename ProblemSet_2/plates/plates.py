@@ -27,19 +27,23 @@ def is_valid(s):
         plate_split = splitter(s)
         print(plate_split)
 
-    # checks if there is a "0" as first number in the number block, returns if not - True
-    if plate_first_number_zero(plate_split) == False:
+# checks if there is a "0" as first number in the number block, returns if not - True
+    if first_number_zero(plate_split) == False:
         return False
 
-
-
-
-
-
-
+    if letterblock_atleast_two_char(plate_split) == False:
+        return False
 # If no functions used exit(), then the plate input is valid and return a "True"
-    print("kommt es bis hierhin?")
-    return True
+    else:
+        return True
+
+
+
+
+
+
+
+
 
 
 
@@ -85,12 +89,20 @@ def splitter(plate_input):
             return plate_split
 
 # checks if there is a "0" as first number in the number block, returns if not - True
-def plate_first_number_zero(plate_split):
+def first_number_zero(plate_split):
     number_block = plate_split[1]
     if number_block[0] == "0":
         return False
     else:
         return True
+
+# check if the length of the letter block is atleast 2 character
+def letterblock_atleast_two_char(plate_split):
+    letter_block = plate_split[0]
+    if  len(letter_block) >= 2:
+        return True
+    else:
+        return False
 
 
 
