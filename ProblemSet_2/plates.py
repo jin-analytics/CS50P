@@ -23,4 +23,6 @@ def is_valid(s):
     # Checks for signs, spaces and punctuation in the input
     def sign_detection(plate_input):
         for signs in plate_input:
-            if " " or "."
+            signs = signs.punctuation()
+            signs = signs.
+
