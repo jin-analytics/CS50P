@@ -67,9 +67,10 @@ def number_detection(plate_input):
 def splitter(plate_input):
     for number in plate_input:
         #print(number)
-        number = number.isdigit()
+        n = number.isdigit()
+        print(n)
         print(number)
-        if number == True:
+        if n == True:
             plate_input = plate_input.replace(str(number)," " + str(number), 1)
             print(plate_input)
             plate_split = plate_input.split(" ")
