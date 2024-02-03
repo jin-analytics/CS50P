@@ -13,22 +13,25 @@ def is_valid(s):
 # Check if the string Length of the input is in the allowed range from between 2 to 6
     if length(s) == False: # Function #1
         return False
+
 # Checks for periods, spaces and punctuation in the input, if nothing found - return True
     if sign_detection(s) == False: # Function #2
         return False
+
 # Checks for numbers in the input - if no number detected, function returns True else the proove of validation continues
     if number_detection(s) == False: # Function #3
-        print(number_detection(s))
         return True
 # Splits the plate input to a letter (#1) and number (#2) block to continue the proove of validation
     else:
         plate_split = splitter(s) # Function #4
-        print(plate_split)
+
 # checks if there is a "0" as first number in the number block, returns if not - True
     if first_number_zero(plate_split) == False: # Function #5
         return False
+
     if letterblock_atleast_two_char(plate_split) == False: # Function #6
         return False
+
 # If no functions used exit(), then the plate input is valid and return a "True"
     else:
         return True
