@@ -17,6 +17,7 @@ def is_valid(s):
 def length(plate_length):
     print(len(plate_length))
     if 2 <= len(plate_length) <= 6:
+        print("drin")
         return True
     else:
         return False
