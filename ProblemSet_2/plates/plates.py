@@ -31,4 +31,4 @@ def is_valid(s):
                 exit()
 
 
-
+main()
