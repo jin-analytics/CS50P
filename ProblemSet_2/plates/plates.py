@@ -1,3 +1,5 @@
+import string
+
 def main():
     plate = input("Plate: ")
     if is_valid(plate):
@@ -33,11 +35,15 @@ def sign_detection(plate_input):
         # punctuation() detects: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
         #signs = signs.punctuation()
         # whitespace detects: characters space, tab, linefeed, return, formfeed, and vertical tab
-        signs = signs.whitespace()
-        if signs != True:
-            return True
-        else:
+        #signs = signs.whitespace()
+        print(signs)
+        if signs in "!#$%&' ()*+,-./:;<=>?@[\]^_`{|}~":
+            print("ups")
             return False
+            break
+    else:
+        print("geht rein")
+        return True
 
 
 main()
