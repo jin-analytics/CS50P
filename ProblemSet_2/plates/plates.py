@@ -70,7 +70,9 @@ def splitter(plate_input):
         number = number.isdigit()
         print(number)
         if number == True:
-            plate_split = plate_input.replace(str(number)," " + str(number), 1)
+            plate_input = plate_input.replace(str(number)," " + str(number), 1)
+            print(plate_input)
+            plate_split = plate_input.split(" ")
             print(plate_split)
 
 
