@@ -21,6 +21,7 @@ def is_valid(s):
 # Checks for numbers in the input - if no number detected, function returns True else the proove of validation continues
     if number_detection(s) == False:
         print(number_detection(s))
+        exit(True)
     else:
         print("continue to look")
 
