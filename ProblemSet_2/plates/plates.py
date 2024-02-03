@@ -14,10 +14,15 @@ def is_valid(s):
     if length(s) == False:
         return False
 
+# Checks for periods, spaces and punctuation in the input, if nothing found - return True
     if sign_detection(s) == False:
         return False
 
-    # If no functions used exit(), then the plate input is valid and return a "True"
+# Checks for numbers in the input - if no number detected, function returns True else the proove of validation continues
+    if 
+
+
+# If no functions used exit(), then the plate input is valid and return a "True"
     return True
 
 
