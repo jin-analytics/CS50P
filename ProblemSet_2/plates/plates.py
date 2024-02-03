@@ -24,6 +24,7 @@ def is_valid(s):
 # Splits the plate input to a letter (#1) and number (#2) block to continue the proove of validation
     else:
         plate_split = splitter(s) # Function #4
+        #print(plate_split)
 
 # checks if there is a "0" as first number in the number block, returns if not - True
     if first_number_zero(plate_split) == False: # Function #5
@@ -32,7 +33,7 @@ def is_valid(s):
 # check if the length of the letter block is atleast 2 character, and then - returns True
     if letterblock_atleast_two_char(plate_split) == False: # Function #6
         return False
-    
+
 # Checks if there are only numbers in the number block (#2)
     if first_number_zero(plate_split) == False: # Function #6
         return False
@@ -109,6 +110,7 @@ def letterblock_atleast_two_char(plate_split):
 # Checks if there are only numbers in the number block (#2), if yes - returns True
 def numberblock_only_number(plate_split):
         number_block = plate_split[1]
+        print("bool",number_block.isdigit())
         if number_block.isdigit() != True:
             return False
         else:
