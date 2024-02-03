@@ -99,8 +99,10 @@ def first_number_zero(plate_split):
 # check if the length of the letter block is atleast 2 character
 def letterblock_atleast_two_char(plate_split):
     letter_block = plate_split[0]
-    if  len(letter_block) >= 2:
+    if  len(letter_block) <= 2:
+        print("true")
         return True
+
     else:
         return False
 
