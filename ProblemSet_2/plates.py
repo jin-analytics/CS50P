@@ -15,3 +15,12 @@ def is_valid(s):
         return True
     else:
         exit("Invalid")
+
+    # Checks for signs, spaces and punctuation in the input
+    def sign_detection(plate_input):
+
+        for signs in plate_input:
+            signs = sign_detection.isdigit()
+            signs = sign_detection.
+            if signs != False:
+                return True
