@@ -17,22 +17,16 @@ def is_valid(s):
 
     # filtering length between 2 and 6 characters, if so - return True
     length(s)
-
     # seperates the plate string from main() to a letter block (#1) and a number block (#2) through the variable "plate_split"
     plate_split = seperator(s)
-
     # Looks up if there is a letter in the number block via function "plate_order", if not - returns True
     plate_order(plate_split)
-
     # check if there is a "0" as the first number in Block #2, if not - returns True
     plate_order_zero(plate_split)
-
     # checks if there is a sign in the first list entree of "plate_split"
     sign_alarm_letter(plate_split)
-
     # checks if there is a sign in the second list entree of "plate_split"
     sign_alarm_number(plate_split)
-
     # checks if the letter block (#1) has atleast two characters
     length_letter(plate_split)
 
