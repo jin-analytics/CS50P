@@ -22,13 +22,13 @@ def is_valid(s):
     if number_detection(s) == False:
         print(number_detection(s))
         return True
-        break
     else:
         print("continue to look")
 
 
 
 # If no functions used exit(), then the plate input is valid and return a "True"
+    print("kommt es bis hierhin?")
     return True
 
 
