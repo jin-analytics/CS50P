@@ -102,10 +102,12 @@ def letterblock_atleast_two_char(plate_split):
     else:
         return False
 
-# Checks if there are only numbers in the number block (#2) and returns True
-def numberblock_only_number(split):
-        number_block = split[1]
-        if number_block.isdigit() == True:
+# Checks if there are only numbers in the number block (#2), if yes - returns True
+def numberblock_only_number(plate_split):
+        number_block = plate_split[1]
+        if number_block.isdigit() != True:
+            return False
+        else:
             return True
 
 
