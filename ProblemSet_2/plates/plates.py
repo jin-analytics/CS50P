@@ -24,17 +24,7 @@ def is_valid(s):
         return True
 # Splits the plate input to a letter (#1) and number (#2) block to continue the proove of validation
     else:
-        print("continue to look")
-        plate_raw = s.split()
-        print(plate_raw)
-        for numbers in plate_raw:
-            numbers = numbers.isalpha()
-            print(numbers)
-            if numbers == True:
-                plate_raw = plate_raw.replace(str(numbers)," " + str(numbers), 1)
-                plate_split = plate_raw.split(" ")
-                print(plate_split)
-                break
+        plate_split = splitter(s)
 
 
 
@@ -74,6 +64,13 @@ def number_detection(plate_input):
         return False
 
 # Seperates first letter block and number block and returns variable "plate_split"
+def splitter(plate_input):
+    for number in plate_input:
+        #print(number)
+        number = number.isdigit()
+        if number == True:
+            plate_split = plate_input.replace(str(number)," " + str(number), 1)
+            print(plate_split)
 
 
 main()
