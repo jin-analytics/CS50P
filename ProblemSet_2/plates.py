@@ -20,9 +20,10 @@ def is_valid(s):
         else:
             exit("Invalid")
 
-    # Checks for signs, spaces and punctuation in the input
+    # Checks for periods, spaces and punctuation in the input
     def sign_detection(plate_input):
         for signs in plate_input:
+
             signs = signs.punctuation()
-            signs = signs.
+            
 
