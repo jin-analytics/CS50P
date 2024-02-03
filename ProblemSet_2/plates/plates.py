@@ -35,7 +35,7 @@ def is_valid(s):
         return False
 
 # Checks if there are only numbers in the number block (#2)
-    if first_number_zero(plate_split) == False: # Function #6
+    if numberblock_only_number(plate_split) == False: # Function #6
         return False
 
 # If no functions used exit(), then the plate input is valid and return a "True"
@@ -110,7 +110,6 @@ def letterblock_atleast_two_char(plate_split):
 # Checks if there are only numbers in the number block (#2), if yes - returns True
 def numberblock_only_number(plate_split):
         number_block = plate_split[1]
-        print("bool",number_block.isdigit())
         if number_block.isdigit() != True:
             return False
         else:
