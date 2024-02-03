@@ -19,7 +19,8 @@ def is_valid(s):
         return False
 
 # Checks for numbers in the input - if no number detected, function returns True else the proove of validation continues
-    if 
+    if number_detection(s) == False:
+        exit(True)
 
 
 # If no functions used exit(), then the plate input is valid and return a "True"
