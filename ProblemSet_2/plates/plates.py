@@ -22,6 +22,7 @@ def is_valid(s):
     if number_detection(s) == False:
         print(number_detection(s))
         return True
+# Splits the input to a letter (#1) and number (#2) block to continue the proove of validation
     else:
         print("continue to look")
 
@@ -61,6 +62,19 @@ def number_detection(plate_input):
             break
     else:
         return False
+
+# Seperates first letter block and number block and returns variable "plate_split"
+def seperator(plate_raw):
+    plate_split = plate_raw.split()
+    for letters in plate_raw:
+        l = letters.isalpha()
+        if l == False:
+            plate_raw = plate_raw.replace(str(letters)," " + str(letters), 1)
+            plate_split = plate_raw.split(" ")
+            break
+    plate_split = plate_raw.append('nn')
+    print(plate_split)
+    return plate_split
 
 
 main()
