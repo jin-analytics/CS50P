@@ -32,17 +32,14 @@ def length(plate_length):
 # Checks for periods, spaces and punctuation in the input
 def sign_detection(plate_input):
     for signs in plate_input:
-        # punctuation() detects: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
-        #signs = signs.punctuation()
-        # whitespace detects: characters space, tab, linefeed, return, formfeed, and vertical tab
-        signs = signs.isspace()
+        # detects: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+        # isspace() detects: characters space and tab
         print(signs)
-        if signs in "!#$%&' ()*+,-./:;<=>?@[\]^_`{|}~":
-            print("ups")
+        if signs in "!#$%&' ()*+,-./:;<=>?@[\]^_`{|}~" or signs.isspace() == True:
+            #print("detected")
             return False
             break
     else:
-        print("geht rein")
         return True
 
 
