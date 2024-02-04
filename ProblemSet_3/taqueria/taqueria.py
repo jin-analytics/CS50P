@@ -14,12 +14,16 @@ menu={
 def main():
     while True:
         item = input("Item: ")
-        total(item)
+        print("Amount:",total(item))
+
 
 def total(i):
     for food in menu:
         if food == i:
-            print(menu[food])
-        
+            #print(menu[food])
+            price = float(menu[food])
+            amount += price
+            return amount
+
 
 main()
