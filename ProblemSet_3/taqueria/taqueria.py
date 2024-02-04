@@ -21,12 +21,15 @@ def total(i):
     for food in menu:
         if food == i:
             price = float(menu[food])
-    while True:
-        item = input("Item: ")
-        for food in menu:
-            if food == item:
-                price = float(menu[food]) + price
-        #return price
+    try:
+        while True:
+            item = input("Item: ")
+            for food in menu:
+                if food == item:
+                    price = float(menu[food]) + price
+            #return price
+    except EOFError:
+         pass
 
 
 main()
