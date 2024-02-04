@@ -12,14 +12,14 @@ menu={
 }
 
 def main():
-    item = input("Item: ")
-    total(item)
+    while True:
+        item = input("Item: ")
+        total(item)
 
 def total(i):
     for food in menu:
-        print(f"{food}")
         if food == i:
-            #print(menu.value())
-            None
+            print(menu[food])
+        
 
 main()
