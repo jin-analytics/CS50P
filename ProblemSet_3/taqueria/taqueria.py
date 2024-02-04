@@ -29,7 +29,7 @@ def total(i):
                     price = float(menu[food]) + price
             #return price
     except EOFError:
-         pass
+         return price
 
 
 main()
