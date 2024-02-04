@@ -14,9 +14,9 @@ menu={
 def main():
     while True:
         try:
-            item = input("Item: ")
+            item = input("Item: ").title()
             amount = total(item)
-            print ("Amount:",format(amount, '.2f'))
+            print ("Total:",format(amount, '.2f'))
             break
         except UnboundLocalError:
             pass
@@ -29,14 +29,14 @@ def total(i):
     for food in menu:
         if food == i:
             price = float(menu[food])
-            print ("Amount:",format(price, '.2f'))
+            print ("Total:",format(price, '.2f'))
     try:
         while True:
-            item = input("Item: ")
+            item = input("Item: ").title()
             for food in menu:
                 if food == item:
                     price = float(menu[food]) + price
-                    print ("Amount:",format(price, '.2f'))
+                    print ("Total:",format(price, '.2f'))
     except EOFError:
          return price
 
