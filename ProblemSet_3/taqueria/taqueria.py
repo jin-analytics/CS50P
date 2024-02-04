@@ -15,7 +15,7 @@ def main():
     while True:
         item = input("Item: ")
         amount = total(item)
-        print (round(amount, 2))
+        print (format(amount, '.2f'))
 
 
 def total(i):
