@@ -8,23 +8,26 @@ def main():
 
 def calculator(f):
     # if x and y is a number, the program calculates how much fuel is left, else it reprompts
-    if f[0].isdigit() and f[1].isdigit() == True:
-        if f[1] == "0":
-            return False
-        percentage = (int(f[0])/int(f[1]))*100
-        # if y is a zero or x is greater than y the program repromts
+    try:
 
 
-        if 1 < percentage < 99:
-            print(round(percentage), "%", sep="")
-            exit()
-        elif percentage <= 1:
-            print("E")
-            exit()
-        elif percentage <= 99:
-            print("F")
-            exit()
-        else:
-            return False
 
+        if f[0].isdigit() and f[1].isdigit() == True:
+            percentage = (int(f[0])/int(f[1]))*100
+            # if y is a zero or x is greater than y the program repromts
+
+
+            if 1 < percentage < 99:
+                print(round(percentage), "%", sep="")
+                exit()
+            elif percentage <= 1:
+                print("E")
+                exit()
+            elif percentage <= 99:
+                print("F")
+                exit()
+            else:
+                return False
+    except ValueError:
+        
 main()
