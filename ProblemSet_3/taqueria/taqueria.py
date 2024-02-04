@@ -13,6 +13,7 @@ menu={
 
 def main():
         item = input("Item: ")
+        if item
         amount = total(item)
         print (format(amount, '.2f'))
 
