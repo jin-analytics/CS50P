@@ -17,7 +17,7 @@ def main():
 
 def total(i):
     for food in menu:
-        print(food.value())
+        print(food.values())
         if food == i:
             #print(menu.value())
             None
