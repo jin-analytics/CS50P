@@ -11,7 +11,7 @@ def calculator(f):
     # if x and y is a number, the program calculates how much fuel is left, else it stops
     if f[0].isdigit() and f[1].isdigit() == True:
         if f[1] == "0" or f[0] > f[1]:
-            exit()
+            return False
         percentage = (int(f[0])/int(f[1]))*100
 
         if 1 < percentage < 99:
