@@ -9,9 +9,6 @@ def main():
             exit()
 
 
-        #fraction_calculator(x_y_splitter(fraction))
-
-
 def calculator(f):
     # if x and y is a number, the program calculates how much fuel is left, else it stops
     if f[0].isdigit() and f[1].isdigit() == True:
