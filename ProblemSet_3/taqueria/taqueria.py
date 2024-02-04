@@ -15,7 +15,7 @@ def main():
     while True:
         item = input("Item: ")
         amount = total(item)
-        print (float(amount, 2))
+        print (round(amount, 3))
 
 
 def total(i):
