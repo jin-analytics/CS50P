@@ -1,5 +1,5 @@
 # menu list:
-menu=[{
+menu={
     "Baja Taco": 4.25,
     "Burrito": 7.50,
     "Bowl": 8.50,
@@ -9,7 +9,7 @@ menu=[{
     "Super Quesadilla": 9.50,
     "Taco": 3.00,
     "Tortilla Salad": 8.00
-}]
+}
 
 def main():
     item = input("Item: ")
