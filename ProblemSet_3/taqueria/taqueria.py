@@ -18,7 +18,7 @@ def main():
             amount = total(item)
             print (format(amount, '.2f'))
         except UnboundLocalError:
-             return False
+             pass
 
 
 
