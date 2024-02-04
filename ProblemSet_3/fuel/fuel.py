@@ -10,8 +10,8 @@ def main():
 def calculator(f):
     # if x and y is a number, the program calculates how much fuel is left, else it stops
     if f[0].isdigit() and f[1].isdigit() == True:
-        print(f[1])
         if f[1] == "0" or f[0] > f[1]:
+            print(f[1])
             return False
         percentage = (int(f[0])/int(f[1]))*100
 
