@@ -29,11 +29,12 @@ def calculator(f):
         elif percentage >= 99:
             print("F")
             exit()
+        # if x = y, for example 100/100, it prints F
         elif f[0] == f[1]:
             print("F")
             exit()
-        #else:
-           # return False
+        else:
+            return False
     except UnboundLocalError:
         return False
 
