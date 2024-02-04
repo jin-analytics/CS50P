@@ -38,7 +38,7 @@ def total(i):
                     price = float(menu[food]) + price
                     print ("Total:",format(price, '.2f'))
     except EOFError:
-         return price
+         exit()
 
 
 main()
