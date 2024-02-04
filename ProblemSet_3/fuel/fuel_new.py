@@ -11,17 +11,21 @@ def calculator(f):
             percentage = (int(f[0])/int(f[1]))*100
     except ZeroDivisionError:
         return False
-    
-    if 1 < percentage < 99:
-        print(round(percentage), "%", sep="")
-        exit()
-    elif percentage <= 1:
-        print("E")
-        exit()
-    elif percentage <= 99:
-        print("F")
-        exit()
-    else:
+
+    try:
+        if 1 < percentage < 99:
+            print(round(percentage), "%", sep="")
+            exit()
+        elif percentage <= 1:
+            print("E")
+            exit()
+        elif percentage <= 99:
+            print("F")
+            exit()
+        else:
+            return False
+    except UnboundLocalError:
         return False
+
 
 main()
