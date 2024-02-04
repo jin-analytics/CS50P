@@ -12,10 +12,17 @@ menu={
 }
 
 def main():
+    while True:
         item = input("Item: ")
-        if item
-        amount = total(item)
-        print (format(amount, '.2f'))
+        try:
+            amount = total(item)
+            print (format(amount, '.2f'))
+        except UnboundLocalError:
+             item = input("Item: ")
+        try:
+            amount = total(item)
+            print (format(amount, '.2f'))
+
 
 
 def total(i):
