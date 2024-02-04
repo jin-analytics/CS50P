@@ -19,6 +19,6 @@ def total(i):
     for food in menu:
         print(food)
         if food == i:
-            print("d")
+            print(food[{"i"}])
 
 main()
