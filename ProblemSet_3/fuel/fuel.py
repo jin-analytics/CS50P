@@ -13,14 +13,13 @@ def calculator(f):
     #print(f)
     if f[0].isdigit() and f[1].isdigit() == True:
         percentage = (int(f[0])/int(f[1]))*100
-        match percentage:
-            case 1 < percentage < 99:
-                print(round(percentage), "%", sep="")
-                exit()
-            case percentage <= 1:
-                print("empty")
-            case percentage >= 99:
-                print("full")
+    if 1 < percentage < 99:
+        print(round(percentage), "%", sep="")
+        exit()
+    elif percentage <= 1:
+        print("empty")
+    else:
+        print("full")
 
 
 
