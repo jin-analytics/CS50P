@@ -13,6 +13,7 @@ def calculator(f):
         if f[1] == "0" or f[0] > f[1]:
             return False
         percentage = (int(f[0])/int(f[1]))*100
+        print(percentage)
 
         if 1 < percentage < 99:
             print(round(percentage), "%", sep="")
