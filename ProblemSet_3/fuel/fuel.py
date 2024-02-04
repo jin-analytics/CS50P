@@ -26,7 +26,7 @@ def calculator(f):
             print("E")
             exit()
         # <= 99% prints F for Full
-        elif percentage >= 99:
+        elif 99 <= percentage <= 100 :
             print("F")
             exit()
         # if x = y, for example 100/100, it prints F
