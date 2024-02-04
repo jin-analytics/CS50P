@@ -19,11 +19,12 @@ def main():
 
 def total(i):
     while True:
-        for food in menu:
-            if food == i:
-                #print(menu[food])
-                price = float(menu[food])
-                return price
+        item = input("Item: ")
+            for food in menu:
+                if food == i:
+                    #print(menu[food])
+                    price = float(menu[food])
+                    return price
 
 
 main()
