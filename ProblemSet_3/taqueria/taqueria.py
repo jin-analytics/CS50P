@@ -16,7 +16,7 @@ def main():
         try:
             item = input("Item: ").title()
             amount = total(item)
-            print ("Total: $",format(amount, '.2f'),sep="")
+            print ("\nTotal: $",format(amount, '.2f'),sep="")
             break
         except UnboundLocalError:
             pass
