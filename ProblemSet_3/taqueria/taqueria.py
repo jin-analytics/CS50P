@@ -15,7 +15,7 @@ def main():
     while True:
         item = input("Item: ")
         amount = total(item)
-        print (amount)
+        print (float(amount, 2))
 
 
 def total(i):
