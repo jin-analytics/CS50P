@@ -20,11 +20,11 @@ def calculator(f):
         elif percentage <= 1:
             print("E")
             exit()
-        else:
+        elif percentage >= 99:
             print("F")
             exit()
-    else:
-        exit()
+        else:
+            return False
 
 
 main()
