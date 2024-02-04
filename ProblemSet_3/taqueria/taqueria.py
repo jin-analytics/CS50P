@@ -26,7 +26,7 @@ def total(i):
         for food in menu:
             if food == item:
                 price = float(menu[food]) + price
-        return price
+        #return price
 
 
 main()
