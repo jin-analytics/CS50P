@@ -13,13 +13,15 @@ menu={
 
 def main():
     while True:
-        item = input("Item: ")
         try:
+            item = input("Item: ")
             amount = total(item)
             print ("Amount:",format(amount, '.2f'))
             break
         except UnboundLocalError:
-             pass
+            pass
+        except EOFError:
+            exit()
 
 
 
