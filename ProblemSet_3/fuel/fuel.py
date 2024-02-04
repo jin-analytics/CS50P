@@ -17,7 +17,10 @@ def calculator(f):
             case 1 < percentage < 99:
                 print(round(percentage), "%", sep="")
                 exit()
-            case percentage < 1:
+            case percentage <= 1:
+                print("empty")
+            case percentage >= 99:
+                print("full")
 
 
 
