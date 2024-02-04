@@ -22,8 +22,10 @@ def total(i):
         if food == i:
             #print(menu[food])
             price = float(menu[food])
-            amount += price
-            return amount
+            try:
+                amount += price
+            except ValueError:
+                return amount
 
 
 main()
