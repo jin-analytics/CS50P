@@ -14,7 +14,8 @@ menu={
 def main():
     while True:
         item = input("Item: ")
-        print("Amount:",total(item))
+        amount = total(item)
+        print (amount)
 
 
 def total(i):
@@ -22,10 +23,7 @@ def total(i):
         if food == i:
             #print(menu[food])
             price = float(menu[food])
-            try:
-                amount += price
-            except ValueError:
-                return amount
+            return price
 
 
 main()
