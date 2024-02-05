@@ -51,7 +51,7 @@ def get_date(prompt):
                 for i in month:
                     if i == date_split[0]:
 
-                        print(date_split[0])
+                        print(month[i])
                         date_split[0] = month[i]
                         print(date_split[0])
 
