@@ -26,13 +26,13 @@ def get_date(prompt):
         try:
             # Split the date string wherever "/", " ", or "," is
             date_split = re.split('[ ,/]', input(prompt))
-
             # Create a new list without the ("")-tuple
             tuple_to_remove = ("")
             new_list = []
             for item in date_split:
                 if item != tuple_to_remove:
                     new_list.append(item)
+                    print(date_split)
             # Update the original list with the modified list
             date_split = new_list
             # check if all inputs beside "/" are numbers
