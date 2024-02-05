@@ -47,7 +47,9 @@ def get_date(prompt):
 
             # check if the month is fully written, for example: september 01, 1992
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[3].isdigit() == True:
-
+                # remove the #3 entree because it is empty... for example: ['September', '1', '', '1999']
+                date_split = date_split.remove(date_split[2])
+                print(date_split)
                 for i in month:
                     if i == date_split[0]:
 
