@@ -5,7 +5,12 @@ def main():
 def get_date(prompt):
     while True:
         try:
-            return (int(input(prompt)))
+            
+            input(prompt).re
+            # Split the date string wherever "/" is
+
+
+            return prompt
         except ValueError:
             pass
 
