@@ -36,7 +36,7 @@ def get_date(prompt):
                     new_list.append(item)
             # Update the original list with the modified list
             date_split = new_list
-            print("GGGG", date_split)
+
 
             # check if all inputs beside "/" are numbers
             if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
@@ -49,6 +49,7 @@ def get_date(prompt):
                 for i in month:
                     if i == date_split[0]:
                         date_split[0] = str(month[i])
+                        print("GGGG", date_split)
                 outdated = date_convert(date_split)
                 return outdated
 
