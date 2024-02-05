@@ -46,6 +46,18 @@ def get_date(prompt):
 
             # check if the month is fully written, for example: september 01, 1992
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
+
+                for m in month:
+                    if food == i:
+                    price = float(menu[food])
+
+
+
+
+
+
+
+
                  # add 0 if MM has only one character
                 if len(date_split[0]) == 1:
                     date_split[0] = date_split[0].replace(date_split[0], "0" + date_split[0])
