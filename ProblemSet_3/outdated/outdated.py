@@ -5,8 +5,13 @@ def main():
 def get_date(prompt):
     while True:
         try:
-            
-            input(prompt).re
+            date_split = input(prompt).split("/")
+            print(date_split)
+            # add 0 if 
+            if len(date_split[0]) == 1:
+                date_split[0] = date_split[0].replace(date_split[0], "0" + date_split[0])
+                print (date_split[0])
+
             # Split the date string wherever "/" is
 
 
