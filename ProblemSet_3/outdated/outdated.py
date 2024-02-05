@@ -35,6 +35,7 @@ def get_date(prompt):
                     new_list.append(item)
             # Update the original list with the modified list
             date_split = new_list
+            print(date_split)
 
             # check if all inputs beside "/" are numbers
             if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
