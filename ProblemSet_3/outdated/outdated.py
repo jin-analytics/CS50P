@@ -7,6 +7,7 @@ def main():
 def get_date(prompt):
     while True:
         try:
+            # Split the date string wherever "/" is
             date_split = input(prompt).split("/")
             # check if all inputs beside "/" are integer
             if date_split[0].isdigit() or date_split[1].isdigit() or date_split[2].isdigit() == True:
@@ -18,13 +19,14 @@ def get_date(prompt):
                 if len(date_split[1]) == 1:
                     date_split[1] = date_split[1].replace(date_split[1], "0" + date_split[1])
                     print (date_split[1])
-                print(date_split)
-
-            # Split the date string wherever "/" is
 
 
-            return prompt
+
+
+                return prompt
         except ValueError:
+            pass
+        except IndexError:
             pass
 
 main()
