@@ -26,6 +26,8 @@ def get_date(prompt):
         try:
             # Split the date string wherever "/", " ", or "," is
             date_split = re.split('[ ,/]', input(prompt))
+            for i in date_split:
+                if date_split[i] = empty
             # check if all inputs beside "/" are numbers
             if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                 outdated = date_convert(date_split)
