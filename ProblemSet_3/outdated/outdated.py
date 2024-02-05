@@ -46,7 +46,6 @@ def get_date(prompt):
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                 # changes the fully written month in entree data_split[0] to the number from the list "month"
                 for month_name, month_number in month.items():
-                    print(month_name)
                     if month_name == date_split[0]:
                         date_split[0] = str(month_number)
 
