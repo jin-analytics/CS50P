@@ -27,9 +27,9 @@ def get_date(prompt):
             # Split the date string wherever "/", " ", or "," is
             date_split = re.split('[ ,/]', input(prompt))
             for i in enumerate(date_split):
-                if len(date_split[i]) == 0:
+                if i == "":
                     print(date_split)
-                    del date_split[i]
+                    del i
                     print(date_split)
             # check if all inputs beside "/" are numbers
             if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
