@@ -27,10 +27,7 @@ def get_date(prompt):
         try:
             # Split the date string wherever "/", " ", or "," is
             date_split = re.split('[ ,/]', input(prompt))
-            print(date_split)
-            #date_split = input(prompt).split("/")
-
-            # check if all inputs beside "/" are integer
+            # check if all inputs beside "/" are numbers
             if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                 outdated = date_convert(date_split)
                 return outdated
@@ -51,6 +48,7 @@ def get_date(prompt):
         except IndexError:
             pass
 
+# converts the date_split variable to YYYY-MM-DD
 def date_convert(date_split):
     # add 0 if MM has only one character
     if len(date_split[0]) == 1:
@@ -64,6 +62,5 @@ def date_convert(date_split):
     # joins the list to a string joined wir "-"
     date_split = '-'.join(date_split)
     return date_split
-
 
 main()
