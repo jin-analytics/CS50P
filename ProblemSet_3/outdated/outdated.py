@@ -20,9 +20,7 @@ def get_date(prompt):
                     date_split[1] = date_split[1].replace(date_split[1], "0" + date_split[1])
                     print (date_split[1])
                 # change format MM.DD.YYYY to YYYY.MM.DD
-                date_split[1] = date_split[0] # MM is now #2
-                date_split[2] = date_split[1] # DD is now #3
-                date_split[0] = date_split[2] # YYYY is now #1
+                date_split[0], date_split[1], date_split[2] = date_split[1], date_split[2], date_split[0]
                 print(date_split)
 
                 return date_split
