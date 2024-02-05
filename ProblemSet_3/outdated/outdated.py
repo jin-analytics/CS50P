@@ -18,9 +18,8 @@ month = {
 
 def main():
     # input will be MM/DD/YYYY
-    date = get_date("What is the date? ")
-    # output will be YY/MM/DD
-    print(f"The date is {date}")
+    print(get_date("What is the date? ")) # output will be YY/MM/DD
+
 
 def get_date(prompt):
     while True:
