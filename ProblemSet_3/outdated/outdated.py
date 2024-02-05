@@ -1,6 +1,6 @@
 import re
 
-[{
+month = [{
     "January":1,
     "February":2,
     "March":3,
