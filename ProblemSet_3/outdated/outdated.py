@@ -31,7 +31,7 @@ def get_date(prompt):
             new_list = []
             for item in date_split:
                 if item != tuple_to_remove:
-                    new_list.append(item)
+                    date_split = new_list.append(item)
                     print(date_split)
             # Update the original list with the modified list
             date_split = new_list
