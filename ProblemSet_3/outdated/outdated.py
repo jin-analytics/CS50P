@@ -21,7 +21,7 @@ def get_date(prompt):
                     print (date_split[1])
                 # change format MM.DD.YYYY to YYYY.MM.DD
                 myorder = [3, 2, 1]
-                date_split = [date_split[i] for i in myorder]
+                date_split[0], date_split[1] = date_split[1], date_split[0]
                 print(date_split)
 
                 return date_split
