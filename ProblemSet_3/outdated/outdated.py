@@ -27,7 +27,7 @@ def get_date(prompt):
             # Split the date string wherever "/", " ", or "," is
             date_split = re.split('[ ,/]', input(prompt))
             for i in date_split:
-                if bool(date_split) == False:
+                if len(date_split[i]) == 0:
                     print(date_split)
                     del date_split[i]
                     print(date_split)
