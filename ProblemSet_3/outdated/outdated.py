@@ -26,6 +26,7 @@ def get_date(prompt):
         try:
             # Split the date string wherever "/", " ", or "," is
             date_split = re.split('[ ,/]', input(prompt))
+            print("DAAAA", date_split)
 
             # Create a new list without the ("")-tuple
             tuple_to_remove = ("")
@@ -49,6 +50,7 @@ def get_date(prompt):
                         date_split[0] = str(month[i])
 
                 return date_convert(date_split)
+
 
         except ValueError:
             pass
