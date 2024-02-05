@@ -50,7 +50,7 @@ def get_date(prompt):
                 # changes the fully written month in entree data_split[0] to the number from the list "month"
                 for i in month:
                     if i == date_split[0]:
-                        date_split[0] = month[i]
+                        date_split[0] = str(month[i])
                 # remove the #3 entree because it is empty... for example: ['September', '1', '', '1999']
                 del date_split[2]
 
