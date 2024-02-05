@@ -54,23 +54,28 @@ def get_date(prompt):
                 # remove the #3 entree because it is empty... for example: ['September', '1', '', '1999']
                 del date_split[2]
 
-                 # add 0 if MM has only one character
-                if len(date_split[0]) == 1:
-                    date_split[0] = date_split[0].replace(date_split[0], "0" + date_split[0])
-                # add 0 if DD has only one character
-                if len(date_split[1]) == 1:
-                    date_split[1] = date_split[1].replace(date_split[1], "0" + date_split[1])
 
-                # change format MM.DD.YYYY to YYYY.MM.DD
-                date_split[0], date_split[1] = date_split[1], date_split[0] # Changes MM #1 to MM #2 and DD #2 to DD #1
-                date_split[0], date_split[2] = date_split[2], date_split[0] # Changes DD #1 to DD #3 and YYYY #3 to YYYY #1
-                # joins the list to a string joined wir "-"
-                date_split = '-'.join(date_split)
+
+
                 return date_split
 
         except ValueError:
             pass
         except IndexError:
             pass
+
+def date_convert():
+    # add 0 if MM has only one character
+    if len(date_split[0]) == 1:
+        date_split[0] = date_split[0].replace(date_split[0], "0" + date_split[0])
+    # add 0 if DD has only one character
+    if len(date_split[1]) == 1:
+        date_split[1] = date_split[1].replace(date_split[1], "0" + date_split[1])
+    # change format MM.DD.YYYY to YYYY.MM.DD
+    date_split[0], date_split[1] = date_split[1], date_split[0] # Changes MM #1 to MM #2 and DD #2 to DD #1
+    date_split[0], date_split[2] = date_split[2], date_split[0] # Changes DD #1 to DD #3 and YYYY #3 to YYYY #1
+    # joins the list to a string joined wir "-"
+    date_split = '-'.join(date_split)
+
 
 main()
