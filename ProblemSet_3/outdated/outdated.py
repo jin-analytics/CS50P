@@ -48,7 +48,7 @@ def get_date(prompt):
 
                 for i in month:
                     if i == date_split[0]:
-                        date_split[0] = month[i]
+                        date_split[0] = str(month[i])
                         print(date_split)
                     outdated = date_convert(date_split)
                     if int(outdated[1]) <= 12 and int(outdated[2]) <= 31: # Checks if the month and day is legit
