@@ -26,7 +26,7 @@ def get_date(prompt):
         try:
             # Split the date string wherever "/", " ", or "," is
             date_split = re.split('[ ,/]', input(prompt))
-            print("DAAAA", date_split)
+
 
             # Create a new list without the ("")-tuple
             tuple_to_remove = ("")
@@ -36,6 +36,7 @@ def get_date(prompt):
                     new_list.append(item)
             # Update the original list with the modified list
             date_split = new_list
+            print("DAAAA", date_split)
 
 
             # check if all inputs beside "/" are numbers
