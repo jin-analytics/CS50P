@@ -49,7 +49,7 @@ def get_date(prompt):
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[3].isdigit() == True:
 
                 for m in month:
-                    print(m)
+                    print(month)
                     #print(month)
                     if m == date_split[0]:
                         print("found")
