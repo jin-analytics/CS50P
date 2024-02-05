@@ -47,7 +47,9 @@ def get_date(prompt):
                 # changes the fully written month in entree data_split[0] to the number from the list "month"
 
                 for i in month:
+                    str(month[i])
                     if i == date_split[0]:
+                        print (str(month[i]))
                         date_split[0] = str(month[i])
                         print(date_split)
                     outdated = date_convert(date_split)
