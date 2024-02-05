@@ -1,19 +1,19 @@
 import re
 
-month = [{
-    "January":1,
-    "February":2,
-    "March":3,
-    "April":4,
-    "May":5,
-    "June":6,
-    "July":7,
-    "August":8,
+month = {
+    "January":  1,
+    "February": 2,
+    "March":    3,
+    "April":    4,
+    "May":      5,
+    "June":     6,
+    "July":     7,
+    "August":   8,
     "September":9,
-    "October":10,
-    "November":11,
-    "December":12
-}]
+    "October":  10,
+    "November": 11,
+    "December": 12
+}
 
 
 def main():
@@ -48,11 +48,12 @@ def get_date(prompt):
             # check if the month is fully written, for example: september 01, 1992
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[3].isdigit() == True:
 
-                for m in month:
-                    print(month)
-                    #print(month)
-                    if m == date_split[0]:
-                        print("found")
+                for i in month:
+                    if i == date_split[0]:
+
+                        print(date_split[0])
+                        date_split[0] = month[i]
+                        print(date_split[0])
 
 
 
