@@ -38,8 +38,8 @@ def get_date(prompt):
 
             # check if all inputs beside "/" are numbers
             if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
-                outdated = date_convert(date_split)
-                return outdated
+                if int(date_split[1]) <= 12: # Checks if the month is bigger than 12
+                    return date_convert(date_split)
 
             # check if the month is fully written, for example: september 01, 1992
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
@@ -47,7 +47,8 @@ def get_date(prompt):
                 for i in month:
                     if i == date_split[0]:
                         date_split[0] = str(month[i])
-                return date_convert(date_split)
+                if int(date_split[1]) <= 12: # Checks if the month is bigger than 12
+                    return date_convert(date_split)
 
 
         except ValueError:
@@ -66,8 +67,6 @@ def date_convert(date_split):
     # change format MM.DD.YYYY to YYYY.MM.DD
     date_split[0], date_split[1] = date_split[1], date_split[0] # Changes MM #1 to MM #2 and DD #2 to DD #1
     date_split[0], date_split[2] = date_split[2], date_split[0] # Changes DD #1 to DD #3 and YYYY #3 to YYYY #1
-    if int(date_split[1]) > 12: # Checks if the month is bigger than 12
-        return None
     # joins the list to a string joined wir "-"
     date_split = '-'.join(date_split)
     return date_split
