@@ -1,3 +1,5 @@
+import re
+
 def main():
     # input will be MM/DD/YYYY
     date = get_date("What is the date? ")
@@ -25,6 +27,8 @@ def get_date(prompt):
                 date_split = '-'.join(date_split)
                 return date_split
 
+            date_split = re.split('[ ,]', prompt)
+            print(date_split)
             # check if the month is fully written, for example: september 01, 1992
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                  # add 0 if MM has only one character
