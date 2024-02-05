@@ -40,8 +40,9 @@ def get_date(prompt):
             # check if all inputs beside "/" are numbers
             if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                     outdated = date_convert(date_split)
-                    if int(date_split[1]) >= 12: # Checks if the month is bigger than 12
+                    if int(date_split[1]) <= 12: # Checks if the month is bigger than 12
                         return outdated
+
             # check if the month is fully written, for example: september 01, 1992
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                 # changes the fully written month in entree data_split[0] to the number from the list "month"
@@ -49,9 +50,8 @@ def get_date(prompt):
                     if i == date_split[0]:
                         date_split[0] = str(month[i])
                     outdated = date_convert(date_split)
-                    if int(date_split[1]) >= 12: # Checks if the month is bigger than 12
+                    if int(date_split[1]) <= 12: # Checks if the month is bigger than 12
                         return outdated
-
 
         except ValueError:
             pass
