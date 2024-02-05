@@ -47,10 +47,8 @@ def get_date(prompt):
                 # changes the fully written month in entree data_split[0] to the number from the list "month"
                 print(date_split)
                 for i in month:
-                    print(i)
                     if i == date_split[0]:
-                        date_split[0] = str(month[i])
-                        #print(date_split)
+                        date_split[0] = month[i]
                     outdated = date_convert(date_split)
                     if int(date_split[1]) <= 12 and int(date_split[2]) <= 31: # Checks if the month and day is legit
                         return outdated
@@ -63,10 +61,10 @@ def get_date(prompt):
 # converts the date_split variable to YYYY-MM-DD
 def date_convert(date_split):
     # add 0 if MM has only one character
-    if len(date_split[0]) == 1:
+    if len(str(date_split[0])) == 1:
         date_split[0] = date_split[0].replace(date_split[0], "0" + date_split[0])
     # add 0 if DD has only one character
-    if len(date_split[1]) == 1:
+    if len(str(date_split[1])) == 1:
         date_split[1] = date_split[1].replace(date_split[1], "0" + date_split[1])
     # change format MM.DD.YYYY to YYYY.MM.DD
     date_split[0], date_split[1] = date_split[1], date_split[0] # Changes MM #1 to MM #2 and DD #2 to DD #1
