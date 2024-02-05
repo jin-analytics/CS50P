@@ -46,7 +46,7 @@ def get_date(prompt):
                 return date_split
 
             # check if the month is fully written, for example: september 01, 1992
-            if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
+            if date_split[0].isalpha() and date_split[1].isdigit() and date_split[3].isdigit() == True:
 
                 for m in month:
                     print(m)
