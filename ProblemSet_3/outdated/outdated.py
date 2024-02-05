@@ -27,7 +27,7 @@ def get_date(prompt):
                 date_split = '-'.join(date_split)
                 return date_split
 
-            date_split = re.split('[ ,]', prompt)
+            date_split = re.split('[ ,]', input(prompt))
             print(date_split)
             # check if the month is fully written, for example: september 01, 1992
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
