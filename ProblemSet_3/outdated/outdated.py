@@ -1,5 +1,5 @@
 def main():
-    date = get_date("What's the date?")
+    date = get_date(
     print(f"The date is {date}")
 
 def get_date(prompt):
