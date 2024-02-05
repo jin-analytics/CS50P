@@ -48,8 +48,10 @@ def get_date(prompt):
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
 
                 for m in month:
+                    print(m)
+                    #print(month)
                     if m == date_split[0]:
-                    date_split[0] = month[m]
+                        print("found")
 
 
 
