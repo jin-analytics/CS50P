@@ -39,7 +39,7 @@ def get_date(prompt):
             # check if all inputs beside "/" are numbers
             if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                     outdated = date_convert(date_split)
-                    if int(outdated[1]) <= 12 and int(outdated[2]) <= 31: # Checks if the month and day is legit
+                    if int(outdated[1]) <= 12:
                         return outdated
 
             # check if the month is fully written, for example: september 01, 1992
