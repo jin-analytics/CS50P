@@ -49,8 +49,8 @@ def get_date(prompt):
                 for i in month:
                     if i == date_split[0]:
                         date_split[0] = str(month[i])
-
-                return date_convert(date_split)
+                outdated = date_convert(date_split)
+                return outdated
 
 
         except ValueError:
