@@ -26,11 +26,16 @@ def get_date(prompt):
         try:
             # Split the date string wherever "/", " ", or "," is
             date_split = re.split('[ ,/]', input(prompt))
-            for i in date_split:
-                if i == "":
-                    print(date_split)
-                    del i
-            print(date_split)
+
+            # Create a new list without the ("")-tuple
+            tuple_to_remove = ("")
+            new_list = []
+            for item in date_split:
+                if item != tuple_to_remove:
+                    new_list.append(item)
+            # Update the original list with the modified list
+            date_split = new_list
+
             # check if all inputs beside "/" are numbers
             if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                 outdated = date_convert(date_split)
@@ -42,10 +47,8 @@ def get_date(prompt):
                 for i in month:
                     if i == date_split[0]:
                         date_split[0] = str(month[i])
-                # remove the #3 entree because it is empty... for example: ['September', '1', '', '1999']
-                #del date_split[2]
-                outdated = date_convert(date_split)
-                return outdated
+
+                return date_convert(date_split)
 
         except ValueError:
             pass
