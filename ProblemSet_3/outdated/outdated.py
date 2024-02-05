@@ -47,22 +47,12 @@ def get_date(prompt):
 
             # check if the month is fully written, for example: september 01, 1992
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[3].isdigit() == True:
-                # remove the #3 entree because it is empty... for example: ['September', '1', '', '1999']
-                date_split = date_split.remove(date_split[2])
-                print(date_split)
+                # changes the fully written month in entree data_split[0] to the number from the list "month"
                 for i in month:
                     if i == date_split[0]:
-
-                        print(month[i])
                         date_split[0] = month[i]
-                        print(date_split[0])
-
-
-
-
-
-
-
+                # remove the #3 entree because it is empty... for example: ['September', '1', '', '1999']
+                del date_split[2]
 
                  # add 0 if MM has only one character
                 if len(date_split[0]) == 1:
@@ -71,8 +61,12 @@ def get_date(prompt):
                 if len(date_split[1]) == 1:
                     date_split[1] = date_split[1].replace(date_split[1], "0" + date_split[1])
 
-
-
+                # change format MM.DD.YYYY to YYYY.MM.DD
+                date_split[0], date_split[1] = date_split[1], date_split[0] # Changes MM #1 to MM #2 and DD #2 to DD #1
+                date_split[0], date_split[2] = date_split[2], date_split[0] # Changes DD #1 to DD #3 and YYYY #3 to YYYY #1
+                # joins the list to a string joined wir "-"
+                date_split = '-'.join(date_split)
+                return date_split
 
         except ValueError:
             pass
