@@ -1,5 +1,21 @@
 import re
 
+[{
+    "January":1,
+    "February":2,
+    "March":3,
+    "April":4,
+    "May":5,
+    "June":6,
+    "July":7,
+    "August":8,
+    "September":9,
+    "October":10,
+    "November":11,
+    "December":12
+}]
+
+
 def main():
     # input will be MM/DD/YYYY
     date = get_date("What is the date? ")
@@ -9,8 +25,9 @@ def main():
 def get_date(prompt):
     while True:
         try:
-            # Split the date string wherever "/" is
-            date_split = input(prompt).split("/")
+            # Split the date string wherever "/", " ", or "," is
+            date_split = re.split('[ ,/]', input(prompt))
+            #date_split = input(prompt).split("/")
 
             # check if all inputs beside "/" are integer
             if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
@@ -27,8 +44,6 @@ def get_date(prompt):
                 date_split = '-'.join(date_split)
                 return date_split
 
-            date_split = re.split('[ ,]', input(prompt))
-            print(date_split)
             # check if the month is fully written, for example: september 01, 1992
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                  # add 0 if MM has only one character
