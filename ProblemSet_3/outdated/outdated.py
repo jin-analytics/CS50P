@@ -53,11 +53,7 @@ def get_date(prompt):
                         date_split[0] = str(month[i])
                 # remove the #3 entree because it is empty... for example: ['September', '1', '', '1999']
                 del date_split[2]
-                date_convert(date_split)
-
-
-
-
+                outdated = date_convert(date_split)
                 return date_split
 
         except ValueError:
