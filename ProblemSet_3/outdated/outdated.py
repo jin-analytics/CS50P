@@ -48,11 +48,11 @@ def get_date(prompt):
                 for index, element in enumerate(date_split):
                     for month_name, month_number in month.items():
                         if month_name == element:
-                            date_split[index] = str(month_number)
+                            date_split[0] = str(month_number)
 
-            outdated = date_convert(date_split)
-            if int(outdated[1]) <= 12 and int(outdated[2]) <= 31: # Checks if the month and day is legit
-                return outdated
+                    outdated = date_convert(date_split)
+                    if int(outdated[1]) <= 12 and int(outdated[2]) <= 31: # Checks if the month and day is legit
+                        return outdated
 
         except ValueError:
             pass
