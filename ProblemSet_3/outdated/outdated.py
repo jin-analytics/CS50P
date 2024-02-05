@@ -54,7 +54,7 @@ def get_date(prompt):
                 # remove the #3 entree because it is empty... for example: ['September', '1', '', '1999']
                 del date_split[2]
                 outdated = date_convert(date_split)
-                return date_split
+                return outdated
 
         except ValueError:
             pass
