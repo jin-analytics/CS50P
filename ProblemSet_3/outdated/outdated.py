@@ -10,7 +10,7 @@ def get_date(prompt):
             # Split the date string wherever "/" is
             date_split = input(prompt).split("/")
             # check if all inputs beside "/" are integer
-            if date_split[0].isdigit() or date_split[1].isdigit() or date_split[2].isdigit() == True:
+            if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                 # add 0 if MM has only one character
                 if len(date_split[0]) == 1:
                     date_split[0] = date_split[0].replace(date_split[0], "0" + date_split[0])
