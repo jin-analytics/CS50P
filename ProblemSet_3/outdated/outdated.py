@@ -53,6 +53,7 @@ def get_date(prompt):
                         date_split[0] = str(month[i])
                 # remove the #3 entree because it is empty... for example: ['September', '1', '', '1999']
                 del date_split[2]
+                date_convert(date_split)
 
 
 
@@ -64,7 +65,7 @@ def get_date(prompt):
         except IndexError:
             pass
 
-def date_convert():
+def date_convert(date_split):
     # add 0 if MM has only one character
     if len(date_split[0]) == 1:
         date_split[0] = date_split[0].replace(date_split[0], "0" + date_split[0])
@@ -76,6 +77,7 @@ def date_convert():
     date_split[0], date_split[2] = date_split[2], date_split[0] # Changes DD #1 to DD #3 and YYYY #3 to YYYY #1
     # joins the list to a string joined wir "-"
     date_split = '-'.join(date_split)
+    return date_split
 
 
 main()
