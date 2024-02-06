@@ -42,8 +42,6 @@ def get_date(prompt):
                         outdated = date_convert(date_split)
                         return outdated
 
-
-
                 # check if the month is fully written, for example: september 01, 1992
                 if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
 
@@ -51,7 +49,6 @@ def get_date(prompt):
                         #print(month_name)
                         if month_name == date_split[0]:
                             date_split[0] = str(month[month_name])
-
                     # changes the fully written month in entree data_split[0] to the number from the list "month"
                             outdated = date_convert(date_split)
                             return outdated
