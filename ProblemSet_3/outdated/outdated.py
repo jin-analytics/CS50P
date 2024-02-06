@@ -51,8 +51,8 @@ def get_date(prompt):
                         date_split[0] = str(month[month_name])
 
                 # changes the fully written month in entree data_split[0] to the number from the list "month"
-                        outdated = date_convert(date_split)
-                        if int(outdated[1]) <= 12 and int(outdated[0]) <= 31: # Checks if the month and day is legit
+                    outdated = date_convert(date_split)
+                    if int(outdated[1]) <= 12 and int(outdated[0]) <= 31: # Checks if the month and day is legit
                             return outdated
 
         except ValueError:
