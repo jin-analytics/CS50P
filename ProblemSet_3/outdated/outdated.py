@@ -25,6 +25,7 @@ def get_date(prompt):
         try:
             # Split the date string wherever "/", " ", or "," is
             date_split = re.split('[ ,/]', input(prompt))
+            print(date_split)
 
             # Create a new list without the ("")-tuple
             tuple_to_remove = ("")
