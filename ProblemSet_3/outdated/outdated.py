@@ -18,13 +18,7 @@ month = {
 
 def main():
     # input will be MM/DD/YYYY
-
-    for monthName in month:
-        print (monthName)
-
-
     print(get_date("What is the date? ")) # output will be YY/MM/DD
-
 
 def get_date(prompt):
     while True:
