@@ -41,6 +41,8 @@ def get_date(prompt):
                     outdated = date_convert(date_split)
                     if int(outdated[1]) <= 12 and int(outdated[0]) <= 31: # Checks if the month and day is legit
                         return outdated
+                    else:
+                        exit()
 
 
             # check if the month is fully written, for example: september 01, 1992
@@ -55,6 +57,8 @@ def get_date(prompt):
                         outdated = date_convert(date_split)
                         if int(outdated[1]) <= 12 and int(outdated[0]) <= 31: # Checks if the month and day is legit
                             return outdated
+                        else:
+                            exit()
 
         except ValueError:
             pass
