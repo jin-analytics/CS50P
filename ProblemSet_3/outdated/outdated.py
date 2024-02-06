@@ -18,6 +18,11 @@ month = {
 
 def main():
     # input will be MM/DD/YYYY
+
+    for m in month:
+        print m
+
+
     print(get_date("What is the date? ")) # output will be YY/MM/DD
 
 
