@@ -60,9 +60,9 @@ def get_date(prompt):
                         #if month_name == element:
                             #date_split[i] = str(month_number)
 
-                    outdated = date_convert(date_split)
-                    if int(outdated[1]) <= 12: # Checks if the month and day is legit
-                        return outdated
+                        outdated = date_convert(date_split)
+                        if int(outdated[1]) <= 12: # Checks if the month and day is legit
+                            return outdated
 
         except ValueError:
             pass
