@@ -57,6 +57,7 @@ def get_date(prompt):
                         outdated = date_convert(date_split)
 
                         if int(outdated[1]) <= 12 and int(outdated[2]) <= 31: # Checks if the month and day is legit
+                            print(outdated)
                             return outdated
                         else:
                             exit()
