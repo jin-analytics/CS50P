@@ -35,20 +35,20 @@ def get_date(prompt):
             # Update the original list with the modified list
             date_split = new_list
 
-            if int(date_split[0]) <= 12 and int(date_split[1]) <= 31: # Checks if the month and day is legit:
                 # check if all inputs beside "/" are numbers
-                if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
-                        outdated = date_convert(date_split)
-                        return outdated
+            if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
+                if int(date_split[0]) <= 12 and int(date_split[1]) <= 31: # Checks if the month and day is legit:
+                    outdated = date_convert(date_split)
+                    return outdated
 
                 # check if the month is fully written, for example: september 01, 1992
-                if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
-
-                    #for month_name in month:
-                        #print(month_name)
-                     #   if month_name == date_split[0]:
-                      #      date_split[0] = str(month[month_name])
-                    # changes the fully written month in entree data_split[0] to the number from the list "month"
+            if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
+                # changes the fully written month in entree data_split[0] to the number from the list "month"
+                for month_name in month:
+                    #print(month_name)
+                    if month_name == date_split[0]:
+                        date_split[0] = str(month[month_name])
+                        if int(date_split[0]) <= 12 and int(date_split[1]) <= 31: # Checks if the month and day is legit:
                             outdated = date_convert(date_split)
                             return outdated
 
