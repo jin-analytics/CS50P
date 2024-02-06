@@ -19,8 +19,8 @@ month = {
 def main():
     # input will be MM/DD/YYYY
 
-    for m in month:
-        print m
+    #for monthName in month:
+        #print (monthName)
 
 
     print(get_date("What is the date? ")) # output will be YY/MM/DD
@@ -49,11 +49,15 @@ def get_date(prompt):
 
             # check if the month is fully written, for example: september 01, 1992
             if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
+
+                for month_name in month:
+                    print(month_name)
+
                 # changes the fully written month in entree data_split[0] to the number from the list "month"
-                for i, element in enumerate(date_split):
-                    for month_name, month_number in month.items():
-                        if month_name == element:
-                            date_split[i] = str(month_number)
+                #for i, element in enumerate(date_split):
+                    #for month_name, month_number in month.items():
+                        #if month_name == element:
+                            #date_split[i] = str(month_number)
 
                     outdated = date_convert(date_split)
                     if int(outdated[1]) <= 12: # Checks if the month and day is legit
