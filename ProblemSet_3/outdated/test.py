@@ -27,32 +27,34 @@ def get_date(prompt):
             date = input(prompt)
 
             # First will be checked if its "September 9, 1999" or "9/9/1999", because these are the only valid inputs
-            if sign_detection_comma(date) == True:
-                # Split the date string wherever "/"
-                date_split = re.split('[ ,]', date)
-                # remove every whitespace
-                date_split = remove_spaces(date_split)
+            if sign_detection_comma(date) == True: # checks for comma ","
+                date_split = re.split('[ ,]', date) # Split the date string wherever "/"
+                date_split = remove_spaces(date_split) # remove every whitespace
                 # check if the month is fully written, for example: "September 9, 1999"
                 if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                     # changes the fully written month in entree data_split[0] to the number from the list "month"
                     for month_name in month:
                         if month_name == date_split[0]:
-                            date_split[0] = str(month[month_name])
+                            date_split[0] = str(month[month_name]) # changes month name to month number
                             if int(date_split[0]) <= 12 and int(date_split[1]) <= 31: # Checks if the month and day is legit:
-                                outdated = date_convert(date_split)
+                                outdated = date_convert(date_split) # gives back the converted date
                                 return outdated
 
             # First will be checked if its "September 9, 1999" or "9/9/1999", because these are the only valid inputs
-            if sign_detection_slash(date) == True:
-                # Split the date string wherever "/", " " is
-                date_split = re.split('[ /]', date)
-                date_split = remove_spaces(date_split)
+            if sign_detection_slash(date) == True: # checks for slash "/"
+                date_split = re.split('[ /]', date) # Split the date string wherever "/", " " is
+                date_split = remove_spaces(date_split) # remove every whitespace
                 # check if all inputs beside "/" are numbers
                 if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                     if int(date_split[0]) <= 12 and int(date_split[1]) <= 31: # Checks if the month and day is legit
-                        outdated = date_convert(date_split)
+                        outdated = date_convert(date_split) # gives back the converted date
+                # if there is a "/" and a aphabetical character, program exits
                 if date_split[0].isalpha() or date_split[1].isalpha() or date_split[2].isalpha() == True:
                         exit()
+
+            # if the is a input like "Spetember 09 1999", the program exits
+            if sign_detection_slash(date) and sign_detection_comma(date) != True:
+                exit()
 
         except ValueError:
             pass
@@ -78,7 +80,6 @@ def date_convert(date_split):
 def sign_detection_comma(d):
     for signs in d:
         if signs  == ",":
-            #print("detected")
             return True
 
 # Checks for "/"
