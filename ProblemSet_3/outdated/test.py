@@ -51,7 +51,8 @@ def get_date(prompt):
                 if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
                     if int(date_split[0]) <= 12 and int(date_split[1]) <= 31: # Checks if the month and day is legit
                         outdated = date_convert(date_split)
-                        return outdated
+                if date_split[0].isalpha() or date_split[1].isalpha() or date_split[2].isalpha() == True:
+                        exit()
 
         except ValueError:
             pass
