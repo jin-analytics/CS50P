@@ -28,8 +28,9 @@ def get_date(prompt):
 
             # First will be checked if its "September 9, 1999" or "9/9/1999", because these are the only valid inputs
             if sign_detection_comma(date) == True:
-                # Split the date string wherever "/" " " is
+                # Split the date string wherever "/"
                 date_split = re.split('[ ,]', date)
+                # remove every whitespace
                 date_split = remove_spaces(date_split)
                 # check if the month is fully written, for example: "September 9, 1999"
                 if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
@@ -88,13 +89,14 @@ def sign_detection_slash(d):
 
 # Create a new list without the ("")-tuple
 def remove_spaces(d):
+    print(d)
     tuple_to_remove = ("")
     new_list = []
-    for item in date_split:
+    for item in d:
         if item != tuple_to_remove:
             new_list.append(item)
             # Update the original list with the modified list
-            date_split = new_list
-            return date_split
+            d = new_list
+    return d
 
 main()
