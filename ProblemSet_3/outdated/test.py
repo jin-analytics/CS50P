@@ -25,20 +25,22 @@ def get_date(prompt):
     while True:
         try:
             date = input(prompt)
-            
+
             # First will be checked if its "September 9, 1999" or "9/9/1999", because these are the only valid inputs
-            sign_detection_comma(date)
-            # Split the date string wherever "/", " " is
-            date_split = re.split('[ ,]', input(prompt))
-            date_split = remove_spaces(date_split)
+            if sign_detection_comma(date) == True:
+                # Split the date string wherever "/", " " is
+                date_split = re.split('[ ,]', date)
+                date_split = remove_spaces(date_split)
 
 
 
 
 
-
-            # Split the date string wherever "/", " " is
-            date_split = re.split('[ /]', input(prompt))
+            # First will be checked if its "September 9, 1999" or "9/9/1999", because these are the only valid inputs
+            if sign_detection_comma(date) == True:
+                # Split the date string wherever "/", " " is
+                date_split = re.split('[ /]', date)
+                date_split = remove_spaces(date_split)
 
 
 
