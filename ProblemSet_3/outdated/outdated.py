@@ -49,8 +49,8 @@ def get_date(prompt):
                     if int(date_split[0]) <= 12 and int(date_split[1]) <= 31: # Checks if the month and day is legit
                         outdated = date_convert(date_split) # gives back the converted date
                 # if there is a "/" and a aphabetical character, program exits
-                if date_split[0].isalpha() or date_split[1].isalpha() or date_split[2].isalpha() == True:
-                        exit()
+                #if date_split[0].isalpha() or date_split[1].isalpha() or date_split[2].isalpha() == True:
+                        #exit()
 
             # if the is a input like "Spetember 09 1999", the program exits
             #if sign_detection_slash(date) and sign_detection_comma(date) != True:
