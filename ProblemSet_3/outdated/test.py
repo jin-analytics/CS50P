@@ -31,50 +31,26 @@ def get_date(prompt):
                 # Split the date string wherever "/", " " is
                 date_split = re.split('[ ,]', date)
                 date_split = remove_spaces(date_split)
-
-
-
-
+                # check if the month is fully written, for example: "September 9, 1999"
+                if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
+                    # changes the fully written month in entree data_split[0] to the number from the list "month"
+                    for month_name in month:
+                        if month_name == date_split[0]:
+                            date_split[0] = str(month[month_name])
+                            if int(date_split[0]) <= 12 and int(date_split[1]) <= 31: # Checks if the month and day is legit:
+                                outdated = date_convert(date_split)
+                                return outdated
 
             # First will be checked if its "September 9, 1999" or "9/9/1999", because these are the only valid inputs
             if sign_detection_comma(date) == True:
                 # Split the date string wherever "/", " " is
                 date_split = re.split('[ /]', date)
                 date_split = remove_spaces(date_split)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 # check if all inputs beside "/" are numbers
-            if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
-                if int(date_split[0]) <= 12 and int(date_split[1]) <= 31: # Checks if the month and day is legit:
-                    outdated = date_convert(date_split)
-                    return outdated
-
-                # check if the month is fully written, for example: september 01, 1992
-            if date_split[0].isalpha() and date_split[1].isdigit() and date_split[2].isdigit() == True:
-                # changes the fully written month in entree data_split[0] to the number from the list "month"
-                for month_name in month:
-                    #print(month_name)
-                    if month_name == date_split[0]:
-                        date_split[0] = str(month[month_name])
-                        if int(date_split[0]) <= 12 and int(date_split[1]) <= 31: # Checks if the month and day is legit:
-                            outdated = date_convert(date_split)
-                            return outdated
+                if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
+                    if int(date_split[0]) <= 12 and int(date_split[1]) <= 31: # Checks if the month and day is legit
+                        outdated = date_convert(date_split)
+                        return outdated
 
         except ValueError:
             pass
@@ -96,11 +72,9 @@ def date_convert(date_split):
     date_split = '-'.join(date_split)
     return date_split
 
-
 # Checks for ","
 def sign_detection_comma(d):
     for signs in d:
-        print(signs)
         if signs  == ",":
             #print("detected")
             return True
@@ -108,7 +82,6 @@ def sign_detection_comma(d):
 # Checks for "/"
 def sign_detection_slash(d):
     for signs in d:
-        print(signs)
         if signs  == ",":
             #print("detected")
             return True
