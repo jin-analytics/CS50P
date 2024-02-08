@@ -84,7 +84,6 @@ def sign_detection_comma(d):
 def sign_detection_slash(d):
     for signs in d:
         if signs  == "/":
-            #print("detected")
             return True
 
 # Create a new list without the ("")-tuple
