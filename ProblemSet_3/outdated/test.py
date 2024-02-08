@@ -18,7 +18,7 @@ month = {
 
 def main():
     # input will be MM/DD/YYYY
-    print(get_date("What is the date? ")) # output will be YY/MM/DD
+    print(get_date("Date: ")) # output will be YY/MM/DD
 
 
 def get_date(prompt):
@@ -102,9 +102,9 @@ def date_convert(date_split):
     return date_split
 
             # Checks for ","
-def sign_detection_comma(prompt):
-    print(prompt)
-    for signs in prompt:
+def sign_detection_comma(d):
+    print(d)
+    for signs in d:
         if signs in "," == True:
             print("detected")
             return True
