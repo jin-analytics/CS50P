@@ -25,9 +25,10 @@ def get_date(prompt):
     while True:
         try:
             date = input(prompt)
+            
             # First will be checked if its "September 9, 1999" or "9/9/1999", because these are the only valid inputs
             sign_detection_comma(date)
-                # Split the date string wherever "/", " " is
+            # Split the date string wherever "/", " " is
             date_split = re.split('[ ,]', input(prompt))
             date_split = remove_spaces(date_split)
 
@@ -54,15 +55,7 @@ def get_date(prompt):
 
 
 
-            # Create a new list without the ("")-tuple
-            def remove_spaces():
-                tuple_to_remove = ("")
-                new_list = []
-                for item in date_split:
-                    if item != tuple_to_remove:
-                        new_list.append(item)
-                # Update the original list with the modified list
-                date_split = new_list
+
 
                 # check if all inputs beside "/" are numbers
             if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
@@ -101,12 +94,32 @@ def date_convert(date_split):
     date_split = '-'.join(date_split)
     return date_split
 
-            # Checks for ","
+
+# Checks for ","
 def sign_detection_comma(d):
-    print(d)
     for signs in d:
-        if signs in "," == True:
-            print("detected")
+        print(signs)
+        if signs  == ",":
+            #print("detected")
             return True
+
+# Checks for "/"
+def sign_detection_slash(d):
+    for signs in d:
+        print(signs)
+        if signs  == ",":
+            #print("detected")
+            return True
+
+                    # Create a new list without the ("")-tuple
+def remove_spaces():
+    tuple_to_remove = ("")
+    new_list = []
+    for item in date_split:
+        if item != tuple_to_remove:
+            new_list.append(item)
+            # Update the original list with the modified list
+            date_split = new_list
+            return date_split
 
 main()
