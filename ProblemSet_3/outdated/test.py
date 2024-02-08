@@ -27,8 +27,8 @@ def get_date(prompt):
             # First will be checked if its "September 9, 1999" or "9/9/1999", because these are the only valid inputs
             sign_detection_comma(prompt)
                 # Split the date string wherever "/", " " is
-                date_split = re.split('[ ,]', input(prompt))
-                date_split = remove_spaces(date_split)
+            date_split = re.split('[ ,]', input(prompt))
+            date_split = remove_spaces(date_split)
 
 
 
@@ -102,6 +102,7 @@ def date_convert(date_split):
 
             # Checks for ","
 def sign_detection_comma(prompt):
+    print(prompt)
     for signs in prompt:
         if signs in "," == True:
             print("detected")
