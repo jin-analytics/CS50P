@@ -103,7 +103,7 @@ def date_convert(date_split):
             # Checks for ","
 def sign_detection_comma(prompt):
     for signs in prompt:
-        if signs in ",":
+        if signs in "," == True:
             print("detected")
 
 main()
