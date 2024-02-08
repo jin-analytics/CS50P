@@ -19,13 +19,28 @@ month = {
 def main():
     # input will be MM/DD/YYYY
     print(get_date("What is the date? ")) # output will be YY/MM/DD
-    
+
 
 def get_date(prompt):
     while True:
         try:
-            # Split the date string wherever "/", " ", or "," is
-            date_split = re.split('[ ,/]', input(prompt))
+            # Split the date string wherever "/", " " is
+            date_split = re.split('[ /]', input(prompt))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             # Create a new list without the ("")-tuple
             tuple_to_remove = ("")
