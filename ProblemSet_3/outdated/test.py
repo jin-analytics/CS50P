@@ -53,8 +53,8 @@ def get_date(prompt):
                         exit()
 
             # if the is a input like "Spetember 09 1999", the program exits
-            if sign_detection_slash(date) and sign_detection_comma(date) != True:
-                exit()
+            #if sign_detection_slash(date) and sign_detection_comma(date) != True:
+                #exit()
 
         except ValueError:
             pass
