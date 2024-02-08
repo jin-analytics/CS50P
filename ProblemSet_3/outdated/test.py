@@ -24,6 +24,17 @@ def main():
 def get_date(prompt):
     while True:
         try:
+            # First will be checked if its "September 9, 1999" or "9/9/1999", because these are the only valid inputs
+            if sign_detection_comma(prompt) == True:
+                # Split the date string wherever "/", " " is
+                date_split = re.split('[ ,]', input(prompt))
+                date_split = remove_spaces(date_split)
+
+
+
+
+
+
             # Split the date string wherever "/", " " is
             date_split = re.split('[ /]', input(prompt))
 
@@ -43,13 +54,14 @@ def get_date(prompt):
 
 
             # Create a new list without the ("")-tuple
-            tuple_to_remove = ("")
-            new_list = []
-            for item in date_split:
-                if item != tuple_to_remove:
-                    new_list.append(item)
-            # Update the original list with the modified list
-            date_split = new_list
+            def remove_spaces():
+                tuple_to_remove = ("")
+                new_list = []
+                for item in date_split:
+                    if item != tuple_to_remove:
+                        new_list.append(item)
+                # Update the original list with the modified list
+                date_split = new_list
 
                 # check if all inputs beside "/" are numbers
             if date_split[0].isdigit() and date_split[1].isdigit() and date_split[2].isdigit() == True:
@@ -87,5 +99,11 @@ def date_convert(date_split):
     # joins the list to a string joined wir "-"
     date_split = '-'.join(date_split)
     return date_split
+
+            # Checks for ","
+def sign_detection_comma(prompt):
+    for signs in prompt:
+        if signs in ",":
+            print("detected")
 
 main()
