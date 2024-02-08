@@ -113,7 +113,7 @@ def sign_detection_slash(d):
             #print("detected")
             return True
 
-                    # Create a new list without the ("")-tuple
+# Create a new list without the ("")-tuple
 def remove_spaces():
     tuple_to_remove = ("")
     new_list = []
