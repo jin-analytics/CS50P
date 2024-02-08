@@ -42,7 +42,7 @@ def get_date(prompt):
                                 return outdated
 
             # First will be checked if its "September 9, 1999" or "9/9/1999", because these are the only valid inputs
-            if sign_detection_comma(date) == True:
+            if sign_detection_slash(date) == True:
                 # Split the date string wherever "/", " " is
                 date_split = re.split('[ /]', date)
                 date_split = remove_spaces(date_split)
@@ -82,7 +82,7 @@ def sign_detection_comma(d):
 # Checks for "/"
 def sign_detection_slash(d):
     for signs in d:
-        if signs  == ",":
+        if signs  == "/":
             #print("detected")
             return True
 
