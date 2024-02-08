@@ -24,6 +24,7 @@ def main():
 def get_date(prompt):
     while True:
         try:
+            print(prompt)
             # First will be checked if its "September 9, 1999" or "9/9/1999", because these are the only valid inputs
             sign_detection_comma(prompt)
                 # Split the date string wherever "/", " " is
