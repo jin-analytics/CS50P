@@ -17,7 +17,6 @@ def main():
             print("0",shopping_list)
 
             for i in shopping_list:
-                shopping_list = shopping_list({new_key:new_value})
                 if i == shopping_list.get(i):
                     shopping_list[i] = shopping_list.get(i) +1
                     print("1",shopping_list)
