@@ -18,7 +18,7 @@ def main():
                     shopping_list[i] = shopping_list.get(i) +1
                     print("1",shopping_list)
                     print("2",shopping_list[1])
-            shopping_list = shopping_list.update(new_key,new_value)
+            shopping_list = shopping_list.update({new_key:new_value})
             print("3",shopping_list)
 
 
