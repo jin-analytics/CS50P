@@ -8,14 +8,15 @@
 def main():
     # Empty dictionary
     list = {}
+    new_value = 1
 
     while True:
 
         new_key = input()
-        new_value = 1
+
         for i in list:
             if new_key ==i:
-                new_value = new_v
+                new_value = new_value + 1
         #    if i == new_key:
         #        list.update({new_key: new_value + 1})
                 # Add a key-value pair to empty dictionary in python
