@@ -13,15 +13,21 @@ def main():
     while True:
 
         new_key = input()
+        count_items(new_key)
 
-        for i in list:
-            if new_key ==i:
-                new_value = new_value + 1
+
         #    if i == new_key:
         #        list.update({new_key: new_value + 1})
                 # Add a key-value pair to empty dictionary in python
         list.update({new_key: new_value})
 
         print(list)
+
+def count_items(i):
+    for i in list:
+        if i == list.key():
+            new_value = new_value + 1
+
+
 
 main()
