@@ -5,7 +5,8 @@ def main():
 def list(i):
     while True:
         list = []
-        list = list.append()
+        for entree in list:
+            list = list.append(entree)
         return list
 
 
