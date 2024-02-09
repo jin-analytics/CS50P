@@ -8,7 +8,7 @@ def main():
             list.append(item)
             print(list)
         except EOFError:
-            print("new",list[])
+            print("new",list[0])
 
 
 
