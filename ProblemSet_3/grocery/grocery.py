@@ -7,16 +7,16 @@
 
 def main():
     # Empty dictionary
-    #shopping_list = {}
+    shopping_list = {}
     new_value = 1
 
     while True:
         try:
             new_key = input()
-            shopping_list = {new_key:new_value}
             print("0",shopping_list)
 
             for i in shopping_list:
+                shopping_list = shopping_list{new_key:new_value})
                 if i == shopping_list.get(i):
                     shopping_list[i] = shopping_list.get(i) +1
                     print("1",shopping_list)
