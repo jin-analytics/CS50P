@@ -7,7 +7,7 @@
 
 def main():
     # Empty dictionary
-    list = {}
+    shopping_list = {}
     new_value = 1
 
     while True:
@@ -15,16 +15,16 @@ def main():
             new_key = input()
         #        list.update({new_key: new_value + 1})
                 # Add a key-value pair to empty dictionary in python
-            list.update({new_key: new_value})
-            print(list)
+            shopping_list.update({new_key: new_value})
+            print(shopping_list)
         except EOFError:
-            for entrees in list:
-                print(list.key(entrees), list.value(entrees))
+            for entrees in shopping_list:
+                print(shopping_list.key(entrees), shopping_list.value(entrees))
 
 def count_items(i):
-    for i in list:
-        if i == list.key(i):
-            list.value(i) = list-value(i) + 1
+    for i in shopping_list:
+        if i == shopping_list.key(i):
+            shopping_list.value(i) = shopping_list-value(i) + 1
 
 
 
