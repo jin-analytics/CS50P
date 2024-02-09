@@ -13,18 +13,20 @@ def main():
     while True:
         try:
             new_key = input()
-        #        list.update({new_key: new_value + 1})
-                # Add a key-value pair to empty dictionary in python
-            shopping_list.update({new_key: new_value})
-            print(shopping_list)
+            for i in shopping_list:
+                if i == shopping_list.get(i):
+                    shopping_list[i] = shopping_list.get(i) +1
+                    print("1",shopping_list)
+                    print("2",shopping_list[1])
+            shopping_list = shopping_list.update(new_key)
+            print("3",shopping_list)
+
+
+
         except EOFError:
             for entrees in shopping_list:
                 print(shopping_list.key(entrees), shopping_list.value(entrees))
 
-def count_items(i):
-    for i in shopping_list:
-        if i == shopping_list.key(i):
-            shopping_list.value(i) = shopping_list-value(i) + 1
 
 
 
