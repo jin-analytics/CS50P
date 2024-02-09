@@ -24,7 +24,7 @@ def main():
 def count_items(i):
     for i in list:
         if i == list.key(i):
-            list.value(i) = list-value + 1
+            list.value(i) = list-value(i) + 1
 
 
 
