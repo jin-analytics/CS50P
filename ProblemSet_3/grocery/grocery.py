@@ -13,12 +13,11 @@ def main():
         new_key = input()
         new_value = 1
         for i in list:
-            print(i)
-        #if new_key == list:
-        #    list.update({new_key: new_value + 1})
-
-        # Add a key-value pair to empty dictionary in python
-        list.update({new_key: new_value})
+            if i == new_key:
+                list.update({new_key: new_value + 1})
+            else:
+                # Add a key-value pair to empty dictionary in python
+                list.update({new_key: new_value})
 
         print(list)
 
