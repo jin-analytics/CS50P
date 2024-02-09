@@ -3,9 +3,13 @@ def main():
     list = []
 
     while True:
-        item = input()
-        list.append(item)
-        print(list)
+        try:
+            item = input()
+            list.append(item)
+            print(list)
+        except EOFError:
+            print("new",list[])
+
 
 
 #def add_item_to_list(i):
