@@ -7,14 +7,15 @@
 
 def main():
     # Empty dictionary
-    sample_dict = {}
-    
-    new_key = 'John'
-    new_value = 100
+    list = {}
+    while True:
 
-    # Add a key-value pair to empty dictionary in python
-    sample_dict.update({new_key: new_value})
+        new_key = input()
+        new_value = 1
 
-    print(sample_dict)
+        # Add a key-value pair to empty dictionary in python
+        list.update({new_key: new_value})
+
+        print(list)
 
 main()
