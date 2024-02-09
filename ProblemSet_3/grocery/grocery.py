@@ -8,20 +8,18 @@
 def main():
     # Empty dictionary
     list = {}
-    new_key = input()
-    new_value = 1
-    list.update({new_key: new_value})
-    
+
     while True:
 
         new_key = input()
         new_value = 1
         for i in list:
-            if i == new_key:
-                list.update({new_key: new_value + 1})
-            else:
+            if new_key ==i:
+                new_value = new_v
+        #    if i == new_key:
+        #        list.update({new_key: new_value + 1})
                 # Add a key-value pair to empty dictionary in python
-                list.update({new_key: new_value})
+        list.update({new_key: new_value})
 
         print(list)
 
