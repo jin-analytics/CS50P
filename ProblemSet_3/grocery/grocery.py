@@ -13,7 +13,6 @@ def main():
     while True:
         try:
             new_key = input()
-        #    if i == new_key:
         #        list.update({new_key: new_value + 1})
                 # Add a key-value pair to empty dictionary in python
             list.update({new_key: new_value})
@@ -24,8 +23,8 @@ def main():
 
 def count_items(i):
     for i in list:
-        if i == list.key():
-            new_value = new_value + 1
+        if i == list.key(i):
+            list.value(i) = list-value + 1
 
 
 
