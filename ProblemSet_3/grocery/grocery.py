@@ -8,21 +8,19 @@
 def main():
     # Empty dictionary
     shopping_list = {}
-    new_value = 1
 
     while True:
         try:
-            new_key = input()
-            shopping_list[input()] = 'new_value'
-            print("0",shopping_list)
-
+            item = input()
             for i in shopping_list:
-                if i == shopping_list.get(i):
-                    shopping_list[i] = shopping_list.get(i) +1
-                    print("1",shopping_list)
-                    print("2",shopping_list[1])
-            #shopping_list = shopping_list.update({new_key:new_value})
-            #print("3",shopping_list)
+                print(shopping_list)
+                if item == shopping_list.get(i):
+                    shopping_list[i] = shopping_list.get(i) + 1
+                    print(shopping_list)
+                else:
+                    shopping_list[i] = 1
+                    print(shopping_list)
+
 
 
 
