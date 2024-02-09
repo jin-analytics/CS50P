@@ -11,7 +11,7 @@ def main():
 
     while True:
         try:
-            item = input()
+            shopping_list[input()]
             for i in shopping_list:
                 print(shopping_list)
                 if item == shopping_list.get(i):
