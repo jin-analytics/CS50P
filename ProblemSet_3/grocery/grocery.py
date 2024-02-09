@@ -3,8 +3,11 @@
 #2 associate a number to each input
 #3 if the same input occurs, add +1 to count the entrees
 
+
+
 def main():
 
+    value = 1
     list = {}
 
     while True:
