@@ -1,11 +1,12 @@
-def main()
+def main():
     item = input()
     print(list(item))
 
-def list(i)
+def list(i):
     while True:
         list = []
         list = list.append()
+        return list
 
 
 main()
