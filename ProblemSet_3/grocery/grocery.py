@@ -7,6 +7,7 @@ def list(i):
         list = []
         for entree in list:
             list = list.append(entree)
+
         return list
 
 
