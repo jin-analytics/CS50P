@@ -20,7 +20,7 @@ def main():
             print(list)
         except EOFError:
             for entrees in list:
-                print()
+                print(list.key(entrees), list.value(entrees))
 
 def count_items(i):
     for i in list:
