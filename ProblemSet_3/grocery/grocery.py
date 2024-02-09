@@ -1,14 +1,13 @@
 def main():
-    item = input()
-    print(list(item))
-
-def list(i):
     while True:
-        list = []
-        for entree in list:
-            list = list.append(entree)
+        item = input()
+        list = add_item_to_list(item)
+        list = list + list
+        print(list)
 
-        return list
 
+def add_item_to_list(i):
+    new_list = i
+    return new_list
 
 main()
