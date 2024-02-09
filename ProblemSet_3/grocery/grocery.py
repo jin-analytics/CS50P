@@ -13,6 +13,7 @@ def main():
     while True:
         try:
             new_key = input()
+            shopping_list[input()] = 'new_value'
             print("0",shopping_list)
 
             for i in shopping_list:
