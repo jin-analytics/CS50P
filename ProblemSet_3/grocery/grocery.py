@@ -6,26 +6,15 @@
 
 
 def main():
+    # Empty dictionary
+    sample_dict = {}
+    
+    new_key = 'John'
+    new_value = 100
 
-    value = 1
-    list = {}
+    # Add a key-value pair to empty dictionary in python
+    sample_dict.update({new_key: new_value})
 
-    while True:
-        try:
-            item = input()
-            list.append(item)
-            print(list)
-
-        except EOFError:
-            #for entrees in list:
-            #   print(list(entrees))
-            print(list)
-            break
-
-
-
-#def add_item_to_list(i):
-#    new_list = i
-#   return new_list
+    print(sample_dict)
 
 main()
