@@ -4,8 +4,7 @@ def main():
 
     while True:
         item = input()
-     #  list = add_item_to_list(item)
-        list = list.append(item)
+        list.append(item)
         print(list)
 
 
