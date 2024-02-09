@@ -11,17 +11,16 @@ def main():
     new_value = 1
 
     while True:
-
-        new_key = input()
-        count_items(new_key)
-
-
+        try:
+            new_key = input()
         #    if i == new_key:
         #        list.update({new_key: new_value + 1})
                 # Add a key-value pair to empty dictionary in python
-        list.update({new_key: new_value})
-
-        print(list)
+            list.update({new_key: new_value})
+            print(list)
+        except EOFError:
+            for entrees in list:
+                print()
 
 def count_items(i):
     for i in list:
