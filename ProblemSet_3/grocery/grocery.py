@@ -8,6 +8,7 @@ while True:
         else:
             einkaufsliste[var] = einkaufsliste.get(var) + 1
         alphalist = sorted(einkaufsliste)
+        print(alphalist)
 
     except EOFError:
         for k,v in einkaufsliste.items():
