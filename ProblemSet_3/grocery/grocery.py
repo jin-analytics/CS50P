@@ -11,6 +11,8 @@ def main():
 
     while True:
         try:
+            shopping_list.setdefault(input()[, 1])
+            shopping_list
 
         except EOFError:
            exit()
