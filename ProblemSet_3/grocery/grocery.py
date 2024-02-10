@@ -1,4 +1,3 @@
-
 einkaufsliste = {} #creates empty dictionary which will be filled in the while loop
 
 while True:
@@ -12,9 +11,9 @@ while True:
             einkaufsliste[var] = einkaufsliste.get(var) + 1
 
     except EOFError:
-        # sorts the keys from dict(einkaufsliste) alphabetically
-        #einkaufsliste = dict(sorted(einkaufsliste.items()))
-        einkaufsliste = sorted(einkaufsliste.items())
+        # sorts the keys from einkaufsliste alphabetically
+        # if dict is not used, the items() method creates an error due to the misleading list/dictionary definition
+        einkaufsliste = dict(sorted(einkaufsliste.items()))
         for k,v in einkaufsliste.items():
             # changes value and key position and capitalizes all letters
             print(v,k.upper())
