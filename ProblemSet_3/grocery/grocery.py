@@ -11,22 +11,9 @@ def main():
 
     while True:
         try:
-            shopping_list[input()]
-            for i in shopping_list:
-                print(shopping_list)
-                if item == shopping_list.get(i):
-                    shopping_list[i] = shopping_list.get(i) + 1
-                    print(shopping_list)
-                else:
-                    shopping_list[i] = 1
-                    print(shopping_list)
-
-
-
 
         except EOFError:
-            for entrees in shopping_list:
-                print(shopping_list.key(entrees), shopping_list.value(entrees))
+           exit()
 
 
 
