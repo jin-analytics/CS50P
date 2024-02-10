@@ -11,7 +11,7 @@ def main():
 
     while True:
         try:
-            shopping_list = shopping_list.values(input())
+            shopping_list: dict = input()
             # sets the default value "v" +1
             #shopping_list.setdefault(input()[,v + 1])
             print(shopping_list)
