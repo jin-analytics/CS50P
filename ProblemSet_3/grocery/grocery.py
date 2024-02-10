@@ -3,9 +3,13 @@
 
 einkaufsliste = {}
 while True:
-    einkaufsliste[input()] = 1
+    var = input()
+    einkaufsliste[var] = 1
     for key in einkaufsliste:
-        print(key)
+        if key == var:
+            print("got ya",key)
+        else:
+            einkaufsliste[var] = 1
     print(einkaufsliste)
 
 
