@@ -10,8 +10,8 @@ while True:
             einkaufsliste[var] = einkaufsliste.get(var) + 1
             print(einkaufsliste)
 
-        for k,v in einkaufsliste:
-            print(k,v)
+        for k,v in einkaufsliste.items():
+            print(v,k.capitalized())
 
     except EOFError:
         exit()
