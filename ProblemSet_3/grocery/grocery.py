@@ -5,7 +5,7 @@ def main():
 
     while True:
         try:
-            shopping_list.update(input())
+            shopping_list = shopping_list.update(input())
             print(shopping_list)
         except EOFError:
            exit()
