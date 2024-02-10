@@ -1,7 +1,7 @@
 
 def main():
     # Empty dictionary
-    shopping_list = {}
+    shopping_list = {"key": 1}
 
     while True:
         try:
