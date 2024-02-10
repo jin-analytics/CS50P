@@ -8,8 +8,13 @@ while True:
             einkaufsliste[var] = 1
         else:
             einkaufsliste[var] = einkaufsliste.get(var) + 1
-        l = sorted(einkaufsliste, key=1)
-        print(l)
+
+        # sorts alphabeticaly
+        alphalist = sorted(einkaufsliste)
+        print(alphalist)
+        for i in alphalist:
+            
+
 
 
     except EOFError:
