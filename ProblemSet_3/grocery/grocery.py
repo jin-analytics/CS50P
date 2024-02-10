@@ -1,5 +1,5 @@
 product = []
-amount  = [] # amout
+
 letter  = {} # grocery list with products and the assigned amount
 
 
