@@ -11,10 +11,10 @@ def main():
 
     while True:
         try:
-            
+            shopping_list = shopping_list.fromkeys(input()[, 1])
             # sets the default value "v" +1
             #shopping_list.setdefault(input()[,v + 1])
-            #shopping_list
+            print(shopping_list)
 
         except EOFError:
            exit()
