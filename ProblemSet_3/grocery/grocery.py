@@ -3,6 +3,6 @@
 
 buch = {"Jakob": 29}
 var = input()
-buch.update(var: 1)
+buch[var] = 28
 print (buch)
 
