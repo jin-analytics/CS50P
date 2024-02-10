@@ -1,8 +1,9 @@
 
 
 
-buch = {"Jakob": 29}
-#var = input()
-buch[input()] = 1
-print (buch)
+einkaufsliste = {}
+while True:
+    var = input()
+    einkaufsliste[var] = 1
+    print(einkaufsliste)
 
