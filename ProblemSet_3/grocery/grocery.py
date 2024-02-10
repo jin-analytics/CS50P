@@ -10,14 +10,16 @@ while True:
             einkaufsliste[var] = einkaufsliste.get(var) + 1
 
         # sorts alphabeticaly
-        alphalist = sorted(einkaufsliste)
-        print(alphalist)
-        for i in alphalist:
-            
+        #alphalist = sorted(einkaufsliste)
+        #print(alphalist)
+        #for i in alphalist:
+
 
 
 
     except EOFError:
+        einkaufsliste = {}
+        einkaufsliste = sorted(einkaufsliste)
         for k,v in einkaufsliste.items():
             print(v,k.upper())
         exit()
