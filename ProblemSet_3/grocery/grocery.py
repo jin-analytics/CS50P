@@ -8,7 +8,7 @@ while True:
             einkaufsliste[var] = 1
         else:
             einkaufsliste[var] = einkaufsliste.get(var) + 1
-        einkaufsliste = {sorted(einkaufsliste.keys():values())}
+        einkaufsliste = dict(sorted(einkaufsliste.items()))
         # sorts alphabeticaly
         #alphalist = sorted(einkaufsliste)
         print(einkaufsliste)
