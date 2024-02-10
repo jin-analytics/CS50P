@@ -1,5 +1,5 @@
 einkaufsliste = {}
-l = {}
+alphalist = []
 while True:
     try:
         var = input()
@@ -7,7 +7,7 @@ while True:
             einkaufsliste[var] = 1
         else:
             einkaufsliste[var] = einkaufsliste.get(var) + 1
-        einkaufsliste = sorted(einkaufsliste)
+        alphalist = sorted(einkaufsliste)
 
     except EOFError:
         for k,v in einkaufsliste.items():
