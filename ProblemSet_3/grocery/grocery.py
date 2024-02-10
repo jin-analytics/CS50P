@@ -11,7 +11,7 @@ while True:
             print(einkaufsliste)
 
         for k,v in einkaufsliste.items():
-            print(v,k.capitalized())
+            print(v,k.capitalize())
 
     except EOFError:
         exit()
