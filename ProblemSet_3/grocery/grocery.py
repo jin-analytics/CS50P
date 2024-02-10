@@ -1,5 +1,6 @@
 einkaufsliste = {}
 alphalist = []
+letter = {}
 while True:
     try:
         var = input()
