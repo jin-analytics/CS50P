@@ -1,4 +1,5 @@
 einkaufsliste = {}
+l = {}
 while True:
     try:
         var = input()
