@@ -1,1 +1,3 @@
-print("test")
+import random
+
+random.choice(["heads","tails"])
