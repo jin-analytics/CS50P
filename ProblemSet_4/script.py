@@ -1,5 +1,6 @@
 #import random
-import statistics
+#import statistics
+import sys
 
 #for i in range(3):
     #coin = random.choice(["heads","tails"])
@@ -10,5 +11,7 @@ import statistics
     #   print(card)
     #print(coin)
 
-grade = statistics.mean([100, 90])
-print(grade)
+#grade = statistics.mean([100, 90])
+#print(grade)
+
+
