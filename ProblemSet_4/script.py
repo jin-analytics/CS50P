@@ -15,3 +15,4 @@ import sys
 #print(grade)
 
 
+print(sys.argv[2])
