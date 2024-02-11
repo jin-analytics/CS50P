@@ -1,3 +1,7 @@
 import random
 
-random.choice(["heads","tails"])
+
+
+for i in range(100):
+    coin = random.choice(["heads","tails"])
+    print(coin)
