@@ -9,5 +9,5 @@ import json
 response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias")
 
 #response.json()
-print(response.encoding())
+print(response.text)
 #print(response.text)
