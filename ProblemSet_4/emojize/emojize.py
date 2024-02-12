@@ -1,6 +1,6 @@
 import cowsay
 
-cowsay.cow('Hello World')
+cowsay.stegosaurus('Hello World')
 
 
 #https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias
