@@ -10,10 +10,10 @@ import json
 response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias")
 
 
-object = response.json()
-for result in object["results"]:
+#object = response.json()
+#for result in object["results"]:
     #print(json.dumps(r.json(), indent=2))
-    print(result)
+print(response)
 
 #https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias
 
