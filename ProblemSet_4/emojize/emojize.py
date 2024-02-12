@@ -8,5 +8,6 @@ import json
 
 response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias")
 
-response.json()
+#response.json()
+response.status_code()
 #print(response.text)
