@@ -9,7 +9,7 @@
 
 
 def main():
-    height = int(input())
+    height = int(input("Height: "))
     pyramid(height)
 
 def pyramid(n):
