@@ -7,7 +7,7 @@ if len(sys.argv) != 2:
     sys.exit()
 
 #r = requests.get('https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias', auth=('user', 'pass'))
-r= requests.get("https://itunes.apple.com/search?entity=song&limit01&term=" + sys.argv[1])
+r= requests.get("https://itunes.apple.com/search?entity=song&limit1&term=" + sys.argv[1])
 print(json.dumps(r.json(), indent=2))
 
 
