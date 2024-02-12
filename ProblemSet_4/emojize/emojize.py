@@ -11,6 +11,6 @@ response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=e
 #response.json()
 for result in response:
     #print(json.dumps(r.json(), indent=2))
-    print(result["trackName"])
+    print(result["WRESTLERS"])
 print(response.text)
 #print(response.text)
