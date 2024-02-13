@@ -12,5 +12,5 @@ response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=e
 #for result in response:
     #print(json.dumps(r.json(), indent=2))
     #print(result["WRESTLERS"])
-print(dir(response))
+print(response.headers)
 #print(response.text)
