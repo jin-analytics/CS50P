@@ -9,8 +9,8 @@ import json
 response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias")
 
 #response.json()
-for result in response:
+#for result in response:
     #print(json.dumps(r.json(), indent=2))
-    print(result["WRESTLERS"])
-print(response.text)
+    #print(result["WRESTLERS"])
+print(response)
 #print(response.text)
