@@ -16,3 +16,9 @@ response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=e
 print(response.content)
 
 #print(response.text)
+resp = requests.get(url, params=params)
+data = response.json()
+thumbs = data["stats"]["floor_price"]
+print(thumbs)
+
+
