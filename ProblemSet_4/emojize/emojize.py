@@ -14,12 +14,12 @@ response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=e
     #print(result["WRESTLERS"])
 #res_json = response.json()
 
-print(response.content)
+#print(response.content)
 
 #print(response.text)
 
 data = response.json()
-thumbs = data["PERSON IN STEAMY ROOM"]
+thumbs = data["detective"]
 print(data)
 
 
