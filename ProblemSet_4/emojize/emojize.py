@@ -3,17 +3,17 @@ import requests
 import json
 
 
-payload = {'key1': 'value1', 'key2': 'value2'}
-r = requests.get('https://httpbin.org/get', params=payload)
+#payload = {'key1': 'value1', 'key2': 'value2'}
+#r = requests.get('https://httpbin.org/get', params=payload)
 
-r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
-print(r)
+#r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
+#print(r)
 
-#response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias")
+response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias")
 #
 #response.status_code
 
-#data = response.content
-#print(data)
+data = response.text
+print(data)
 
 
