@@ -12,7 +12,7 @@ import json
 response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias", stream = True)
 #response.raw
 
-data = response.raw.text
+data = response.raw
 print(data)
 
 
