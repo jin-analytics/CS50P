@@ -3,6 +3,8 @@ import requests
 import json
 
 
+payload = {'key1': 'value1', 'key2': 'value2'}
+r = requests.get('https://httpbin.org/get', params=payload)
 
 r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
 print(r)
