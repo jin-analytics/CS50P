@@ -6,12 +6,12 @@ import re
 
 def main():
     emo = input("Input: ")
-    #line_check(emo)
-    #print(emoji.emojize(f"Output: {emo}", language='alias'))
+    line_check(emo)
+    print(emoji.emojize(f"Output: {emo}", language='alias'))
 
     #re.sub("::", "", emo)
     #emoji_selected = emo.split(':', maxsplit = 1)
-    print(re.sub("::", "", emo))
+    #print(re.sub("::", "", emo))
 
 #__________________________________________________
 # Checks if ther is a _ inside the string "emo"
