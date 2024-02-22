@@ -10,6 +10,7 @@ import json
 #print(r)
 
 response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias")
+response = requests.get("https://www.corporationwiki.com/search/results?term=jim%20smith")
 response.raw
 
 #data = response.raw
