@@ -2,10 +2,11 @@ import emoji
 
 def main():
     emo = input("Input: ")
-    line_check(emo)
-    print(emoji.emojize(f"Output: {emo}", language='alias'))
+    #line_check(emo)
+    #print(emoji.emojize(f"Output: {emo}", language='alias'))
 
-    emoji_selected = emo.split("")
+    emoji_selected = emo.split(":")
+    print(emoji_selected)
 
 #__________________________________________________
 # Checks if ther is a _ inside the string "emo"
