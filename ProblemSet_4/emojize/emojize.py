@@ -9,8 +9,9 @@ def main():
     #line_check(emo)
     #print(emoji.emojize(f"Output: {emo}", language='alias'))
 
-    emoji_selected = emo.split(':', maxsplit = 1)
-    print(emoji_selected)
+    #re.sub("::", "", emo)
+    #emoji_selected = emo.split(':', maxsplit = 1)
+    print(re.sub("::", "", emo))
 
 #__________________________________________________
 # Checks if ther is a _ inside the string "emo"
