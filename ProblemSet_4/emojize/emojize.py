@@ -9,13 +9,13 @@ import json
 #r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
 #print(r)
 
-#response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias", stream = True)
-#response.raw
+response = requests.get("https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias")
+response.raw
 
 #data = response.raw
-#print(data)
+print(response.text)
 
-for i in range(100):
-    print("Buongiorno Bella")
+#for i in range(100):
+ #   print("Buongiorno Bella")
 
 
