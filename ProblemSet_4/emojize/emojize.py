@@ -10,4 +10,6 @@ for i in emo:
     if i == "_":
         print(emoji.emojize(f'Output: {emo}'))
 
+
+
 print(f"Output: {emo}")
