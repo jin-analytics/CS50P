@@ -5,7 +5,9 @@ import emoji
 
 emo = input("Input: ")
 
-for _ in emo:
-    print(emo)
+for i in emo:
+    #print(i)
+    if i == "_":
+        print(emoji.emojize(f'Output: {emo}'))
 
 print(f"Output: {emo}")
