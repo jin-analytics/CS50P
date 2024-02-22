@@ -5,7 +5,7 @@ def main():
     line_check(emo)
     print(emoji.emojize(f"Output: {emo}", language='alias'))
 
-
+    emoji_selected = emo.split("")
 
 #__________________________________________________
 # Checks if ther is a _ inside the string "emo"
