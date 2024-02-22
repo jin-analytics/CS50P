@@ -16,7 +16,7 @@ import emoji
 ##response.raw
 
 #data = response.raw
-print(response.text)
+#print(response.text)
 
 #for i in range(100):
  #   print("Buongiorno Bella")
