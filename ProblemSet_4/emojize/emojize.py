@@ -1,4 +1,8 @@
 import emoji
+import re
+
+#x = "This is a sentence. (once a day) [twice a day]"
+#re.sub("([\(\[]).*?([\)\]])", "\g<1>\g<2>", x)
 
 def main():
     emo = input("Input: ")
