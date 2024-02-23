@@ -12,7 +12,10 @@ from pyfiglet import Figlet
 #    print("hello", argument)
 
 #f = Figlet(font='italic')
-print(sys.argv)
-f = sys.argv[2]
-t = input("Input: ")
-print(f.renderText(t))
+if len(sys.argv) <2:
+#print(sys.argv)
+    f = Figlet(font = sys.argv[2])
+    t = input("Input: ")
+    print(f.renderText(t))
+
+elif 
