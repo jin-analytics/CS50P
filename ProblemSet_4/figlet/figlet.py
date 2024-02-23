@@ -13,4 +13,4 @@ from pyfiglet import Figlet
 
 #f = Figlet(font='italic')
 t = input("Input: ")
-print(renderText(t))
+print(tools/pyfiglet(t))
