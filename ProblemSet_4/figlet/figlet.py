@@ -12,23 +12,16 @@ z = random.randint(0,l)
 # use the font with the random number
 randomfont = randomfont[z]
 
-if len(sys.argv) > 3:
-    sys.exit("too many arguments") # sys.exit | exits the program
-
-#for argument in sys.argv[1:]: # Slices | the brackets [] scliding up a list - in this case start a No. 1 until infinity
-#    print("hello", argument)
-
-
-elif len(sys.argv) > 2: #if "python figlet.py -f font"
+if len(sys.argv) == 1: #if "python figlet.py -f font"
 #print(sys.argv)
     f = Figlet(font = sys.argv[2])
     text = input("Input: ")
     print(f.renderText(text))
 
-elif len(sys.argv) < 2: #if only "python figlet.py"
+elif len(sys.argv) == 3: #if only "python figlet.py"
     text = input("Input: ")
     f = Figlet(font = randomfont)
     print(f.renderText(text))
 
 else:
-    exit("more or less arguments")
+    sys.exit("more or less arguments")
