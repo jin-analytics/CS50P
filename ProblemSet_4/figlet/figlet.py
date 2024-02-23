@@ -2,16 +2,15 @@ import sys
 from pyfiglet import Figlet
 import pyfiglet
 import random
+
+# gets the list of usable fonts
 font = pyfiglet.FigletFont.getFonts()
+# gets the length of the fontlist
 l = len(font)
+# choose random number of font list
 z = random.randint(0,l)
-font = pyfiglet.FigletFont.getFonts(z)
-print(font)
-
-
-#Font: italic
-# example: f = Figlet(font='slant')
-# example: print f.renderText('text to render')
+# use the font with the random number
+font = font[z]
 
 #if len(sys.argv) <2:
 #    sys.exit("too few") # sys.exit | exits the program
@@ -20,7 +19,7 @@ print(font)
 #    print("hello", argument)
 
 #f = Figlet(font='italic')
-if len(sys.argv) > 2: #if "python figlet.py -f font"
+if len(sys.argv) = 2: #if "python figlet.py -f font"
 #print(sys.argv)
     f = Figlet(font = sys.argv[2])
     t = input("Input: ")
