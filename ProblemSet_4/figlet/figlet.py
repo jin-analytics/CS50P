@@ -13,6 +13,6 @@ from pyfiglet import Figlet
 
 #f = Figlet(font='italic')
 print(sys.argv)
-f = sys.argv[1]
+f = sys.argv[2]
 t = input("Input: ")
 print(f.renderText(t))
