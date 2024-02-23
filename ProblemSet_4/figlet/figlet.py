@@ -11,6 +11,6 @@ from pyfiglet import Figlet
 #for argument in sys.argv[1:]: # Slices | the brackets [] scliding up a list - in this case start a No. 1 until infinity
 #    print("hello", argument)
 
-f = Figlet(font='italic')
+#f = Figlet(font='italic')
 t = input("Input: ")
 print(f.renderText(t))
