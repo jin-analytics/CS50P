@@ -19,5 +19,5 @@ if len(sys.argv) > 2: #if "python figlet.py -f font"
     print(f.renderText(t))
 
 elif len(sys.argv) < 2: #if only "python figlet.py"
-    t = input("Input: ")
-    print(Figlet.renderText(t))
+    #t = input("Input: ")
+    print(Figlet(-d fontdirectory))
