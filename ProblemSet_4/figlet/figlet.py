@@ -1,13 +1,16 @@
 import sys
-import Figlet
+from pyfiglet import Figlet
 
 #Font: italic
-# example print f.renderText('text to render')
+# example: f = Figlet(font='slant')
+# example: print f.renderText('text to render')
 
-if len(sys.argv) <2:
-    sys.exit("too few") # sys.exit | exits the program
+#if len(sys.argv) <2:
+#    sys.exit("too few") # sys.exit | exits the program
 
-for argument in sys.argv[1:]: # Slices | the brackets [] scliding up a list - in this case start a No. 1 until infinity
-    print("hello", argument)
+#for argument in sys.argv[1:]: # Slices | the brackets [] scliding up a list - in this case start a No. 1 until infinity
+#    print("hello", argument)
 
-
+f = Figlet(font='italic')
+t = input("Input: ")
+print(f.renderText(t))
