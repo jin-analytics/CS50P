@@ -1,14 +1,7 @@
 import sys
 from pyfiglet import Figlet
-from pyfiglet import fonts.zip
-# specifying the zip file name
-file_name = "my_python_files.zip"
-# opening the zip file in READ mode
-with ZipFile(file_name, 'r') as zip:
-# printing all the contents of the zip file
-zip.printdir()
-# extracting all the files
-#Figlet.system("python yourfile.py")
+print(Figlet.getFonts())
+
 
 #Font: italic
 # example: f = Figlet(font='slant')
@@ -29,4 +22,5 @@ if len(sys.argv) > 2: #if "python figlet.py -f font"
 
 elif len(sys.argv) < 2: #if only "python figlet.py"
     t = input("Input: ")
-    f = Figlet(font = FigletFonts.getFonts())
+    #f = Figlet(font = FigletFonts.getFonts())
+    print(pyfiglet.FigletFont.getFonts())
