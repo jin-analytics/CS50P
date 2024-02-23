@@ -14,10 +14,12 @@ randomfont = randomfont[z]
 
 try:
     if len(sys.argv) == 3 and sys.argv[1] == "-f": #if "python figlet.py -f font"
-    #print(sys.argv)
-        f = Figlet(font = sys.argv[2])
-        text = input("Input: ")
-        print(f.renderText(text))
+        if fontexist(sys.argv[1]) == True:
+            f = Figlet(font = sys.argv[2])
+            text = input("Input: ")
+            print(f.renderText(text))
+        else:
+            sys.exit("Invalid usage")
 
     elif len(sys.argv) == 1: #if only "python figlet.py"
         text = input("Input: ")
@@ -26,7 +28,18 @@ try:
 
     else:
         sys.exit("Invalid usage")
-        
+
 except pyfiglet.FontNotFound == True:
     sys.exit("Invalid usage")
+
+def fontexist(e):
+    fontlist = pyfiglet.FigletFont.getFonts()
+    for fonts in fontlist:
+        if e == fonts:
+            return True
+        else:
+            return False
+
+
+
 
