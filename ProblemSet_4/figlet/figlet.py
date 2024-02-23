@@ -3,7 +3,9 @@ from pyfiglet import Figlet
 import pyfiglet
 import random
 font = pyfiglet.FigletFont.getFonts()
-font = random.randint(1,418)
+l = len(font)
+z = random.randint(0,l)
+font = pyfiglet.FigletFont.getFonts(z)
 print(font)
 
 
