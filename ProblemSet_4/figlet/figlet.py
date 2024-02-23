@@ -2,7 +2,9 @@ import sys
 from pyfiglet import Figlet
 import pyfiglet
 import random
-print(pyfiglet.FigletFont.getFonts(random(1)))
+font = pyfiglet.FigletFont.getFonts()
+font = random()
+print(font)
 
 
 #Font: italic
