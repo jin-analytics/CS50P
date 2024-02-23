@@ -24,4 +24,4 @@ elif len(sys.argv) == 1: #if only "python figlet.py"
     print(f.renderText(text))
 
 else:
-    sys.exit("more or less arguments")
+    sys.exit("Invalid usage")
