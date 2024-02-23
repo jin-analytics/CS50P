@@ -1,5 +1,6 @@
 import sys
 from pyfiglet import Figlet
+Figlet.system("python yourfile.py")
 
 #Font: italic
 # example: f = Figlet(font='slant')
