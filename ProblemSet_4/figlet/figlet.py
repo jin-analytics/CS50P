@@ -12,13 +12,13 @@ z = random.randint(0,l)
 # use the font with the random number
 randomfont = randomfont[z]
 
-if len(sys.argv) == 1: #if "python figlet.py -f font"
+if len(sys.argv) == 3: #if "python figlet.py -f font"
 #print(sys.argv)
     f = Figlet(font = sys.argv[2])
     text = input("Input: ")
     print(f.renderText(text))
 
-elif len(sys.argv) == 3: #if only "python figlet.py"
+elif len(sys.argv) == 1: #if only "python figlet.py"
     text = input("Input: ")
     f = Figlet(font = randomfont)
     print(f.renderText(text))
