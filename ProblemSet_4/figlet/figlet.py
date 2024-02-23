@@ -2,7 +2,7 @@ import sys
 import Figlet
 
 #Font: italic
-
+# example print f.renderText('text to render')
 
 if len(sys.argv) <2:
     sys.exit("too few") # sys.exit | exits the program
