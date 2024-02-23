@@ -19,7 +19,7 @@ if len(sys.argv) > 3:
 #    print("hello", argument)
 
 
-elif len(sys.argv) == 2: #if "python figlet.py -f font"
+elif len(sys.argv) > 2: #if "python figlet.py -f font"
 #print(sys.argv)
     f = Figlet(font = sys.argv[2])
     text = input("Input: ")
@@ -31,4 +31,4 @@ elif len(sys.argv) < 2: #if only "python figlet.py"
     print(f.renderText(text))
 
 else:
-    exit()
+    exit("more or less arguments")
