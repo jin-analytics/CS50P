@@ -36,12 +36,9 @@ def main():
 def fontexist(e):
     fontlist = pyfiglet.FigletFont.getFonts()
     for fonts in fontlist:
-        print(fonts)
-        print(e)
         if e == fonts:
             return True
-        else:
-            return False
+    return False
 
 main()
 
