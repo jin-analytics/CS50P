@@ -15,6 +15,7 @@ def main():
 
     try:
         if len(sys.argv) == 3 and sys.argv[1] == "-f": #if "python figlet.py -f font"
+            print(fontexist(sys.argv[1]))
             if fontexist(sys.argv[1]) == True:
                 f = Figlet(font = sys.argv[2])
                 text = input("Input: ")
