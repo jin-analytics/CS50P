@@ -20,4 +20,4 @@ if len(sys.argv) > 2: #if "python figlet.py -f font"
 
 elif len(sys.argv) < 2: #if only "python figlet.py"
     t = input("Input: ")
-    print(FigletFont)
+    f = Figlet(font = FigletFonts.getFonts())
