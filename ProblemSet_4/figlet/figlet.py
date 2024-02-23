@@ -10,7 +10,7 @@ l = len(randomfont)
 # choose random number of font list
 z = random.randint(0,l)
 # use the font with the random number
-font = randomfont[z]
+randomfont = randomfont[z]
 
 if len(sys.argv) > 2:
     sys.exit("too many arguments") # sys.exit | exits the program
