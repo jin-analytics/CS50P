@@ -1,4 +1,5 @@
 import random
+import sys
 
 def main():
     while True:
@@ -16,7 +17,7 @@ def main():
 
             if gue == num:
                 print("Just right!")
-                exit()
+                sys.exit()
             elif gue < num:
                 print("Too small!")
             elif gue > num:
