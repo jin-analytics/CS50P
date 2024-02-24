@@ -18,7 +18,8 @@ def main():
                 #print(len(adieulist))
                 print(f"Adieu, adieu, to {adieulist[-len(adieulist)]} and {adieulist[-n]}") #last entree of somelist[-n]
             elif len(adieulist) > 2:
-                print(f"{name_string(adieulist)}")
+                #print(f"{name_string(adieulist)}")
+                print(f"{adieulist[-n]}")
                 #print(f"Adieu, adieu, to {name_string(adieulist)} and {adieulist[-n]}")
 
 
