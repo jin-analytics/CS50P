@@ -20,7 +20,8 @@ def main():
             if gue == num:
                 print("Just right!")
                 sys.exit()
-            elif gue < num and gue > 0:
+            #elif gue < num and gue > 0:
+            elif gue < num:
                 print("Too small!")
             elif gue > num:
                 print("Too large!")
