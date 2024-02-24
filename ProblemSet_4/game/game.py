@@ -23,7 +23,7 @@ def main():
                 print("Too large!")
 
         except EOFError:
-            exit()
+            break
         except ValueError:
             print("ups")
         except gue > 1:
