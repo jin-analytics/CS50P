@@ -19,6 +19,8 @@ def main():
 
         except EOFError:
             exit()
+        except gue > 1 or gue not int:
+            print("ups")
 
 if __name__ == "__main__":
     main()
