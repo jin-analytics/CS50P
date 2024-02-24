@@ -9,6 +9,8 @@ def main():
             break
         except ValueError:
             print("", end = "")
+        except EOFError:
+            return False
 
     while True:
         try:
@@ -24,7 +26,7 @@ def main():
                 print("Too large!")
 
         except EOFError:
-            break
+            return False
         except ValueError:
             print("", end = "")
 
