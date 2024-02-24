@@ -7,7 +7,7 @@ def main():
             n = input("Name: ")
 
         except EOFError:
-            print(f"Adieu {n}")
+            print(f"Adieu, adieu, to {n}")
 
 
 
