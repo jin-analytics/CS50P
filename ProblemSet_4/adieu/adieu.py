@@ -1,11 +1,11 @@
-adieulist = {} #creates empty dictionary which will be filled in the while loop
+adieulist = [] #creates empty list which will be filled in the while loop
 
 
 def main():
     while True:
 
         try:
-            n = input("Name: ") #creates variable where the name gets added to the dictionary "adieulist"
+            n = input("Name: ") #creates variable where the name gets added to the list "adieulist"
             #if the product doesnt exist in the "einkaufsliste", then product gets value 1
             #else the value of the product gets increased by 1
             if adieulist.get(n) == None:
