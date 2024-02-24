@@ -1,4 +1,5 @@
 einkaufsliste = {} #creates empty list which will be filled in the while loop
+adieulist = []
 
 
 def main():
