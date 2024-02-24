@@ -26,7 +26,7 @@ def main():
         except EOFError:
             break
         except ValueError:
-            print()
+            print("", end = "")
 
 if __name__ == "__main__":
     main()
