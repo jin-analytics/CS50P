@@ -20,7 +20,7 @@ def main():
 
             elif len(adieulist) > 2:
                 print()
-                print(f"Adieu, adieu, to {name_string(adieulist)} and {adieulist[-1]}")
+                print(f"Adieu, adieu, to {name_string(adieulist)}, and {adieulist[-1]}")
 
             exit()
 
