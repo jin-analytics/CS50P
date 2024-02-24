@@ -11,7 +11,7 @@ def main():
             if adieulist.get(n) == None:
                 adieulist[n] = 1
             else:
-                einkaufsliste[n] = einkaufsliste.get(n) + 1
+                adieulist[n] = adieulist.get(n) + 1
 
         except EOFError:
             print(f"Adieu, adieu, to {n}")
