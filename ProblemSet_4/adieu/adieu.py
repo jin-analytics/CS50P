@@ -14,7 +14,7 @@ def main():
             print(f"Adieu, adieu, to {adieulist[0:len(adieulist)]}")
             exit()
 
-
+def 
 
 
 
