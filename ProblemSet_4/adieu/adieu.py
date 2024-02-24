@@ -28,7 +28,10 @@ def main():
 # by a comma and then returns the single string of these names
 def name_string(adieulist):
     for entrees in adieulist:
+        comma = entrees
+        comma 
         print(entrees)
+
     exit()
 
 
