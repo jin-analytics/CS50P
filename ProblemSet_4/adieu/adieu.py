@@ -27,10 +27,11 @@ def main():
 # creates a string of all names (except the last one), wihich will all be seperated
 # by a comma and then returns the single string of these names
 def name_string(adieulist):
+    comma = []
     for entrees in adieulist:
-        comma = entrees
-        comma 
+        comma += entrees
         print(entrees)
+        print(comma)
 
     exit()
 
