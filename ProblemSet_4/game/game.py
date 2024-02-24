@@ -1,8 +1,13 @@
 import random
 
 def main():
-    lev = int(input("Level: "))
-    num = random.randint(1,lev)
+    while True:
+        try:
+            lev = int(input("Level: "))
+            num = random.randint(1,lev)
+            break
+        except ValueError:
+            print("ups")
 
     while True:
         try:
@@ -19,7 +24,9 @@ def main():
 
         except EOFError:
             exit()
-        except gue > 1 or gue.isdigit() != True:
+        except ValueError:
+            print("ups")
+        except gue > 1:
             print("ups")
 
 if __name__ == "__main__":
