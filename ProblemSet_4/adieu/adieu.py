@@ -1,6 +1,6 @@
+from name_string import
+
 adieulist = []
-
-
 def main():
     while True:
 
