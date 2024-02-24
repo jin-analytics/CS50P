@@ -27,7 +27,7 @@ def main():
             break
         except ValueError:
             print("ups")
-        except gue > 1:
+        except gue < 1:
             print("ups2")
 
 if __name__ == "__main__":
