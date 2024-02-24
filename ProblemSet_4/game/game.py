@@ -18,7 +18,7 @@ def main():
             if gue == num:
                 print("Just right!")
                 sys.exit()
-            elif gue < num:
+            elif gue < num and gue > 0:
                 print("Too small!")
             elif gue > num:
                 print("Too large!")
@@ -27,8 +27,6 @@ def main():
             break
         except ValueError:
             print("ups")
-        except gue < 1:
-            print("ups2")
 
 if __name__ == "__main__":
     main()
