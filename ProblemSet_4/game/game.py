@@ -19,7 +19,7 @@ def main():
 
         except EOFError:
             exit()
-        except gue > 1 or gue.isalpha() == True:
+        except gue > 1 or gue.isdigit() != True:
             print("ups")
 
 if __name__ == "__main__":
