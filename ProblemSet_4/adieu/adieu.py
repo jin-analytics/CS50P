@@ -1,3 +1,4 @@
+adieulist = {} #creates empty dictionary which will be filled in the while loop
 
 
 def main():
