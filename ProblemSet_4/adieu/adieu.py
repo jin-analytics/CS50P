@@ -10,6 +10,7 @@ def main():
             print(adieulist)
 
         except EOFError:
+            print()
             print(f"Adieu, adieu, to {adieulist[0:len(adieulist)]}")
             exit()
 
