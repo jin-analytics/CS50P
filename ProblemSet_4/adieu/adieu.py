@@ -1,4 +1,4 @@
-from name import name_string
+#from name import name_string
 
 adieulist = []
 
