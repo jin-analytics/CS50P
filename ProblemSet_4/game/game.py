@@ -8,7 +8,7 @@ def main():
             num = random.randint(1,lev)
             break
         except ValueError:
-            print()
+            print("", end = "")
 
     while True:
         try:
@@ -26,7 +26,7 @@ def main():
         except EOFError:
             break
         except ValueError:
-            print("", end = None)
+            print("", end = "")
 
 if __name__ == "__main__":
     main()
