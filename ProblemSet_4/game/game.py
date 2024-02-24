@@ -12,7 +12,7 @@ def main():
 
     while True:
         try:
-            print(num)
+            #print(num)
             gue = int(input("Guess: "))
 
             if gue == num:
