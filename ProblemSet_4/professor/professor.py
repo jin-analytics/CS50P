@@ -6,7 +6,7 @@ def main():
 
     level = get_level()
     while True:
-        counter = []
+        try_counter = []
         numbers = generate_integer(level)
         x = numbers[0]
         y = numbers[1]
@@ -17,8 +17,8 @@ def main():
                 guess = int(input())
                 if guess != solution: # when the guess doesn't equal the solution, Errormessage "EEE" appears
                     print("EEE")
-                    counter.append(0) # you have three guesses, then the program shows the correct answer and stops
-                    if len(counter) == 3:
+                    try_counter.append(0) # you have three guesses, then the program shows the correct answer and stops
+                    if len(try_counter) == 3:
                         print(x,"+",y,"= ",solution)
                         break
                 else:
