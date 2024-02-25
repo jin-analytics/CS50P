@@ -26,7 +26,6 @@ def get_level():
         except EOFError:
             return False
 
-
 def generate_integer(level):
     try:
 #__________________________________Level 1
