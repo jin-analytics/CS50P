@@ -12,8 +12,8 @@ try:
     data = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
     bitcoin = data.json()
     #print(json.dumps(bitcoin, indent = 2)) #shows the data of the request in nice readable form
-    price = bitcoin["bpi"]["USD"]["rate_float"].replace
-    print(price)
+    price = bitcoin["bpi"]["USD"]["rate_float"]
+    print(f"${price:,} %.3f") #uses comma to thousand seperator
 
 
 except requests.RequestException:
