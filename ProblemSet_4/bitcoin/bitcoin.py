@@ -1,6 +1,6 @@
 import sys
 import requests
-import json
+#import json
 
 try:
     if len(sys.argv) <2: #catches if there is less then one entree
@@ -12,8 +12,10 @@ try:
     #print(coins)
     data = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
     bitcoin = data.json()
-    print(json.dumps(bitcoin, indent = 2))
-    for key in bitcoin["bpi"]["USD"]["rate"]:
-        print(key)
+    #print(json.dumps(bitcoin, indent = 2))
+    for result in bitcoin["bpi"]["USD"]["rate"]:
+        value = result
+        print("$", value)
+
 except requests.RequestException:
     ...
