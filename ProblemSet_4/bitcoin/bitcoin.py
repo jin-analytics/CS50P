@@ -14,8 +14,8 @@ try:
     bitcoin = data.json()
     #print(json.dumps(bitcoin, indent = 2))
     for result in bitcoin["bpi"]["USD"]:
-        #value = result.get("rate_float")
-        print("$", result["rate_float"])
+        value = float(result["rate_float"])
+        print("$", value)
 
 except requests.RequestException:
     ...
