@@ -13,7 +13,8 @@ try:
     bitcoin = data.json()
     #print(json.dumps(bitcoin, indent = 2)) #shows the data of the request in nice readable form
     price = bitcoin["bpi"]["USD"]["rate_float"]
-    print(f"${price:,} %.3f") #uses comma to thousand seperator
+    print(f"${price:,}") #uses comma to thousand seperator (per default are 4 digits behind comma)
+    #print(f"${price:,.2f}") #uses comma to thousand seperator and cuts after 2 digits behind comma
 
 
 except requests.RequestException:
