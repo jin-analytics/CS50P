@@ -21,26 +21,29 @@ def get_level():
 
 def generate_integer(level):
     #_________Level 1_________
-    if level == 1:
-        x = random.randint(1,9)
-        y = random.randint(1,9)
-        print(x,"+",y,"= ", end = "")
-        int(input())
-
-
+    try:
+        if level == 1:
+            x = random.randint(1,9)
+            y = random.randint(1,9)
+            print(x,"+",y,"= ", end = "")
+            int(input())
     #_________Level 2_________
-    elif level == 2:
-        x = random.randint(1,99)
-        y = random.randint(1,99)
-        print(x,"+",y,"= ", end = "")
-        int(input())
-
+        elif level == 2:
+            x = random.randint(1,99)
+            y = random.randint(1,99)
+            print(x,"+",y,"= ", end = "")
+            int(input())
     #_________Level 3_________
-    elif level == 3:
-        x = random.randint(1,999)
-        y = random.randint(1,999)
-        print(x,"+",y,"= ", end = "")
-        int(input())
+        elif level == 3:
+            x = random.randint(1,999)
+            y = random.randint(1,999)
+            print(x,"+",y,"= ", end = "")
+            int(input())
+
+    except ValueError:
+        print("", end = "")
+    except EOFError:
+        return False
 
 if __name__ == "__main__":
     main()
