@@ -13,5 +13,7 @@ try:
     #print(data.json())
     bitcoin = data.json()
     print(bitcoin.items())
+    for key, value in bitcoin.items():
+        print(key, value)
 except requests.RequestException:
     ...
