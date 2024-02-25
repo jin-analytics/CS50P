@@ -10,8 +10,8 @@ try:
     coins = float(sys.argv[1]) #defines the n-amounts of coins
     print(coins)
     data = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-    print(data.json())
+    #print(data.json())
     bitcoin = data.json()
-    print(bitcoin)
+    print(bitcoin.items())
 except requests.RequestException:
     ...
