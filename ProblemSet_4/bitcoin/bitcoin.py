@@ -14,6 +14,6 @@ try:
     bitcoin = data.json()
     print(json.dumps(bitcoin, indent = 2))
     for result in bitcoin["bpi"]:
-        print(result["rate"])
+        print(result["USD"])
 except requests.RequestException:
     ...
