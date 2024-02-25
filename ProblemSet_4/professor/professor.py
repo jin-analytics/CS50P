@@ -25,8 +25,8 @@ def generate_integer(level):
         x = random.randint(1,9)
         y = random.randint(1,9)
         #print(x,"+",y,"=")
-        exercise = str((x,"+",y,"="))
-        int(input(exercise))
+        #exercise = str(f({x} + {y}))
+        int(input(print(x,"+",y,"=")))
 
 
     #_________Level 2_________
