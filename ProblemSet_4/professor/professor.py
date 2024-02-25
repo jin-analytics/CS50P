@@ -36,6 +36,8 @@ def main():
         except EOFError:
             return False
 
+    print("Score: ", score_counter.count(1))
+
 def get_level():
     while True:
         try:
