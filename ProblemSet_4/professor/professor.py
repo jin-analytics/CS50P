@@ -10,11 +10,9 @@ def main():
     while True:
         print(x,"+",y,"= ", end = "")
         guess = int(input())
-    #print(solution)
         if guess != solution:
             print("EEE")
         else:
-            print("correct")
             return True
 
 def get_level():
@@ -35,13 +33,11 @@ def generate_integer(level):
         if level == 1:
             x = random.randint(1,9)
             y = random.randint(1,9)
-            #print(x,"+",y,"= ", end = "")
             return x,y
 #__________________________________Level 2
         elif level == 2:
             x = random.randint(1,99)
             y = random.randint(1,99)
-            print(x,"+",y,"= ", end = "")
             return x,y
 #__________________________________Level 3
         elif level == 3:
