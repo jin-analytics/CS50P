@@ -33,8 +33,8 @@ def generate_integer(level):
     elif level == 2:
         x = random.randint(1,99)
         y = random.randint(1,99)
-        #print(x,"+",y,"=")
-        int(input(x,"+",y,"="))
+        print(x,"+",y,"=", end = "")
+        int(input())
 
     #_________Level 3_________
     elif level == 3:
