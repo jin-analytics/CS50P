@@ -22,11 +22,10 @@ def get_level():
 def generate_integer(level):
 
         #__________________________________Level 1
-        try:
-            while True:
-                if level == 1:
-                    x = random.randint(1,9)
-                    y = random.randint(1,9)
+    try:
+        if level == 1:
+            x = random.randint(1,9)
+            y = random.randint(1,9)
                     print(x,"+",y,"= ", end = "")
                     solution = x + y
                     guess = int(input())
