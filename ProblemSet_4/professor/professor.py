@@ -35,7 +35,7 @@ def generate_integer(level):
         if level == 1:
             x = random.randint(1,9)
             y = random.randint(1,9)
-            print(x,"+",y,"= ", end = "")
+            #print(x,"+",y,"= ", end = "")
             return x,y
 #__________________________________Level 2
         elif level == 2:
