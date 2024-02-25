@@ -3,16 +3,15 @@ import random
 
 def main():
 
-
+    score_counter = [] # score counter - how many right solutions you got
     level = get_level()
     while True:
         try_counter = [] # counter list - how many tries per excercise
-        score_counter = [] # score counter - how many right solutions you got
         numbers = generate_integer(level)
         x = numbers[0]
         y = numbers[1]
         solution = x + y
-        print(len(score_counter))
+        print(score_counter)
         try:
             while True:
                 print(x,"+",y,"= ", end = "")
@@ -22,11 +21,15 @@ def main():
                     try_counter.append(0) # you have three guesses, then the program shows the correct answer and stops
                     if len(try_counter) == 3:
                         print(x,"+",y,"= ",solution)
-                        return score_counter.append(0) # adds 0 to score counter and returns 0 to main while loop
+                        score_counter.append(0) # adds 0 to score counter and returns 0 to main while loop
+                        break
+                        #print(len(score_counter))
                 elif guess == solution:
-                    return score_counter.append(1) # adds 1 to score counter and returns 1 to main while loop
-                else:
+                    score_counter.append(1) # adds 1 to score counter and returns 1 to main while loop
                     break
+                    #print(len(score_counter))
+                #else:
+                    #break
         except ValueError:
             print("", end = "")
         except EOFError:
