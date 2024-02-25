@@ -12,6 +12,6 @@ try:
     data = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
     print(data.json())
     bitcoin = data.json()
-    print(bitcoin.[])
+    print(bitcoin)
 except requests.RequestException:
     ...
