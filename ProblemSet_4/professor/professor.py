@@ -6,8 +6,8 @@ def main():
 
     level = get_level()
     while True:
-        try_counter = []
-        score_counter = []
+        try_counter = [] # counter list - how many tries per excercise
+        score_counter = [] # score counter - how many right solutions you got
         numbers = generate_integer(level)
         x = numbers[0]
         y = numbers[1]
