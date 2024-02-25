@@ -13,9 +13,9 @@ def main():
         guess = int(input())
         if guess != solution: # when the guess doesn't equal the solution, Errormessage "EEE" appears
             print("EEE")
-            counter.append(0) # you have three guesses, then the program 
+            counter.append(0) # you have three guesses, then the program shows the correct answer and stops
             if len(counter) == 3:
-                exit()
+                exit(print(solution))
         else:
             return True
 
