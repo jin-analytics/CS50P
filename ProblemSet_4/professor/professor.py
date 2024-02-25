@@ -19,7 +19,7 @@ def main():
                     print("EEE")
                     counter.append(0) # you have three guesses, then the program shows the correct answer and stops
                     if len(counter) == 3:
-                        print(solution)
+                        print(x,"+",y,"= ",solution)
                         break
                 else:
                     break
