@@ -24,24 +24,23 @@ def generate_integer(level):
     if level == 1:
         x = random.randint(1,9)
         y = random.randint(1,9)
-        #print(x,"+",y,"=")
-        #exercise = str(f({x} + {y}))
-        int(input(print(x,"+",y,"=")))
+        print(x,"+",y,"= ", end = "")
+        int(input())
 
 
     #_________Level 2_________
     elif level == 2:
         x = random.randint(1,99)
         y = random.randint(1,99)
-        print(x,"+",y,"=", end = "")
+        print(x,"+",y,"= ", end = "")
         int(input())
 
     #_________Level 3_________
     elif level == 3:
         x = random.randint(1,999)
         y = random.randint(1,999)
-        #print(x,"+",y,"=")
-        int(input(x,"+",y,"="))
+        print(x,"+",y,"= ", end = "")
+        int(input())
 
 if __name__ == "__main__":
     main()
