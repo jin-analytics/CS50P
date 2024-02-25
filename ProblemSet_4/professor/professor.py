@@ -8,9 +8,10 @@ def get_level():
     while True:
         try:
             lev = int(input("Level: "))
-            num = random.randint(1,lev)
-            print(num)
-            break
+            if 1 <= lev <= 3:
+                num = random.randint(1,lev)
+                print(num)
+                break
         except ValueError:
             print("", end = "")
         except EOFError:
