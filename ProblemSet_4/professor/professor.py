@@ -22,10 +22,9 @@ def main():
                     try_counter.append(0) # you have three guesses, then the program shows the correct answer and stops
                     if len(try_counter) == 3:
                         print(x,"+",y,"= ",solution)
-                        score_counter.append(0) # adds 0 to score counter
-                        break
+                        return score_counter.append(0) # adds 0 to score counter and returns 0 to main while loop
                 elif guess == solution:
-                    score_counter.append(1) # adds 1 to score counter
+                    return score_counter.append(1) # adds 1 to score counter and returns 1 to main while loop
                 else:
                     break
         except ValueError:
