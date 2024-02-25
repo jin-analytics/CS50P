@@ -2,6 +2,7 @@ import random
 
 
 def main():
+    counter = []
     level = get_level()
     numbers = generate_integer(level)
     x = numbers[0]
@@ -12,6 +13,7 @@ def main():
         guess = int(input())
         if guess != solution:
             print("EEE")
+            counter.append(+1)
         else:
             return True
 
