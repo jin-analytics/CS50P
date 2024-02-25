@@ -12,6 +12,7 @@ def main():
         x = numbers[0]
         y = numbers[1]
         solution = x + y
+        print(len(score_counter))
         try:
             while True:
                 print(x,"+",y,"= ", end = "")
@@ -21,7 +22,10 @@ def main():
                     try_counter.append(0) # you have three guesses, then the program shows the correct answer and stops
                     if len(try_counter) == 3:
                         print(x,"+",y,"= ",solution)
+                        score_counter.append(0) # adds 0 to score counter
                         break
+                elif guess == solution:
+                    score_counter.append(1) # adds 1 to score counter
                 else:
                     break
         except ValueError:
