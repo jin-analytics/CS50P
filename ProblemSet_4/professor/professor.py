@@ -11,9 +11,9 @@ def main():
     while True:
         print(x,"+",y,"= ", end = "")
         guess = int(input())
-        if guess != solution:
+        if guess != solution: # when the guess doesn't equal the solution, Errormessage "EEE" appears
             print("EEE")
-            counter.append(0)
+            counter.append(0) # you have three guesses, then the program 
             if len(counter) == 3:
                 exit()
         else:
