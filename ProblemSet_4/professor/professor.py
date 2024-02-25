@@ -1,6 +1,5 @@
 import random
 
-
 def main():
     score_counter = [] # score counter - how many right solutions you got
     level = get_level()
