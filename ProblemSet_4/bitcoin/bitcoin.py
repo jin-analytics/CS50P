@@ -11,10 +11,9 @@ try:
     coins = float(sys.argv[1]) #defines the n-amounts of coins
     #print(coins)
     data = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-    #print(data.json())
     bitcoin = data.json()
     print(json.dumps(bitcoin, indent = 2))
-    #for key, value in bitcoin.items():
-        #print(key, value)
+    for result in bitcoin["bpi"]:
+        print(result["rate"])
 except requests.RequestException:
     ...
