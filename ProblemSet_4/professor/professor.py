@@ -7,6 +7,7 @@ def main():
     level = get_level()
     while True:
         try_counter = []
+        score_counter = []
         numbers = generate_integer(level)
         x = numbers[0]
         y = numbers[1]
