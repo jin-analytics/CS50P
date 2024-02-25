@@ -4,7 +4,7 @@ import json
 
 try:
     if len(sys.argv) <2: #catches if there is less then one entree
-        sys.exit("too few")
+        sys.exit("Missing command-line argument")
     if len(sys.argv) >2: #catches if there is more then one entree
         sys.exit("too many")
 
