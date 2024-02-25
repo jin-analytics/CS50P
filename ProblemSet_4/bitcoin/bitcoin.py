@@ -13,9 +13,9 @@ try:
     data = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
     bitcoin = data.json()
     print(json.dumps(bitcoin, indent = 2))
-    for result in bitcoin["bpi"]["USD"]["rate_float"]:
-        value = float[0]
-        print("$", value)
+    for result in bitcoin["bpi"]["USD"][]:
+        #value = float[0]
+        print(result("rate_float"))
 
 except requests.RequestException:
     ...
