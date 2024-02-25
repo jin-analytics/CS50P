@@ -12,5 +12,4 @@ def line_check(e):
         if i == "_":
             print(emoji.emojize(f"Output: {e}"))
 
-
 main()
