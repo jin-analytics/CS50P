@@ -13,7 +13,7 @@ def main():
         guess = int(input())
         if guess != solution:
             print("EEE")
-            counter.append() + 1
+            counter.append(+1)
             print(counter)
         else:
             return True
