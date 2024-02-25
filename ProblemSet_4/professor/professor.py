@@ -48,8 +48,8 @@ def generate_integer(level):
     try:
 #__________________________________Level 1
         if level == 1:
-            x = random.randint(1,9)
-            y = random.randint(1,9)
+            x = random.randint(0,9)
+            y = random.randint(0,9)
             return x,y
 #__________________________________Level 2
         elif level == 2:
