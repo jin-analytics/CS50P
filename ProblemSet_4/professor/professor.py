@@ -53,13 +53,13 @@ def generate_integer(level):
             return x,y
 #__________________________________Level 2
         elif level == 2:
-            x = random.randint(1,99)
-            y = random.randint(1,99)
+            x = random.randint(10,99)
+            y = random.randint(10,99)
             return x,y
 #__________________________________Level 3
         elif level == 3:
-            x = random.randint(1,999)
-            y = random.randint(1,999)
+            x = random.randint(100,999)
+            y = random.randint(100,999)
             return x,y
     except ValueError:
         print("", end = "")
