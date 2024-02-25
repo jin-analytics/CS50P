@@ -2,28 +2,31 @@ import random
 
 
 def main():
-    counter = []
+
+
     level = get_level()
-    numbers = generate_integer(level)
-    x = numbers[0]
-    y = numbers[1]
-    solution = x + y
-    try:
-        while True:
-            print(x,"+",y,"= ", end = "")
-            guess = int(input())
-            if guess != solution: # when the guess doesn't equal the solution, Errormessage "EEE" appears
-                print("EEE")
-                counter.append(0) # you have three guesses, then the program shows the correct answer and stops
-                if len(counter) == 3:
-                    print(solution)
+    while True:
+        counter = []
+        numbers = generate_integer(level)
+        x = numbers[0]
+        y = numbers[1]
+        solution = x + y
+        try:
+            while True:
+                print(x,"+",y,"= ", end = "")
+                guess = int(input())
+                if guess != solution: # when the guess doesn't equal the solution, Errormessage "EEE" appears
+                    print("EEE")
+                    counter.append(0) # you have three guesses, then the program shows the correct answer and stops
+                    if len(counter) == 3:
+                        print(solution)
+                        break
+                else:
                     break
-            else:
-                break
-    except ValueError:
-        print("", end = "")
-    except EOFError:
-        return False
+        except ValueError:
+            print("", end = "")
+        except EOFError:
+            return False
 
 def get_level():
     while True:
