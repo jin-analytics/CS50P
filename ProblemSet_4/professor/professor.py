@@ -8,7 +8,7 @@ def get_level():
     while True:
         try:
             lev = int(input("Level: "))
-            if 1 <= lev <= 3:
+            if 1 <= lev <= 3: #just accepts input of [1;3]
                 num = random.randint(1,lev)
                 print(num)
                 break
