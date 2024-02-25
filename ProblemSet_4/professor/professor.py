@@ -7,14 +7,15 @@ def main():
     x = numbers[0]
     y = numbers[1]
     solution = x + y
-    print(x,"+",y,"= ", end = "")
-    guess = int(input())
+    while True:
+        print(x,"+",y,"= ", end = "")
+        guess = int(input())
     #print(solution)
-    #if guess != solution:
-        #print("EEE")
-    #else:
-        #print("correct")
-        #return True
+        if guess != solution:
+            print("EEE")
+        else:
+            print("correct")
+            return True
 
 def get_level():
     while True:
