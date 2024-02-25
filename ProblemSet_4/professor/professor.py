@@ -8,16 +8,22 @@ def main():
     x = numbers[0]
     y = numbers[1]
     solution = x + y
-    while True:
-        print(x,"+",y,"= ", end = "")
-        guess = int(input())
-        if guess != solution: # when the guess doesn't equal the solution, Errormessage "EEE" appears
-            print("EEE")
-            counter.append(0) # you have three guesses, then the program shows the correct answer and stops
-            if len(counter) == 3:
-                exit(print(solution))
-        else:
-            return True
+    try:
+        while True:
+            print(x,"+",y,"= ", end = "")
+            guess = int(input())
+            if guess != solution: # when the guess doesn't equal the solution, Errormessage "EEE" appears
+                print("EEE")
+                counter.append(0) # you have three guesses, then the program shows the correct answer and stops
+                if len(counter) == 3:
+                    print(solution)
+                    break
+            else:
+                break
+    except ValueError:
+        print("", end = "")
+    except EOFError:
+        return False
 
 def get_level():
     while True:
