@@ -18,4 +18,6 @@ try:
 
 
 except requests.RequestException:
-    ...
+    sys.exit("RequestException")
+except ValueError:
+    sys.exit("Command-line argument is not a number")
