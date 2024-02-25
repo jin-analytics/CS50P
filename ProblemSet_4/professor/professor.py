@@ -20,23 +20,31 @@ def get_level():
 
 
 def generate_integer(level):
-    while True:
+
         #__________________________________Level 1
         try:
-            if level == 1:
-                x = random.randint(1,9)
-                y = random.randint(1,9)
-                print(x,"+",y,"= ", end = "")
-                solution = x + y
-                print(solution)
-                int(input())
+            while True:
+                if level == 1:
+                    x = random.randint(1,9)
+                    y = random.randint(1,9)
+                    print(x,"+",y,"= ", end = "")
+                    solution = x + y
+                    guess = int(input())
+                    print(solution)
+                    if guess != solution:
+                        print("EEE")
+                    else:
+                        print("correct")
+                        return True
         #__________________________________Level 2
+            while True:
             elif level == 2:
                 x = random.randint(1,99)
                 y = random.randint(1,99)
                 print(x,"+",y,"= ", end = "")
                 int(input())
         #__________________________________Level 3
+            while True:
             elif level == 3:
                 x = random.randint(1,999)
                 y = random.randint(1,999)
