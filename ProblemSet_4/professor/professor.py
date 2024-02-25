@@ -2,11 +2,9 @@ import random
 
 
 def main():
-
     score_counter = [] # score counter - how many right solutions you got
     level = get_level()
-    #while True:
-    for _ in range(2):
+    for _ in range(10): # ten guesses, then you get the score of correct answers
         try_counter = [] # counter list - how many tries per excercise
         numbers = generate_integer(level)
         x = numbers[0]
@@ -28,15 +26,12 @@ def main():
                 elif guess == solution:
                     score_counter.append(1) # adds 1 to score counter and returns 1 to main while loop
                     break
-                    #print(len(score_counter))
-                #else:
-                    #break
         except ValueError:
             print("", end = "")
         except EOFError:
             return False
 
-    print("Score: ", score_counter.count(1))
+    print("Score:", score_counter.count(1))
 
 def get_level():
     while True:
