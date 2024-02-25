@@ -21,7 +21,6 @@ def main():
                         print(x,"+",y,"= ",solution)
                         score_counter.append(0) # adds 0 to score counter and returns 0 to main while loop
                         break
-                        #print(len(score_counter))
                 elif guess == solution:
                     score_counter.append(1) # adds 1 to score counter and returns 1 to main while loop
                     break
