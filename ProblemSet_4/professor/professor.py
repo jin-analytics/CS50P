@@ -27,6 +27,8 @@ def generate_integer(level):
                 x = random.randint(1,9)
                 y = random.randint(1,9)
                 print(x,"+",y,"= ", end = "")
+                solution = x + y
+                print(solution)
                 int(input())
         #__________________________________Level 2
             elif level == 2:
