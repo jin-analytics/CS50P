@@ -11,7 +11,9 @@ def test_lower(tw):
    for letters in shortened_word:
       try:
         vowelslist = ["a","e","i","o","u"]
+        print(vowelslist[0])
         for i in vowelslist:
+            print(i)
             assert letters != vowelslist[i]
             print(vowelslist[i])
       except AssertionError:
