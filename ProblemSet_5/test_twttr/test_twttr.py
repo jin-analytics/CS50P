@@ -4,6 +4,7 @@ def main():
     test_lower()
     test_upper()
     test_numbers()
+    test_signs()
 
 # compare the selected vowes with the one removed
 def test_lower():
@@ -37,6 +38,11 @@ def test_numbers():
     input = shorten("1234567890")
     for number in input:
         assert number.isdigit() != True
+
+def test_signs():
+    input = shorten(" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ")
+    for signs in input:
+        assert signs.isalpha() == True
 
 
 # if __name__ == "__main__": - helps to prevent errors due to not defined global variables yet, if we call main() inside there
