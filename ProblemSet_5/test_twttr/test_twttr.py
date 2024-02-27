@@ -1,16 +1,10 @@
 from twttr import shorten
 import pytest
 
-#def main():
-    #tweet = input("Input: ")
-    #print("Output:", shorten(tweet))
-    #test_lower(tweet)
-    #test_upper(tweet)
-
-tweet = input("Input: ")
-#print("Output:", shorten(tweet))
-test_lower(tweet)
-test_upper(tweet)
+def main():
+    tweet = input("Input: ")
+    test_lower(tweet)
+    test_upper(tweet)
 
 # compare the selected vowes with the one removed
 def test_lower(tw):
@@ -33,8 +27,7 @@ def test_upper(tw):
       except AssertionError:
          print("Still some vowels left... ->", vowels)
 
-
 # if __name__ == "__main__": - helps to prevent errors due to not defined global variables yet, if we call main() inside there
-#if __name__ == "__main__":
-#    main()
+if __name__ == "__main__":
+    main()
 
