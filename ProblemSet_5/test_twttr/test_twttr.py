@@ -7,8 +7,8 @@ def main():
     test_signs()
 
 # compare the selected vowes with the one removed
-def test_lower():
-   shortened_word = shorten()
+def test_lower(word):
+   shortened_word = shorten(word)
    print(shortened_word)
    for letters in shortened_word:
       vowelslist = ["a","e","i","o","u"]
