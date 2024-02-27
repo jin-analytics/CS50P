@@ -9,6 +9,7 @@ def main():
 # compare the selected vowes with the one removed
 def test_lower():
    shortened_word = shorten("twitter")
+   print(shortened_word)
    for letters in shortened_word:
       try:
         vowelslist = ["a","e","i","o","u"]
