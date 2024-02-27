@@ -2,13 +2,13 @@ from twttr import shorten
 import pytest
 
 def main():
-    tweet = input("Input: ")
-    test_lower(tweet)
-    test_upper(tweet)
+    #tweet = input("Input: ")
+    test_lower()
+    #test_upper(tweet)
 
 # compare the selected vowes with the one removed
-def test_lower(tw):
-   shortened_word = shorten(tw)
+def test_lower():
+   shortened_word = shorten("twitter")
    for letters in shortened_word:
       try:
         vowelslist = ["a","e","i","o","u"]
