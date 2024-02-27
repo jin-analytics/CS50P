@@ -2,9 +2,10 @@ from twttr import shorten
 
 def main():
     tweet = input("Input: ")
-    print("Output:", shorten(tweet))
+    #print("Output:", shorten(tweet))
 
-#def test_lower():
+def test_lower(tweet):
+    
 
 #def test_upper():
 
