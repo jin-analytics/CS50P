@@ -6,6 +6,7 @@ def main():
 
 # compare the selected vowes with the one removed
 def test_lower(tweet):
+    
 
 
 #def test_upper():
