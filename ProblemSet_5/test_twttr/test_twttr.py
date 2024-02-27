@@ -3,6 +3,7 @@ from twttr import shorten
 def main():
     test_lower()
     test_upper()
+    test_numbers()
 
 # compare the selected vowes with the one removed
 def test_lower():
@@ -12,7 +13,6 @@ def test_lower():
       vowelslist = ["a","e","i","o","u"]
       for vowels in vowelslist:
           assert letters != vowels
-
 #      try:
 #        vowelslist = ["a","e","i","o","u"]
 #        for vowels in vowelslist:
@@ -26,13 +26,22 @@ def test_upper():
         vowelslist = ["A","E","I","O","U"]
         for vowels in vowelslist:
             assert letters != vowels
-
 #      try:
 #        vowelslist = ["A","E","I","O","U"]
 #        for vowels in vowelslist:
 #            assert letters != vowels
 #      except AssertionError:
 #         print("Still some vowels left... ->", vowels)
+
+def test_numbers():
+    input = shorten("1234567890")
+    for number in input:
+        #print(number)
+        numberlist = [0]
+        for n in numberlist:
+            print(n)
+            assert number != n
+
 
 # if __name__ == "__main__": - helps to prevent errors due to not defined global variables yet, if we call main() inside there
 if __name__ == "__main__":
