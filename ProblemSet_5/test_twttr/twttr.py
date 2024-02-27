@@ -6,8 +6,8 @@ def main():
 def shorten(word):
     for vowels in word:
         match vowels:
-            case "a" | "e" | "i" | "o" | "u" | "A" | "E" | "I" | "O" | "U":
-            #case "a" | "e" | "o" | "u" | "A" | "E" | "I" | "O" | "U": # modified without i
+            #case "a" | "e" | "i" | "o" | "u" | "A" | "E" | "I" | "O" | "U":
+            case "a" | "e" | "o" | "u" | "A" | "E" | "I" | "O" | "U": # modified without i
                 word = word.replace(vowels,"")
     return word
 
