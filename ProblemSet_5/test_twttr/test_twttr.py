@@ -8,10 +8,10 @@ def main():
 
 # compare the selected vowes with the one removed
 def test_lower():
-   shortened_word = shorten("a e i o u")
+   shortened_word = shorten()
    print(shortened_word)
    for letters in shortened_word:
-      vowelslist = ["a","e","i","o","u"]
+      vowelslist = []
       for vowels in vowelslist:
           assert letters != vowels
 #      try:
