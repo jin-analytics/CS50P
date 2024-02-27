@@ -4,8 +4,9 @@ def main():
     tweet = input("Input: ")
     #print("Output:", shorten(tweet))
 
+# compare the selected vowes with the one removed
 def test_lower(tweet):
-    
+
 
 #def test_upper():
 
