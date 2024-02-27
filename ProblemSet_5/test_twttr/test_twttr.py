@@ -3,24 +3,31 @@ import pytest
 
 def main():
     tweet = input("Input: ")
-    test_lower()
-    #test_upper(tweet)
+    test_lower(tweet)
+    test_upper(tweet)
 
 # compare the selected vowes with the one removed
-def test_lower(tweet):
-   shortened_word = shorten(tweet)
+def test_lower(tw):
+   shortened_word = shorten(tw)
    print(shortened_word)
    for letters in shortened_word:
-      try:
-        vowelslist = ["a","e","i","o","u"]
+      vowelslist = ["a","e","i","o","u"]
+      for vowels in vowelslist:
+          assert letters != vowels
+#      try:
+#        vowelslist = ["a","e","i","o","u"]
+#        for vowels in vowelslist:
+#            assert letters != vowels
+#      except AssertionError:
+#         print("Still some vowels left... ->", vowels)
+
+def test_upper(tw):
+    shortened_word = shorten(tw)
+    for letters in shortened_word:
+        vowelslist = ["A","E","I","O","U"]
         for vowels in vowelslist:
             assert letters != vowels
-      except AssertionError:
-         print("Still some vowels left... ->", vowels)
 
-#def test_upper(tw):
-#    shortened_word = shorten(tw)
-#    for letters in shortened_word:
 #      try:
 #        vowelslist = ["A","E","I","O","U"]
 #        for vowels in vowelslist:
