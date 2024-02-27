@@ -1,11 +1,16 @@
 from twttr import shorten
 import pytest
 
-def main():
-    tweet = input("Input: ")
+#def main():
+    #tweet = input("Input: ")
     #print("Output:", shorten(tweet))
-    test_lower(tweet)
-    test_upper(tweet)
+    #test_lower(tweet)
+    #test_upper(tweet)
+
+tweet = input("Input: ")
+#print("Output:", shorten(tweet))
+test_lower(tweet)
+test_upper(tweet)
 
 # compare the selected vowes with the one removed
 def test_lower(tw):
@@ -30,6 +35,6 @@ def test_upper(tw):
 
 
 # if __name__ == "__main__": - helps to prevent errors due to not defined global variables yet, if we call main() inside there
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()
 
