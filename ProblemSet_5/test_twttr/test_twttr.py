@@ -3,10 +3,11 @@ from twttr import shorten
 def main():
     tweet = input("Input: ")
     #print("Output:", shorten(tweet))
+    test_lower(tweet)
 
 # compare the selected vowes with the one removed
-def test_lower(tweet):
-    assert
+def test_lower(tw):
+    assert shorten(tw) == 
 
 
 #def test_upper():
