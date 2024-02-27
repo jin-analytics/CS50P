@@ -2,13 +2,13 @@ from twttr import shorten
 import pytest
 
 def main():
-    #tweet = input("Input: ")
+    tweet = input("Input: ")
     test_lower()
     #test_upper(tweet)
 
 # compare the selected vowes with the one removed
-def test_lower():
-   shortened_word = shorten("twitter")
+def test_lower(tweet):
+   shortened_word = shorten(tweet)
    print(shortened_word)
    for letters in shortened_word:
       try:
