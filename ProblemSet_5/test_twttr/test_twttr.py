@@ -2,13 +2,12 @@ from twttr import shorten
 import pytest
 
 def main():
-    tweet = input("Input: ")
-    test_lower(tweet)
-    test_upper(tweet)
+    test_lower()
+    test_upper()
 
 # compare the selected vowes with the one removed
-def test_lower(tw):
-   shortened_word = shorten(tw)
+def test_lower():
+   shortened_word = shorten("twitter")
    print(shortened_word)
    for letters in shortened_word:
       vowelslist = ["a","e","i","o","u"]
@@ -21,8 +20,8 @@ def test_lower(tw):
 #      except AssertionError:
 #         print("Still some vowels left... ->", vowels)
 
-def test_upper(tw):
-    shortened_word = shorten(tw)
+def test_upper():
+    shortened_word = shorten("twitter")
     for letters in shortened_word:
         vowelslist = ["A","E","I","O","U"]
         for vowels in vowelslist:
