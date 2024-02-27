@@ -1,7 +1,7 @@
 from twttr import shorten
 
-def main():
-    test_lower()
+def main(word):
+    test_lower(word)
     test_upper()
     test_numbers()
     test_signs()
