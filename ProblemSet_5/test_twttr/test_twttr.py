@@ -7,7 +7,9 @@ def main():
 
 # compare the selected vowes with the one removed
 def test_lower(tw):
-    assert shorten(tw) == 
+   shortened_word = shorten(tw)
+   for letters in shortened_word:
+       assert letters != "a" or "e" or "i" or "o" or "u"
 
 
 #def test_upper():
