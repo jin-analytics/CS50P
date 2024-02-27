@@ -36,11 +36,7 @@ def test_upper():
 def test_numbers():
     input = shorten("1234567890")
     for number in input:
-        #print(number)
-        numberlist = [0]
-        for n in numberlist:
-            print(n)
-            assert number != n
+        assert number.isdigit() != True
 
 
 # if __name__ == "__main__": - helps to prevent errors due to not defined global variables yet, if we call main() inside there
