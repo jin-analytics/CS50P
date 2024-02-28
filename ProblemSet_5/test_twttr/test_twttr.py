@@ -1,14 +1,15 @@
 from twttr import shorten
 
-def main(word):
-    test_lower(word)
-    test_upper()
-    test_numbers()
-    test_signs()
+def main():
+    #tweet = input("Input: ")
+    test_lower(tweet)
+    test_upper(tweet)
+    test_numbers(tweet)
+    test_signs(tweet)
 
 # compare the selected vowes with the one removed
-def test_lower(word):
-   shortened_word = shorten(word)
+def test_lower(t):
+   shortened_word = shorten(t)
    print(shortened_word)
    for letters in shortened_word:
       vowelslist = ["a","e","i","o","u"]
@@ -21,8 +22,8 @@ def test_lower(word):
 #      except AssertionError:
 #         print("Still some vowels left... ->", vowels)
 
-def test_upper():
-    shortened_word = shorten("A E I O U")
+def test_upper(t):
+    shortened_word = shorten(t)
     for letters in shortened_word:
         vowelslist = ["A","E","I","O","U"]
         for vowels in vowelslist:
@@ -34,13 +35,13 @@ def test_upper():
 #      except AssertionError:
 #         print("Still some vowels left... ->", vowels)
 
-def test_numbers():
-    input = shorten("1234567890")
+def test_numbers(t):
+    input = shorten(t)
     for number in input:
         assert number.isdigit() != True
 
-def test_signs():
-    input = shorten(" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ")
+def test_signs(t):
+    input = shorten(t)
     for signs in input:
         assert signs.isalpha() == True
 

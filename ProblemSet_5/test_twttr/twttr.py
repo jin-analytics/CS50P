@@ -13,7 +13,7 @@ def shorten(word):
                 word = word.replace(_,"")
         #if _ in "!#$%&'§""()*+,-./:;<=>?@[]\^_`{|}~" or _.isspace() == True:
         if _.isalpha() == False:
-             print(_.isalpha())
+             #print(_.isalpha())
              word = word.replace(_,"")
 
     return word
