@@ -5,7 +5,7 @@ def main():
     test_hello(greeting)
 
 def test_hello():
-    value()
+    assert value() == 100
 
 
 if __name__ == "__main__":
