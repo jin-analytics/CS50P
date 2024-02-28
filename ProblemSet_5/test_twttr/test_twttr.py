@@ -1,6 +1,7 @@
 from twttr import shorten
 
 def main():
+    tweet = str("1234567890!§$%&/=twitter")
     #tweet = input("Input: ")
     test_lower(tweet)
     test_upper(tweet)
