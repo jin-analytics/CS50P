@@ -9,7 +9,7 @@ def shorten(word = "twitter123#"):
             case "a" | "e" | "i" | "o" | "u" | "A" | "E" | "I" | "O" | "U":
             #case "a" | "e" | "o" | "u" | "A" | "E" | "I" | "O" | "U": # modified without i
                 word = word.replace(_,"")
-            case "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9":
+            case "0" | "0" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9":
                 word = word.replace(_,"")
         #if _ in "!#$%&'§""()*+,-./:;<=>?@[]\^_`{|}~" or _.isspace() == True:
         if _.isalpha() == False:
