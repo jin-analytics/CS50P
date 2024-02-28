@@ -17,3 +17,13 @@ match greeting:
         else:
             print("$100")
 
+def main():
+    ...
+
+
+def value(greeting):
+    ...
+
+
+if __name__ == "__main__":
+    main()
