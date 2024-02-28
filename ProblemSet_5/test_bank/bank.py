@@ -13,16 +13,14 @@ def value(greeting):
         case ["Hello," | "Hello" | "hello", *rest]:
             #print("$0")
             val = int(0)
+            
         case _:
-        # Joing the matrix back together, so that you can...
-        # ... select the letter and not the full word!
             greeting = ' '.join(greeting)
-            print(greeting[0])
-            if greeting[0] == "H" or "h":
-                #print("$20")
+            if greeting[0] == "H":
+                val = int(20)
+            elif greeting[0] == "h":
                 val = int(20)
             else:
-                print("$100")
                 val = int(100)
     return val
 
