@@ -1,16 +1,16 @@
 from twttr import shorten
 
 def main():
-    tweet = str("1234567890!§$%&/=twitter")
+    #tweet = str("1234567890!§$%&/=twitter")
     #tweet = input("Input: ")
-    test_lower(tweet)
-    test_upper(tweet)
-    test_numbers(tweet)
-    test_signs(tweet)
+    test_lower()
+    test_upper()
+    test_numbers()
+    test_signs()
 
 # compare the selected vowes with the one removed
-def test_lower(t):
-   shortened_word = shorten(t)
+def test_lower():
+   shortened_word = shorten()
    print(shortened_word)
    for letters in shortened_word:
       vowelslist = ["a","e","i","o","u"]
@@ -23,8 +23,8 @@ def test_lower(t):
 #      except AssertionError:
 #         print("Still some vowels left... ->", vowels)
 
-def test_upper(t):
-    shortened_word = shorten(t)
+def test_upper():
+    shortened_word = shorten()
     for letters in shortened_word:
         vowelslist = ["A","E","I","O","U"]
         for vowels in vowelslist:
@@ -36,13 +36,13 @@ def test_upper(t):
 #      except AssertionError:
 #         print("Still some vowels left... ->", vowels)
 
-def test_numbers(t):
-    input = shorten(t)
+def test_numbers():
+    input = shorten()
     for number in input:
         assert number.isdigit() != True
 
-def test_signs(t):
-    input = shorten(t)
+def test_signs():
+    input = shorten()
     for signs in input:
         assert signs.isalpha() == True
 
