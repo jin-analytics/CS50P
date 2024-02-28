@@ -17,6 +17,7 @@ def value(greeting):
         # Joing the matrix back together, so that you can...
         # ... select the letter and not the full word!
             greeting = ' '.join(greeting)
+            print(greeting[0])
             if greeting[0] == "H" or "h":
                 #print("$20")
                 val = int(20)
