@@ -22,7 +22,7 @@ def value(greeting):
                 #print("$20")
                 val = int(20)
             else:
-                #print("$100")
+                print("$100")
                 val = int(100)
     return val
 
