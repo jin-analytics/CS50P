@@ -1,7 +1,7 @@
 
 def main():
     greeting = input("Greeting: ")
-    print("$",value(greeting), )
+    print("$",value(greeting),sep="")
 
 def value(greeting):
     greeting = greeting.replace(",", " ").split()
@@ -20,15 +20,12 @@ def value(greeting):
                 case _:
                     val = int(100)
 
-
-
 #            if greeting[0] == "H":
 #                val = int(20)
 #            elif greeting[0] == "h":
 #                val = int(20)
 #            else:
 #                val = int(100)
-
 
     return val
 
