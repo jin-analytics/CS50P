@@ -11,7 +11,8 @@ def shorten(word):
                 word = word.replace(_,"")
             case "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9":
                 word = word.replace(_,"")
-        if _ in "!#$%&'§""()*+,-./:;<=>?@[]\^_`{|}~" or _.isspace() == True:
+        #if _ in "!#$%&'§""()*+,-./:;<=>?@[]\^_`{|}~" or _.isspace() == True:
+        if _ != word.isalpha():
              word = word.replace(_,"")
 
     return word
