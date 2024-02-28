@@ -11,7 +11,8 @@ def value(greeting):
     # Select different types of hello in the first column of the matrix...
     # ... with *rest will be the rest of the column entrees ignored!
         case ["Hello," | "Hello" | "hello", *rest]:
-            print("$0")
+            #print("$0")
+            val = int(0)
         case _:
         # Joing the matrix back together, so that you can...
         # ... select the letter and not the full word!
@@ -20,6 +21,8 @@ def value(greeting):
                 print("$20")
             else:
                 print("$100")
+
+        return val
 
 
 
