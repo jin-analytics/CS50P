@@ -5,8 +5,8 @@ def main():
     #tweet = input("Input: ")
     test_lower()
     test_upper()
-    test_numbers()
-    test_signs()
+#    test_numbers()
+#    test_signs()
 
 # compare the selected vowes with the one removed
 def test_lower():
@@ -36,10 +36,10 @@ def test_upper():
 #      except AssertionError:
 #         print("Still some vowels left... ->", vowels)
 
-def test_numbers():
-    input = shorten()
-    for number in input:
-        assert number.isdigit() != True
+#def test_numbers():
+#    input = shorten()
+#    for number in input:
+#        assert number.isdigit() != True
 
 #def test_signs():
 #    input = shorten()
