@@ -1,5 +1,5 @@
 def main():
-    tweet = input("Input: ")
+    tweet = str(input("Input: "))
     print("Output:", shorten(tweet))
 
 # checks if any vowel is inside the "tweet" and removes it, then gives it ("word") back
