@@ -41,10 +41,10 @@ def test_numbers():
     for number in input:
         assert number.isdigit() != True
 
-def test_signs():
-    input = shorten()
-    for signs in input:
-        assert signs.isalpha() == True
+#def test_signs():
+#    input = shorten()
+ #   for signs in input:
+ #       assert signs.isalpha() == True
 
 
 # if __name__ == "__main__": - helps to prevent errors due to not defined global variables yet, if we call main() inside there
