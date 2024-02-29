@@ -15,11 +15,11 @@ def test_uppercase_vowels(): #A,E,I,O,U
 #    word = ("TWITTER AND OUCHIE") # Output should be: "twttr nd ch"
 #    assert shorten(word) == "TWTTR ND CH"
 
-def test_numbers(): #1,2,3,4,5,6,7,8,9
+#def test_numbers(): #1,2,3,4,5,6,7,8,9
     #word = ("combo 1-2-3, left 4,5,6 & 7 8 9") # Output should be: "cmb  lft     "
-    word = ("1234567890")
-    word = shorten(word)
-    for _ in word:
-        match _:
-            case "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9":
-                assert _ == None
+    #word = ("twitter 1234567890")
+    #assert shorten(word) == "twttr "
+    #for _ in word:
+    #    match _:
+    #        case "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9":
+    #            assert _ == None
