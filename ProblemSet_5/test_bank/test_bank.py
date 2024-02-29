@@ -9,9 +9,10 @@ from test_bank import value
 #______________________________________
 
 def test_gives_100_for_hello():
-    greeting = ("hello")
-    value(greeting)
-    
+    #greeting = ("hello")
+    value = value()
+    assert value == 100
+
 
 #if __name__ == "__main__":
 #    main()
