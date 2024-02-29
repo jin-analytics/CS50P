@@ -8,10 +8,10 @@ from test_bank import value
 #    assert value() == 100
 #______________________________________
 
-def test_gives_100_for_hello():
+def test_gives_100_for_hello(greeting = "hello"):
     #greeting = ("hello")
-    value = value()
-    assert value == 100
+    val = value(greeting)
+    assert val == 100
 
 
 #if __name__ == "__main__":
