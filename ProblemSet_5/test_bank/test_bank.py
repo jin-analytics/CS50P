@@ -1,9 +1,9 @@
 from test_bank import value
 
-def main():
+#def main():
 #    greeting = str(input("Greeting: "))
 #    test_hello(greeting)
-    test_gives_100_for_hello()
+    #test_gives_100_for_hello()
 
 #def test_hello():
 #    assert value() == 100
