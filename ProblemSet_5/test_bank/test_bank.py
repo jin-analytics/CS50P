@@ -9,6 +9,8 @@ from test_bank import value
 #______________________________________
 
 def test_gives_100_for_hello():
+    greeting = ("hello")
+    value(greeting)
     
 
 #if __name__ == "__main__":
