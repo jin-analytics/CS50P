@@ -12,6 +12,8 @@ def test_gives_20_for_h_at_beginning():
     greeting = ("hi Sir")
     assert value(greeting[0]) == 20
     greeting = ("Hi Sir")
-    assert value(greeting[1]) == 20
+    assert value(greeting[0]) == 20
     greeting = ("Hi, Sir")
-    assert value(greeting[1]) == 20
+    assert value(greeting[0]) == 20
+
+def test_gives_0_for_when_h_is_not_at_beginning():
