@@ -10,7 +10,9 @@ def shorten(word):
             #case "a" | "e" | "o" | "u" | "A" | "E" | "I" | "O" | "U": # modified without i
                 word = word.replace(_,"")
             case "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9":
-                #word = word.replace(_,"")
+                word = word.replace(_,"")
+            case "!" | "§" | "$" | "%" | "&" | "/" | "=" | "?" | "." | "," | "-" | "*":
+                word = word.replace(_,"")
         #if _.isspace() != True:
             #if _.isalpha() == False:
                 #word = word.replace(_,"")
