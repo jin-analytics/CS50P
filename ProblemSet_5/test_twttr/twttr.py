@@ -3,7 +3,6 @@ def main():
     print("Output:", shorten(word))
 
 # checks if any vowel is inside the "tweet" and removes it, then gives it ("word") back
-#def shorten(word = "twitter123#"):
 def shorten(word):
     for _ in word:
         match _: #vowels
