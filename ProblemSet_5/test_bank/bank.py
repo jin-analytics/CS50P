@@ -1,4 +1,3 @@
-
 def main():
     greeting = input("Greeting: ")
     print("$",value(greeting),sep="")
@@ -19,14 +18,6 @@ def value(greeting):
                     val = int(20)
                 case _:
                     val = int(100)
-
-#            if greeting[0] == "H":
-#                val = int(20)
-#            elif greeting[0] == "h":
-#                val = int(20)
-#            else:
-#                val = int(100)
-
     return val
 
 if __name__ == "__main__":
