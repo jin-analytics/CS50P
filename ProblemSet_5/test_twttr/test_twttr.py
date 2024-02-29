@@ -5,9 +5,9 @@ def test_lowercase_vowels(): #a,e,i,o,u
     word = ("twitter") # Output should be: "twttr"
     assert shorten(word) == "twttr"
 
-#def test_uppercase_vowels(): #A,E,I,O,U
-#    word = ("TWITTER") # Output should be: "twttr"
-#    assert shorten(word) == "twttr"
+def test_uppercase_vowels(): #A,E,I,O,U
+    word = ("TWITTER") # Output should be: "twttr"
+    assert shorten(word) == "TWTTR"
 
 #def test_lowercase_and_vowels_and_sentences(): #a,e,i,o,u
 #    word = ("twitter and ouchie") # Output should be: "twttr nd ch"
