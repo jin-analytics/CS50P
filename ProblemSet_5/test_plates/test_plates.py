@@ -36,8 +36,5 @@ def test_if_numberblock_has_only_numbers(plate):
 
 def test_if_the_first_number_is_zero(plate):
     plate_split = splitter(plate)
-    if first_number_zero(plate_split) == None:
-        pass
-    else:
-        assert first_number_zero(plate_split) == True
+    assert first_number_zero(plate_split) != False
 
