@@ -13,11 +13,11 @@ def plate():
     #return ("")
 
 
-def test_if_the_length_is_between_2_and_6():
-    assert length() == True
+def test_if_the_length_is_between_2_and_6(plate):
+    assert length(plate) == True
 
-def test_if_signs_or_spaces_get_detected():
-    assert sign_detection() == None
+def test_if_signs_or_spaces_get_detected(plate):
+    assert sign_detection(plate) == None
 
 #def test_if_letterblock_has_atleast_two_chars():
     #plate_split = splitter()
