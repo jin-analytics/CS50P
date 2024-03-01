@@ -8,18 +8,19 @@ from plates import first_number_zero
 from plates import main
 import pytest
 
-@pytest.fixture
-def plate():
-    return ("CS50")
-    #return ("")
+def main():
+    @pytest.fixture
+    def plate():
+        return ("CS50")
+        #return ("")
 
 
 
-def test_length(plate):
-    assert length(plate) == True
+    def test_length(plate):
+        assert length(plate) == True
 
-def test_sign_detection(plate):
-    assert sign_detection(plate) == None
+    def test_sign_detection(plate):
+        assert sign_detection(plate) == None
 
 #def test_if_letterblock_has_atleast_two_chars():
     #plate_split = splitter()
@@ -32,3 +33,5 @@ def test_sign_detection(plate):
 #def test_if_the_first_number_is_zero():
  #   plate_split = splitter()
   #  assert first_number_zero(plate_split) == True
+if __name__ == "__main__":
+    main()
