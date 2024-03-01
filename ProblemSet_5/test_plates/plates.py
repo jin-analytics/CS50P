@@ -52,7 +52,6 @@ def sign_detection(plate_input):
         if signs in "!#$%&' ()*+,-./:;<=>?@[\]^_`{|}~" or signs.isspace() == True:
             #print("detected")
             return False
-            break
     else:
         return True
 #_______________________________________________Function #3_____________________________________________________________
@@ -61,7 +60,6 @@ def number_detection(plate_input):
     for numbers in plate_input:
         if numbers.isdigit() == True:
             return True
-            break
     else:
         return False
 #_______________________________________________Function #4_____________________________________________________________
