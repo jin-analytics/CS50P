@@ -55,8 +55,9 @@ def sign_detection(plate_input):
     ##else:
         ##return True
     if plate_input.isspace() != True:
-    elif _.isalpha() == False:
-                #word = word.replace(_,"")
+        return False
+    elif plate_input.isalpha() == False:
+        return False
 #_______________________________________________Function #3_____________________________________________________________
 # Checks for numbers in the input - if a number is detected, function returns True... else returns False
 def number_detection(plate_input):
