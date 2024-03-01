@@ -10,7 +10,7 @@ import pytest
 
 @pytest.fixture
 def plate():
-    return main
+    return ("CS50")
     #return ("")
 
 
