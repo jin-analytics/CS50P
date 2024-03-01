@@ -1,7 +1,7 @@
 #import string
 
 def main():
-    plate = input("Plate: ")
+    plate = int(input("Plate: "))
     if is_valid(plate):
         print("Valid")
     else:
@@ -12,6 +12,7 @@ def is_valid(s):
     if s is str:
         pass
     else:
+        print("gotya")
         return False
 
 # Check if the string Length of the input is in the allowed range from between 2 to 6
