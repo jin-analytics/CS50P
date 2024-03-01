@@ -1,6 +1,7 @@
 #import string
 
 def main():
+    print("Check in main")
     plate = input("Plate: ")
     if is_valid(plate):
         print("Valid")
@@ -98,5 +99,6 @@ def numberblock_only_number(plate_split):
             return True
 
 if __name__ == "__main__":
+    print("Check in if main")
     main()
 
