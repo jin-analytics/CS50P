@@ -1,5 +1,6 @@
 from plates import is_valid
 from plates import length
+from plates import sign_detection
 import pytest
 
 @pytest.fixture
@@ -10,3 +11,6 @@ def plate():
 
 def test_if_the_length_is_between_2_and_6(plate):
     assert length(plate) == True
+
+def test_if_signs_or_spaces_get_detected(plate):
+    assert sign_detection(plate) == None
