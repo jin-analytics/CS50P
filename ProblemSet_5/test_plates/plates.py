@@ -47,14 +47,9 @@ def length(plate_length):
 # Checks for periods, spaces and punctuation in the input, if nothing found - return True
 def sign_detection(plate_input):
     for _ in plate_input:
-        match _:
-            case isdigit() == True:
-
-
-
-        #if _.isalpha() != True:         #If not letter
-            #if _.isdigit() != True:     #And not number
-                #return False            #Then it`s a sign
+        if _.isalpha() != True:         #If not letter
+            if _.isdigit() != True:     #And not number
+                return False            #Then it`s a sign
 
 
 #_______________________________________________Function #3_____________________________________________________________
