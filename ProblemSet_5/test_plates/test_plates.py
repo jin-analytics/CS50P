@@ -10,7 +10,7 @@ import pytest
 
 @pytest.fixture
 def plate():
-    return ("CS50")
+    return ("NRVOUS")
     #return ("")
 
 
