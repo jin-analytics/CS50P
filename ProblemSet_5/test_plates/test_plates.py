@@ -5,12 +5,14 @@ from plates import letterblock_atleast_two_char
 from plates import numberblock_only_number
 from plates import splitter
 from plates import first_number_zero
+from plates import main
 import pytest
 
 @pytest.fixture
 def plate():
     return ("CS50")
     #return ("")
+
 
 
 def test_if_the_length_is_between_2_and_6(plate):
