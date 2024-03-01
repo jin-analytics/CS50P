@@ -2,6 +2,7 @@ from plates import is_valid
 from plates import length
 from plates import sign_detection
 from plates import letterblock_atleast_two_char
+from plates import numberblock_only_number
 from plates import splitter
 import pytest
 
@@ -19,5 +20,8 @@ def test_if_signs_or_spaces_get_detected(plate):
 
 def test_if_letterblock_has_atleast_two_chars(plate):
     plate_split = splitter(plate)
-    letter_block = plate_split[0]
-    assert letterblock_atleast_two_char() == True
+    assert letterblock_atleast_two_char(plate_split) == True
+
+def test_if_numberblock_has_only_numbers(plate):
+    plate_split = splitter(plate)
+    assert numberblock_only_number(plate_split) == True
