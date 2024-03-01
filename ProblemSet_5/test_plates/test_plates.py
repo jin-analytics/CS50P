@@ -4,6 +4,7 @@ from plates import sign_detection
 from plates import letterblock_atleast_two_char
 from plates import numberblock_only_number
 from plates import splitter
+from plates import first_number_zero
 import pytest
 
 @pytest.fixture
@@ -25,3 +26,7 @@ def test_if_letterblock_has_atleast_two_chars(plate):
 def test_if_numberblock_has_only_numbers(plate):
     plate_split = splitter(plate)
     assert numberblock_only_number(plate_split) == True
+
+def test_if_the_first_number_is_zero(plate):
+    plate_split = splitter(plate)
+    assert first_number_zero(plate_split) == True
