@@ -15,10 +15,10 @@ def plate():
 
 
 
-def test_if_the_length_is_between_2_and_6(plate):
+def test_length(plate):
     assert length(plate) == True
 
-def test_if_signs_or_spaces_get_detected(plate):
+def test_sign_detection(plate):
     assert sign_detection(plate) == None
 
 #def test_if_letterblock_has_atleast_two_chars():
