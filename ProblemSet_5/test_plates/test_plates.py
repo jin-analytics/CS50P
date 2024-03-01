@@ -13,20 +13,20 @@ def plate():
     #return ("")
 
 
-def test_if_the_length_is_between_2_and_6(plate):
-    assert length(plate) == True
+def test_if_the_length_is_between_2_and_6():
+    assert length() == True
 
-def test_if_signs_or_spaces_get_detected(plate):
-    assert sign_detection(plate) == None
+def test_if_signs_or_spaces_get_detected():
+    assert sign_detection() == None
 
-def test_if_letterblock_has_atleast_two_chars(plate):
-    plate_split = splitter(plate)
+def test_if_letterblock_has_atleast_two_chars():
+    plate_split = splitter()
     assert letterblock_atleast_two_char(plate_split) == True
 
-def test_if_numberblock_has_only_numbers(plate):
-    plate_split = splitter(plate)
+def test_if_numberblock_has_only_numbers():
+    plate_split = splitter()
     assert numberblock_only_number(plate_split) == True
 
-def test_if_the_first_number_is_zero(plate):
-    plate_split = splitter(plate)
+def test_if_the_first_number_is_zero():
+    plate_split = splitter()
     assert first_number_zero(plate_split) == True
