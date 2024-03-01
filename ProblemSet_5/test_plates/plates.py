@@ -10,7 +10,7 @@ def main():
 
 def is_valid(s):
     if s is str:
-        pass
+        return True
     else:
         return False
 
