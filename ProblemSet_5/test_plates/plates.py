@@ -115,5 +115,6 @@ def numberblock_only_number(plate_split):
         else:
             return True
 
+if __name__ == "__main__":
+    main()
 
-main()
