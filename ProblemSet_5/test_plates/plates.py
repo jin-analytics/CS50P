@@ -9,6 +9,10 @@ def main():
 
 
 def is_valid(s):
+    if s is str:
+        pass
+    else:
+        return False
 
 # Check if the string Length of the input is in the allowed range from between 2 to 6
     if length(s) == False: # Function #1
