@@ -46,18 +46,11 @@ def length(plate_length):
 #_______________________________________________Function #2_____________________________________________________________
 # Checks for periods, spaces and punctuation in the input, if nothing found - return True
 def sign_detection(plate_input):
-    ##for signs in plate_input:
-        # detects: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ in the input
-        # isspace() detects: characters space and tab
-        ##if signs in "!#$%&' ()*+,-./:;<=>?@[\]^_`{|}~" or signs.isspace() == True:
-            #print("detected")
-            ##return False
-    ##else:
-        ##return True
-    if plate_input.isspace() == True:
-        return False
-    elif plate_input.isalpha() == False:
-        return False
+    for _ in plate_input:
+        if _.isspace() == True:
+            return False
+        elif _.isalpha() != True:
+            return False
 #_______________________________________________Function #3_____________________________________________________________
 # Checks for numbers in the input - if a number is detected, function returns True... else returns False
 def number_detection(plate_input):
