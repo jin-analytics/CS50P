@@ -1,7 +1,8 @@
 from plates import is_valid
 from plates import length
 
-@pytest.input("CS50")
+@pytest.fixture
+def 
 
 def test_if_the_length_is_between_2_and_6():
     plate = (input)
