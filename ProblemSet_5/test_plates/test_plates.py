@@ -14,3 +14,4 @@ def test_if_the_length_is_between_2_and_6(plate):
 
 def test_if_signs_or_spaces_get_detected(plate):
     assert sign_detection(plate) == None
+
