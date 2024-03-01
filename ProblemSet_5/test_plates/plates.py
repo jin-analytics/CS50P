@@ -54,7 +54,7 @@ def sign_detection(plate_input):
             ##return False
     ##else:
         ##return True
-    if plate_input.isspace() != True:
+    if plate_input.isspace() == True:
         return False
     elif plate_input.isalpha() == False:
         return False
