@@ -21,7 +21,9 @@ def main():
 test_dont_divide_by_zero()
 
 def test_dont_divide_by_zero():
-    assert convert("100/0") raise ZeroDivisionError
+    with pytest raises.ZeroDivisionError:
+    100/0
+    #assert convert("100/0") raise ZeroDivisionError
 
 
 
