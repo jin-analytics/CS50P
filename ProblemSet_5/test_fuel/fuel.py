@@ -17,6 +17,8 @@ def convert(f):
         if f[0].isdigit() and f[1].isdigit() == True:
             x = int(f[0])
             y = int(f[1])
+            if x > y:
+                return ValueError
             percentage = (x/y)*100
             return percentage
     except ZeroDivisionError:
