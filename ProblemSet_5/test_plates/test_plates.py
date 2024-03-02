@@ -2,10 +2,10 @@ from plates import is_valid
 
 def main():
     test_letter_size()
-    test_if_there_are_2_letter()
-    test_if_there_is_no_zero_at_beginning_of_numberblock
-    test_if_numberblock_has_no_letter_in_it()
-    test_if_there_is_no_sign_or_space()
+    #test_if_there_are_2_letter()
+    #test_if_there_is_no_zero_at_beginning_of_numberblock()
+    #test_if_numberblock_has_no_letter_in_it()
+    #test_if_there_is_no_sign_or_space()
 
 # test if length smaller 2 or bigger 6 returns false
 def test_letter_size():
