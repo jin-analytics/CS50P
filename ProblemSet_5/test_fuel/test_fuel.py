@@ -50,6 +50,7 @@ def test_if_F_comes():
 
 def test_if_percentage_correct():
     assert gauge(67) == "67"
+    assert gauge(67) != "%67"
 
 if __name__ == "__main__":
     main()
