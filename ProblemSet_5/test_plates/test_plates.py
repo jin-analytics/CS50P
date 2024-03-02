@@ -17,6 +17,7 @@ def plate():
 
 def test_length(plate):
     assert length(plate) == True
+
 def test_sign_detection(plate):
     assert sign_detection(plate) == None
 
