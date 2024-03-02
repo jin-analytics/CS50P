@@ -12,7 +12,9 @@ def main():
                     print(percentage)
                 return True
             elif convert(fraction) == 0:
-                print(gauge(convert(fraction)))
+                percentage = convert(fraction)
+                percentage = gauge(percentage)
+                print(percentage)
                 return True
 
 
