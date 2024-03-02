@@ -17,15 +17,10 @@ import pytest
 # "z%" otherwise, wherein z is the same int
 
 def main():
-
-test_dont_divide_by_zero()
+    test_dont_divide_by_zero()
 
 def test_dont_divide_by_zero():
-    with pytest raises.ZeroDivisionError:
-    100/0
-    #assert convert("100/0") raise ZeroDivisionError
-
-
+    assert pytest convert("100/0") raises withZeroDivisionError
 
 
 
