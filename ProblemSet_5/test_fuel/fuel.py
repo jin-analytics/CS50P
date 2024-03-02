@@ -7,8 +7,8 @@ def main():
                 if percentage.isdigit():
                     print(f"{percentage}%", sep="")
                     return True
-            else:
-                print(percentage)
+                else:
+                    print(percentage)
                 return True
 
 def convert(f):
