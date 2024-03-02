@@ -29,20 +29,18 @@ def gauge(percentage):
     try:
         # ]1%;99%[ print the actual number
         if 1 < percentage < 99:
-            print(round(percentage), "%", sep="")
-            exit()
+            #print(round(percentage), "%", sep="")
+            #exit()
+            g = str(round(percentage))
+            return g
         # <= 1% prints E for Empty
         elif percentage <= 1:
-            print("E")
-            exit()
+            g = ("E")
+            return g
         # <= 99% prints F for Full
         elif 99 <= percentage <= 100 :
-            print("F")
-            exit()
-        # if x = y, for example 100/100, it prints F
-        elif f[0] == f[1]:
-            print("F")
-            exit()
+            g = ("F")
+            return g
         else:
             return False
     except UnboundLocalError:
