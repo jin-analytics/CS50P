@@ -17,12 +17,18 @@ import pytest
 # "z%" otherwise, wherein z is the same int
 
 def main():
-    test_x_and_y_is_a_str()
+    test_x_and_y_is_a_int()
 
-def test_x_and_y_is_a_str():
+def test_x_and_y_is_a_int():
     assert convert("1/2") == 50
     assert convert("a/2") == False
     assert convert("1/b") == False
+
+def test_returned_fraction_is_percentage():
+    assert convert("1/2") == 50
+    assert convert("3/2") == False
+    assert convert("1/b") == False
+
 
 def test_x_and_y_is_a_str():
     assert convert("1/2") == 50
