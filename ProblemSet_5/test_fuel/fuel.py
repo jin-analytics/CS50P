@@ -7,8 +7,9 @@ def main():
                 percentage = convert(fraction)
                 percentage = gauge(percentage)
                 print(f"{percentage}%", sep="")
-            elif len(fraction) != 2:
-                return False
+                exit()
+            #elif len(fraction) != 2:
+              #  return False
         except ValueError:
             return False
 
