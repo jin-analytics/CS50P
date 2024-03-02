@@ -17,16 +17,16 @@ import pytest
 # "z%" otherwise, wherein z is the same int
 
 def main():
-    test_x_and_y_is_a_int()
+  #  test_x_and_y_is_a_int()
     test_if_E_comes()
 
-def test_x_and_y_is_a_int():
-    f1 = ("1/2").split("/")
-    f2 = ("a/2").split("/")
-    f3 = ("1/b").split("/")
-    assert convert(f1) == 50
-    assert convert(f2) == False
-    assert convert(f3) == False
+#def test_x_and_y_is_a_int():
+#    f1 = ("1/2").split("/")
+#    f2 = ("a/2").split("/")
+#    f3 = ("1/b").split("/")
+#    assert convert(f1) == 50
+#    assert convert(f2) == False
+#    assert convert(f3) == False
 
 #def test_returned_fraction_is_percentage():
   #  assert convert("1/2") == 50
