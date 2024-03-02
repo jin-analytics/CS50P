@@ -2,9 +2,7 @@ def main():
     while True:
             fraction = input("Fraction: ").split("/") # expects Format "X/Y"
             percentage = convert(fraction)
-            match percentage:
-                case _:
-                    if percentage is not False and isinstance(percentage, int):
+            if percentage is not False and isinstance(percentage, int):
                         print(gauge(percentage))
                         return True
             if isinstance(percentage, int):
