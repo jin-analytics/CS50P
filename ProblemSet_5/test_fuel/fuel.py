@@ -1,8 +1,8 @@
 def main():
     while True:
             fraction = input("Fraction: ").split("/") # expects Format "X/Y"
-            percentage = convert(fraction)
-            if isinstance(percentage, int) == True:
+            #percentage = convert(fraction)
+            if convert(fraction) != False:
                 percentage = convert(fraction)
                 percentage = gauge(percentage)
                 if percentage.isdigit():
@@ -23,7 +23,8 @@ def convert(f):
             return False
         else:
             percentage = round((x/y)*100)
-            return percentage
+            return isinstance(percentage, int)
+            #return percentage
     except ZeroDivisionError:
         return False
     except ValueError:
