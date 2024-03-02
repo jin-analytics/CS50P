@@ -44,8 +44,10 @@ def test_if_E_comes():
     assert gauge(2) != "E"
 
 def test_if_F_comes():
-    assert gauge(100) == "F"
+    assert gauge(99) == "F"
     assert gauge(50) != "F"
+
+    
 
 if __name__ == "__main__":
     main()
