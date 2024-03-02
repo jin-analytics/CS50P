@@ -15,6 +15,9 @@ def test_if_numbers_dont_get_changed():
 def test_if_spaces_dont_get_changed():
     assert shorten("twitter   ") == "twttr   "
 
+def test_if_spaces_dont_get_changed():
+    assert shorten("twitter ?!§$%&/()=") == "twttr ?!§$%&/()="
+
 
 if __name__ == "__main__":
     main()
