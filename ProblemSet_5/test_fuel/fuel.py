@@ -2,6 +2,10 @@ def main():
     while True:
             fraction = input("Fraction: ").split("/") # expects Format "X/Y"
             percentage = convert(fraction)
+            match percentage:
+                case 0:
+                    print(gauge(percentage))
+                    return True
             if percentage == True:
                 percentage = convert(fraction)
                 percentage = gauge(percentage)
@@ -22,8 +26,6 @@ def convert(f):
         y = int(f[1])
         if x > y:
             return False
-        elif x == 0:
-            return True
         else:
             percentage = round((x/y)*100)
             #return isinstance(percentage, int)
