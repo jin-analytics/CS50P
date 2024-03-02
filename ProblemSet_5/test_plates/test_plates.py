@@ -1,4 +1,4 @@
-import is_valid
+from plates import is_valid
 #from plates import length
 #from plates import sign_detection
 #from plates import letterblock_atleast_two_char
@@ -25,7 +25,7 @@ def test_sign_detection(plate):
 
 def test_if_letterblock_has_atleast_two_chars(plate):
     is_valid(plate)
-    if splitter(plate) == None:
+    if is_valid.splitter(plate) == None:
         pass
     else:
         assert letterblock_atleast_two_char(splitter(plate)) == True
