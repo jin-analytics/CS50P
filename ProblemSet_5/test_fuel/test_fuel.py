@@ -18,10 +18,11 @@ import pytest
 
 def main():
     test_x_and_y_is_a_str()
-    test_dont_divide_by_zero()
 
-def test_dont_divide_by_zero():
-    ...
+def test_x_and_y_is_a_str():
+    assert convert("1/2") == 50
+    assert convert("a/2") == False
+    assert convert("1/b") == False
 
 def test_x_and_y_is_a_str():
     assert convert("1/2") == 50
@@ -29,6 +30,12 @@ def test_x_and_y_is_a_str():
     assert convert("1/b") == False
 
 
+
+
+
+
+def test_dont_divide_by_zero():
+    ...
 
 if __name__ == "__main__":
     main()
