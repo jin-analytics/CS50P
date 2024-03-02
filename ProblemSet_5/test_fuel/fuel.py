@@ -6,7 +6,7 @@ def main():
                 case 0:
                     print(gauge(percentage))
                     return True
-            if percentage == True:
+            if isinstance(percentage, int):
                 percentage = convert(fraction)
                 percentage = gauge(percentage)
                 if percentage.isdigit():
