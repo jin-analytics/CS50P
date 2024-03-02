@@ -21,7 +21,7 @@ def test_sign_detection(plate):
     assert sign_detection(plate) == None
 
 def test_if_letterblock_has_atleast_two_chars(plate):
-    if is_valid.splitter(plate) == None:
+    if splitter(plate) == None:
         pass
     else:
         assert letterblock_atleast_two_char(splitter(plate)) == True
@@ -38,5 +38,5 @@ def test_if_the_first_number_is_zero(plate):
     else:
         assert first_number_zero(splitter(plate)) != False
 
-def test_if_is_valid_func_gives_True():
-    assert is_valid == True
+def test_if_is_valid_func_gives_True(plate):
+    assert is_valid(plate) == True
