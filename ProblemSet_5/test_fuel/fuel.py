@@ -15,6 +15,29 @@ def convert(f):
     try:
         if len(f) != 2:
             return False
+        x = int(f[0])
+        y = int(f[1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         else:
             if f[0].isdigit() and f[1].isdigit() == True:
                 x = int(f[0])
@@ -25,6 +48,8 @@ def convert(f):
                     percentage = round((x/y)*100)
                     return percentage
     except ZeroDivisionError:
+        return False
+    except ValueError:
         return False
 
 
