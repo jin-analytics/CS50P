@@ -18,6 +18,7 @@ import pytest
 
 def main():
     test_x_and_y_is_a_int()
+    test_if_E_comes()
 
 def test_x_and_y_is_a_int():
     f1 = ("1/2").split("/")
@@ -37,8 +38,9 @@ def test_x_and_y_is_a_int():
  #   assert convert("a/2") == False
  #   assert convert("1/b") == False
 
-def test_dont_divide_by_zero():
-    ...
+def test_if_E_comes():
+    assert gauge(1) == "E"
+    assert gauge(2) != "E"
 
 if __name__ == "__main__":
     main()
