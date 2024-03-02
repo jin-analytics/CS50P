@@ -22,11 +22,11 @@ def main():
     test_if_F_comes()
     test_if_percentage_correct()
 
-#def test_x_and_y_is_a_int():
+def test_x_and_y_is_a_int():
 #    f1 = ("1/2").split("/")
 #    f2 = ("a/2").split("/")
 #    f3 = ("1/b").split("/")
-#    assert convert(f1) == 50
+    assert convert(['a','b']) == False
 #    assert convert(f2) == False
 #    assert convert(f3) == False
 
