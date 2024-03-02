@@ -4,15 +4,15 @@ def main():
             fraction = input("Fraction: ") # expects Format "X/Y"
             fraction = fraction.split("/")
             #if len(fraction) == 2:
-            if convert(fraction) is int:
-                percentage = convert(fraction)
-                percentage = gauge(percentage)
-                if percentage.isdigit():
-                    print(f"{percentage}%", sep="")
-                    return True
-                else:
-                    print(percentage)
-                    return True
+            #convert(fraction) is int:
+            percentage = convert(fraction)
+            percentage = gauge(percentage)
+            if percentage.isdigit():
+                print(f"{percentage}%", sep="")
+                return True
+            else:
+                print(percentage)
+                return True
             #elif len(fraction) != 2:
               #  return False
         #except ValueError:
