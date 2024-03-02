@@ -21,8 +21,8 @@ def test_if_there_are_2_letter():
 
 # test if number block has no zero at beginning
 def test_if_there_is_no_zero_at_beginning_of_numberblock():
-    assert is_valid("CS50"): True
-    assert is_valid("CS05"): False
+    assert is_valid("CS50") == True
+    assert is_valid("CS05") == False
 
 # test if number block has no letter in it
 def test_if_numberblock_has_no_letter_in_it():
