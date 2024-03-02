@@ -3,8 +3,8 @@ def main():
             fraction = input("Fraction: ").split("/") # expects Format "X/Y"
             percentage = convert(fraction)
             match percentage:
-                case 0:
-                    if percentage is not False:
+                case _:
+                    if isinstance(percentage, int):
                         print(gauge(percentage))
                         return True
             if isinstance(percentage, int):
