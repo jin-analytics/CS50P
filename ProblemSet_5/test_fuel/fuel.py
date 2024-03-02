@@ -23,8 +23,8 @@ def convert(f):
             return False
         else:
             percentage = round((x/y)*100)
-            return isinstance(percentage, int)
-            #return percentage
+            #return isinstance(percentage, int)
+            return percentage
     except ZeroDivisionError:
         return False
     except ValueError:
