@@ -1,7 +1,6 @@
 def main():
     while True:
             fraction = input("Fraction: ").split("/") # expects Format "X/Y"
-            #percentage = convert(fraction)
             if convert(fraction) != False:
                 percentage = round(convert(fraction))
                 percentage = gauge(percentage)
@@ -39,8 +38,6 @@ def gauge(percentage):
     try:
         # ]1%;99%[ print the actual number
         if 1 < percentage < 99:
-            #print(round(percentage), "%", sep="")
-            #exit()
             g = str(percentage)
             return g
         # <= 1% prints E for Empty

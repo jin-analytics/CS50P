@@ -29,7 +29,6 @@ def test_returned_fraction_is_percentage():
     assert convert("3/2") == False
     assert convert("1/b") == False
 
-
 def test_x_and_y_is_a_str():
     assert convert("1/2") == 50
     assert convert("a/2") == False
