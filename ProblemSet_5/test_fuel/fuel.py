@@ -25,8 +25,9 @@ def convert(f):
             y = int(f[1])
             if x > y:
                 raise ValueError
-            percentage = round((x/y)*100)
-            return percentage
+            else:
+                percentage = round((x/y)*100)
+                return percentage
     except ZeroDivisionError:
         return False
 
