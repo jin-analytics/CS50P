@@ -11,8 +11,7 @@ def main():
                 else:
                     print(percentage)
                 return True
-            elif convert(fraction) == 0:
-                print("yes")
+
 
 def convert(f):
     # Checks if x and y is a number, then divides it to get the percentage of the fraction
