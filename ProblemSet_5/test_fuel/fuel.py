@@ -1,7 +1,7 @@
 def main():
     while True:
             fraction = input("Fraction: ").split("/") # expects Format "X/Y"
-            if convert(fraction) is int:
+            if convert(fraction) != False:
                 percentage = convert(fraction)
                 percentage = gauge(percentage)
                 if percentage.isdigit():
