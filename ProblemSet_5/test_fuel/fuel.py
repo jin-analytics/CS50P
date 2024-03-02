@@ -18,7 +18,7 @@ def convert(f):
             x = int(f[0])
             y = int(f[1])
             if x > y:
-                return ValueError
+                raise ValueError
             percentage = (x/y)*100
             return percentage
     except ZeroDivisionError:
