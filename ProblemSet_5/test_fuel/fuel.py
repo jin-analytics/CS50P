@@ -3,7 +3,7 @@ def main():
             fraction = input("Fraction: ").split("/") # expects Format "X/Y"
             #percentage = convert(fraction)
             if convert(fraction) != False:
-                percentage = convert(fraction)
+                percentage = round(convert(fraction))
                 percentage = gauge(percentage)
                 if percentage.isdigit():
                     print(f"{percentage}%", sep="")
@@ -22,6 +22,9 @@ def convert(f):
         y = int(f[1])
         if x > y:
             return False
+        elif x == 0:
+            percentage = 0.000000001
+            return percentage
         else:
             percentage = round((x/y)*100)
             #return isinstance(percentage, int)
