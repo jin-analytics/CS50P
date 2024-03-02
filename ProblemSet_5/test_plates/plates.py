@@ -4,7 +4,7 @@ def main():
     plate = input("Plate: ")
     if is_valid(plate) == True:
         print("Valid")
-    else:
+    elif is_valid(plate) == False:
         print("Invalid")
 
 
