@@ -11,7 +11,7 @@ def main():
                 else:
                     print(percentage)
                 return True
-            elif convert(fraction) == 0:
+            if convert(fraction) == 0:
                 percentage = convert(fraction)
                 percentage = gauge(percentage)
                 print(percentage)
