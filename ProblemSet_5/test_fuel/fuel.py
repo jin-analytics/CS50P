@@ -4,7 +4,7 @@ def main():
             percentage = convert(fraction)
             match percentage:
                 case _:
-                    if isinstance(percentage, int):
+                    if percentage is not False and isinstance(percentage, int):
                         print(gauge(percentage))
                         return True
             if isinstance(percentage, int):
