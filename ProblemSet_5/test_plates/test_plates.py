@@ -21,7 +21,7 @@ def test_length(plate):
 
 def test_sign_detection(plate):
     is_valid(plate)
-    assert issign_detection(plate) == None
+    assert sign_detection(plate) == None
 
 def test_if_letterblock_has_atleast_two_chars(plate):
     is_valid(plate)
