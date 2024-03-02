@@ -1,10 +1,10 @@
-from plates import is_valid
-from plates import length
-from plates import sign_detection
-from plates import letterblock_atleast_two_char
-from plates import numberblock_only_number
-from plates import splitter
-from plates import first_number_zero
+from plates import is_valid, length, sign_detection, letterblock_atleast_two_char, numberblock_only_number, splitter, first_number_zero
+#from plates import length
+#from plates import sign_detection
+#from plates import letterblock_atleast_two_char
+#from plates import numberblock_only_number
+#from plates import splitter
+#from plates import first_number_zero
 import pytest
 
 @pytest.fixture
