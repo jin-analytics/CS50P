@@ -15,7 +15,9 @@ def convert(f):
     # Checks if x and y is a number, then divides it to get the percentage of the fraction
     try:
         if f[0].isdigit() and f[1].isdigit() == True:
-            percentage = (int(f[0])/int(f[1]))*100
+            x = int(f[0])
+            y = int(f[1])
+            percentage = (x/y)*100
             return percentage
     except ZeroDivisionError:
         return False
