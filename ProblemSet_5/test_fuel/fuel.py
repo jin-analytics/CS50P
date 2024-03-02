@@ -5,7 +5,8 @@ def main():
                 percentage = round(convert(fraction))
                 percentage = gauge(percentage)
                 if percentage.isdigit():
-                    print(f"{percentage}%", sep="")
+                    #print(f"{percentage}%", sep="")
+                    print(percentage)
                     return True
                 else:
                     print(percentage)
@@ -37,7 +38,7 @@ def convert(fraction):
 def gauge(percentage):
     try:
         if 1 < percentage < 99:
-            g = str(percentage)
+            g = str(f"{percentage}%")
             return g
         elif percentage <= 1:
             g = ("E")

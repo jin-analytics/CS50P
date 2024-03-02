@@ -17,22 +17,21 @@ import pytest
 # "z%" otherwise, wherein z is the same int
 
 def main():
-  #  test_x_and_y_is_a_int()
+    test_x_and_y()
     test_if_E_comes()
     test_if_F_comes()
     test_if_percentage_correct()
 
-#def test_x_and_y_is_a_int():
-#    f1 = ("1/2").split("/")
-#    f2 = ("a/2").split("/")
-#    f3 = ("1/b").split("/")
-#    assert convert(['a','b']) == False
-#    assert convert(f2) == False
-#    assert convert(f3) == False
+def test_x_and_y():
+    assert convert("2/3") == "67" and gauge(67) == "67%"
 
 def test_if_0_raise_error():
     with pytest.raises(ZeroDivisionError):
         convert("1/0")
+
+def test_if_0_value_error():
+    with pytest.raises(ValueError):
+        convert("bunny/hop")
 
 def test_if_E_comes():
     assert gauge(1) == "E"
