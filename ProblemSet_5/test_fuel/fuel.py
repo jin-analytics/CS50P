@@ -12,13 +12,13 @@ def main():
                 return True
 
 
-def convert(f):
+def convert(fraction):
     # Checks if x and y is a number, then divides it to get the percentage of the fraction
     try:
-        if len(f) != 2:
+        if len(fraction) != 2:
             return False
-        x = int(f[0])
-        y = int(f[1])
+        x = int(fraction[0])
+        y = int(fraction[1])
         if x > y:
             return False
         elif x == 0:
@@ -36,15 +36,12 @@ def convert(f):
 
 def gauge(percentage):
     try:
-        # ]1%;99%[ print the actual number
         if 1 < percentage < 99:
             g = str(percentage)
             return g
-        # <= 1% prints E for Empty
         elif percentage <= 1:
             g = ("E")
             return g
-        # <= 99% prints F for Full
         elif 99 <= percentage <= 100 :
             g = ("F")
             return g
