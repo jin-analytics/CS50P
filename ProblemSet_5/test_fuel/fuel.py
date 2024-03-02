@@ -6,8 +6,12 @@ def main():
             if len(fraction) == 2:
                 percentage = convert(fraction)
                 percentage = gauge(percentage)
-                print(f"{percentage}%", sep="")
-                exit()
+                if percentage.isdigit():
+                    print(f"{percentage}%", sep="")
+                    exit()
+                else:
+                    print(percentage)
+                    exit()
             #elif len(fraction) != 2:
               #  return False
         except ValueError:
