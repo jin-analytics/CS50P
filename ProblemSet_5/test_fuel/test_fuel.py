@@ -20,6 +20,7 @@ def main():
     test_x_and_y_is_a_int()
 
 def test_x_and_y_is_a_int():
+    
     assert convert("1/2") == 50
     assert convert("a/2") == False
     assert convert("1/b") == False
