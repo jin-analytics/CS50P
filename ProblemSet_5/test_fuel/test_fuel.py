@@ -17,16 +17,15 @@ import pytest
 # "z%" otherwise, wherein z is the same int
 
 def main():
-    #test_x_and_y()
-
+    test_x_and_y()
     test_if_0_raise_error()
     test_if_0_value_error()
     test_if_E_comes()
     test_if_F_comes()
 
 
-#def test_x_and_y():
-    assert convert("2/3") == "67" and gauge(67) == "67%"
+def test_x_and_y():
+    assert convert("2/3") == 67 and gauge(67) == "67%"
 
 def test_if_0_raise_error():
     with pytest.raises(ZeroDivisionError):
