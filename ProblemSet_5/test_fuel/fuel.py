@@ -3,15 +3,15 @@ def main():
         #try:
             fraction = input("Fraction: ") # expects Format "X/Y"
             fraction = fraction.split("/")
-            if len(fraction) == 2:
-                percentage = convert(fraction)
-                percentage = gauge(percentage)
-                if percentage.isdigit():
-                    print(f"{percentage}%", sep="")
-                    exit()
-                else:
-                    print(percentage)
-                    exit()
+            #if len(fraction) == 2:
+            percentage = convert(fraction)
+            percentage = gauge(percentage)
+            if percentage.isdigit():
+                print(f"{percentage}%", sep="")
+                exit()
+            else:
+                print(percentage)
+                exit()
             #elif len(fraction) != 2:
               #  return False
         #except ValueError:
