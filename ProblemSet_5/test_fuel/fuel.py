@@ -1,11 +1,12 @@
 def main():
     while True:
             fraction = input("Fraction: ").split("/") # expects Format "X/Y"
-            percentage = convert(fraction)
-            percentage = gauge(percentage)
-            if percentage.isdigit():
-                print(f"{percentage}%", sep="")
-                return True
+            if convert(fraction) != False:
+                percentage = convert(fraction)
+                percentage = gauge(percentage)
+                if percentage.isdigit():
+                    print(f"{percentage}%", sep="")
+                    return True
             else:
                 print(percentage)
                 return True
