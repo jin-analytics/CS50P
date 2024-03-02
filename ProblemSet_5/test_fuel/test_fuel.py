@@ -1,3 +1,6 @@
+from fuel import convert
+from fuel import gauge
+
 #_________convert
 # input "x/y" is an string
 # x is integer and y is integer
@@ -12,4 +15,16 @@
 # "F" if in is greater/equal 99
 # "z%" otherwise, wherein z is the same int
 
+def main():
 
+test_dont_divide_by_zero()
+
+def test_dont_divide_by_zero():
+    assert convert("100/0") raise ZeroDivisionError
+
+
+
+
+
+if __name__ == "__main__":
+    main()
