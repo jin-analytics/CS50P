@@ -17,10 +17,16 @@ import pytest
 # "z%" otherwise, wherein z is the same int
 
 def main():
+    test_x_and_y_is_a_str()
     test_dont_divide_by_zero()
 
 def test_dont_divide_by_zero():
-    assert pytest convert("100/0") raises withZeroDivisionError
+    ...
+
+def test_x_and_y_is_a_str():
+    assert convert("1/2") == 50
+    assert convert("a/2") == False
+    assert convert("1/b") == False
 
 
 
