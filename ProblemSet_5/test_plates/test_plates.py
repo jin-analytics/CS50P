@@ -1,11 +1,11 @@
-from plates import is_valid
-from plates import length
-from plates import sign_detection
-from plates import letterblock_atleast_two_char
-from plates import numberblock_only_number
-from plates import splitter
-from plates import first_number_zero
-from plates import main
+import is_valid
+#from plates import length
+#from plates import sign_detection
+#from plates import letterblock_atleast_two_char
+#from plates import numberblock_only_number
+#from plates import splitter
+#from plates import first_number_zero
+#from plates import main
 import pytest
 
 @pytest.fixture
@@ -21,7 +21,7 @@ def test_length(plate):
 
 def test_sign_detection(plate):
     is_valid(plate)
-    assert sign_detection(plate) == None
+    assert issign_detection(plate) == None
 
 def test_if_letterblock_has_atleast_two_chars(plate):
     is_valid(plate)
