@@ -19,6 +19,7 @@ import pytest
 def main():
   #  test_x_and_y_is_a_int()
     test_if_E_comes()
+    test_if_F_comes()
 
 #def test_x_and_y_is_a_int():
 #    f1 = ("1/2").split("/")
@@ -41,6 +42,10 @@ def main():
 def test_if_E_comes():
     assert gauge(1) == "E"
     assert gauge(2) != "E"
+
+def test_if_F_comes():
+    assert gauge(100) == "F"
+    assert gauge(50) != "F"
 
 if __name__ == "__main__":
     main()
