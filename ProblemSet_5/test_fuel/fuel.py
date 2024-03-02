@@ -1,6 +1,6 @@
 def main():
     while True:
-            fraction = input("Fraction: ") # expects Format "X/Y"
+            fraction = input("Fraction: ").split("/") # expects Format "X/Y"
             #percentage = convert(fraction)
             if convert(fraction) != False:
                 percentage = convert(fraction)
@@ -19,7 +19,6 @@ def main():
 def convert(f):
     # Checks if x and y is a number, then divides it to get the percentage of the fraction
     try:
-        f = f.split("/")
         if len(f) != 2:
             return False
         x = int(f[0])
