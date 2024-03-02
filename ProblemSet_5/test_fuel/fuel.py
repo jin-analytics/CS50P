@@ -4,7 +4,7 @@ def main():
             fraction = input("Fraction: ") # expects Format "X/Y"
             fraction = fraction.split("/")
             #if len(fraction) == 2:
-            if convert(fraction) != False:
+            if convert(fraction) is int:
                 percentage = convert(fraction)
                 percentage = gauge(percentage)
                 if percentage.isdigit():
