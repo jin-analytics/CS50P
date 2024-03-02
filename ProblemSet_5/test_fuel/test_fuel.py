@@ -1,5 +1,6 @@
 from fuel import convert
 from fuel import gauge
+import pytest
 
 #_________convert
 # input "x/y" is an string
