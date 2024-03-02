@@ -26,7 +26,7 @@ def main():
 
 
 #def test_x_and_y():
-#    assert convert("2/3") == "67" and gauge(67) == "67%"
+    assert convert("2/3") == "67" and gauge(67) == "67%"
 
 def test_if_0_raise_error():
     with pytest.raises(ZeroDivisionError):
