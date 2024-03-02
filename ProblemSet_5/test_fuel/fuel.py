@@ -4,8 +4,9 @@ def main():
             percentage = convert(fraction)
             match percentage:
                 case 0:
-                    print(gauge(percentage))
-                    return True
+                    if percentage is not False:
+                        print(gauge(percentage))
+                        return True
             if isinstance(percentage, int):
                 percentage = convert(fraction)
                 percentage = gauge(percentage)
