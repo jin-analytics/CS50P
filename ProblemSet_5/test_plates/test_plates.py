@@ -1,4 +1,4 @@
-from plates import
+from plates import is_valid
 
 def main():
     test_letter_size()
