@@ -1,11 +1,13 @@
 def main():
     while True:
         try:
-            fraction = input("Fraction: ")
+            fraction = input("Fraction: ") # expects Format "X/Y"
             fraction = fraction.split("/")
             if len(fraction) == 2:
                 percentage = convert(fraction)
                 gauge(percentage)
+            elif len(fraction) != 2:
+                return False
         except ValueError:
             return False
 
