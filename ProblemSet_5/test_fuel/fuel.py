@@ -18,7 +18,7 @@ def main():
                 return True
 
 
-def convert(f):
+def convert(f): 
     # Checks if x and y is a number, then divides it to get the percentage of the fraction
     try:
         if len(f) != 2:
