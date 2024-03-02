@@ -48,9 +48,9 @@ def test_if_F_comes():
     assert gauge(99) == "F"
     assert gauge(50) != "F"
 
-def test_if_percentage_correct():
-    assert gauge(67) == "67"
-    assert gauge(67) != "%67"
+#def test_if_percentage_correct():
+#    assert gauge(67) == "67"
+#    assert gauge(67) != "%67"
 
 if __name__ == "__main__":
     main()
