@@ -38,7 +38,7 @@ def gauge(percentage):
     try:
         if 1 < percentage < 99:
             g = str(percentage)
-            return g
+            return g +
         elif percentage <= 1:
             g = ("E")
             return g
