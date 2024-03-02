@@ -5,7 +5,7 @@ def main():
             fraction = fraction.split("/")
             if len(fraction) == 2:
                 percentage = convert(fraction)
-                gauge(percentage)
+                print(gauge(percentage))
             elif len(fraction) != 2:
                 return False
         except ValueError:
