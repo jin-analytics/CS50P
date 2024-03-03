@@ -18,3 +18,7 @@
 ### File does not exist
 
 ### open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+import sys
+
+filename = sys.argv[1:]
+print(filename)
