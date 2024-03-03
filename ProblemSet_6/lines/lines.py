@@ -10,8 +10,11 @@
 # ...the program should instead exit via sys.exit.
 
 
-#Too few command-line arguments
-#Too many command-line arguments
-#Not a Python file
-#File does not exist
 
+
+### Too few command-line arguments
+### Too many command-line arguments
+### Not a Python file
+### File does not exist
+
+### open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
