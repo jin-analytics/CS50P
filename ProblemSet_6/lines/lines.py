@@ -22,4 +22,7 @@ import sys
 
 filename = sys.argv[1:]
 #print(filename[1])
-open(filename, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+#open(filename, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+f = open(f'{filename}', 'w', encoding="utf-8")
+with open(f'{filename}', encoding="utf-8") as f:
+    read_data = f.read()
