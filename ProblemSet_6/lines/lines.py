@@ -21,4 +21,5 @@
 import sys
 
 filename = sys.argv[1:]
-print(filename)
+#print(filename[1])
+open(filename, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
