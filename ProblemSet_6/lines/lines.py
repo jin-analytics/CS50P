@@ -20,8 +20,8 @@
 ### open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
 import sys
 
-def main():
-    filename = sys.argv[1:]
+if __name__ == "__main__":
+    #filename = sys.argv[1:]
     #print(filename[1])
     #open(filename, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
     #f = open(f'{filename[2]}', 'w', encoding="utf-8")
@@ -29,11 +29,9 @@ def main():
     #    read_data = f.read()
     #    print(f.readline())
     ##f.readline()
-
-    f = open(f'{filename[2]}', 'r')
-    print(f.readline())
+    with open(einstein.py, 'r') as einstein.py:
+        print(einstein.py.readline())
 
 
 
 if __name__ == "__main__":
-    main()
