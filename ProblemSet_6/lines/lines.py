@@ -20,14 +20,20 @@
 ### open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
 import sys
 
-filename = sys.argv[1:]
-#print(filename[1])
-#open(filename, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
-#f = open(f'{filename[2]}', 'w', encoding="utf-8")
-#with open(f'{filename[2]}', encoding="utf-8") as f:
-#    read_data = f.read()
-#    print(f.readline())
-##f.readline()
+def main():
+    filename = sys.argv[1:]
+    #print(filename[1])
+    #open(filename, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+    #f = open(f'{filename[2]}', 'w', encoding="utf-8")
+    #with open(f'{filename[2]}', encoding="utf-8") as f:
+    #    read_data = f.read()
+    #    print(f.readline())
+    ##f.readline()
 
-f = open(f'{filename[2]}', 'r')
-print(f.readline())
+    f = open(f'{filename[2]}', 'r')
+    print(f.readline())
+
+
+
+if __name__ == "__main__":
+    main()
