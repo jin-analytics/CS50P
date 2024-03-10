@@ -50,7 +50,7 @@ def find_files(filename, search_path):
 
 
 def main():
-    print(find_files(sys.argv[1],"155905672"))
+    print(find_files(sys.argv[1],"ProblemSet_6"))
     counter = [] #empty list which raises when in the readen file is a command or empty line
     while True:
         try:
