@@ -55,7 +55,7 @@ def main():
     counter = [] #empty list which raises when in the readen file is a command or empty line
     while True:
         try:
-            filename = sys.argv[1]
+            filename = 'einstein.py'#sys.argv[1]
 
             with open(filename, 'r') as f:
                 content = f.readlines()
