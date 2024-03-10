@@ -5,5 +5,6 @@ with open('test.txt','r') as f:
 
     for line in content:
         #con = con.append(lines)
-        #print('...',line)
+        print('...',line)
+        if line == ''
         print('...',content[line])
