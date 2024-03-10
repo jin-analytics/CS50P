@@ -1,4 +1,4 @@
-# define variables
+    # define variables
 c = 300000000 #speed of light = 300000000 m/s
 
 # get mass input in kg

@@ -37,7 +37,7 @@ while True:
         with open(filename, 'r') as f:
             content = f.readlines()
             for line in content:
-                line.()
+                line = line.strip(' ')
                 if line == '\n':
                     counter.append(1)
                 elif line[0] == '#':
