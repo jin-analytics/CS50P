@@ -19,25 +19,43 @@
 
 import sys
 
-counter = [] #empty list which raises when in the readen file is a command or empty line
-while True:
-    try:
-        filename = sys.argv[1]
+import os
 
-        with open(filename, 'r') as f:
-            content = f.readlines()
-            for line in content:
-                line = line.strip(' ')
-                if line == '\n':
-                    counter.append(1)
-                elif line[0] == '#':
-                    counter.append(1)
+def find_files(filename, search_path):
+   result = []
 
-            print(len(content) - len(counter))
+# Wlaking top-down from the root
+   for root, dir, files in os.walk(search_path):
+      if filename in files:
+         result.append(os.path.join(root, filename))
+   return result
+
+
+def main():
+    #print(find_files(sys.argv[1],"ProblemSet_6"))
+
+    counter = [] #empty list which raises when in the readen file is a command or empty line
+    while True:
+        try:
+            filename = sys.argv[1]
+
+            with open(filename, 'r') as f:
+                content = f.readlines()
+                for line in content:
+                    line = line.strip(' ')
+                    if line == '\n':
+                        counter.append(1)
+                    elif line[0] == '#':
+                        counter.append(1)
+
+                print(len(content) - len(counter))
+                sys.exit()
+        except EOFError:
             sys.exit()
-    except EOFError:
-        sys.exit()
-    except FileNotFoundError:
-        sys.exit('Not found')
-    #except EOFError:
-    #sys.exit()
+        except FileNotFoundError:
+            sys.exit('Not found')
+        #except EOFError:
+        #sys.exit()
+
+if __name__ == "__main__":
+    main()
