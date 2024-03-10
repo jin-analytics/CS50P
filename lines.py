@@ -21,7 +21,6 @@ import sys
 import os
 
 
-filename = sys.argv[1]
 
 def find_files(filename, search_path):
    result = []
