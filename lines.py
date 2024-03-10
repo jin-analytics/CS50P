@@ -32,7 +32,7 @@ def find_files(filename, search_path):
          result.append(os.path.join(root, filename))
    return result
 
-print(find_files("einstein.py","ProblemSet_6"))
+
 
 
 
@@ -51,7 +51,7 @@ print(find_files("einstein.py","ProblemSet_6"))
 
 
 def main():
-
+    print(find_files("einstein.py","ProblemSet_6"))
     counter = [] #empty list which raises when in the readen file is a command or empty line
     while True:
         try:
@@ -70,8 +70,8 @@ def main():
                 sys.exit()
         except EOFError:
             sys.exit()
-        except FileNotFoundError:
-            sys.exit('Not found')
+        #except FileNotFoundError:
+           # sys.exit('Not found')
         #except EOFError:
         #sys.exit()
 
