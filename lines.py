@@ -32,7 +32,7 @@ def find_files(filename, search_path):
          result.append(os.path.join(root, filename))
    return result
 
-print(find_files("einstein.py","D:"))
+print(find_files("einstein.py","ProblemSet_6"))
 
 
 
