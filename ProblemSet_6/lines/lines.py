@@ -20,7 +20,7 @@
 ### open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
 import sys
 
-if __name__ == "__main__":
+#if __name__ == "__main__":
     #filename = sys.argv[1:]
     #print(filename[1])
     #open(filename, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
@@ -29,10 +29,7 @@ if __name__ == "__main__":
     #    read_data = f.read()
     #    print(f.readline())
     ##f.readline()
-    with open(einstein.py, 'r') as einstein.py:
-        print(einstein.py.readline())
+with open('einstein.py', 'r') as f:
+    content = f.readlines()
+    print(len(content))
 
-
-
-if __name__ == "__main__":
-    main
