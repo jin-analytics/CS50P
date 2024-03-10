@@ -20,8 +20,6 @@
 import sys
 import os
 
-
-
 def find_files(filename, search_path):
    result = []
 
@@ -30,23 +28,6 @@ def find_files(filename, search_path):
       if filename in files:
          result.append(os.path.join(root, filename))
    return result
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 def main():
