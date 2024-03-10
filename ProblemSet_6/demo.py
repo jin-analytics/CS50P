@@ -1,2 +1,4 @@
-f = open('test.txt')
-print(f.name)
+f = open('test.txt','r')
+print(f.mode)
+
+f.close()
