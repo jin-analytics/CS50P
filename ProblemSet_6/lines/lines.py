@@ -37,7 +37,7 @@ while True:
         with open(filename, 'r') as f:
             content = f.readlines()
             for line in content:
-                pass
+                line.()
                 if line == '\n':
                     counter.append(1)
                 elif line[0] == '#':
@@ -48,6 +48,6 @@ while True:
     except EOFError:
         sys.exit()
     except FileNotFoundError:
-        sys.exit()
+        sys.exit('Not found')
     #except EOFError:
     #sys.exit()
