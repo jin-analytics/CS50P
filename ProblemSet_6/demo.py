@@ -5,8 +5,12 @@ with open('test.txt','r') as f:
 
     for line in content:
         #con = con.append(lines)
-        print('...',line)
+        #print('...',line)
+        #print(line[0])
+        pass
         if line == '\n':
-            print('check')
-        elif line[1:] == '#':
+            #print('check')
+            pass
+        elif line[0] == '#':
+            pass
             print('check2')
