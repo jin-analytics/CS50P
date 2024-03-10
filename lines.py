@@ -18,26 +18,63 @@
 ### File does not exist
 
 import sys
+import os
 
-counter = [] #empty list which raises when in the readen file is a command or empty line
-while True:
-    try:
-        filename = sys.argv[1]
 
-        with open(filename, 'r') as f:
-            content = f.readlines()
-            for line in content:
-                line = line.strip(' ')
-                if line == '\n':
-                    counter.append(1)
-                elif line[0] == '#':
-                    counter.append(1)
+filename = sys.argv[1]
 
-            print(len(content) - len(counter))
+def find_files(filename, search_path):
+   result = []
+
+# Wlaking top-down from the root
+   for root, dir, files in os.walk(search_path):
+      if filename in files:
+         result.append(os.path.join(root, filename))
+   return result
+
+print(find_files("smpl.htm","D:"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def main():
+
+    counter = [] #empty list which raises when in the readen file is a command or empty line
+    while True:
+        try:
+            filename = sys.argv[1]
+
+            with open(filename, 'r') as f:
+                content = f.readlines()
+                for line in content:
+                    line = line.strip(' ')
+                    if line == '\n':
+                        counter.append(1)
+                    elif line[0] == '#':
+                        counter.append(1)
+
+                print(len(content) - len(counter))
+                sys.exit()
+        except EOFError:
             sys.exit()
-    except EOFError:
-        sys.exit()
-    except FileNotFoundError:
-        sys.exit('Not found')
-    #except EOFError:
-    #sys.exit()
+        except FileNotFoundError:
+            sys.exit('Not found')
+        #except EOFError:
+        #sys.exit()
+
+
+if __name__ == "__main__":
+    main()
