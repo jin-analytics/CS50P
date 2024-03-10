@@ -30,7 +30,10 @@ import sys
     #    print(f.readline())
     ##f.readline()
 counter = [] #empty list which raises when in the readen file is a command or empty line
-filename = sys.argv[1:]
+while True
+filename = sys.argv[1]
+
+
 with open(filename, 'r') as f:
     content = f.readlines()
     for line in content:
