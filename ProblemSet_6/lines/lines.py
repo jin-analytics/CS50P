@@ -17,18 +17,8 @@
 ### Not a Python file
 ### File does not exist
 
-### open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
 import sys
 
-#if __name__ == "__main__":
-    #filename = sys.argv[1:]
-    #print(filename[1])
-    #open(filename, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
-    #f = open(f'{filename[2]}', 'w', encoding="utf-8")
-    #with open(f'{filename[2]}', encoding="utf-8") as f:
-    #    read_data = f.read()
-    #    print(f.readline())
-    ##f.readline()
 counter = [] #empty list which raises when in the readen file is a command or empty line
 while True:
     try:
