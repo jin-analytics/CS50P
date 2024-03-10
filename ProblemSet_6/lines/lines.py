@@ -31,19 +31,23 @@ import sys
     ##f.readline()
 counter = [] #empty list which raises when in the readen file is a command or empty line
 while True:
-    filename = sys.argv[1]
-    print(len(sys.argv))
+    try:
+        filename = sys.argv[1]
 
+        with open(filename, 'r') as f:
+            content = f.readlines()
+            for line in content:
+                pass
+                if line == '\n':
+                    counter.append(1)
+                elif line[0] == '#':
+                    counter.append(1)
 
-
-    with open(filename, 'r') as f:
-        content = f.readlines()
-        for line in content:
-            pass
-            if line == '\n':
-                counter.append(1)
-            elif line[0] == '#':
-                counter.append(1)
-
-        print(len(content) - len(counter))
+            print(len(content) - len(counter))
+            sys.exit()
+    except EOFError:
         sys.exit()
+    except FileNotFoundError:
+        sys.exit()
+    #except EOFError:
+    #sys.exit()
