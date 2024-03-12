@@ -21,7 +21,7 @@ import os
 #finds the path of the input from the commandline and returns it
 def find_files(filename, search_path):
    result = []
-   for root, files in os.walk(search_path):
+   for root, dirs, files in os.walk(search_path, topdown=False):
       if filename in files:
          result.append(os.path.join(root, filename))
    return result
