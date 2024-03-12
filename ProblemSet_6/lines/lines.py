@@ -41,6 +41,7 @@ def main():
         # uses input from commandline and then gives first entree from list
         ###folder = find_files(sys.argv[1],"/workspaces/155905672")
         rootdir = os.getcwd()
+        print(os.getcwd())
         folder = find_files(sys.argv[1],rootdir)
         folder = folder[0]
 
