@@ -17,6 +17,6 @@ def find_files(filename, search_path):
 with open(sys.argv[1]) as p:
     for entrees in p:
         #print(p.readlines())
-        print(entrees[0])
+        print(p[1])
        #print(tabulate(p))
        #print(tabulate(p, headers=["1","2", "3"]))
