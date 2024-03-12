@@ -11,7 +11,7 @@ with open(sys.argv[1]) as file:
         order.append(f"{row[0]},{row[1]},{row[2]}")
 
     table = [[row[0],row[1],row[2]]]
-    print(table)
+    print(row[0])
     #headers = order[0]
     #print(tabulate(order, headers, tablefmt="grid"))
 
