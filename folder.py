@@ -6,7 +6,7 @@ import sys
 rootDir = os.getcwd()
 fileToSearch = sys.argv[1]
 
-for files, dirs in os.walk(rootDir,fileToSearch, topdown = False):
+for files, dirs in os.walk(rootDir,fileToSearch, topdown = True):
 
 #print(os.path.join("/workspaces/155905672", sys.argv[1]))
 #print(os.walk("/workspaces/155905672"))

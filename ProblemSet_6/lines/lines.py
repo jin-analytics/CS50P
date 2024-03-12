@@ -18,13 +18,13 @@
 import sys
 import os
 
-## finds the path of the input from the commandline and returns it
-#def find_files(filename, search_path):
-#   result = []
-#   for root, dir, files in os.walk(search_path):
-#      if filename in files:
-#         result.append(os.path.join(root, filename))
-#   return result
+#finds the path of the input from the commandline and returns it
+def find_files(filename, search_path):
+   result = []
+   for root, files in os.walk(search_path):
+      if filename in files:
+         result.append(os.path.join(root, filename))
+   return result
 
 
 def main():
