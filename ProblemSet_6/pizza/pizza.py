@@ -3,9 +3,10 @@ import sys
 import csv
 
 with open(sys.argv[1]) as file:
-    reader = csv.reader(file)
-    for item, small, large in reader:
-        
+    reader = csv.DictReader(file)
+    for row in reader:
+        print(row)
+
 
     #for line in file:
         ###splits by comma and remoceves with rstrip garbage like "/n"
