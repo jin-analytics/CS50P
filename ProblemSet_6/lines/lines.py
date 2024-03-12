@@ -52,7 +52,7 @@ def main():
             #print("Files:", filenames)
                 print(entrees)
                 if entrees == sys.argv[1]:
-                    folder == entrees
+                    folder = entrees
 
 
 
