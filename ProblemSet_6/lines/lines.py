@@ -40,19 +40,12 @@ def main():
 
         # uses input from commandline and then gives first entree from list
         ###folder = find_files(sys.argv[1],"/workspaces/155905672")
-        #folder = find_files(sys.argv[1],"/")
-        #folder = folder[0]
+        rootdir = os.getcwd()
+        folder = find_files(sys.argv[1],rootdir)
+        folder = folder[0]
 
-        os.chdir("/workspaces/155905672")
+        #os.chdir("/workspaces/155905672")
 
-        for dirpath, dirnames, filenames in os.walk("/workspaces/155905672"):
-            print("Current Path:", dirpath)
-            print("Directories:", dirnames)
-            for entrees in filenames:
-            #print("Files:", filenames)
-                #print(entrees)
-                if entrees == sys.argv[1]:
-                    folder = entrees
 
 
 
