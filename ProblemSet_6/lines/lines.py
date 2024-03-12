@@ -28,6 +28,8 @@ import os
 
 
 def main():
+    counter = [] #empty list which raises when in the readen file is a command or empty line
+
     try:
         if len(sys.argv) < 2:
             sys.exit("Too few command-line arguments")
@@ -41,7 +43,7 @@ def main():
         #folder = find_files(sys.argv[1],"/")
         #folder = folder[0]
 
-        counter = [] #empty list which raises when in the readen file is a command or empty line
+
 
         with open(folder, 'r') as f:
             content = f.readlines()
