@@ -9,7 +9,8 @@ with open(sys.argv[1]) as file:
     reader = csv.reader(file)
 
     for row in reader:
-        order.append(f"{row[0]},{row[1]},{row[2]}")
+        #order.append(f"{row[0]},{row[1]},{row[2]}")
+        order.append(row)
     #print([order[0]],[order[1]])
 
     for entrees in order:
