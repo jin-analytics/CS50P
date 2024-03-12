@@ -1,5 +1,5 @@
 from tabulate import tabulate
-import os
+#import os
 import sys
 
 ##finds the path of the input from the commandline and returns it
