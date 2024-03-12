@@ -9,12 +9,6 @@
 # ...or if the specified file does not exist,
 # ...the program should instead exit via sys.exit.
 
-
-### Too few command-line arguments
-### Too many command-line arguments
-### Not a Python file
-### File does not exist
-
 import sys
 import os
 
@@ -39,24 +33,17 @@ def main():
             sys.exit("Not a Python file")
 
         # uses input from commandline and then gives first entree from list
-        ###folder = find_files(sys.argv[1],"/workspaces/155905672")
-        rootdir = os.getcwd()
-        #print(os.getcwd())
-        folder = find_files(sys.argv[1],rootdir)
-        folder = folder[0]
-
-        #os.chdir("/workspaces/155905672")
-
-
-
+        rootdir = os.getcwd() #gets current working directory from commandline
+        folder = find_files(sys.argv[1],rootdir) #searches for file from commandline and directory from commandline
+        folder = folder[0] #returns the first entree of a file which was found
 
         with open(folder, 'r') as f:
-            content = f.readlines()
+            content = f.readlines() # gives the number of written lines in the file
             for line in content:
-                line = line.strip(' ')
-                if line == '\n':
+                line = line.strip(' ') # removes whitespace, so that a comment getzs detected even with tabs used
+                if line == '\n':       # subtract a empty line in line 49 
                     counter.append(1)
-                elif line[0] == '#':
+                elif line[0] == '#':   # substract a commented line in line 49
                     counter.append(1)
 
             print(len(content) - len(counter))
