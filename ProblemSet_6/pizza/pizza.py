@@ -9,10 +9,8 @@ with open(sys.argv[1]) as file:
 
     for row in reader:
         order.append(f"{row[0]},{row[1]},{row[2]}")
-
-    headers = order[0]
-    table = order
-    print(tabulate(table[1:], headers, tablefmt="grid"))
+    print(order)
+    #print(tabulate(, headers="firstrow", tablefmt="grid"))
 
     #for line in file:
         ###splits by comma and remoceves with rstrip garbage like "/n"
