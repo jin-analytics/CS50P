@@ -3,6 +3,7 @@ import sys
 import csv
 
 order = []
+table = []
 
 with open(sys.argv[1]) as file:
     reader = csv.reader(file)
@@ -11,6 +12,9 @@ with open(sys.argv[1]) as file:
         order.append(f"{row[0]},{row[1]},{row[2]}")
     print([order[0]],[order[1]])
     #print(tabulate(, headers="firstrow", tablefmt="grid"))
+    for entrees in order:
+        table.append(entrees)
+        print(table)
 
     #for line in file:
         ###splits by comma and remoceves with rstrip garbage like "/n"
