@@ -4,5 +4,7 @@ import csv
 
 with open(sys.argv[1], newline='') as csvfile:
     for entrees in csvfile:
-        lines = csv.reader(csvfile)
-        print(lines)
+        #spamreader = csv.reader(csvfile)
+        spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+    for row in spamreader:
+        print(', '.join(row))
