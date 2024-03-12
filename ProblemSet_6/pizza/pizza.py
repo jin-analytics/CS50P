@@ -4,7 +4,8 @@ import csv
 
 with open(sys.argv[1]) as file:
     reader = csv.reader(file)
-    for 
+    for item, small, large in reader:
+        
 
     #for line in file:
         ###splits by comma and remoceves with rstrip garbage like "/n"
