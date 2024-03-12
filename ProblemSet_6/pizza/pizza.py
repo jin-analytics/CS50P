@@ -9,7 +9,7 @@ with open(sys.argv[1]) as file:
 
     for row in reader:
         order.append(f"{row[0]},{row[1]},{row[2]}")
-    print(order)
+    print([order[0]],[order[1]])
     #print(tabulate(, headers="firstrow", tablefmt="grid"))
 
     #for line in file:
