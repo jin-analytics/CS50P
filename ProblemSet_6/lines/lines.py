@@ -10,8 +10,6 @@
 # ...the program should instead exit via sys.exit.
 
 
-
-
 ### Too few command-line arguments
 ### Too many command-line arguments
 ### Not a Python file
