@@ -2,8 +2,6 @@ from tabulate import tabulate
 import sys
 import csv
 
-
-
 def main():
     order = []
     try:
