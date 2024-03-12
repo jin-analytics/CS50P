@@ -18,13 +18,13 @@
 import sys
 import os
 
-# finds the path of the input from the commandline and returns it
-def find_files(filename, search_path):
-   result = []
-   for root, dir, files in os.walk(search_path):
-      if filename in files:
-         result.append(os.path.join(root, filename))
-   return result
+## finds the path of the input from the commandline and returns it
+#def find_files(filename, search_path):
+#   result = []
+#   for root, dir, files in os.walk(search_path):
+#      if filename in files:
+#         result.append(os.path.join(root, filename))
+#   return result
 
 
 def main():
@@ -37,9 +37,9 @@ def main():
             sys.exit("Not a Python file")
 
         # uses input from commandline and then gives first entree from list
-        #folder = find_files(sys.argv[1],"/workspaces/155905672")
-        folder = find_files(sys.argv[1],"/")
-        folder = folder[0]
+        ###folder = find_files(sys.argv[1],"/workspaces/155905672")
+        #folder = find_files(sys.argv[1],"/")
+        #folder = folder[0]
 
         counter = [] #empty list which raises when in the readen file is a command or empty line
 
