@@ -20,3 +20,4 @@ with open(sys.argv[1]) as file:
         print(lines[0])
        #print(tabulate(p))
        #print(tabulate(p, headers=["1","2", "3"]))
+
