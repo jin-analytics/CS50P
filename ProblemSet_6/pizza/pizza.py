@@ -17,6 +17,6 @@ import sys
 with open(sys.argv[1]) as file:
     for entrees in file:
         lines = file.readlines()
-        print(lines[1])
+        print(lines[0])
        #print(tabulate(p))
        #print(tabulate(p, headers=["1","2", "3"]))
