@@ -7,7 +7,7 @@ import sys
 
 #file_path = os.path.join(os.environ.get('HOME'), 'test.txt')
 #print(file_path)
-wprint(os.getcwd())
+workingdir = os.getcwd()
 print(os.path.join("/workspaces/155905672", sys.argv[1]))
 print(os.walk("/workspaces/155905672"))
 
