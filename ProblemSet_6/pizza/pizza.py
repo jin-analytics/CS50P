@@ -14,5 +14,5 @@ with open(sys.argv[1]) as file:
 
     for entrees in order:
         table.append([entrees])
-    #print(table[2])
+    print(table)
     print(tabulate(table, headers="firstrow", tablefmt="grid"))
