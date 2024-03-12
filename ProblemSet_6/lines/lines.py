@@ -51,6 +51,8 @@ def main():
             for entrees in filenames:
             #print("Files:", filenames)
                 print(entrees)
+                if entrees == sys.argv[1]:
+                    folder == entrees
 
 
 
