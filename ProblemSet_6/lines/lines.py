@@ -18,13 +18,11 @@
 ### File does not exist
 
 import sys
-
 import os
 
+# finds the path of the input from the commandline and returns it
 def find_files(filename, search_path):
    result = []
-
-# Wlaking top-down from the root
    for root, dir, files in os.walk(search_path):
       if filename in files:
          result.append(os.path.join(root, filename))
@@ -32,30 +30,39 @@ def find_files(filename, search_path):
 
 
 def main():
-    #print(find_files(sys.argv[1],"ProblemSet_6"))
+    try:
+        if len(sys.argv) < 2:
+            sys.exit("Too few command-line arguments")
+        elif len(sys.argv) > 2:
+            sys.exit("Too many command-line arguments")
+        elif sys.argv[1][-3:] != ".py":
+            sys.exit("Not a Python file")
 
-    counter = [] #empty list which raises when in the readen file is a command or empty line
-    while True:
-        try:
-            filename = sys.argv[1]
+        # uses input from commandline and then gives first entree from list
+        #folder = find_files(sys.argv[1],"/workspaces/155905672")
+        folder = find_files(sys.argv[1],"/")
+        folder = folder[0]
 
-            with open(filename, 'r') as f:
-                content = f.readlines()
-                for line in content:
-                    line = line.strip(' ')
-                    if line == '\n':
-                        counter.append(1)
-                    elif line[0] == '#':
-                        counter.append(1)
+        counter = [] #empty list which raises when in the readen file is a command or empty line
 
-                print(len(content) - len(counter))
-                sys.exit()
-        except EOFError:
+        with open(folder, 'r') as f:
+            content = f.readlines()
+            for line in content:
+                line = line.strip(' ')
+                if line == '\n':
+                    counter.append(1)
+                elif line[0] == '#':
+                    counter.append(1)
+
+            print(len(content) - len(counter))
             sys.exit()
-        except FileNotFoundError:
-            sys.exit('Not found')
-        #except EOFError:
-        #sys.exit()
+    except EOFError:
+        sys.exit()
+    except FileNotFoundError:
+        sys.exit('File does not exist')
+    except IndexError:
+        sys.exit('File does not exist')
+
 
 if __name__ == "__main__":
     main()
