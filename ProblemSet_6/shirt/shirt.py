@@ -26,21 +26,21 @@ import os
 #        image.save(''.format(filename,filetype))
 
 
-size = (300,300)
+size = (300,300) # crop size tupel
 
 image1 = Image.open(sys.argv[1])
-
 image2 = Image.open(sys.argv[2])
-
-image1_crop = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
-image2_crop = ImageOps.fit(image2, size, bleed=0.0, centering=(0.5, 0.5))
 
 for f in os.listdir('.'):
     if f.endswith('.jpg') and f == sys.argv[1]:
         image = Image.open(f)
-        filename, filetype = os.path.splitext(f)
-        image.save('{}_cropped{}'.format(filename,filetype))
+        image = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
+        filename, filetype = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
+        image.save('{}_cropped{}'.format(filename,filetype)) #saves as 'before1_cropped.jpg'
 
+    elif f.endswith('.png') and f == sys.argv[2]:
+        image = Image.open(f)
+        image = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
+        filename, filetype = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
+        image.save('{}_cropped{}'.format(filename,filetype)) #saves as 'before1_cropped.jpg'
 
-#image1_crop.save('{}_cropped{}'.format(filename,filetype)) #saves cropped image
-#image2_crop.save('image2_crop.png') #saves cropped image
