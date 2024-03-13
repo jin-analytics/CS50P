@@ -35,7 +35,7 @@ def main():
         sys.exit()
 
     except FileNotFoundError:
-        sys.exit('File does not exist')
+        sys.exit(f'Could not read {sys.argv[1]}')
     except IndexError:
         sys.exit('File does not exist')
 
