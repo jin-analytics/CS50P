@@ -19,7 +19,7 @@ for f in os.listdir('.'):
         image2 = Image.open(f)
         filename, filetype = os.path.splitext(f)
 
-        image2.save(''.format(filename, filetype))
+        image2.save('test'.format(filename, filetype))
 
 
 size = (300,300)
