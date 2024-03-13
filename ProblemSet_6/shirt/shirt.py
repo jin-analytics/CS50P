@@ -18,24 +18,30 @@ import os
 # convert to png, because the jpeg format doesnt contains the transperency information
 #JPEG does not support the alpha channel (transparency) that is part of the RGBA color space.
 #When you try to save an RGBA image as a JPEG, the alpha channel information will be lost.
+#for f in os.listdir('.'):
+#    if f.endswith('.jpg'):
+#        image = Image.open(f)
+#        filename, filetype = os.path.splitext(f)
+#        #print(filename, filetype)
+#        image.save(''.format(filename,filetype))
+
+
+size = (300,300)
+
+image1 = Image.open(sys.argv[1])
+
+image2 = Image.open(sys.argv[2])
+
+image1_crop = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
+image2_crop = ImageOps.fit(image2, size, bleed=0.0, centering=(0.5, 0.5))
+
 for f in os.listdir('.'):
     if f.endswith('.jpg'):
         image = Image.open(f)
         filename, filetype = os.path.splitext(f)
         #print(filename, filetype)
-        image.save(''.format(filename,filetype))
+        image.save('{}_cropped{}'.format(filename,filetype))
 
 
-size = (300,300)
-
-#image1 = Image.open(sys.argv[1])
-#image1.save('test.png') #saves image
-
-#image2 = Image.open(sys.argv[2])
-#image2.save('shirt.jpg'.format('.jpg')) #saves image
-
-#image1_crop = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
-#image2_crop = ImageOps.fit(image2, size, bleed=0.0, centering=(0.5, 0.5))
-
-#image1_crop.save('image1_crop.jpg') #saves cropped image
-#image2_crop.save('image2_crop.jpg') #saves cropped image
+image1_crop.save('image1_crop.png') #saves cropped image
+image2_crop.save('image2_crop.png') #saves cropped image
