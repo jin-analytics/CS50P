@@ -14,7 +14,7 @@ with open("before.csv") as csvfile:
         lastname, firstname, house = line.rstrip().split(",")
         students.append([lastname, firstname, house])
 
-        with open("test.csv", "w") as newfile:
+        with open("test.csv", "a") as newfile:
             writer =  csv.writer(newfile)
             writer.writerow([lastname, firstname, house])
 
