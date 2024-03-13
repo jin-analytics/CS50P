@@ -20,7 +20,7 @@ with open("before.csv") as csvfile:
 
 with open("before.csv") as csvfile, open("test.csv", "w") as newfile:
     writer = csv.writer(newfile)
-    for line in csvfile:
+    for line in students:
         writer.writerow([lastname, firstname, house])
 
 
