@@ -25,8 +25,6 @@ with open("before.csv") as csvfile:
     next(csvfile)
     for line in csvfile:
         row = line.rstrip().split(",")
-        student = {}
-        student["name"] = name
-        student["house"] = house
-        students.append(student)
-    print(students)
+        #student = {"name" = name, "house": house}
+        #students.append(student)
+        print(row)
