@@ -40,12 +40,14 @@ for f in os.listdir('.'):
         filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
         img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
-im1 = Image.open('{}_cropped{}'.format(filename1,'.png'))
-im2 = Image.open('{}_cropped{}'.format(filename2,filetype2))
+background = Image.open('{}_cropped{}'.format(filename1,'.png'))
+foreground = Image.open('{}_cropped{}'.format(filename2,filetype2))
 
 #final1 = Image.new("RGBA", layer1.size)
 #final1.paste(layer1, (0,0), layer1)
 #final1.paste(layer2, (0,0), layer2)
 
-blended = Image.blend(im1, im2, alpha=0.5)
-blended.save("blended.png")
+background.paste(foreground, (0, 0), foreground.convert('RGBA'))
+
+img2.save('{}_cropped_overlayed{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
+
