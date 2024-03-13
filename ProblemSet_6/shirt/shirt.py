@@ -39,7 +39,7 @@ for f in os.listdir('.'):
         filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
         img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
-image_fusion(background_filename, background_filetype, foreground_filename, foreground_filetype)
+image_fusion(filename1,filetype1,filename2,filetype2)
 
 #background = Image.open('{}_cropped{}'.format(filename1,filetype1)) #jpg
 #foreground = Image.open('{}_cropped{}'.format(filename2,filetype2)) #png
