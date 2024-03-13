@@ -19,9 +19,9 @@ def main():
         elif sys.argv[2][-4:] != ".csv":
             sys.exit("Not a CSV file")
 
-    filename1 = image_crop(300,300,sys.argv[1])
-    filename2 = image_crop(300,300,sys.argv[2])
-    image_fusion(filename1,filename2)
+        filename1 = image_crop(300,300,sys.argv[1])
+        filename2 = image_crop(300,300,sys.argv[2])
+        image_fusion(filename1,filename2)
 
     except FileNotFoundError:
         sys.exit(f'Could not read {sys.argv[1]}')
