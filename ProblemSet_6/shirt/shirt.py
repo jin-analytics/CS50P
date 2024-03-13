@@ -1,6 +1,7 @@
 from PIL import Image
 from PIL import ImageOps
 import sys
+import os
 
 #Open the input with Image.open
 #resize and crop the input with ImageOps.fit
@@ -12,9 +13,14 @@ import sys
 #    ImageOps.fit(image, size, bleed=0.0, centering=(0.5, 0.5))
 #    Image.paste(sys.argv[2], box=None, mask=None)
 
+#for f in os.listdir('.'):
+#    if f.endswith('.jpg'):
+#       print(f)
+
 image1 = Image.open(sys.argv[1])
 #image1.save('test.png') #saves image
 
 image2 = Image.open(sys.argv[1])
 image2.save('shirt.jpg') #saves image
+
 
