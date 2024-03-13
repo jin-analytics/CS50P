@@ -12,4 +12,4 @@ with open("before.csv") as csvfile:
         #print(student["house"],student["firstname"], student["lastname"])
     with open("test.csv", "w") as newfile:
         writer =  csv.writer(newfile)
-        writer.writerow(student)
+        writer.writerow(students)
