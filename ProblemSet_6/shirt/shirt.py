@@ -46,7 +46,3 @@ layer2 = Image.open('{}_cropped{}'.format(filename2,filetype2))
 #final1 = Image.new("RGBA", layer1.size)
 #final1.paste(layer1, (0,0), layer1)
 #final1.paste(layer2, (0,0), layer2)
-
-final2 = Image.new("RGBA", layer1.size)
-final2 = Image.alpha_composite(final2, layer1)
-final2 = Image.alpha_composite(final2, layer2)
