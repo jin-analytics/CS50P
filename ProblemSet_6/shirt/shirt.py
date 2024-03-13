@@ -22,7 +22,8 @@ def main():
         filename1 = image_crop(300,300,sys.argv[1])
         filename2 = image_crop(300,300,"shirt.png")
         #filename2 = image_crop(300,300,sys.argv[2])
-        image_fusion(filename1,filename2)
+        image = image_fusion(filename1,filename2)
+        image.save(sys.argv[2]) #saves as 'filename2_overlayed.png'
 
     except FileNotFoundError:
         sys.exit(f'Could not read {sys.argv[1]}')
