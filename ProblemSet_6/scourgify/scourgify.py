@@ -29,7 +29,7 @@ def main():
         # writes a new file "after.csv" with the structure from the list "studens" + header "firstname, lastname, house"
         with open(sys.argv[2], "w") as csvfile:
             writer =  csv.writer(csvfile)
-            writer.writerow(['first name', 'last name', 'house']) #creates the header in the csv.file
+            writer.writerow(['first', 'last', 'house']) #creates the header in the csv.file
             for firstname, lastname, house in students:
                 writer.writerow([firstname, lastname, house])
         sys.exit()
