@@ -44,7 +44,7 @@ img1 = Image.open('{}_cropped{}'.format(filename1,'.png'))
 img2 = Image.open('{}_cropped{}'.format(filename2,filetype2))
 
 back_img = img1.copy()
-back_img.paste(img2)
+back_img.paste(img2, "mask=RGBA")
 #back_img.alpha_composite(img1)
 back_img.save(f'{filename1}_cropped_paste.png')
 
