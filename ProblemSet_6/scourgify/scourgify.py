@@ -14,8 +14,8 @@ with open("before.csv") as csvfile:
         lastname, firstname, house = line.rstrip().split(",")
 
         with open("test.csv", "w") as newfile:
-                writer =  csv.writer(newfile)
-                writer.writerow([lastname, firstname, house])
+            writer =  csv.writer(newfile)
+            writer.writerow([lastname, firstname, house])
 
 
 
