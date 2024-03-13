@@ -3,7 +3,7 @@ from PIL import ImageOps
 import sys
 import os
 from img_fusion import image_fusion
-
+from img_crop import image_crop
 #Open the input with Image.open
 #resize and crop the input with ImageOps.fit
 #using default values for method, bleed, and centering,
@@ -40,32 +40,17 @@ def main():
 #            filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
 #            img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
-    image1 = crop_image(300,300,sys.argv[1])
-    image2 = crop_image(300,300,sys.argv[2])
+    image1 = image_crop(300,300,sys.argv[1])
+    image2 = image_crop(300,300,sys.argv[2])
     print(image1,image2)
     #image2 = crop_image(300,300,Image.open(sys.argv[2]))
     #print(image2)
+    print(image1.endswith())
     #image_fusion(filename1,filetype1,filename2,filetype2)
     #image = (image_fusion(filename1,filetype1,filename2,filetype2))
     #image.save("test.png")
 
-def crop_image(x,y,image_name):
-    #print('......',image_name)
-    try:
-        image = Image.open(image_name)
-        size = (int(x),int(y)) # crop size tupel
-        for f in os.listdir('.'):
-            if f == image_name:
-                # checks if image from cmd line is in the current path, then crops it and then saves under new name  "{filename}_cropped{filetype}"
-                img = Image.open(f)
-                img = ImageOps.fit(image, size, bleed=0.0, centering=(0.5, 0.5))
-                filename1, filetype1 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
-                img.save('{}_cropped{}'.format(filename1,filetype1)) #saves as 'before1_cropped.png'#
-                image = Image.open('{}_cropped{}'.format(filename1,filetype1))
-                image_name = '{}_cropped{}'.format(filename1,filetype1)
-                return image_name
-    except FileNotFoundError:
-        sys.exit("File not in this folder!")
+
 
 
 
