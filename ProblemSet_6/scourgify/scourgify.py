@@ -16,9 +16,9 @@ with open("before.csv", "r") as csvfile:
 #    print(students)
 
 ### Option 2 - Use the csv.reader() which splits automaticly by comma and append the single lines to an empty list
-    reader = csv.reader(csvfile)
-    for line in csvfile:
-        row = line.rstrip().split(",")
-        students.append(row)
-    print(students)
+#    reader = csv.reader(csvfile)
+#    for line in reader:
+#        students.append(line)
+#    print(students)
 
+### Option 3 - 
