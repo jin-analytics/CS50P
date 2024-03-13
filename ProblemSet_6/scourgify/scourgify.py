@@ -11,3 +11,10 @@ with open("before.csv", "r") as csvfile:
     for line in csvfile:
         print(line)
 
+    with open("test.csv", "w") as newfile:
+        fieldnames = ["name", "house"]
+        csv_writer = csv.DictWriter(newfile, fieldnames=fielsnames)
+
+        for line in newfile:
+            
+        print(line)
