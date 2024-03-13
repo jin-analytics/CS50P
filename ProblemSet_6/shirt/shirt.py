@@ -39,12 +39,14 @@ for f in os.listdir('.'):
         filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
         img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
-background = Image.open('{}_cropped{}'.format(filename1,filetype1)) #jpg
-foreground = Image.open('{}_cropped{}'.format(filename2,filetype2)) #png
+image_fusion(background_filename, background_filetype, foreground_filename, foreground_filetype)
 
-# lays foreground picture over background picture
-background.paste(foreground, (0, 0), foreground.convert('RGBA')) #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
-background.save('{}_cropped_overlayed{}'.format(filename2,filetype2)) #saves as 'before1_cropped_overlayed.jpg'
+#background = Image.open('{}_cropped{}'.format(filename1,filetype1)) #jpg
+#foreground = Image.open('{}_cropped{}'.format(filename2,filetype2)) #png
+
+### lays foreground picture over background picture
+#background.paste(foreground, (0, 0), foreground.convert('RGBA')) #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
+#background.save('{}_cropped_overlayed{}'.format(filename2,filetype2)) #saves as 'before1_cropped_overlayed.jpg'
 
 
 
@@ -64,5 +66,5 @@ def image_fusion(filename1,filetype1,filename2,filetype2):
     background.paste(foreground, (0, 0), foreground.convert('RGBA')) #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
     background.save('{}_overlayed{}'.format(filename2,filetype2)) #saves as 'filename2_overlayed.png'
     image = Image.open('{}_overlayed{}'.format(filename2,filetype2))
-    
+
     return image
