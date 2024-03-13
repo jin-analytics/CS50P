@@ -31,20 +31,26 @@ for f in os.listdir('.'):
         img1 = Image.open(f)
         img1 = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
         filename1, filetype1 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
-        img1.save('{}_cropped{}'.format(filename1,".png")) #saves as 'before1_cropped.png'
+        img1.save('{}_cropped{}'.format(filename1,filetype1)) #saves as 'before1_cropped.png'
 
     # checks if image from cmd line is in the current path, then crops it and then saves under new name with _cropped in it
     elif f.endswith('.png') and f == sys.argv[2]:
         img2 = Image.open(f)
-        img2 = ImageOps.fit(image2, size2, bleed=0.0, centering=(0.5, 0.5))
+        img2 = ImageOps.fit(image2, size, bleed=0.0, centering=(0.5, 0.5))
         filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
         img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
 img1 = Image.open(f'{filename1}_cropped.png')
 img2 = Image.open(f'{filename2}_cropped.png')
 
-img2.paste(img1)
-img2.save(f'{filename1}_cropped_paste.png')
+back_img = img1.copy()
+back_img.paste(img2)
+back_img.save(f'{filename1}_cropped_paste.png')
 
 
+#im1 = Image.open('data/src/rocket.jpg')
+#im2 = Image.open('data/src/lena.jpg')
 
+#back_im = im1.copy()
+#back_im.paste(im2)
+#back_im.save('data/dst/rocket_pillow_paste.jpg', quality=95)
