@@ -13,8 +13,9 @@ with open("before.csv", "r") as csvfile:
 
     with open("test.csv", "w") as newfile:
         fieldnames = ["name", "house"]
-        csv_writer = csv.DictWriter(newfile, fieldnames=fielsnames)
+        csv_writer = csv.DictWriter(newfile, fieldnames=fieldnames)
+        csv_writer.writeheader()
 
         for line in newfile:
-            
-        print(line)
+            csv_writer.writerow("name")
+            print(line)
