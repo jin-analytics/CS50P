@@ -12,18 +12,11 @@ with open("before.csv") as csvfile:
     for line in csvfile:
         line = line.replace('"', '')
         lastname, firstname, house = line.rstrip().split(",")
-        student = {"firstname":firstname, "lastname":lastname, "house":house}
-        students.append(student)
-        #print(student["house"],student["firstname"], student["lastname"])
+
     with open("test.csv", "w") as newfile:
             writer =  csv.writer(newfile)
             writer.writerow(students)
 
-with open("test.csv", "r") as newfile:
-        csvreader=csv.DictReader(newfile)
-        for row in newfile:
-              pass
-        print(row)
 
 
 
