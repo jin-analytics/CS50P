@@ -12,19 +12,37 @@ with open("before.csv") as csvfile:
     for line in csvfile:
         line = line.replace('"', '')
         lastname, firstname, house = line.rstrip().split(",")
-        students.append([lastname, firstname, house])#
+        students.append([lastname, firstname, house])
 
-#        with open("test.csv", "w") as newfile:
-#            writer =  csv.writer(newfile)
-#            writer.writerow([lastname, firstname, house])
-
-with open("before.csv") as csvfile, open("test.csv", "w") as newfile:
-    writer = csv.writer(newfile)
-    for line in students:
-        writer.writerow([lastname, firstname, house])
+        
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #print(students)
+
+     #with open("test.csv", "w") as newfile:
+     #       for line in
+     #       writer =  csv.writer(newfile)
+     #       writer.writerow([lastname, firstname, house])
 
 
 
