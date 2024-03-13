@@ -2,11 +2,18 @@
     # the name is key
     # the house is value
     # draco : slytherin
-
+import sys
 import csv
 
 def main():
-    
+
+    if len(sys.argv) < 2:
+        sys.exit("Too few command-line arguments")
+    elif len(sys.argv) > 2:
+        sys.exit("Too many command-line arguments")
+    elif sys.argv[1][-4:] != ".csv":
+        sys.exit("Not a CSV file")
+
     students = []
     # reads the before.csv file and creates a list "students" with this structure: [firstname, lastname, house]
     with open("before.csv") as csvfile:
