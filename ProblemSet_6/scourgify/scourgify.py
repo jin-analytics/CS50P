@@ -18,12 +18,10 @@ with open("before.csv") as csvfile:
 #            writer =  csv.writer(newfile)
 #            writer.writerow([lastname, firstname, house])
 
-        with open("before.csv") as csvfile, open("test.csv", "w") as newfile:
-            writer = csv.writer(newfile)
-            next(csvfile)
-            for line in csvfile:
-                # your code here
-                writer.writerow([lastname, firstname, house])
+with open("before.csv") as csvfile, open("test.csv", "w") as newfile:
+    writer = csv.writer(newfile)
+    for line in csvfile:
+        writer.writerow([lastname, firstname, house])
 
 
 
