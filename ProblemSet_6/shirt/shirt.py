@@ -41,9 +41,9 @@ def main():
 #            img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
 
-    image1 = crop_image(300,300,sys.argv[1])
+    image1 = crop_image(300,300,Image.open(sys.argv[1]))
     print(image1)
-    image2 = crop_image(300,300,sys.argv[2])
+    image2 = crop_image(300,300,Image.open(sys.argv[2]))
     print(image2)
     #image_fusion(filename1,filetype1,filename2,filetype2)
     #image = (image_fusion(filename1,filetype1,filename2,filetype2))
