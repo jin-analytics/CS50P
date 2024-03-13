@@ -54,12 +54,13 @@ def crop_image(x,y,image_name):
     #image = Image.open(image_name)
     size = (int(x),int(y)) # crop size tupel
     for f in os.listdir('.'):
-        # checks if image from cmd line is in the current path, then crops it and then saves under new name  "{filename}_cropped{filetype}"
-        image = Image.open(f)
-        image = ImageOps.fit(image_name, size, bleed=0.0, centering=(0.5, 0.5))
-        filename1, filetype1 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
-        image.save('{}_cropped{}'.format(filename1,filetype1)) #saves as 'before1_cropped.png'
-        image = Image.open('{}_cropped{}'.format(filename1,filetype1))
+        if f == image_name:
+            # checks if image from cmd line is in the current path, then crops it and then saves under new name  "{filename}_cropped{filetype}"
+            image = Image.open(f)
+            image = ImageOps.fit(image_name, size, bleed=0.0, centering=(0.5, 0.5))
+            filename1, filetype1 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
+            image.save('{}_cropped{}'.format(filename1,filetype1)) #saves as 'before1_cropped.png'
+            image = Image.open('{}_cropped{}'.format(filename1,filetype1))
     return image
 
 
