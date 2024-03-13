@@ -14,13 +14,13 @@ def main():
             sys.exit("Too few command-line arguments")
         elif len(sys.argv) > 3:
             sys.exit("Too many command-line arguments")
-        elif sys.argv[1][-4:] != ".csv":
-            sys.exit("Not a CSV file")
-        elif sys.argv[2][-4:] != ".jpg" or ".png":
-            sys.exit("Invalid output")
+        elif sys.argv[1][-4:] != ".jpg":
+            sys.exit("Invalid Output")
+        elif sys.argv[2][-4:] == ".jpg" and sys.argv[3][-4:] ==".png":
+            sys.exit("Input and output have different extensions")
 
         filename1 = image_crop(300,300,sys.argv[1])
-        filename2 = image_crop(300,300,sys.argv[2])
+        #filename2 = image_crop(300,300,sys.argv[2])
         image_fusion(filename1,filename2)
 
     except FileNotFoundError:
