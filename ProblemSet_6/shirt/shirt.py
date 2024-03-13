@@ -36,7 +36,7 @@ for f in os.listdir('.'):
     # checks if image from cmd line is in the current path, then crops it and then saves under new name with _cropped in it
     elif f.endswith('.png') and f == sys.argv[2]:
         img2 = Image.open(f)
-        img2 = ImageOps.fit(image2, size, bleed=0.0, centering=(0.5, 0.5))
+        img2 = ImageOps.fit(image2, size2, bleed=0.0, centering=(0.5, 0.5))
         filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
         img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
@@ -44,8 +44,8 @@ img1 = Image.open('{}_cropped{}'.format(filename1,filetype1))
 img2 = Image.open('{}_cropped{}'.format(filename2,filetype2))
 
 back_img = img1.copy()
-#back_img.paste(img2)
-back_img.alpha_composite(img1)
+back_img.paste(img2)
+#back_img.alpha_composite(img1)
 back_img.save(f'{filename1}_cropped_paste.png')
 
 
