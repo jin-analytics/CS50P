@@ -24,7 +24,7 @@ with open("before.csv") as csvfile:
 ### Option 3 - Read out every single line, split it by comma and append to an empty dictionary
     next(csvfile)
     for line in csvfile:
-        name, house = line.rstrip().split(",")
+        row = line.rstrip().split(",")
         student = {}
         student["name"] = name
         student["house"] = house
