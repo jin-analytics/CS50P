@@ -16,8 +16,8 @@ def main():
             sys.exit("Too many command-line arguments")
         elif sys.argv[1][-4:] != ".csv":
             sys.exit("Not a CSV file")
-        elif sys.argv[2][-4:] != ".csv":
-            sys.exit("Not a CSV file")
+        elif sys.argv[2][-4:] != ".jpg" or ".png":
+            sys.exit("Invalid output")
 
         filename1 = image_crop(300,300,sys.argv[1])
         filename2 = image_crop(300,300,sys.argv[2])
