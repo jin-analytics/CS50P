@@ -5,11 +5,11 @@
 
 import csv
 
-storage = []
+students = []
 
 with open("before.csv", "r") as csvfile:
     for line in csvfile:
         row = line.rstrip().split(",")
-        storage.append(row)
+        students.append(row)
 
-    print(storage[2])
+    print(students)
