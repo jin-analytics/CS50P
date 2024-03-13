@@ -10,4 +10,4 @@ with open("before.csv") as csvfile:
         students.append(student)
         #print(student["house"],student["firstname"], student["lastname"])
         with open("test.csv") as newfile:
-            write
+            csv.write()
