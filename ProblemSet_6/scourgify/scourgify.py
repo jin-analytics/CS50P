@@ -7,7 +7,8 @@ import csv
 
 students = []
 
-with open("before.csv", "r") as csvfile:
+with open("before.csv") as csvfile:
+    next()
 
 ### Option 1 - Read out every single line, split it by comma and append to an empty list
 #    for line in csvfile:
