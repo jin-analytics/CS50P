@@ -15,10 +15,12 @@ with open("before.csv") as csvfile:
         firstname=firstname.replace(' ', '')
         students.append([lastname, firstname, house])
 
-for lastname, firstname, house in students:
+with open("test.csv", "w") as csvfile:
+    for lastname, firstname, house in students:
         #print(lastname, firstname, house)
-    pass
-#print(students)
+        writer =  csv.writer(csvfile)
+        writer.writerow([lastname, firstname, house])
+
 
 
 
