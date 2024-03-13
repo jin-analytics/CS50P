@@ -39,3 +39,4 @@ for f in os.listdir('.'):
         filename, filetype = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
         img.save('{}_cropped{}'.format(filename,filetype)) #saves as 'before1_cropped.jpg'
 
+Image.paste(image1)
