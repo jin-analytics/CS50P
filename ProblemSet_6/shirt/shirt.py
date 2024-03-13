@@ -20,27 +20,32 @@ from img_fusion import image_fusion
 #JPEG does not support the alpha channel (transparency) that is part of the RGBA color space.
 #When you try to save an RGBA image as a JPEG, the alpha channel information will be lost.
 def main():
-    image1 = Image.open(sys.argv[1])
-    image2 = Image.open(sys.argv[2])
+#    image1 = Image.open(sys.argv[1])
+#    image2 = Image.open(sys.argv[2])
 
-    size = (300,300) # crop size tupel
+#    size = (300,300) # crop size tupel
 
-    for f in os.listdir('.'):
-        # checks if image from cmd line is in the current path, then crops it and then saves under new name with _cropped in it
-        if f.endswith('.jpg') and f == sys.argv[1]:
-            img1 = Image.open(f)
-            img1 = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
-            filename1, filetype1 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
-            img1.save('{}_cropped{}'.format(filename1,filetype1)) #saves as 'before1_cropped.png'
+#    for f in os.listdir('.'):
+#        # checks if image from cmd line is in the current path, then crops it and then saves under new name with _cropped in it
+#        if f.endswith('.jpg') and f == sys.argv[1]:
+#            img1 = Image.open(f)
+#            img1 = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
+#            filename1, filetype1 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
+#            img1.save('{}_cropped{}'.format(filename1,filetype1)) #saves as 'before1_cropped.png'#
+#
+#        # checks if image from cmd line is in the current path, then crops it and then saves under new name with _cropped in it
+#        elif f.endswith('.png') and f == sys.argv[2]:
+#            img2 = Image.open(f)
+#            img2 = ImageOps.fit(image2, size, bleed=0.0, centering=(0.5, 0.5))
+#            filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
+#            img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
-        # checks if image from cmd line is in the current path, then crops it and then saves under new name with _cropped in it
-        elif f.endswith('.png') and f == sys.argv[2]:
-            img2 = Image.open(f)
-            img2 = ImageOps.fit(image2, size, bleed=0.0, centering=(0.5, 0.5))
-            filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
-            img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
-    image_fusion(filename1,filetype1,filename2,filetype2)
+    image1 = crop_image(300,300,sys.argv[1])
+    print(image1)
+    image2 = crop_image(300,300,sys.argv[2])
+    print(image2)
+    #image_fusion(filename1,filetype1,filename2,filetype2)
     #image = (image_fusion(filename1,filetype1,filename2,filetype2))
     #image.save("test.png")
 
