@@ -51,7 +51,7 @@ def main():
 
 def crop_image(x,y,image_name):
     #image = Image.open(image_name)
-    size = (x,y) # crop size tupel
+    size = (int(x),int(y)) # crop size tupel
     for f in os.listdir('.'):
         # checks if image from cmd line is in the current path, then crops it and then saves under new name  "{filename}_cropped{filetype}"
         image = Image.open(f)
