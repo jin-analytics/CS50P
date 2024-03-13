@@ -42,3 +42,6 @@ for f in os.listdir('.'):
 img1 = Image.open(f'{filename1}_cropped.png')
 img2 = Image.open(f'{filename2}_cropped.png')
 
+img1.paste(img2)
+img1.save(f'{filename1}_cropped_paste.png')
+
