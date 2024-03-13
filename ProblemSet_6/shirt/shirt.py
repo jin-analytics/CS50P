@@ -35,7 +35,7 @@ image2 = Image.open(sys.argv[2])
 image1_crop = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
 image2_crop = ImageOps.fit(image2, size, bleed=0.0, centering=(0.5, 0.5))
 
-for f in os.listdir('.'):
+for f in image1_crop:
     if f.endswith('.jpg'):
         image = Image.open(f)
         filename, filetype = os.path.splitext(f)
