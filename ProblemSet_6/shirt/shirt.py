@@ -5,7 +5,8 @@ import os
 
 #Open the input with Image.open
 #resize and crop the input with ImageOps.fit
-#using default values for method, bleed, and centering, overlay the shirt with Image.paste
+#using default values for method, bleed, and centering,
+#overlay the shirt with Image.paste
 #and save the result with Image.save
 
 #with open(Image.open(sys.argv[1], mode='r', formats=None)) as image:
@@ -17,10 +18,13 @@ import os
 #    if f.endswith('.jpg'):
 #       print(f)
 
+size = (300,300)
+
 image1 = Image.open(sys.argv[1])
 #image1.save('test.png') #saves image
 
 image2 = Image.open(sys.argv[1])
 image2.save('shirt.jpg') #saves image
 
-
+ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
+ImageOps.fit(image2, size, bleed=0.0, centering=(0.5, 0.5))
