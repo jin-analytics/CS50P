@@ -17,3 +17,4 @@ image1 = Image.open(sys.argv[1])
 
 image2 = Image.open(sys.argv[1])
 image2.save('shirt.jpg') #saves image
+
