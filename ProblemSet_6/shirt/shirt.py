@@ -37,8 +37,9 @@ image2_crop = ImageOps.fit(image2, size, bleed=0.0, centering=(0.5, 0.5))
 
 for f in os.listdir('.'):
     if f.endswith('.jpg') and f == sys.argv[1]:
+        image = Image.open(f)
         filename, filetype = os.path.splitext(f)
-        f.save('{}_cropped{}'.format(filename,filetype))
+        image.save('{}_cropped{}'.format(filename,filetype))
 
 
 #image1_crop.save('{}_cropped{}'.format(filename,filetype)) #saves cropped image
