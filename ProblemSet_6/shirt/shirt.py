@@ -40,12 +40,12 @@ def main():
 #            filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
 #            img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
-    image1 = image_crop(300,300,sys.argv[1])
-    image2 = image_crop(300,300,sys.argv[2])
-    print(image1,image2)
+    filename1,filetype1 = image_crop(300,300,sys.argv[1])
+    filename2,filetype2 = image_crop(300,300,sys.argv[2])
+    print(filename1,filetype1)
     #image2 = crop_image(300,300,Image.open(sys.argv[2]))
     #print(image2)
-    print(image1.endswith())
+    #print(image1.endswith())
     #image_fusion(filename1,filetype1,filename2,filetype2)
     #image = (image_fusion(filename1,filetype1,filename2,filetype2))
     #image.save("test.png")
