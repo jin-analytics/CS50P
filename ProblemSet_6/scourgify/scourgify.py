@@ -18,7 +18,7 @@ def main():
 
         students = []
         # reads the before.csv file and creates a list "students" with this structure: [firstname, lastname, house]
-        with open("before.csv") as csvfile:
+        with open(sys.argv[1]) as csvfile:
             next(csvfile)
             for line in csvfile:
                 line = line.replace('"', '')
