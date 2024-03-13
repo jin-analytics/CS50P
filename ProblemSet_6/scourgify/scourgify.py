@@ -21,4 +21,11 @@ with open("before.csv", "r") as csvfile:
 #        students.append(line)
 #    print(students)
 
-### Option 3 - 
+### Option 3 - Read out every single line, split it by comma and append to an empty dictionary
+    for line in csvfile:
+        name, house = line.rstrip().split(",")
+        student = {}
+        student["name"] = name
+        student["house"] = house
+        students.append(student)
+    print(students)
