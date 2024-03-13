@@ -8,8 +8,17 @@ import csv
 students = []
 
 with open("before.csv", "r") as csvfile:
+
+### Option 1 - Read out every single line, split it by comma and append to an empty list
+#    for line in csvfile:
+#        row = line.rstrip().split(",")
+#        students.append(row)
+#    print(students)
+
+### Option 2 - Use the csv.reader() which splits automaticly by comma and append the single lines to an empty list
+    reader = csv.reader(csvfile)
     for line in csvfile:
         row = line.rstrip().split(",")
         students.append(row)
-
     print(students)
+
