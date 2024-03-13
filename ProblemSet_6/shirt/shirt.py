@@ -65,6 +65,7 @@ def crop_image(x,y,image_name):
                 img.save('{}_cropped{}'.format(filename1,filetype1)) #saves as 'before1_cropped.png'#
                 image = Image.open('{}_cropped{}'.format(filename1,filetype1))
                 return image
+            sys.exit("File not in this folder!")
     except FileNotFoundError:
         sys.exit("File not in this folder!")
 
