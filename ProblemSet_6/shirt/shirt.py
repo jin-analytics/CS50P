@@ -18,8 +18,9 @@ for f in os.listdir('.'):
     if f.endswith('.png'):
         image2 = Image.open(f)
         filename, filetype = os.path.splitext(f)
+        print(filename, filetype)
 
-        image2.save('test'.format(filename, filetype))
+        image2.save('test.jpg')
 
 
 size = (300,300)
