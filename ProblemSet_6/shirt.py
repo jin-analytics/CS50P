@@ -8,4 +8,3 @@ import sys
 
 PIL.Image.open(sys.argv[1], mode='r', formats=None)
 
-python3 -m pip install --upgrade pip
