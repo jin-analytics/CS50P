@@ -19,7 +19,11 @@ with open("before.csv") as csvfile:
             writer =  csv.writer(newfile)
             writer.writerow(students)
 
-
+with open("test.csv", "r") as newfile:
+        csvreader=csv.DictReader(newfile)
+        for row in newfile:
+              pass
+        print(row)
 
 
 
