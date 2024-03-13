@@ -8,5 +8,6 @@ with open("before.csv") as csvfile:
         lastname, firstname, house = line.rstrip().split(",")
         student = {"firstname":firstname, "lastname":lastname, "house":house}
         students.append(student)
-   # for _ in students:
-    print(students)
+        #print(student["house"],student["firstname"], student["lastname"])
+        with open("test.csv") as newfile:
+            write
