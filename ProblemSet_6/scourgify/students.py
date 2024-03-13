@@ -7,4 +7,4 @@ with open("before.csv") as csvfile:
         #name, house = line.rstrip().split(",")
         line = line.rstrip().split(",")
         #line = line[0].split(",")
-        print(line[2])
+        print(line)
