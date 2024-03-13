@@ -11,5 +11,5 @@ with open("before.csv") as csvfile:
         students.append(student)
         #print(student["house"],student["firstname"], student["lastname"])
     with open("test.csv", "w") as newfile:
-        writer =  csv.writer(newfile)
-        writer.writerow(students)
+            writer =  csv.writer(newfile)
+            writer.writerow(students)
