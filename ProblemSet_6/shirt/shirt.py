@@ -13,4 +13,7 @@ import sys
 #    Image.paste(sys.argv[2], box=None, mask=None)
 
 image1 = Image.open(sys.argv[1])
-image1.save('test.png') #saves image
+#image1.save('test.png') #saves image
+
+image2 = Image.open(sys.argv[1])
+image2.save('shirt.jpg') #saves image
