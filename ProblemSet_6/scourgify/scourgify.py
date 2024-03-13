@@ -7,6 +7,7 @@ import csv
 
 students = []
 
+# reads the before.csv file and creates a list "students" with this structure: [lastname, firstname, house]
 with open("before.csv") as csvfile:
     next(csvfile)
     for line in csvfile:
@@ -15,6 +16,7 @@ with open("before.csv") as csvfile:
         firstname=firstname.replace(' ', '')
         students.append([lastname, firstname, house])
 
+# writes a new file "after.csv" with the structure from the list "studens" + header "lastname, firstname, house"
 with open("after.csv", "w") as csvfile:
     writer =  csv.writer(csvfile)
     writer.writerow(['lastname', 'firstname', 'house']) #creates the header in the csv.file
