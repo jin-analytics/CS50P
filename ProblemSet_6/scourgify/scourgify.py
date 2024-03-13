@@ -10,6 +10,6 @@ storage = []
 with open("before.csv", "r") as csvfile:
     for line in csvfile:
         row = line.rstrip().split(",")
-        storage = storage.append(row)
+        storage.append(row)
 
-    print(storage)
+    print(storage[2])
