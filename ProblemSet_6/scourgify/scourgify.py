@@ -5,7 +5,11 @@
 
 import csv
 
+storage = []
+
 with open("before.csv", "r") as csvfile:
     for line in csvfile:
         row = line.rstrip().split(",")
-        print(row)
+        storage = storage.append(row)
+
+    print(storage)
