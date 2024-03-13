@@ -26,14 +26,14 @@ size = (300,300) # crop size tupel
 
 for f in os.listdir('.'):
     if f.endswith('.jpg') and f == sys.argv[1]:
-        image = Image.open(f)
-        image = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
+        img = Image.open(f)
+        img = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
         filename, filetype = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
-        image.save('{}_cropped{}'.format(filename,".png")) #saves as 'before1_cropped.png'
+        img.save('{}_cropped{}'.format(filename,".png")) #saves as 'before1_cropped.png'
 
     elif f.endswith('.png') and f == sys.argv[2]:
-        image = Image.open(f)
-        image = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
+        img = Image.open(f)
+        img = ImageOps.fit(image1, size, bleed=0.0, centering=(0.5, 0.5))
         filename, filetype = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
-        image.save('{}_cropped{}'.format(filename,filetype)) #saves as 'before1_cropped.jpg'
+        img.save('{}_cropped{}'.format(filename,filetype)) #saves as 'before1_cropped.jpg'
 
