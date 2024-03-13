@@ -14,13 +14,17 @@ import os
 #    ImageOps.fit(image, size, bleed=0.0, centering=(0.5, 0.5))
 #    Image.paste(sys.argv[2], box=None, mask=None)
 
+
+# convert to png, because the jpeg format doesnt contains the transperency information
+#JPEG does not support the alpha channel (transparency) that is part of the RGBA color space.
+#When you try to save an RGBA image as a JPEG, the alpha channel information will be lost.
 for f in os.listdir('.'):
-    if f.endswith('.png'):
+    if f.endswith('.jpg'):
         image2 = Image.open(f)
         filename, filetype = os.path.splitext(f)
         print(filename, filetype)
 
-        image2.save('test.jpg')
+        #image2.save('test.png')
 
 
 size = (300,300)
