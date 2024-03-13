@@ -50,6 +50,7 @@ def main():
     #image.save("test.png")
 
 def crop_image(x,y,image_name):
+    print('......',image_name)
     #image = Image.open(image_name)
     size = (int(x),int(y)) # crop size tupel
     for f in os.listdir('.'):
