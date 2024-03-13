@@ -6,23 +6,23 @@
 import csv
 
 def main():
+    
     students = []
-
-    # reads the before.csv file and creates a list "students" with this structure: [lastname, firstname, house]
+    # reads the before.csv file and creates a list "students" with this structure: [firstname, lastname, house]
     with open("before.csv") as csvfile:
         next(csvfile)
         for line in csvfile:
             line = line.replace('"', '')
             lastname, firstname, house = line.rstrip().split(",")
             firstname=firstname.replace(' ', '')
-            students.append([lastname, firstname, house])
+            students.append([firstname, lastname, house])
 
-    # writes a new file "after.csv" with the structure from the list "studens" + header "lastname, firstname, house"
+    # writes a new file "after.csv" with the structure from the list "studens" + header "firstname, lastname, house"
     with open("after.csv", "w") as csvfile:
         writer =  csv.writer(csvfile)
-        writer.writerow(['lastname', 'firstname', 'house']) #creates the header in the csv.file
-        for lastname, firstname, house in students:
-            writer.writerow([lastname, firstname, house])
+        writer.writerow(['first name', 'last name', 'house']) #creates the header in the csv.file
+        for firstname, lastname, house in students:
+            writer.writerow([firstname, lastname, house])
 
 if __name__ == "__main__":
     main()
