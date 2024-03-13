@@ -12,9 +12,13 @@ with open("before.csv") as csvfile:
     for line in csvfile:
         line = line.replace('"', '')
         lastname, firstname, house = line.rstrip().split(",")
+        firstname=firstname.replace(' ', '')
         students.append([lastname, firstname, house])
 
-        
+    for lastname, firstname, house in students:
+        #print(lastname, firstname, house)
+        pass
+    print(students)
 
 
 
