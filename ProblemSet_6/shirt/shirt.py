@@ -1,4 +1,5 @@
 from PIL import Image
+from PIL import ImageOps
 import sys
 
 #Open the input with Image.open
@@ -8,4 +9,4 @@ import sys
 
 image = Image.open(sys.argv[1], mode='r', formats=None)
 size = 128, 128
-ImageOps.fit(image, size, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
+ImageOps.fit(image, size, bleed=0.0, centering=(0.5, 0.5))
