@@ -55,9 +55,7 @@ def crop_image(x,y,image_name):
         image = Image.open(image_name)
         size = (int(x),int(y)) # crop size tupel
         for f in os.listdir('.'):
-            print('......',f)
             if f == image_name:
-                print("found")
                 # checks if image from cmd line is in the current path, then crops it and then saves under new name  "{filename}_cropped{filetype}"
                 img = Image.open(f)
                 img = ImageOps.fit(image, size, bleed=0.0, centering=(0.5, 0.5))
@@ -65,7 +63,6 @@ def crop_image(x,y,image_name):
                 img.save('{}_cropped{}'.format(filename1,filetype1)) #saves as 'before1_cropped.png'#
                 image = Image.open('{}_cropped{}'.format(filename1,filetype1))
                 return image
-            sys.exit("File not in this folder!")
     except FileNotFoundError:
         sys.exit("File not in this folder!")
 
