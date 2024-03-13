@@ -36,22 +36,17 @@ for f in os.listdir('.'):
     # checks if image from cmd line is in the current path, then crops it and then saves under new name with _cropped in it
     elif f.endswith('.png') and f == sys.argv[2]:
         img2 = Image.open(f)
-        img2 = ImageOps.fit(image2, size2, bleed=0.0, centering=(0.5, 0.5))
+        img2 = ImageOps.fit(image2, size, bleed=0.0, centering=(0.5, 0.5))
         filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
         img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
-img1 = Image.open('{}_cropped{}'.format(filename1,'.png'))
-img2 = Image.open('{}_cropped{}'.format(filename2,filetype2))
+layer1 = Image.open('{}_cropped{}'.format(filename1,'.png'))
+layer2 = Image.open('{}_cropped{}'.format(filename2,filetype2))
 
-back_img = img1.copy()
-back_img.paste(img2, "mask=RGBA")
-#back_img.alpha_composite(img1)
-back_img.save(f'{filename1}_cropped_paste.png')
+#final1 = Image.new("RGBA", layer1.size)
+#final1.paste(layer1, (0,0), layer1)
+#final1.paste(layer2, (0,0), layer2)
 
-
-#im1 = Image.open('data/src/rocket.jpg')
-#im2 = Image.open('data/src/lena.jpg')
-
-#back_im = im1.copy()
-#back_im.paste(im2)
-#back_im.save('data/dst/rocket_pillow_paste.jpg', quality=95)
+final2 = Image.new("RGBA", layer1.size)
+final2 = Image.alpha_composite(final2, layer1)
+final2 = Image.alpha_composite(final2, layer2)
