@@ -12,6 +12,7 @@ with open("before.csv") as csvfile:
     for line in csvfile:
         line = line.replace('"', '')
         lastname, firstname, house = line.rstrip().split(",")
+        students.append([lastname, firstname, house])
 
         with open("test.csv", "w") as newfile:
             writer =  csv.writer(newfile)
