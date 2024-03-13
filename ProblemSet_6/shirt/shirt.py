@@ -19,11 +19,10 @@ import os
 #JPEG does not support the alpha channel (transparency) that is part of the RGBA color space.
 #When you try to save an RGBA image as a JPEG, the alpha channel information will be lost.
 
-
-size = (300,300) # crop size tupel
-
 image1 = Image.open(sys.argv[1])
 image2 = Image.open(sys.argv[2])
+
+size = (300,300) # crop size tupel
 
 for f in os.listdir('.'):
     if f.endswith('.jpg') and f == sys.argv[1]:
