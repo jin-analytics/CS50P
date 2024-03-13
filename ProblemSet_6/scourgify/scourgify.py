@@ -13,6 +13,8 @@ def main():
             sys.exit("Too many command-line arguments")
         elif sys.argv[1][-4:] != ".csv":
             sys.exit("Not a CSV file")
+        elif sys.argv[2][-4:] != ".csv":
+            sys.exit("Not a CSV file")
 
         students = []
         # reads the before.csv file and creates a list "students" with this structure: [firstname, lastname, house]
@@ -30,7 +32,7 @@ def main():
             writer.writerow(['first name', 'last name', 'house']) #creates the header in the csv.file
             for firstname, lastname, house in students:
                 writer.writerow([firstname, lastname, house])
-    
+
     except FileNotFoundError:
         sys.exit('File does not exist')
     except IndexError:
