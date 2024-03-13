@@ -7,5 +7,7 @@ import csv
 
 with open("before.csv", "r") as csvfile:
     csv_reader = csv.DictReader(csvfile)
-    
+
+    for line in csvfile:
+        print(line)
 
