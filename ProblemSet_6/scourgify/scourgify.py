@@ -13,8 +13,8 @@ def main():
             sys.exit("Too many command-line arguments")
         elif sys.argv[1][-4:] != ".csv":
             sys.exit("Not a CSV file")
-        #elif sys.argv[2][-4:] != ".csv":
-        #    sys.exit("Not a CSV file")
+        elif sys.argv[2][-4:] != ".csv":
+            sys.exit("Not a CSV file")
 
         students = []
         # reads the before.csv file and creates a list "students" with this structure: [firstname, lastname, house]
