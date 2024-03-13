@@ -23,6 +23,7 @@ image1 = Image.open(sys.argv[1])
 image2 = Image.open(sys.argv[2])
 
 size = (300,300) # crop size tupel
+size2 = (200,200) # crop size tupel
 
 for f in os.listdir('.'):
     # checks if image from cmd line is in the current path, then crops it and then saves under new name with _cropped in it
@@ -35,13 +36,15 @@ for f in os.listdir('.'):
     # checks if image from cmd line is in the current path, then crops it and then saves under new name with _cropped in it
     elif f.endswith('.png') and f == sys.argv[2]:
         img2 = Image.open(f)
-        img2 = ImageOps.fit(image2, size, bleed=0.0, centering=(0.5, 0.5))
+        img2 = ImageOps.fit(image2, size2, bleed=0.0, centering=(0.5, 0.5))
         filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
         img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
 img1 = Image.open(f'{filename1}_cropped.png')
 img2 = Image.open(f'{filename2}_cropped.png')
 
-img1.paste(img2)
-img1.save(f'{filename1}_cropped_paste.png')
+img2.paste(img1)
+img2.save(f'{filename1}_cropped_paste.png')
+
+
 
