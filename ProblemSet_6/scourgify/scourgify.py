@@ -7,5 +7,5 @@ import csv
 
 with open("before.csv", "r") as csvfile:
     for line in csvfile:
-        line = line.rstrip().split(",")
-    print(csvfile)
+        row = line.rstrip().split(",")
+        print(row)
