@@ -13,4 +13,4 @@ import sys
 #    Image.paste(sys.argv[2], box=None, mask=None)
 
 image1 = Image.open(sys.argv[1])
-image1.save('test.png')
+image1.show()
