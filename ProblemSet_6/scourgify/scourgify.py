@@ -7,14 +7,14 @@ import csv
 
 def main():
     try:
-        if len(sys.argv) < 2:
+        if len(sys.argv) < 3:
             sys.exit("Too few command-line arguments")
-        elif len(sys.argv) > 2:
+        elif len(sys.argv) > 3:
             sys.exit("Too many command-line arguments")
         elif sys.argv[1][-4:] != ".csv":
             sys.exit("Not a CSV file")
-        elif sys.argv[2][-4:] != ".csv":
-            sys.exit("Not a CSV file")
+        #elif sys.argv[2][-4:] != ".csv":
+        #    sys.exit("Not a CSV file")
 
         students = []
         # reads the before.csv file and creates a list "students" with this structure: [firstname, lastname, house]
@@ -27,11 +27,12 @@ def main():
                 students.append([firstname, lastname, house])
 
         # writes a new file "after.csv" with the structure from the list "studens" + header "firstname, lastname, house"
-        with open("after.csv", "w") as csvfile:
+        with open(sys.argv[2], "w") as csvfile:
             writer =  csv.writer(csvfile)
             writer.writerow(['first name', 'last name', 'house']) #creates the header in the csv.file
             for firstname, lastname, house in students:
                 writer.writerow([firstname, lastname, house])
+        sys.exit()
 
     except FileNotFoundError:
         sys.exit('File does not exist')
