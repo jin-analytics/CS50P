@@ -8,7 +8,6 @@ import csv
 students = []
 
 with open("before.csv") as csvfile:
-    next()
 
 ### Option 1 - Read out every single line, split it by comma and append to an empty list
 #    for line in csvfile:
@@ -23,8 +22,9 @@ with open("before.csv") as csvfile:
 #    print(students)
 
 ### Option 3 - Read out every single line, split it by comma and append to an empty dictionary
+    next(csvfile)
     for line in csvfile:
-        name, house = line.rstrip().split(",")
+        name,house = line.rstrip().split(",")
         student = {}
         student["name"] = name
         student["house"] = house
