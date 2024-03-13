@@ -40,8 +40,8 @@ for f in os.listdir('.'):
         filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
         img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
-img1 = Image.open(f'{filename1}_cropped.png')
-img2 = Image.open(f'{filename2}_cropped.png')
+img1 = Image.open('{}_cropped{}'.format(filename1,filetype1))
+img2 = Image.open('{}_cropped{}'.format(filename2,filetype2))
 
 back_img = img1.copy()
 back_img.paste(img2)
