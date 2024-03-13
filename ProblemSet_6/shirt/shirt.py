@@ -40,8 +40,8 @@ def main():
 #            filename2, filetype2 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
 #            img2.save('{}_cropped{}'.format(filename2,filetype2)) #saves as 'before1_cropped.jpg'
 
-    image = crop_image(300,300,sys.argv[1])
-    image = crop_image(300,300,sys.argv[1])
+    image1 = crop_image(300,300,sys.argv[1])
+    image2 = crop_image(300,300,sys.argv[2])
     #image2 = crop_image(300,300,Image.open(sys.argv[2]))
     #print(image2)
     #image_fusion(filename1,filetype1,filename2,filetype2)
@@ -61,6 +61,7 @@ def crop_image(x,y,image_name):
                 filename1, filetype1 = os.path.splitext(f) #filename zB 'before1' & filetype zB '.jpg'
                 img.save('{}_cropped{}'.format(filename1,filetype1)) #saves as 'before1_cropped.png'#
                 image = Image.open('{}_cropped{}'.format(filename1,filetype1))
+                print('{}_cropped{}'.format(filename1,filetype1))
                 return image
     except FileNotFoundError:
         sys.exit("File not in this folder!")
