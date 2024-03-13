@@ -6,5 +6,5 @@ import sys
 #using default values for method, bleed, and centering, overlay the shirt with Image.paste
 #and save the result with Image.save
 
-Image.open(sys.argv[1], mode='r', formats=None)
-
+image = Image.open(sys.argv[1], mode='r', formats=None)
+ImageOps.fit(image, size, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
