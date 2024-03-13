@@ -9,5 +9,5 @@ with open("before.csv") as csvfile:
         student = {"firstname":firstname, "lastname":lastname, "house":house}
         students.append(student)
         #print(student["house"],student["firstname"], student["lastname"])
-        with open("test.csv") as newfile:
-            csv.writer()
+    with open("test.csv") as newfile:
+         csv.writer()
