@@ -15,10 +15,10 @@ with open("before.csv") as csvfile:
         firstname=firstname.replace(' ', '')
         students.append([lastname, firstname, house])
 
-    for lastname, firstname, house in students:
+for lastname, firstname, house in students:
         #print(lastname, firstname, house)
-        pass
-    print(students)
+    pass
+#print(students)
 
 
 
