@@ -17,12 +17,10 @@ def main():
         elif sys.argv[1][-4:] != ".jpg":
             sys.exit("Invalid Output")
         #elif sys.argv[2][-4:] == ".jpg":
-         #   sys.exit("Input and output have different extensions")
+        #   sys.exit("Input and output have different extensions")
 
-        width = Image.open("shirt.png").width
-        height = Image.open("shirt.png").height
-
-
+        width = Image.open("shirt.png").width #get the width of the image which has to be overlayed
+        height = Image.open("shirt.png").height #get the height of the image which has to be overlayed
 
         filename1 = image_crop(width,height,sys.argv[1])
         filename2 = image_crop(width,height,"shirt.png")
