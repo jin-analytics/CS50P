@@ -19,4 +19,5 @@ def image_crop(x,y,image_name):
                 image_name = '{}_cropped{}'.format(filename,filetype)
                 return image_name
     except FileNotFoundError:
-        sys.exit("File not in this folder!")
+        #sys.exit("File not in this folder!")
+        sys.exit()
