@@ -19,7 +19,7 @@ def main():
         elif sys.argv[1][-4:] != sys.argv[2][-4:]:
            sys.exit("Input and output have different extensions")
 
-        print(xor(sys.argv[1][-4:],sys.argv[2][-4:]))
+        print(xor(0,0))
 
         width = Image.open("shirt.png").width #get the width of the image which has to be overlayed
         height = Image.open("shirt.png").height #get the height of the image which has to be overlayed
