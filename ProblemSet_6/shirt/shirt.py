@@ -16,8 +16,9 @@ def main():
             sys.exit("Too many command-line arguments")
         elif sys.argv[1][-4:] != ".jpg":
             sys.exit("Invalid Output")
-        #elif sys.argv[2][-4:] == ".jpg":
-        #   sys.exit("Input and output have different extensions")
+        elif sys.argv[1][-4:] != ".jpg":
+           #sys.exit("Input and output have different extensions")
+            print(sys.argv[2][-4:])
 
         width = Image.open("shirt.png").width #get the width of the image which has to be overlayed
         height = Image.open("shirt.png").height #get the height of the image which has to be overlayed
