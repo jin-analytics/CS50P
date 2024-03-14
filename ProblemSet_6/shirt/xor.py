@@ -1,4 +1,4 @@
-def logical_xor(a, b):
+def xor(a, b):
     if bool(a) == bool(b):
         return False
     else:
