@@ -13,9 +13,9 @@ def image_fusion(filename1,filename2):
     background = Image.open(filename1)
     foreground = Image.open(filename2)
 
-    # lays foreground picture over background picture
-    #background.paste(foreground, (0, 0), foreground.convert('RGBA')) #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
-    #background.save('{}_overlayed{}'.format(filename2,"png")) #saves as 'filename2_overlayed.png'
+    ### lays foreground picture over background picture
+    ###background.paste(foreground, (0, 0), foreground.convert('RGBA')) #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
+    ###background.save('{}_overlayed{}'.format(filename2,"png")) #saves as 'filename2_overlayed.png'
     #image = Image.open('{}_overlayed{}'.format(filename2,"png"))
     background.paste(foreground, (0, 0), foreground.convert('RGBA')) #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
     background.save("new_" + filename2) #saves as 'filename2_overlayed.png'
