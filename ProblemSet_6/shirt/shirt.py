@@ -20,8 +20,8 @@ def main():
          #   sys.exit("Input and output have different extensions")
 
         filename1 = image_crop(300,300,sys.argv[1])
-        filename2 = image_crop(300,300,"shirt.png")
-        #filename2 = image_crop(300,300,sys.argv[2])
+        #filename2 = image_crop(300,300,"shirt.png")
+        filename2 = image_crop(300,300,sys.argv[2])
         image = image_fusion(filename1,filename2)
         image.save(sys.argv[2]) #saves as 'filename2_overlayed.png'
 
