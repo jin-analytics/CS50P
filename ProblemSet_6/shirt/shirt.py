@@ -19,8 +19,13 @@ def main():
         #elif sys.argv[2][-4:] == ".jpg":
          #   sys.exit("Input and output have different extensions")
 
-        filename1 = image_crop(300,300,sys.argv[1])
-        filename2 = image_crop(300,300,"shirt.png")
+        width = Image.open("shirt.png").width
+        height = Image.open("shirt.png").height
+
+
+
+        filename1 = image_crop(width,height,sys.argv[1])
+        filename2 = image_crop(width,height,"shirt.png")
         #filename2 = image_crop(300,300,sys.argv[2])
         image = image_fusion(filename1,filename2)
         image.save(sys.argv[2]) #saves as 'filename2_overlayed.png'
