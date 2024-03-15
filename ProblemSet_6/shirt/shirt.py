@@ -11,18 +11,19 @@ def main():
       #open image
       img = Image.open(sys.argv[1])
 
-      #get size tupel of image
-      size = Image.open(sys.argv[1]).size
+      #get size tupel of image which will be in the foreground
+      size = Image.open("shirt.png").size
       #width = Image.open(sys.argv[1]).width
       #height = Image.open(sys.argv[1]).height
 
-      #fit image
+      #fit image from background to the one from foreground
       img = ImageOps.fit(img, size)
 
       #paste image
       background = img
       foreground = Image.open("shirt.png")
-      background.paste(foreground, (0, 0), foreground.convert('RGBA')) #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
+      #background.paste(foreground, (0, 0), foreground.convert('RGBA')) #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
+      background.paste(foreground, foreground.convert('RGBA')) #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
 
       #save image
       background.save('{}{}'.format(filename, extension)) #saves as 'filename2_overlayed.png'
