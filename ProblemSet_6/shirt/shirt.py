@@ -9,10 +9,16 @@ def main():
    #sys.exit(filename)
    try:
       #open image
-      Image.open(sys.argv[1])
+      img = Image.open(sys.argv[1])
+
+      #get size tupel of image
+      size = Image.open(sys.argv[1]).size
+      #width = Image.open(sys.argv[1]).width
+      #height = Image.open(sys.argv[1]).height
 
       #fit image
-
+      img = ImageOps.fit(img, size)
+      
       #paste image
 
       #save image
