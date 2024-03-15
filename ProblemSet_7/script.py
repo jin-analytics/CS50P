@@ -18,7 +18,6 @@ import re
 # [a-zA-Z0-9]   exclude a,b,...,z/A,B,...,Z/0,1,...,9
 
 
-
 email = input('whats your mail? \n').strip()
 
 if re.search(r"^.+[^@]@.+[^@]\.com$", email):
