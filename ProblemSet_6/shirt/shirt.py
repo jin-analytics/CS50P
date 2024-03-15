@@ -8,10 +8,33 @@ def main():
    filename = check_for_correct_extension_and_file_names(sys.argv)
    sys.exit(filename)
 
-#open image
-#fit image
-#paste image
-#save image
+   #open image
+
+   #fit image
+
+   #paste image
+
+   #save image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def check_for_correct_input(input):
@@ -28,6 +51,7 @@ def check_for_correct_extension_and_file_names(input):
       text, extension = os.path.splitext(elements)
       if extension not in ['.jpg','.jpeg','.png']:
          sys.exit('Invalid output')
+   # returns last filename of "input" ... the suggested output
    return text
 
 if __name__ == "__main__":
