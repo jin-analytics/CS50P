@@ -30,6 +30,5 @@ def check_for_correct_extension_and_file_names(input):
          sys.exit('Invalid output')
    return text
 
-
 if __name__ == "__main__":
     main()
