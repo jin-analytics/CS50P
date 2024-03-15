@@ -18,8 +18,14 @@ def main():
 
       #fit image
       img = ImageOps.fit(img, size)
-      
+
       #paste image
+      background = img
+      foreground = Image.open("shirt.png")
+
+      background.paste(foreground, (0, 0), foreground.convert('RGBA')) #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
+      background.save("new_" + filename2) #saves as 'filename2_overlayed.png'
+      image = Image.open("new_" + filename2)
 
       #save image
 
