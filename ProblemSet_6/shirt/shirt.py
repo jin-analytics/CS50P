@@ -13,8 +13,16 @@ def main():
 #paste image
 #save image
 
+
 def check_for_correct_input():
-   pass
+   if len(sys.argv) < 3:
+      sys.exit("Too few command-line arguments")
+   elif len(sys.argv) > 3:
+      sys.exit("Too many command-line arguments")
+   elif sys.argv[1][-4:] != sys.argv[2][-4:]:
+      sys.exit("Input and output have different extensions")
+
+
 def check_for_correct_extension():
    pass
 
