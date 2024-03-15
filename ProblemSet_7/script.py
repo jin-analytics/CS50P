@@ -15,6 +15,7 @@ import re
 #               ...before the newline at the end of the string
 #     []        set of characters
 #     [^]       complementing the set (opposite)
+# [a-zA-Z0-9]   exclude a,b,...,z/A,B,...,Z/0,1,...,9
 
 
 
