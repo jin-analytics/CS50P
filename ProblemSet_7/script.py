@@ -14,13 +14,13 @@ import re
 #     $         matches the end of the stringor just
 #               ...before the newline at the end of the string
 #     []        set of characters
-#     [^]       complementing the set
+#     [^]       complementing the set (opposite)
 
 
 
 email = input('whats your mail? \n').strip()
 
-if re.search(r"^.+@.+\.com$", email):
+if re.search(r"^.+[^@]@.+[^@]\.com$", email):
     print('valid')
 else:
     print('invalid')
