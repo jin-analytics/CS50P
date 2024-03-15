@@ -13,7 +13,8 @@ import re
 #     ^         matches the start of the string
 #     $         matches the end of the stringor just
 #               ...before the newline at the end of the string
-#
+#     []        set of characters
+#     [^]       complementing the set
 
 
 
@@ -23,4 +24,17 @@ if re.search(r"^.+@.+\.com$", email):
     print('valid')
 else:
     print('invalid')
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
