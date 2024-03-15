@@ -15,7 +15,7 @@ import re
 
 email = input('whats your mail? \n').strip()
 
-if re.search(".+@.+\.com", email):
+if re.search(r".+@.+\.com", email):
     print('valid')
 else:
     print('invalid')
