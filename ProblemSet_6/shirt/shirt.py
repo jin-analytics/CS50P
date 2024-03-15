@@ -26,7 +26,7 @@ def check_for_correct_input(input):
 def check_for_correct_extension_and_file_names(input):
    for elements in input[1:]:
       text, extension = os.path.splitext(elements)
-      if extension != ['jpg','jpeg','png']:
+      if extension not in ['jpg','jpeg','png']:
          sys.exit('Invalid output')
    return text
 
