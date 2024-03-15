@@ -5,8 +5,8 @@ import os
 
 def main():
    check_for_correct_input(sys.argv)
-   check_for_correct_extension(sys.argv)
-   sys.exit('TUTTO')
+   filename = check_for_correct_extension_and_file_names(sys.argv)
+   sys.exit(filename)
 
 #open image
 #fit image
@@ -23,11 +23,12 @@ def check_for_correct_input(input):
    elif input[1][-4:] != input[2][-4:]:
       sys.exit("Input and output have different extensions")
 
-def check_for_correct_extension(input):
+def check_for_correct_extension_and_file_names(input):
    for elements in input[1:]:
-      file = os.path.splitext(elements)
+      text, file = os.path.splitext(elements)
       if file != ['jpg','jpeg','png']:
          sys.exit()
+      return text
 
 
 if __name__ == "__main__":
