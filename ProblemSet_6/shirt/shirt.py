@@ -6,18 +6,24 @@ import os
 def main():
    check_for_correct_input(sys.argv)
    filename = check_for_correct_extension_and_file_names(sys.argv)
-   sys.exit(filename)
+   #sys.exit(filename)
+   try:
+      #open image
+      Image.open(sys.argv[1])
 
-   #open image
+      #fit image
 
-   #fit image
+      #paste image
 
-   #paste image
+      #save image
 
-   #save image
+   except FileNotFoundError:
+      sys.exit('Input does not exist')
 
 
 
+   # width = Image.open("shirt.png").width #get the width of the image which has to be overlayed
+   # height = Image.open("shirt.png").height #get the height of the image which has to be overlayed
 
 
 
