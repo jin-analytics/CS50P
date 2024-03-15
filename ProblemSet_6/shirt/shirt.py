@@ -22,9 +22,9 @@ def main():
       #paste image
       background = img
       foreground = Image.open("shirt.png")
-      #background.paste(foreground, (0, 0), foreground.convert('RGBA')) #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
-      background.paste(foreground, foreground.convert('RGBA')) #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
-
+      #paste(foreground picture, (x,y), applied mask (here 'RGBA' cause of PNG) )
+      background.paste(foreground, foreground.convert('RGBA'))
+      
       #save image
       background.save('{}{}'.format(filename, extension)) #saves as 'filename2_overlayed.png'
       #image = Image.open("new_" + filename2)
