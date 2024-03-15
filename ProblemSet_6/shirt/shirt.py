@@ -24,7 +24,7 @@ def check_for_correct_input(input):
       sys.exit("Input and output have different extensions")
 
 def check_for_correct_extension(input):
-   for elements in input:
+   for elements in input[1:]:
       print(elements)
 
 
