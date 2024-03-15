@@ -25,10 +25,10 @@ def check_for_correct_input(input):
 
 def check_for_correct_extension_and_file_names(input):
    for elements in input[1:]:
-      text, file = os.path.splitext(elements)
-      if file != ['jpg','jpeg','png']:
+      text, extension = os.path.splitext(elements)
+      if extension != ['jpg','jpeg','png']:
          sys.exit('Invalid output')
-      return text
+   return text
 
 
 if __name__ == "__main__":
