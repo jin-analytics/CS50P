@@ -11,7 +11,9 @@ def validate(ip):
     # IPv4 must have this format '#.#.#.#'
     number_format_in_dot_decimal(ip)
     # each number in '#' must be [0:255]
-    number_between_0_and_255(ip)
+    if number_between_0_and_255(ip) != True:
+         sys.exit()
+
     return True
 
 
