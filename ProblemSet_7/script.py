@@ -35,7 +35,7 @@ import re
 
 email = input('whats your mail? \n').strip()
 
-if re.search(r"^.+[^@]@.+[^@]\.com$", email, re.IGNORECASE):
+if re.search(r"^\w+[^@]@.+[^@]\.com$", email, re.IGNORECASE):
     print('valid')
 else:
     print('invalid')
