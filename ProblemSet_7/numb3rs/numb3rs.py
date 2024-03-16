@@ -20,8 +20,8 @@ def validate(ip):
 
 def number_format_in_dot_decimal(ip):
     #test if i can split 3 dots
-
-    print(re.split('.', ip, maxsplit=0))
+    print(re.search(r'^\d?/.',ip))
+    #print(re.split('.', ip, maxsplit=0))
 
 
 
