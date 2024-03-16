@@ -23,25 +23,16 @@ def number_format_in_dot_decimal(ip):
     if re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
         return True
     else:
-        sys.exit()
+        sys.exit('wrong format')
 
 
 def number_between_0_and_255(ip):
-    #if matches := re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
-        #num1 = int(matches.group(1))
         ip = re.split(r'^(\d+).(\d+).(\d+).(\d+)$',ip)
         ip = ' '.join(ip).split()
         for numbers in ip:
              print(int(numbers))
-             if int(numbers) < 0:
-                  print('to small')
-             elif int(numbers) > 255:
-                  print('to big')
-
-
-
-
-        #print(f'{matches.group(1)},{matches.group(2)},{matches.group(3)},{matches.group(4)}')
+             if int(numbers) > 255: #negative numbers gets detected through format check
+                  sys.exit('to big')
 
 
 if __name__ == "__main__":
