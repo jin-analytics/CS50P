@@ -39,7 +39,7 @@ email = input('whats your mail? \n').strip()
 # /w    accepts 'a,b,...,z | A,B,...,Z | 0,1,...,9 | _'
 # +     atleast one character of /w or more
 # @     matches the previous string until @ arrives
-# /w    
+# /w    atleast one character of /w or more after the @
 if re.search(r"^\w+[^@]@.+[^@]\.com$", email, re.IGNORECASE):
     print('valid')
 else:
