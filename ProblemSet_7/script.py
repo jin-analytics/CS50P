@@ -27,10 +27,10 @@ import re
 #     (?:...)   non capturing version
 
 #____flags_______________________________________________________________
-#    re.IGNORECASE
+#    re.IGNORECASE      ignore uppercase, lowercase,... 
 #    re.MULTILINE
 #    re.DOTALL
- 
+
 
 
 email = input('whats your mail? \n').strip()
