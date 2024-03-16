@@ -2,6 +2,9 @@
 
 #re.search(pattern,string,flags=0)
 #re.sub(pattern, repl, string, count=0, flags=0)
+#re.split(pattern, string, maxsplit=0, flags=0)
+#re.findall(pattern,string,flags=0)
+
 import re
 
 #____pattern_____________________________________________________________
@@ -68,7 +71,7 @@ def example3():
     url = input('URL: ').strip()
     #username = url.replace('https://twitter.com/', '')
     #username = url.removeprefix('https://twitter.com/')
-    if matches := re.search(r'^http?s://(?:www\.)?twitter\.com/(.+)$', url, re.IGNORECASE):
+    if matches := re.search(r'^http?s://(?:www\.)?twitter\.com/([a-z0-9_]+)', url, re.IGNORECASE):
         print(f'Username:', matches.group(1))
 
 example3()
