@@ -30,8 +30,8 @@ def number_between_0_and_255(ip):
     #if matches := re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
         #num1 = int(matches.group(1))
         ip = ip.strip()
-        ip = re.findall(r'^(\d+).(\d+).(\d+).(\d+)$',ip)
-        print(ip.group(1))
+        if matches := re.findall(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
+            print(matches[1])
 
 
 
