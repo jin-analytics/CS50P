@@ -9,7 +9,8 @@ def main():
 # validate() expects a str as input and return True or False
 def validate(ip):
     # IPv4 must have this format '#.#.#.#'
-    number_format_in_dot_decimal(ip)
+    if number_format_in_dot_decimal(ip) != True:
+         sys.exit()
     # each number in '#' must be [0:255]
     if number_between_0_and_255(ip) != True:
          sys.exit()
@@ -22,7 +23,7 @@ def number_format_in_dot_decimal(ip):
     if re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
         return True
     else:
-        return False
+        return print(False)
 
 
 def number_between_0_and_255(ip):
@@ -30,7 +31,8 @@ def number_between_0_and_255(ip):
         ip = ' '.join(ip).split()
         for numbers in ip:
              if int(numbers) > 255: #negative numbers gets detected through format check
-                  sys.exit(False)
+                  return print(False)
+        return True
 
 
 if __name__ == "__main__":
