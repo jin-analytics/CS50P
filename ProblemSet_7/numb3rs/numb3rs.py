@@ -32,10 +32,8 @@ def number_between_0_and_255(ip):
         num2 = int(matches.group(2))
         num3 = int(matches.group(3))
         num4 = int(matches.group(4))
-        if  0 <= num1 and num2 and num3 and num4 <= 255:
-            return True
-        else:
-            sys.exit()
+        print(num1, num2, num3)
+
 
 
 
