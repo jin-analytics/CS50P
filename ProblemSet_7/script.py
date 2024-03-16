@@ -59,16 +59,19 @@ def example2():
         #name = matches.group(2) + " " matches.group(1 )
     print(f"hello, {name}")
 
+
 # Example No.3
 def example3():
     # code twitter.py
     # https://twitter.com/davidjmalan
     url = input('URL:').strip()
     #username = url.replace('https://twitter.com/', '')
-    username = url.removeprefix('https://twitter.com/')
+    #username = url.removeprefix('https://twitter.com/')
+    username = re.sub(r'https://twitter.com/', '', url)
     print(f'Username: {username}')
 
 
+example3()
 
 
 
