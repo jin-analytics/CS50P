@@ -15,7 +15,7 @@ import re
 #               ...before the newline at the end of the string
 #     []        set of characters
 #     [^]       complementing the set (opposite)
-# [a-zA-Z0-9_ ]  exclude a,b,...,z/A,B,...,Z/0,1,...,9,_,'space'
+# [a-zA-Z0-9_ ] include a,b,...,z/A,B,...,Z/0,1,...,9,_,'space'
 #     \d        decimal digit
 #     \D        not a decimal digit
 #     \s        whitespace character
@@ -35,6 +35,11 @@ import re
 
 email = input('whats your mail? \n').strip()
 
+# ^     matches at the start of the string
+# /w    accepts 'a,b,...,z | A,B,...,Z | 0,1,...,9 | _'
+# +     atleast one character of /w or more
+# @     matches the previous string until @ arrives
+# /w    
 if re.search(r"^\w+[^@]@.+[^@]\.com$", email, re.IGNORECASE):
     print('valid')
 else:
