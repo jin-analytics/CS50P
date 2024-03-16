@@ -49,6 +49,7 @@ def example1():
     else:
         print('invalid')
 
+
 # Example No. 2
 def example2():
     name = input("whats your name? ").strip()
@@ -67,18 +68,7 @@ def example3():
     url = input('URL: ').strip()
     #username = url.replace('https://twitter.com/', '')
     #username = url.removeprefix('https://twitter.com/')
-    if matches := re.search(r'^(http?s://)?(www\.)?twitter\.com/', '', url)
-    print(f'Username: {username}')
-
+    if matches := re.search(r'^(http?s://(?:www\.)?twitter\.com/(.+)$', url, re.IGNORECASE):
+        print(f'Username:', matches.group(1))
 
 example3()
-
-
-
-
-
-
-
-
-
-
