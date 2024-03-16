@@ -21,7 +21,7 @@ import re
 #     \s        whitespace character
 #     \S        not a whitespace character
 #     \w        word character... as well as numbers and the underscore
-#     \W        not a word character... as well as numbers and the underscore
+#     \W        not a  word character... as well as numbers and the underscore
 #     A|B       either A or B
 #     (...)     a group
 #     (?:...)   non capturing version
