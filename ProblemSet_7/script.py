@@ -68,7 +68,7 @@ def example3():
     url = input('URL: ').strip()
     #username = url.replace('https://twitter.com/', '')
     #username = url.removeprefix('https://twitter.com/')
-    if matches := re.search(r'^(http?s://(?:www\.)?twitter\.com/(.+)$', url, re.IGNORECASE):
+    if matches := re.search(r'^http?s://(?:www\.)?twitter\.com/(.+)$', url, re.IGNORECASE):
         print(f'Username:', matches.group(1))
 
 example3()
