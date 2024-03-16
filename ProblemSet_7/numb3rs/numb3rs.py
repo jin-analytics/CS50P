@@ -31,7 +31,7 @@ def number_between_0_and_255(ip):
         #num1 = int(matches.group(1))
         ip = ip.strip()
         ip = re.findall(r'^(\d+).(\d+).(\d+).(\d+)$',ip)
-        print(ip[1])
+        print(ip.group(1))
 
 
 
