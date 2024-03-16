@@ -15,13 +15,13 @@ def validate(ip):
     # each number in '#' must be [0:255]
     number_between_0_and_255(ip)
 
-    return True
+    sys.exit()
 
 
 def number_format_in_dot_decimal(ip):
     #test if i can split 3 dots
     if matches := re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
-        print(f'matches.group(1)')
+        print(f'{matches.group(1)},{matches.group(2)},{matches.group(3)},{matches.group(4)}')
     #print(re.split('.', ip, maxsplit=0))
 
 
