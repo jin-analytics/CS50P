@@ -8,7 +8,7 @@ def main():
 
 # validate() expects a str as input and return True or False
 def validate(ip):
-    # IPv4 must have this format '#.#.#.#'
+    # IPv4 must have this format '#.#.#.#' and '#' just being numbers
     if number_format_in_dot_decimal(ip) != True:
          sys.exit()
     # each number in '#' must be [0:255]
@@ -19,7 +19,6 @@ def validate(ip):
 
 
 def number_format_in_dot_decimal(ip):
-    #test if i can split 3 dots
     if re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
         return True
     else:
