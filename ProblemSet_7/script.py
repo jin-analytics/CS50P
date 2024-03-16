@@ -3,7 +3,7 @@
 #re.search(pattern,string,flags=0)
 import re
 
-#____pattern
+#____pattern_________________________________
 #     .         any character except a newline
 #     *         0 or more repetitions
 #     +         1 or more repetitions
@@ -15,14 +15,15 @@ import re
 #               ...before the newline at the end of the string
 #     []        set of characters
 #     [^]       complementing the set (opposite)
-# [a-zA-Z0-9_]  exclude a,b,...,z/A,B,...,Z/0,1,...,9 and _
+# [a-zA-Z0-9_ ]  exclude a,b,...,z/A,B,...,Z/0,1,...,9,_,'space'
 #     \d        decimal digit
 #     \D        not a decimal digit
 #     \s        whitespace character
 #     \S        not a whitespace character
 #     \w        word character... as well as numbers and the underscore
-#     \W        not a word character
-
+#     A|B       either A or B
+#     (...)     a group
+#     (?:...)   non capturing version
 
 email = input('whats your mail? \n').strip()
 
