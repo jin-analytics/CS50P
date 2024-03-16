@@ -13,7 +13,7 @@ def validate(ip):
     print('format check', number_format_in_dot_decimal(ip))
 
     # each number in '#' must be [0:255]
-    number_between_0_and_255(ip)
+    print('format check',number_between_0_and_255(ip))
 
     sys.exit()
 
@@ -23,16 +23,20 @@ def number_format_in_dot_decimal(ip):
     if re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
         return True
     else:
-        return False
+        sys.exit()
 
 
 def number_between_0_and_255(ip):
     if matches := re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
-        ip = ip.split('.')
-        for groups in matches.group():
-            print(groups)
-            if 0 <= int(matches.group(groups)) <= 255:
-                #print('gut')
+        num1 = int(matches.group(1))
+        num2 = int(matches.group(2))
+        num3 = int(matches.group(3))
+        num4 = int(matches.group(4))
+        if  0 < num1 and num2 and num3 and num4 < 255:
+            return True
+        else:
+            sys.exit()
+
 
 
         #print(f'{matches.group(1)},{matches.group(2)},{matches.group(3)},{matches.group(4)}')
