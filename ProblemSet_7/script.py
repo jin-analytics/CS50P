@@ -3,7 +3,7 @@
 #re.search(pattern,string,flags=0)
 import re
 
-#____pattern_________________________________
+#____pattern_____________________________________________________________
 #     .         any character except a newline
 #     *         0 or more repetitions
 #     +         1 or more repetitions
@@ -20,13 +20,13 @@ import re
 #     \D        not a decimal digit
 #     \s        whitespace character
 #     \S        not a whitespace character
-#     \w        word character... as well as numbers and the underscore
-#     \W        not a  word character... as well as numbers and the underscore
+#     \w        word character...as well as numbers and the _
+#     \W        not a  word character...as well as numbers and the _
 #     A|B       either A or B
 #     (...)     a group
 #     (?:...)   non capturing version
 
-#____flags___________________________________
+#____flags_______________________________________________________________
 #    re.IGNORECASE
 #    re.MULTILINE
 #    re.DOTALL
