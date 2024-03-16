@@ -7,8 +7,7 @@ def main():
 
 
 def validate(ip):
-    ``
-
+    33333#####33
 
 if __name__ == "__main__":
     main()
