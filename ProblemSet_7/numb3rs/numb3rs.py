@@ -27,12 +27,10 @@ def number_format_in_dot_decimal(ip):
 
 
 def number_between_0_and_255(ip):
-    if matches := re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
-        num1 = int(matches.group(1))
-        num2 = int(matches.group(2))
-        num3 = int(matches.group(3))
-        num4 = int(matches.group(4))
-        print(num1, num2, num3)
+    #if matches := re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
+        #num1 = int(matches.group(1))
+        ip = re.split(r'^(\d+).(\d+).(\d+).(\d+)$',ip)
+        print(ip)
 
 
 
