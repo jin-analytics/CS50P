@@ -1,6 +1,7 @@
 ### Script for Lecture 7
 
 #re.search(pattern,string,flags=0)
+#re.sub(pattern, repl, string, count=0, flags=0)
 import re
 
 #____pattern_____________________________________________________________
@@ -60,7 +61,12 @@ def example2():
 
 # Example No.3
 def example3():
-    
+    # code twitter.py
+    # https://twitter.com/davidjmalan
+    url = input('URL:').strip()
+    #username = url.replace('https://twitter.com/', '')
+    username = url.removeprefix('https://twitter.com/')
+    print(f'Username: {username}')
 
 
 
