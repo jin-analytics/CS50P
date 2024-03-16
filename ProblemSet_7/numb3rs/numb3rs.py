@@ -19,11 +19,14 @@ def validate(ip):
 
 
 def number_format_in_dot_decimal(ip):
+    #test if i can split 3 dots
+
+    print(re.split('...', ip, maxsplit=3))
 
 
 
 def number_between_0_and_255(ip):
-    ...
+    pass
 
 
 if __name__ == "__main__":
