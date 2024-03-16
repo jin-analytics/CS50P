@@ -30,8 +30,8 @@ import re
 #    re.IGNORECASE
 #    re.MULTILINE
 #    re.DOTALL
+ 
 
-                                                    
 
 email = input('whats your mail? \n').strip()
 
