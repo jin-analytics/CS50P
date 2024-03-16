@@ -26,15 +26,15 @@ import re
 #     (?:...)   non capturing version
 
 #____flags___________________________________
-#    re.IGNORECASE         any character except a newline
-#    re.MULTILINE         0 or more repetitions
-#    re.DOTALL         1 or more repetitions
+#    re.IGNORECASE
+#    re.MULTILINE
+#    re.DOTALL
 
 
 
 email = input('whats your mail? \n').strip()
 
-if re.search(r"^.+[^@]@.+[^@]\.com$", email):
+if re.search(r"^.+[^@]@.+[^@]\.com$", email, re.IGNORECASE):
     print('valid')
 else:
     print('invalid')
