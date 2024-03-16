@@ -20,7 +20,7 @@ def number_format_in_dot_decimal(ip):
     if re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
         return True
     else:
-        sys.exit('wrong format')
+        return False
 
 
 def number_between_0_and_255(ip):
@@ -28,7 +28,7 @@ def number_between_0_and_255(ip):
         ip = ' '.join(ip).split()
         for numbers in ip:
              if int(numbers) > 255: #negative numbers gets detected through format check
-                  sys.exit('to big')
+                  sys.exit(False)
 
 
 if __name__ == "__main__":
