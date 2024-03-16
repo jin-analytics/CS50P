@@ -67,7 +67,7 @@ def example3():
     url = input('URL: ').strip()
     #username = url.replace('https://twitter.com/', '')
     #username = url.removeprefix('https://twitter.com/')
-    username = re.sub(r'^(http?s://)?(www\.)?twitter\.com/', '', url)
+    username = (r'^(http?s://)?(www\.)?twitter\.com/', '', url)
     print(f'Username: {username}')
 
 
