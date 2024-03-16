@@ -4,9 +4,9 @@ import sys
 
 def main():
     print(validate(input("IPv4 Address: ")))
-    
 
 
+# validate() expects a str as input and return True or False
 def validate(ip):
 
     # IPv4 must have this format '#.#.#.#'
