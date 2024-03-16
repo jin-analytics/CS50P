@@ -70,7 +70,7 @@ def example3():
     username = re.sub(r'http?s://twitter\.com/', '', url)
     print(f'Username: {username}')
 
-
+    
 example3()
 
 
