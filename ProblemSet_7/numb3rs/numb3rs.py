@@ -10,7 +10,7 @@ def main():
 def validate(ip):
 
     # IPv4 must have this format '#.#.#.#'
-    number_format_in_dot_decimal(ip)
+    print('format check', number_format_in_dot_decimal(ip))
 
     # each number in '#' must be [0:255]
     number_between_0_and_255(ip)
@@ -20,14 +20,19 @@ def validate(ip):
 
 def number_format_in_dot_decimal(ip):
     #test if i can split 3 dots
-    if matches := re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
-        print(f'{matches.group(1)},{matches.group(2)},{matches.group(3)},{matches.group(4)}')
-    #print(re.split('.', ip, maxsplit=0))
-
+    if re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
+        return True
+    else:
+        return False
 
 
 def number_between_0_and_255(ip):
-    pass
+    if matches := re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
+        if 0 <= int(matches.group(1)) <= 255:
+            print('nummer passzt')
+
+
+        #print(f'{matches.group(1)},{matches.group(2)},{matches.group(3)},{matches.group(4)}')
 
 
 if __name__ == "__main__":
