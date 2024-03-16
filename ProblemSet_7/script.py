@@ -15,7 +15,13 @@ import re
 #               ...before the newline at the end of the string
 #     []        set of characters
 #     [^]       complementing the set (opposite)
-# [a-zA-Z0-9]   exclude a,b,...,z/A,B,...,Z/0,1,...,9
+# [a-zA-Z0-9_]  exclude a,b,...,z/A,B,...,Z/0,1,...,9 and _
+#     \d        decimal digit
+#     \D        not a decimal
+#     \s        not a word character
+#     \S        not a word character
+#     \w        not a word character
+#     \w        not a word character
 
 
 email = input('whats your mail? \n').strip()
