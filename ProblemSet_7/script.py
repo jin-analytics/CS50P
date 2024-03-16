@@ -64,7 +64,7 @@ def example2():
 def example3():
     # code twitter.py
     # https://twitter.com/davidjmalan
-    url = input('URL:').strip()
+    url = input('URL: ').strip()
     #username = url.replace('https://twitter.com/', '')
     #username = url.removeprefix('https://twitter.com/')
     username = re.sub(r'https://twitter.com/', '', url)
