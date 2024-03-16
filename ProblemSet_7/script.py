@@ -11,7 +11,7 @@ import re
 #     {m}       m repetitions
 #     {m,n}     m-n repetitions
 #     ^         matches the start of the string
-#     $         matches the end of the stringor just
+#     $         matches the end of the string or just
 #               ...before the newline at the end of the string
 #     []        set of characters
 #     [^]       complementing the set (opposite)
@@ -39,8 +39,11 @@ email = input('whats your mail? \n').strip()
 # /w    accepts 'a,b,...,z | A,B,...,Z | 0,1,...,9 | _'
 # +     atleast one character of /w or more
 # @     matches the previous string until @ arrives
-# /w    atleast one character of /w or more after the @
-if re.search(r"^\w+[^@]@.+[^@]\.com$", email, re.IGNORECASE):
+# /w    accepts 'a,b,...,z | A,B,...,Z | 0,1,...,9 | _' after the @
+# +     atleast one character of /w or more until the .com
+# $     matches the end of the string
+
+if re.search(r"^\w+@\w+\.com$", email, re.IGNORECASE):
     print('valid')
 else:
     print('invalid')
