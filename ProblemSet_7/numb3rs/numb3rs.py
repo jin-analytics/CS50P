@@ -13,7 +13,7 @@ def validate(ip):
     print('format check', number_format_in_dot_decimal(ip))
 
     # each number in '#' must be [0:255]
-    print('format check',number_between_0_and_255(ip))
+    print('number check',number_between_0_and_255(ip))
 
     sys.exit()
 
@@ -32,7 +32,7 @@ def number_between_0_and_255(ip):
         num2 = int(matches.group(2))
         num3 = int(matches.group(3))
         num4 = int(matches.group(4))
-        if  0 < num1 and num2 and num3 and num4 < 255:
+        if  0 <= num1 and num2 and num3 and num4 <= 255:
             return True
         else:
             sys.exit()
