@@ -28,7 +28,8 @@ def number_format_in_dot_decimal(ip):
 
 def number_between_0_and_255(ip):
     if matches := re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
-        if 0 <= int(matches.group(1),matches.group(2),matches.group(3),matches.group(4)) <= 255:
+        print(matches.group())
+        if 0 <= int(matches.group(1)) <= 255:
             print('gut')
 
 
