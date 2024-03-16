@@ -43,7 +43,7 @@ email = input('whats your mail? \n').strip()
 # +     atleast one character of /w or more until the .com
 # $     matches the end of the string
 
-if re.search(r"^\w+[.]?@\w+\.com$", email, re.IGNORECASE):
+if re.search(r"^\w+.?@\w+\.com$", email, re.IGNORECASE):
     print('valid')
 else:
     print('invalid')
