@@ -24,20 +24,15 @@ def test_number_format_in_dot_decimal():
         assert validate(entrees) == False
 
 #______________________________________________________
-def test_number_between_0_and_255():
+def test_number_under_256():
 #    ip_list = [
  #       '255.0.0.0',
  #       '0.256.0.0',
  #       '0.0.256.0',
   #      '0.0.0.256',
    #     ]
-
-    ip_list = ['255.0.0.0'
-               '256.0.0.0']
-
-    #with pytest.raises(SystemExit):
-    for entrees in ip_list:
-        assert validate(entrees) == False
+    assert validate('256.0.0.0') == False
+    assert validate('255.0.0.0') == False
 
 
 if __name__ == "__main__":
