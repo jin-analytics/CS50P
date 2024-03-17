@@ -10,10 +10,10 @@ def main():
 def validate(ip):
     # IPv4 must have this format '#.#.#.#' and '#' just being numbers
     if number_format_in_dot_decimal(ip) != True:
-         sys.exit()
+        return False
     # each number in '#' must be [0:255]
     elif number_between_0_and_255(ip) != True:
-         sys.exit()
+        return False
     else:
         return True
 
