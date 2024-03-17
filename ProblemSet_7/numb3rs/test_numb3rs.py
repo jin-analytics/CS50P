@@ -14,8 +14,8 @@ def test_number_format_in_dot_decimal():
         'cat',
         'cat.dog.mouse.bird',
         '1.2.34',
-        '1.23.4',
-        '12.3.4',
+        '1.cat.dog',
+        '1.2.3.4.5',
         '1,2,3,4',
         ]
 
