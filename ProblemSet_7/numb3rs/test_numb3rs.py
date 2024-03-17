@@ -1,4 +1,5 @@
 from numb3rs import validate
+import pytest
 
 def main():
     test_format_in_dot_decimal()
@@ -10,10 +11,12 @@ def test_format_in_dot_decimal():
         '1.2.34',
         '1.23.4',
         '12.3.4',
-        '1234',
+        '1,2,3,4',
         ]
-    for entrees in ip_list:
-        assert validate(entrees) == False
+
+    with pytest.raises(SystemExit):
+        for entrees in ip_list:
+            validate(entrees)
 
 
 if __name__ == "__main__":
