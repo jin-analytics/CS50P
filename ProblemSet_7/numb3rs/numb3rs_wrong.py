@@ -43,6 +43,10 @@ def validate(ip):
 
 
 def number_format_in_dot_decimal(ip):
+    if matches := re.search(r"", ip):
+        byte1 = matches.group(1)
+        print(f"{ip}")
+        print(f"{byte1}")
 
 
 
