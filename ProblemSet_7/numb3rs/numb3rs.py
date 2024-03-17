@@ -33,8 +33,8 @@ def number_between_0_and_255(ip):
         #ip = re.split(r'^(\d+).(\d+).(\d+).(\d+)$',ip)
         #modification for first byte check:
     if re.search(r'^(\d+)',ip):
-        ip = ''.join(ip).split('.')
-        #print(ip[0])
+        ip = ''.join(ip).split('.',1)
+        print(ip)
         #for numbers in ip:
         for numbers in ip:
              #print(numbers)
