@@ -35,14 +35,9 @@ def validate(ip):
     if number_format_in_dot_decimal(ip) != True:
          return False
          #sys.exit()
-
-
-#    # each number in '#' must be [0:255]
-    if number_between_0_and_255(ip) != True:
-#         sys.exit()
-
-        return True
-
+    # each number in '#' must be [0:255]
+    if number_under_256(ip) != True:
+         return False
 
 def number_format_in_dot_decimal(ip):
     # ^         takes the start of the string, first character
@@ -59,7 +54,7 @@ def number_format_in_dot_decimal(ip):
         #print('no match')
         return False
 
-def number_between_0_and_255(ip):
+def number_under_256(ip):
     ip = re.findall(r"^(\d{1,3})\.([a-zA-Z0-9.]*)$", ip)
     # with re.findall ip becomes a tuple (#,#,#,#). Example for access entree #3: ip[0][2]
     for _ in range(4):
