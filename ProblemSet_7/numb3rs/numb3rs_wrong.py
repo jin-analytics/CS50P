@@ -49,11 +49,13 @@ def number_format_in_dot_decimal(ip):
     # ([0-9.]+) takes any string with atleast one number and/or . in it
     # $         matches the end of the string... so for input "1.2.3.4"
     #           ... ip = ['1','2.3.4']
-    
+
     if matches := re.search(r"^(\d+)\.([0-9.]+)$", ip):
         byte1 = matches.group(1)
+        byte2 = matches.group(2)
         print(f"ip adress: {ip}")
         print(f"first byte: {byte1}")
+        print(f"second byte: {byte2}")
     else:
         print('no match')
 
