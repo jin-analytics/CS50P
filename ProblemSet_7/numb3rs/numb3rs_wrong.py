@@ -34,21 +34,32 @@ def validate(ip):
     # IPv4 must have this format '#.#.#.#' and '#' just being numbers
     if number_format_in_dot_decimal(ip) != True:
          sys.exit()
-    # each number in '#' must be [0:255]
-    if number_between_0_and_255(ip) != True:
-         sys.exit()
+
+#    # each number in '#' must be [0:255]
+#    if number_between_0_and_255(ip) != True:
+#         sys.exit()
 
     return True
 
 
 def number_format_in_dot_decimal(ip):
-    #if re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
-    #modification for first byte check:
-    if re.search(r'^(\d+)',ip):
-        #print(ip[0])
-        return True
-    else:
-        return print(False)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def number_between_0_and_255(ip):

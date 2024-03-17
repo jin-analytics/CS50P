@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    print(validate(input("IPv4 Address: ")))
+    print(validate(input("IPv4 Address: ").strip()))
 
 
 # validate() expects a str as input and return True or False
