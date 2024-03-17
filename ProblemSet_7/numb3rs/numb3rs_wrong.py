@@ -38,6 +38,9 @@ def validate(ip):
     # each number in '#' must be [0:255]
     if number_under_256(ip) != True:
          return False
+    # if both functions (number_format_in_dot_decimal(), number_under_256())
+    #... are True, thne validate() returns True
+    return True
 
 def number_format_in_dot_decimal(ip):
     # ^         takes the start of the string, first character

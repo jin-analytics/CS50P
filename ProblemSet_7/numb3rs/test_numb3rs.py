@@ -25,14 +25,14 @@ def test_number_format_in_dot_decimal():
 
 #______________________________________________________
 def test_number_under_256():
-#    ip_list = [
- #       '255.0.0.0',
- #       '0.256.0.0',
- #       '0.0.256.0',
-  #      '0.0.0.256',
-   #     ]
-    assert validate('256.0.0.0') == False
-    assert validate('255.0.0.0') == False
+    ip_list = [
+        '255.0.0.0',
+        '0.256.0.0',
+        '0.0.256.0',
+        '0.0.0.256',
+        ]
+    for entrees in ip_list:
+        assert validate(entrees) == False
 
 
 if __name__ == "__main__":
