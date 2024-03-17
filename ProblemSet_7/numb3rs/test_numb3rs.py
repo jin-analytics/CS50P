@@ -3,7 +3,7 @@ import pytest
 
 def main():
     test_number_format_in_dot_decimal()
-    number_between_0_and_255()
+    test_number_between_0_and_255()
 
 
 #______________________________________________________
@@ -22,7 +22,7 @@ def test_number_format_in_dot_decimal():
             validate(entrees)
 
 #______________________________________________________
-def number_between_0_and_255():
+def test_number_between_0_and_255():
     ip_list = [
         '256.0.0.0',
         '0.256.0.0',
