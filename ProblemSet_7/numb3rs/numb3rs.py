@@ -12,10 +12,10 @@ def validate(ip):
     if number_format_in_dot_decimal(ip) != True:
          sys.exit()
     # each number in '#' must be [0:255]
-    if number_between_0_and_255(ip) != True:
+    elif number_between_0_and_255(ip) != True:
          sys.exit()
-
-    return True
+    else:
+        return True
 
 
 def number_format_in_dot_decimal(ip):
