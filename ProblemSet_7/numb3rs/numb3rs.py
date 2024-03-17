@@ -20,7 +20,7 @@ def validate(ip):
 
 
 def number_format_in_dot_decimal(ip):
-    if re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
+    if re.search(r'^(\d+)\.(\d+)\.(\d+)\.(\d+)$',ip):
         ip = ''.join(ip).split('.')
         if len(ip) == 4:
             return True
@@ -29,7 +29,7 @@ def number_format_in_dot_decimal(ip):
 
 
 def number_between_0_and_255(ip):
-    if re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
+    if re.search(r'^(\d+)\.(\d+)\.(\d+)\.(\d+)$',ip):
         ip = ''.join(ip).split('.')
         for numbers in ip:
              if int(numbers) > 255: #negative numbers gets detected through format check
