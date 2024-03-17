@@ -23,7 +23,7 @@ def number_format_in_dot_decimal(ip):
     #if re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
     #modification for first byte check:
     if re.search(r'^(\d+).',ip):
-        print(ip)
+        print(ip(0))
         return True
     else:
         return print(False)
