@@ -33,7 +33,8 @@ def main():
 def validate(ip):
     # IPv4 must have this format '#.#.#.#' and '#' just being numbers
     if number_format_in_dot_decimal(ip) != True:
-         sys.exit()
+         return False
+         #sys.exit()
 
 #    # each number in '#' must be [0:255]
 #    if number_between_0_and_255(ip) != True:
@@ -50,6 +51,7 @@ def number_format_in_dot_decimal(ip):
     # $         matches the end of the string... so for input "1.2.3.4"
     #           ... ip = ['1','2.3.4']
 
+    if matches := re.search(r"^(\d+)\.(\d+)\.(\d+)\.(\d+)$", ip): #correct version
     if matches := re.search(r"^(\d+)\.([0-9.]+)$", ip): #version which just checks first byte
         byte1 = matches.group(1)
         byte2 = matches.group(2)
