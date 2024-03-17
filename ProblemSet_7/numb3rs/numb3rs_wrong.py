@@ -47,12 +47,12 @@ def number_format_in_dot_decimal(ip):
     # ^         takes the start of the string, first character
     # (\d+)     just accepts a group of number from 0 to 9 and has to be atleast one number
     # \.        the previous number string has to end with: "."
-    # ([0-9.]+) takes any string with atleast one number and/or . in it
+    # (\d{1,3}) takes any number string from 1 to 3 entrees in it
     # $         matches the end of the string... so for input "1.2.3.4"
     #           ... ip = ['1','2.3.4']
 
-    if matches := re.search(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip): #correct version
-    #if matches := re.search(r"^(\d+)\.([0-9.]+)$", ip): #version which just checks first byte
+    #if matches := re.search(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip): #correct version
+    if matches := re.search(r"^(\d{1,3})\.(\d{0,9})\.(\d{0,9})\.(\d{0,9})$", ip): #version which just checks first byte
         byte1 = matches.group(1)
         byte2 = matches.group(2)
         print(f"ip adress: {ip}")
