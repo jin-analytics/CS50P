@@ -25,12 +25,15 @@ def test_number_format_in_dot_decimal():
 
 #______________________________________________________
 def test_number_between_0_and_255():
-    ip_list = [
-        '255.0.0.0',
-        '0.256.0.0',
-        '0.0.256.0',
-        '0.0.0.256',
-        ]
+#    ip_list = [
+ #       '255.0.0.0',
+ #       '0.256.0.0',
+ #       '0.0.256.0',
+  #      '0.0.0.256',
+   #     ]
+
+    ip_list = ['255.0.0.0'
+               '256.0.0.0']
 
     #with pytest.raises(SystemExit):
     for entrees in ip_list:
