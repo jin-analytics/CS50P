@@ -52,7 +52,7 @@ def number_format_in_dot_decimal(ip):
     #           ... ip = ['1','2.3.4']
 
     #if matches := re.search(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip): #correct version
-    if matches := re.search(r"^(\d{1,3})\.(\d{0,9})\.(\d{0,9})\.(\d{0,9})$", ip): #version which just checks first byte
+    if matches := re.search(r"^(\d{1,3})\.(\w*)$", ip): #version which just checks first byte
         byte1 = matches.group(1)
         byte2 = matches.group(2)
         print(f"ip adress: {ip}")
