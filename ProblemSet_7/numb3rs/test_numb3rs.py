@@ -1,13 +1,12 @@
 from numb3rs import validate
 
 def main():
-    format_only_accepts_4_numberblocks()
+    test_format_in_dot_decimal()
 
-def format_only_accepts_4_numberblocks():
-    ip = "cat"
+def test_format_in_dot_decimal():
     #ip = ip.split('.')
     #print(ip)
-    assert validate(ip) == True
+    assert validate("cat") == True
 
 
 if __name__ == "__main__":
