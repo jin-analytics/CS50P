@@ -34,6 +34,7 @@ def number_between_0_and_255(ip):
         #modification for first byte check:
     if re.search(r'^(\d+).',ip):
         ip = ' '.join(ip).split()
+        #for numbers in ip:
         for numbers in ip:
              print(numbers)
              if int(numbers) > 255: #negative numbers gets detected through format check
