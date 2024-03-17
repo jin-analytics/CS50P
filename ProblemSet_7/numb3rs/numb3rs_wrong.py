@@ -65,7 +65,7 @@ def number_format_in_dot_decimal(ip):
         return False
 
 def number_between_0_and_255(ip):
-    ip = re.split(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip)
+    ip = re.findall(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip)
     for entrees in ip:
         print(entrees)
 
