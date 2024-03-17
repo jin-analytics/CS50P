@@ -4,6 +4,7 @@ import sys
 
 def main():
     print(validate(input("IPv4 Address: ")))
+    sys.exit()
 
 
 # validate() expects a str as input and return True or False
