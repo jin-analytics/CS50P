@@ -21,7 +21,9 @@ def validate(ip):
 
 def number_format_in_dot_decimal(ip):
     if re.search(r'^(\d+).(\d+).(\d+).(\d+)$',ip):
-        return True
+        ip = ''.join(ip).split('.')
+        if len(ip) == 4:
+            return True
     else:
         return print(False)
 
