@@ -1,11 +1,11 @@
-#from numb3rs import validate
+from numb3rs import validate
 import pytest
 
 from numb3rs_wrong import validate
 
 def main():
     test_number_format_in_dot_decimal()
-    test_number_between_0_and_255()
+    test_number_under_256()
 
 
 #______________________________________________________
@@ -26,7 +26,7 @@ def test_number_format_in_dot_decimal():
 #______________________________________________________
 def test_number_under_256():
     ip_list = [
-        '255.0.0.0',
+        '256.0.0.0',
         '0.256.0.0',
         '0.0.256.0',
         '0.0.0.256',
