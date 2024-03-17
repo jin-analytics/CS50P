@@ -1,9 +1,9 @@
 from numb3rs import validate
 import pytest
 
-#def main():
-#    test_number_format_in_dot_decimal()
-#   test_number_between_0_and_255()
+def main():
+    test_number_format_in_dot_decimal()
+    test_number_between_0_and_255()
 
 
 #______________________________________________________
@@ -39,5 +39,5 @@ def test_number_between_0_and_255():
             assert validate(entrees) == False
 
 
-#if __name__ == "__main__":
-#    main()
+if __name__ == "__main__":
+    main()
