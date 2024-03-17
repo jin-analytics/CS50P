@@ -35,6 +35,7 @@ def validate(ip):
     if number_format_in_dot_decimal(ip) != True:
          return False
          #sys.exit()
+    
 
 #    # each number in '#' must be [0:255]
 #    if number_between_0_and_255(ip) != True:
@@ -52,47 +53,21 @@ def number_format_in_dot_decimal(ip):
     #           ... ip = ['1','2.3.4']
 
     #if matches := re.search(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip): #correct version
-    if matches := re.search(r"^(\d{1,3})\.(\w*)$", ip): #version which just checks first byte
-        byte1 = matches.group(1)
-        byte2 = matches.group(2)
-        print(f"ip adress: {ip}")
-        print(f"first byte: {byte1}")
-        print(f"second byte: {byte2}")
+    if re.search(r"^(\d{1,3})\.([a-zA-Z0-9.]*)$", ip): #version which just checks first byte and accepts letters,number,dots
+        #byte1 = matches.group(1)
+        #byte2 = matches.group(2)
+        #print(f"ip adress: {ip}")
+        #print(f"first byte: {byte1}")
+        #print(f"second byte: {byte2}")
         return True
     else:
-        print('no match')
+        #print('no match')
         return False
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def number_between_0_and_255(ip):
-        #ip = re.split(r'^(\d+).(\d+).(\d+).(\d+)$',ip)
-        #modification for first byte check:
-    if re.search(r'^(\d+)',ip):
-        ip = ''.join(ip).split('.',1)
-        print(ip)
-        #for numbers in ip:
-        for numbers in ip:
-             #print(numbers)
-             if int(numbers) > 255: #negative numbers gets detected through format check
-                  return print(False)
-        return True
+    if matches := re.search(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip):
+        for matches in ip:
+            print(matches.group())
 
 
 if __name__ == "__main__":
