@@ -43,12 +43,14 @@ def validate(ip):
 
 
 def number_format_in_dot_decimal(ip):
-    # ^     takes the start of the string, first character
-    # \d+   just accepts number from 0 to 9 and has to be atleast one number
-    # \.    the previous number string has to end with: "."
-    # $     matches the ende of the string... so for input "1.2.3.4"
-    #       ... ip = ['1','2.3.4']
-    if matches := re.search(r"^(\d+)\.(\d+)$", ip):
+    # ^         takes the start of the string, first character
+    # (\d+)     just accepts a group of number from 0 to 9 and has to be atleast one number
+    # \.        the previous number string has to end with: "."
+    # ([0-9.]+) takes any string with atleast one number and/or . in it
+    # $         matches the end of the string... so for input "1.2.3.4"
+    #           ... ip = ['1','2.3.4']
+    
+    if matches := re.search(r"^(\d+)\.([0-9.]+)$", ip):
         byte1 = matches.group(1)
         print(f"ip adress: {ip}")
         print(f"first byte: {byte1}")
