@@ -48,7 +48,7 @@ def number_format_in_dot_decimal(ip):
     # \.    the previous number string has to end with: "."
     # $     matches the ende of the string... so for input "1.2.3.4"
     #       ... ip = ['1','2.3.4']
-    if matches := re.search(r"^(\d+)\.$", ip):
+    if matches := re.search(r"^\d+$", ip):
         byte1 = matches.group(1)
         print(f"{ip}")
         print(f"{byte1}")
