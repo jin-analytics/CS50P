@@ -65,9 +65,10 @@ def number_format_in_dot_decimal(ip):
         return False
 
 def number_between_0_and_255(ip):
-    tuple = re.findall(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip)
-
-    print(tuple[0][0])
+    ip = re.findall(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip)
+    for _ in range(4):
+        if int(ip[0][int(_)]) > 255:
+            return False
 
 
 
