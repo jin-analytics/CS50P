@@ -35,13 +35,13 @@ def validate(ip):
     if number_format_in_dot_decimal(ip) != True:
          return False
          #sys.exit()
-    
+
 
 #    # each number in '#' must be [0:255]
-#    if number_between_0_and_255(ip) != True:
+    if number_between_0_and_255(ip) != True:
 #         sys.exit()
 
-    return True
+        return True
 
 
 def number_format_in_dot_decimal(ip):
@@ -65,9 +65,10 @@ def number_format_in_dot_decimal(ip):
         return False
 
 def number_between_0_and_255(ip):
-    if matches := re.search(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip):
-        for matches in ip:
-            print(matches.group())
+    ip = re.split(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip)
+    ip = ''.join(ip).split('.')
+    print(ip)
+
 
 
 if __name__ == "__main__":
