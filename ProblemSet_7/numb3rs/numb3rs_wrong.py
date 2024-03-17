@@ -60,6 +60,7 @@ def number_under_256(ip):
     for _ in range(4):
         if int(ip[0][int(0)]) > 255:    #ip[0][int(_)] iterates through the 4 numbers of tuple and
             return False                #...converts the str numbers to int numbers for comparison
+        return True
 
 
 
