@@ -54,21 +54,18 @@ def number_format_in_dot_decimal(ip):
 
     #if matches := re.search(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip): #correct version
     if re.search(r"^(\d{1,3})\.([a-zA-Z0-9.]*)$", ip): #version which just checks first byte and accepts letters,number,dots
-        #byte1 = matches.group(1)
-        #byte2 = matches.group(2)
-        #print(f"ip adress: {ip}")
-        #print(f"first byte: {byte1}")
-        #print(f"second byte: {byte2}")
         return True
     else:
         #print('no match')
         return False
 
 def number_between_0_and_255(ip):
-    ip = re.findall(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip)
+    ip = re.findall(r"^(\d{1,3})\.([a-zA-Z0-9.]*)$", ip)
+    # with re.findall ip becomes a tuple (#,#,#,#). Example for access entree #3: ip[0][2]
     for _ in range(4):
-        if int(ip[0][int(_)]) > 255:
-            return False
+        if int(ip[0][int(0)]) > 255:    #ip[0][int(_)] iterates through the 4 numbers of tuple and
+            return False                #...converts the str numbers to int numbers for comparison
+
 
 
 
