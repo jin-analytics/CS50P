@@ -19,7 +19,7 @@ def test_number_format_in_dot_decimal():
 
     with pytest.raises(SystemExit):
         for entrees in ip_list:
-            validate(entrees)
+            assert validate(entrees) == False
 
 #______________________________________________________
 def test_number_between_0_and_255():
@@ -36,7 +36,7 @@ def test_number_between_0_and_255():
 
     with pytest.raises(SystemExit):
         for entrees in ip_list:
-            validate(entrees)
+            assert validate(entrees) == False
 
 
 #if __name__ == "__main__":
