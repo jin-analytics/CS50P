@@ -27,7 +27,7 @@ def number_format_in_dot_decimal(ip):
 
 
 def number_between_0_and_255(ip):
-        ip = re.split(r'^(\d+).(\d+).(\d+).(\d+)$',ip)
+        #ip = re.split(r'^(\d+).(\d+).(\d+).(\d+)$',ip)
     if re.search(r'^(\d+)',ip):
         ip = ''.join(ip).split('.',1)
         print(ip)
