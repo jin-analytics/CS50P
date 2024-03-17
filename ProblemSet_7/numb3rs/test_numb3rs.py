@@ -1,7 +1,7 @@
-from numb3rs import validate
+#from numb3rs import validate
 import pytest
 
-#from numb3rs_wrong import validate
+from numb3rs_wrong import validate
 
 def main():
     test_number_format_in_dot_decimal()
@@ -19,9 +19,9 @@ def test_number_format_in_dot_decimal():
         '1,2,3,4',
         ]
 
-    with pytest.raises(SystemExit):
-        for entrees in ip_list:
-            assert validate(entrees) == False
+    #with pytest.raises(SystemExit):
+    for entrees in ip_list:
+        assert validate(entrees) == False
 
 #______________________________________________________
 def test_number_between_0_and_255():
@@ -36,9 +36,9 @@ def test_number_between_0_and_255():
         '0,0,0,-1',
         ]
 
-    with pytest.raises(SystemExit):
-        for entrees in ip_list:
-            assert validate(entrees) == False
+    #with pytest.raises(SystemExit):
+    for entrees in ip_list:
+        assert validate(entrees) == False
 
 
 if __name__ == "__main__":
