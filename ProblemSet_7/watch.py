@@ -24,12 +24,12 @@ import sys
 
 #{sys.argv[1:]}
 def main():
-    print(parse(input(f"HTML: ")))
+    print(parse(input("HTML: ")))
 
 
 def parse(s):
     #s = re.split(r"^\w[a-z0-9\"/.]*=+[a-z0-9\"/.]*$")
-    s = re.split(r"^(\d)+$")
+    s = re.search(r"^\d*$")
     print(s)
 
 
