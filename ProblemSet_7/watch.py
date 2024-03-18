@@ -17,3 +17,22 @@
 # input: https://www.youtube.com/embed/xvFZjo5PgG0
 # Assume that the value of src will be surrounded by double quotes
 # If the input does not contain any such URL at all, return None
+
+
+import re
+import sys
+
+
+def main():
+    print(parse(input("HTML: ")))
+
+
+def parse(s):
+    ...
+
+
+...
+
+
+if __name__ == "__main__":
+    main()
