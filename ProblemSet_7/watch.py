@@ -29,7 +29,7 @@ def main():
 
 def parse(s):
     #s = re.split(r"^\w[a-z0-9\"/.]*=+[a-z0-9\"/.]*$")
-    s = re.search(r"^\d*$")
+    s = re.search(r"^<iframe$")
     print(s)
 
 
