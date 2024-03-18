@@ -29,7 +29,7 @@ def main():
 def parse(s):
     #s = re.split(r"^\w[a-z0-9\"/.]*=+[a-z0-9\"/.]*$")
     #=(/w[\":/.?-])
-    s = re.search(r"^\d{1,3})\.$", s)
+    s = re.findall(r"^(\d{1,3})\.$", s)
     print('found: ',s)
 
 
