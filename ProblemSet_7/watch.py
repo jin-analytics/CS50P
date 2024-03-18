@@ -24,7 +24,7 @@ import sys
 
 
 def main():
-    print(parse(input("HTML: ")))
+    print(parse(input(f"HTML: {sys.argv[1:]}")))
 
 
 def parse(s):
