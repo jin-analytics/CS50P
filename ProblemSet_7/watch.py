@@ -22,9 +22,9 @@
 import re
 import sys
 
-
+#{sys.argv[1:]}
 def main():
-    print(parse(input(f"HTML: {sys.argv[1:]}")))
+    print(parse(input(f"HTML: ")))
 
 
 def parse(s):
