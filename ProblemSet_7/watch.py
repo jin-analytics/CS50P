@@ -15,5 +15,5 @@
 # input: http://youtube.com/embed/xvFZjo5PgG0
 # input: https://youtube.com/embed/xvFZjo5PgG0
 # input: https://www.youtube.com/embed/xvFZjo5PgG0
-#
-#
+# Assume that the value of src will be surrounded by double quotes
+# If the input does not contain any such URL at all, return None
