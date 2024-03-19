@@ -37,7 +37,7 @@ def parse(s):
 
 
     #s = re.findall(r'^(\"[a-zA-Z0-9:/.]+\")+$', s) #THIS CATCHES A YOUTUBE STRING
-    s = re.findall(r'^^(.+)(\"[a-zA-Z0-9:/.]+\")+$', s)
+    s = re.findall(r'^(.+)(\"[a-zA-Z0-9:/.]+\")+(.+)$', s)
     print(s)
     return True
 
