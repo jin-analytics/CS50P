@@ -27,7 +27,7 @@ def parse(s):
         ####s = re.findall(r'^(\"[a-zA-Z0-9:/.]+\")+$', s) #THIS CATCHES A YOUTUBE STRING
         s = re.findall(r'^<iframe(.+)src=\"([a-zA-Z0-9:/.]+)\"(.+)$', s, re.MULTILINE) # THIS CATCHES THE REQUIRED STRING
         print(s[0][1])
-        short = re.split(r'^http://youtu?be?.com/embed/?xvFZjo5PgG0', s[0][1])
+        short = re.sub(, s[0][1])
         print(short)
         return True
 
