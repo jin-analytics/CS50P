@@ -31,8 +31,9 @@ def parse(s):
     #=(/w[\":/.?-])
     #s = re.findall(r"^(\<\w+)\s+(\w+).+[\"]+(\w+)[\"]+$", s)
     #s = re.search(r"^(.+)src$", s)
-    s = re.search(r"^(.+)src=(.+)$", s)
+    s = re.findall(r"^(.+)src=(.+)$", s)
     print(s)
+    return True
 
 
 #<iframe width="560
