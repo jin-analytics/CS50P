@@ -30,7 +30,7 @@ def parse(s):
     #s = re.split(r"^\w[a-z0-9\"/.]*=+[a-z0-9\"/.]*$")
     #=(/w[\":/.?-])
     #s = re.findall(r"^(\<\w+)\s+(\w+).+[\"]+(\w+)[\"]+$", s)
-    s = re.search(r"^(.+)560$", s)
+    s = re.search(r"^(.+)src$", s)
     print('found: ',s)
 
 #<iframe width="560
