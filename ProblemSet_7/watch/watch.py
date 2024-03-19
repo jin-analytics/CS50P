@@ -36,8 +36,8 @@ def parse(s):
     #s = re.search(r"^(.+)src$", s)
 
 
-
-    s = re.findall(r"^(.+)src=\"?(.+)\"?(.+)$", s)
+    s = re.findall(r"^(.+)src=(\"(.+)\") (.+)$", s)
+    #s = re.findall(r"^(.+)src=\"?(.+)\"?(.+)$", s)
     print(s)
     return True
 
