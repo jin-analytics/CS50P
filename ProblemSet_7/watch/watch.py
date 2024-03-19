@@ -34,8 +34,8 @@ def parse(s):
             if short != s[0][1]:
                 return short
 
-        short = re.sub('http://www.','https://', s[0][1])
-        short = re.sub('be.com/embed','.be', short)
+        short = re.sub('be.com/embed','.be', s[0][1])
+        short = re.sub('http://www.','https://', short)
         if short != s[0][1]:
                 return short
         else:
