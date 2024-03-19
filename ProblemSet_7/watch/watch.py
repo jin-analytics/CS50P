@@ -28,7 +28,10 @@ def parse(s):
         s = re.findall(r'^<iframe(.+)src=\"([a-zA-Z0-9:/.]+)\"(.+)$', s, re.MULTILINE) # THIS CATCHES THE REQUIRED STRING
         #print(s[0][1])
         short = re.sub('be.com/embed','.be', s[0][1])
-        return short
+        if short != s:
+            return short
+        else:
+            return None
 
     except IndexError:
         return None
