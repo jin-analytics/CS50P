@@ -1,5 +1,4 @@
-#<iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0?si=PBf3-vT-bKafDGvb"
-#title="YouTube video player" frameborder="0"
+#<iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0?si=PBf3-vT-bKafDGvb" title="YouTube video player" frameborder="0"
 #allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 #allowfullscreen></iframe>
 
@@ -31,8 +30,8 @@ def parse(s):
     #=(/w[\":/.?-])
     #s = re.findall(r"^(\<\w+)\s+(\w+).+[\"]+(\w+)[\"]+$", s)
     #s = re.search(r"^(.+)src$", s)
-    s = re.findall(r"^(.+)src=(.+)$", s)
-    print(s)
+    s = re.findall(r"^(.+)src=(.+\s)(.+)$", s)
+    print(s[0][1])
     return True
 
 
