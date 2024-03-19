@@ -28,8 +28,9 @@ def parse(s):
         s = re.findall(r'^<iframe(.+)src=\"([a-zA-Z0-9:/.]+)\"(.+)$', s, re.MULTILINE) # THIS CATCHES THE REQUIRED STRING
         #print(s[0][1])
         # CHECK FOR HTTP, SO THAT IT WILL BE REPLACED WITH HTTPS
-        if match := re.findall(r'^http:(.+)([a-zA-Z0-9:/.]+)$', s):
-            short = re.sub('http','https', s.match{0})
+        if matches := re.search(r'^http:(.+)([a-zA-Z0-9:/.]+)$', s):
+            #short = re.sub('http','https', matches.group{0})
+            print(matches.group(0))
 
 
         short = re.sub('be.com/embed','.be', s[0][1])
