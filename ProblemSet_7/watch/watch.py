@@ -34,6 +34,7 @@ def parse(s):
                 return short
 
         short = re.sub('http:','https:', s[0][1])
+        short = re.sub('be.com/embed','.be', s[0][1])
         if short != s[0][1]:
                 return short
         else:
