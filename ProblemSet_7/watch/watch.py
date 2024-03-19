@@ -24,7 +24,7 @@ import sys
 
 def main():
 
-    html = '<iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0" title="YouTube video player"
+    html = '<iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0"'
     #print(parse(input("HTML: ")))
     print(parse(input(html)))
 
