@@ -33,8 +33,8 @@ def parse(s):
     #s = re.search(r"^(.+)src$", s)
     if matches := re.search(r"^(.+)src$", s):
         one = matches.group(1)
-        two = matches.group(2)
-        s = f"{one} {two}"
+        #two = matches.group(2)
+        s = f"{one}"
 
 #<iframe width="560
 ...
