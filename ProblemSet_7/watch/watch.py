@@ -30,8 +30,8 @@ def parse(s):
     #=(/w[\":/.?-])
     #s = re.findall(r"^(\<\w+)\s+(\w+).+[\"]+(\w+)[\"]+$", s)
     #s = re.search(r"^(.+)src$", s)
-    s = re.findall(r"^(.+)src=\"(.\")(.+)$", s)
-    print(s[0][1])
+    s = re.findall(r"^(.+)src=\"(.+)(\s.+)$", s)
+    print(s[0])
     return True
 
 
