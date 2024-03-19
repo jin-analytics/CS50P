@@ -31,10 +31,9 @@ def parse(s):
     #=(/w[\":/.?-])
     #s = re.findall(r"^(\<\w+)\s+(\w+).+[\"]+(\w+)[\"]+$", s)
     #s = re.search(r"^(.+)src$", s)
-    if matches := re.search(r"^(.+)src=(.+)$", s):
-        one = matches.group(1)
-        #two = matches.group(2)
-        s = f"{one}"
+    s = re.search(r"^(.+)src=(.+)$", s)
+    print(s)
+
 
 #<iframe width="560
 ...
