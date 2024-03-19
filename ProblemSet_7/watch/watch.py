@@ -29,14 +29,13 @@ def parse(s):
         #print(s[0][1])
         # CHECK FOR HTTP, SO THAT IT WILL BE REPLACED WITH HTTPS
         if re.findall(r'https([a-zA-Z0-9:/.]+)$', s[0][1]):
-            #short = re.sub('http','https', matches.group{0})
-            print('found')
+            short = re.sub('be.com/embed','.be', s[0][1])
+            if short != s[0][1]:
+                return short
 
-
-        short = re.sub('be.com/embed','.be', s[0][1])
-
+        short = re.sub('http:','https:', s[0][1])
         if short != s[0][1]:
-            return short
+                return short
         else:
             return None
 
