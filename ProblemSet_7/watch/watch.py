@@ -20,16 +20,22 @@
 import re
 import sys
 
-#{sys.argv[1:]}
-def main():
-    print(parse(input("HTML: ")))
 
+
+def main():
+
+    html = '<iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    #print(parse(input("HTML: ")))
+    print(parse(input(html)))
 
 def parse(s):
     #s = re.split(r"^\w[a-z0-9\"/.]*=+[a-z0-9\"/.]*$")
     #=(/w[\":/.?-])
     #s = re.findall(r"^(\<\w+)\s+(\w+).+[\"]+(\w+)[\"]+$", s)
     #s = re.search(r"^(.+)src$", s)
+
+
+
     s = re.findall(r"^(.+)src=\"?(.+)\"?(.+)$", s)
     print(s[0])
     return True
