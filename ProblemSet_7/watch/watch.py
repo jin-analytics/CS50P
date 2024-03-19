@@ -1,7 +1,4 @@
-#<iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0?si=PBf3-vT-bKafDGvb" title="YouTube video player" frameborder="0"
-#allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-#allowfullscreen></iframe>
-
+# <iframe src="https://www.youtube.com/embed/xvFZjo5PgG0"></iframe>
 
 # implement a function called parse():
 # - that expects a str of HTML as input,
@@ -24,21 +21,13 @@ import sys
 
 def main():
 
-    html = 'height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0"'
-    #html = '<iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0"'
-    #print(parse(input("HTML: ")))
-    print(parse(input()))
+    print(parse(input("HTML: ")))
 
 def parse(s):
-    #s = re.split(r"^\w[a-z0-9\"/.]*=+[a-z0-9\"/.]*$")
-    #=(/w[\":/.?-])
-    #s = re.findall(r"^(\<\w+)\s+(\w+).+[\"]+(\w+)[\"]+$", s)
-    #s = re.search(r"^(.+)src$", s)
-
 
     #s = re.findall(r'^(\"[a-zA-Z0-9:/.]+\")+$', s) #THIS CATCHES A YOUTUBE STRING
-    s = re.findall(r'^(.+)(\"[a-zA-Z0-9:/.]+\")+(.+)$', s, re.MULTILINE)
-    print(s)
+    s = re.findall(r'^(.+)\"([a-zA-Z0-9:/.]+)\"(.+)$', s, re.MULTILINE) # THIS CATCHES THE REQUIRED STRING
+    print(s[0][1])
     return True
 
 
