@@ -28,8 +28,8 @@ def parse(s):
     ###s = re.findall(r'^<iframe(.+)src=\"([a-zA-Z0-9:/.]+)\"(.+)$', s, re.MULTILINE) # THIS CATCHES THE REQUIRED STRING
     ###print(s[0][1])
     ###return True
-    if matches := re.search(r'^<iframe(.+)src=\"([a-zA-Z0-9:/.]+)\"(.+)$', s, re.MULTILINE):
-        print(f'Youtube address:', matches.group(0))
+    s = re.search(r'^<iframe(.+)src=\"([a-zA-Z0-9:/.]+)\"(.+)$', s, re.MULTILINE)
+    print(s)
 
 
 #<iframe width="560
