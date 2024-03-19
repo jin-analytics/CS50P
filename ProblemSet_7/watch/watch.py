@@ -24,9 +24,10 @@ import sys
 
 def main():
 
-    html = '<iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0"'
+    html = 'height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0"'
+    #html = '<iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0"'
     #print(parse(input("HTML: ")))
-    print(parse(input(html)))
+    print(parse(input()))
 
 def parse(s):
     #s = re.split(r"^\w[a-z0-9\"/.]*=+[a-z0-9\"/.]*$")
