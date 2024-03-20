@@ -40,7 +40,7 @@ def main():
 def convert(s):
     for key12,value24 in table.items():
         if s == key12:
-            print('FOUND',value24)
+            print(f'{key12} is equal to {value24}')
     #       9:AM to 5:00PM
     s = re.findall(r'^$', s) # THIS CATCHES THE REQUIRED STRING
 
