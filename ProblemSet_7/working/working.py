@@ -13,8 +13,9 @@ def main():
 
 def convert(s):
     with open('hour_format.csv') as file:
-            reader = csv.readlines(file)
-            print(reader)
+            dict = csv.DictReader(file)
+            for key, value in dict:
+                print(key,value)
 
 
     #       9:AM to 5:00PM
