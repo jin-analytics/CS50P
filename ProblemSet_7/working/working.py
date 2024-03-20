@@ -20,6 +20,7 @@ def convert(s):
        #              print(v)
     reader = csv.reader(open('hour_format.csv', 'r'))
     d = {}
+    next(reader)
     for row in reader:
         key, val = row
         d[key] = val
