@@ -6,11 +6,12 @@ def main():
     print(convert(input("Hours: ")))
 
 
+
 def convert(s):
-    ...
+    #       9:AM to 5:00PM
+    
 
 
-...
 
 
 if __name__ == "__main__":
