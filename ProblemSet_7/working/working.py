@@ -27,7 +27,7 @@ table = {"12:00 AM": "00:00",
          "6:00 PM": "18:00",
          "7:00 PM": "19:00",
          "8:00 PM": "20:00",
-         "9:00 PM": "21:00", 
+         "9:00 PM": "21:00",
          "10:00 PM": "22:00",
          "11:00 PM": "23:00"}
 
@@ -38,23 +38,8 @@ def main():
 
 
 def convert(s):
-    #with open('hour_format.csv') as file:
-    #        dict = csv.DictReader(file)
-     #       for row in dict:
-    ##            for k, v in row.items():
-     #               print(k)
-       #              print(v)
-    reader = csv.reader(open('hour_format.csv', 'r'))
-    d = {}
-    next(reader)
-    for row in reader:
-        key, val = row
-        d[key] = val
-    with open('hour_format.txt', 'w') as file:
-        #for row in d:
-        file.write(json.dumps(d))
-
-
+    for k,v in table:
+        print(k,v)
     #       9:AM to 5:00PM
     s = re.findall(r'^$', s) # THIS CATCHES THE REQUIRED STRING
 
