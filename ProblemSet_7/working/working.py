@@ -13,7 +13,7 @@ def main():
 
 def convert(s):
     with open('hour_format.csv') as file:
-            reader = csv.reader(file)
+            reader = csv.readlines(file)
             print(reader)
 
 
