@@ -35,18 +35,18 @@ table = {"12:00 AM": "00:00",
 def main():
     print(convert(input("Hours: ")))
 
-#       9 AM to 5:00 PM
+#       9:00 AM to 5:00 PM
 #    10:30 PM to 8:50 AM
 
 def convert(s):
 
     s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
-    print('Found: ', s[0])
-    print('Found: ', s[0][0])
+    print('Found: ', s[0][0], s[0][1])
 
     for key,value in table.items():
         if s[0][0] == key:
-            print(f'{key} is equal to {value}')
+            print(f'{key[0]} is equal to {value[0:2]}')
+
 
 
 
