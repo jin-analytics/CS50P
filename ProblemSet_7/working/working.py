@@ -24,7 +24,9 @@ def convert(s):
     for row in reader:
         key, val = row
         d[key] = val
-    print(d)
+    with open('hour_format.txt', 'r') as file:
+        for row in d:
+            file.write(json.dumps(exDict))
 
 
     #       9:AM to 5:00PM
