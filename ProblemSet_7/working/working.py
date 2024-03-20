@@ -38,8 +38,8 @@ def main():
 
 
 def convert(s):
-    for v in table:
-        print(table.values())
+    for v in table.keys().values():
+        print()
         print(v)
 
     #       9:AM to 5:00PM
