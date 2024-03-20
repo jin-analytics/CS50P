@@ -43,6 +43,10 @@ def convert(s):
     s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
     print('Timeframe: ', s[0][0],'to', s[0][1])
 
+    s = re.findall(r'^\d+[:]*\d*\s+[AM]*[PM]* to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
+    print('Timeframe: ', s[0][0], s[0][1], s[0][2])
+
+
     #print("{:02}".format(n))
     #print(f"{n:02}")
 
