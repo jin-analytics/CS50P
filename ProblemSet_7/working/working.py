@@ -9,7 +9,8 @@ def main():
 
 def convert(s):
     #       9:AM to 5:00PM
-    
+    s = re.findall(r'^$', s) # THIS CATCHES THE REQUIRED STRING
+
 
 
 
