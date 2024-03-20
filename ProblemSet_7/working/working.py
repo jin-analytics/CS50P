@@ -36,6 +36,7 @@ def main():
     print(convert(input("Hours: ")))
 
 #       9:AM to 5:00PM
+#    10:30 PM to 8:50 AM
 
 def convert(s):
     for key,value in table.items():
