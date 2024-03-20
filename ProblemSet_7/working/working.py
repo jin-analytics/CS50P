@@ -39,8 +39,9 @@ def main():
 
 def convert(s):
     for v in table:
+        print(table.values())
         print(v)
-        
+
     #       9:AM to 5:00PM
     s = re.findall(r'^$', s) # THIS CATCHES THE REQUIRED STRING
 
