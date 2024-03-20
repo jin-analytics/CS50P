@@ -12,18 +12,18 @@ def main():
 
 
 def convert(s):
-    with open('hour_format.csv') as file:
-            dict = csv.DictReader(file)
-            for row in dict:
-                for k, v in row.items():
-                     print(k)
-                     print(v)
-            reader = csv.reader(open(file, 'r'))
-                d = {}
-                for row in reader:
-                    key, val = row
-                    d[key] = val
-                    print(d)
+    #with open('hour_format.csv') as file:
+    #        dict = csv.DictReader(file)
+     #       for row in dict:
+    ##            for k, v in row.items():
+     #               print(k)
+       #              print(v)
+    reader = csv.reader(open('hour_format.csv', 'r'))
+    d = {}
+    for row in reader:
+        key, val = row
+        d[key] = val
+    print(d)
 
 
     #       9:AM to 5:00PM
