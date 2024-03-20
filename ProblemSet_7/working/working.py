@@ -44,7 +44,8 @@ def convert(s):
 #            print(f'{key} is equal to {value}')
 
 
-    s = re.findall(r'^(\d?:\d?)$', s) # THIS CATCHES THE REQUIRED STRING
+    s = re.findall(r'^(\d?\:\d?)$', s) # THIS CATCHES THE REQUIRED STRING
+    print('Found: ', s)
 
 
 
