@@ -38,9 +38,9 @@ def main():
 
 
 def convert(s):
-    #for v in table:
-    print(list(table.keys())[list(table.values())])
-
+    for key12,value24 in table.items():
+        if s == key12:
+            print('FOUND',value24)
     #       9:AM to 5:00PM
     s = re.findall(r'^$', s) # THIS CATCHES THE REQUIRED STRING
 
