@@ -38,9 +38,8 @@ def main():
 
 
 def convert(s):
-    for v in table.keys().values():
-        print()
-        print(v)
+    #for v in table:
+    print(list(table.keys())[list(table.values())])
 
     #       9:AM to 5:00PM
     s = re.findall(r'^$', s) # THIS CATCHES THE REQUIRED STRING
