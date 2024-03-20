@@ -42,7 +42,7 @@ def convert(s):
 
     s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
     print('Timeframe: ', s[0][0],'to', s[0][1])
-    format(print(f"{n:02}"))
+    print(f"{n:02}".format(type:=n))
 
 
     #for key,value in table.items():
