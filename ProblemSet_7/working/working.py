@@ -16,7 +16,8 @@ def convert(s):
             dict = csv.DictReader(file)
             for row in dict:
                 for k, v in row.items():
-                     print(k,v)
+                     print(k)
+                     print(v)
 
 
     #       9:AM to 5:00PM
