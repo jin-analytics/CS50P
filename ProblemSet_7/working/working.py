@@ -16,8 +16,14 @@ def convert(s):
             dict = csv.DictReader(file)
             for row in dict:
                 for k, v in row.items():
-                     print(k[5])
-                     print(v[5])
+                     print(k)
+                     print(v)
+            reader = csv.reader(open(file, 'r'))
+                d = {}
+                for row in reader:
+                    key, val = row
+                    d[key] = val
+                    print(d)
 
 
     #       9:AM to 5:00PM
