@@ -39,9 +39,9 @@ def main():
 #    10:30 PM to 8:50 AM
 
 def convert(s):
-#    for key,value in table.items():
-#        if s == key:
-#            print(f'{key} is equal to {value}')
+    for key,value in table.items():
+        if s == key:
+            print(f'{key[]} is equal to {value}')
 
 
     s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
