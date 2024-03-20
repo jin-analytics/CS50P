@@ -35,13 +35,14 @@ table = {"12:00 AM": "00:00",
 def main():
     print(convert(input("Hours: ")))
 
-
+#       9:AM to 5:00PM
 
 def convert(s):
-    for key12,value24 in table.items():
-        if s == key12:
-            print(f'{key12} is equal to {value24}')
-    #       9:AM to 5:00PM
+    for key,value in table.items():
+        if s == key:
+            print(f'{key} is equal to {value}')
+
+
     s = re.findall(r'^$', s) # THIS CATCHES THE REQUIRED STRING
 
 
