@@ -53,14 +53,16 @@ def convert(s):
 
 
         elif len(re.split("[: ]",s[0][0])) == 2:
+            hour0,daytime0 = re.split("[: ]",s[0][0])
             for key,value in table.items():
-                if s[0][0] == key:
+                if f"{hour0}:00 {daytime0}" == key:
                     time0 = f"{key}"
 
         elif len(re.split("[: ]",s[0][1])) == 2:
+            hour1,daytime1 = re.split("[: ]",s[0][0])
             for key,value in table.items():
-                if s[0][1] == key:
-                    time1 = f"{key}"
+                if f"{hour1}:00 {daytime1}" == key:
+                    time0 = f"{key}"
 
         return f"{time0} to {time1}"
 
