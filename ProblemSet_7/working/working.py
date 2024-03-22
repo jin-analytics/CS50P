@@ -37,9 +37,10 @@ def convert(s):
     try:
 # This catches hh:mm AM/PM and gives each to a variable
         s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
-        print(len(s[0][0], s[0][0]))
-        hour0,minute_correct0,daytime0 = re.split("[: ]",s[0][0])
-        hour1,minute_correct1,daytime1 = re.split("[: ]",s[0][1])
+        var1 = re.split("[: ]",s[0][0])
+        var2 = re.split("[: ]",s[0][1])
+        #hour0,minute_correct0,daytime0 = re.split("[: ]",s[0][0])
+        #hour1,minute_correct1,daytime1 = re.split("[: ]",s[0][1])
 
 # Adjust hh:mm AM/PM to hh:00 AM/PM, so that the hour pair gets found in the dictionary "table"
 # After finding the correct hour format, the correct minute gets assigned to the new hour format
