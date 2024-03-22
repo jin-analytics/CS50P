@@ -1,7 +1,5 @@
 import re
 import sys
-import csv
-import json
 
 # Dictionary which has the hours of 12h format assigned to hours of 24h format
 table = {"12:00 AM": "00:00",
@@ -29,33 +27,33 @@ table = {"12:00 AM": "00:00",
          "10:00 PM": "22:00",
          "11:00 PM": "23:00"}
 
+# Input example:    10:30 PM to 8:50 AM
 
 def main():
     print(convert(input("Hours: ")))
 
-#       9:00 AM to 5:00 PM
-#    10:30 PM to 8:50 AM
 
 def convert(s):
+    try:
+# This catches hh:mm AM/PM and gives each to a variable
+        s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
+        hour0,minute_correct0,daytime0 = re.split("[: ]",s[0][0])
+        hour1,minute_correct1,daytime1 = re.split("[: ]",s[0][1])
 
-    # This catches hh:mm AM/PM and gives each to a variable
-    s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
-    hour0,minute_correct0,daytime0 = re.split("[: ]",s[0][0])
-    hour1,minute_correct1,daytime1 = re.split("[: ]",s[0][1])
+# Adjust hh:mm AM/PM to hh:00 AM/PM, so that the hour pair gets found in the dictionary "table"
+# After finding the correct hour format, the correct minute gets assigned to the new hour format
+        for key,value in table.items():
+            if f"{hour0}:00 {daytime0}" == key:          # If correct input format, the hour will be found in the dictionary
+                hour0, minute0= re.split("[:]", value)   # split the assiged value at ":" to get the minute and hour from the 24h format
 
-    # Adjust hh:mm AM/PM to hh:00 AM/PM, so that the hour pair gets found in the dictionary "table"
-    # After finding the correct hour format, the correct minute gets assigned to the new hour format
-    for key,value in table.items():
-        if f"{hour0}:00 {daytime0}" == key:         # If correct input format, the hour will be found in the dictionary
-           hour0, minute0= re.split("[:]", value)   # split the assiged value at ":" to get the minute and hour
+            elif f"{hour1}:00 {daytime1}" == key:
+                hour1, minute1= re.split("[:]", value)
 
-        elif f"{hour1}:00 {daytime1}" == key:
-           hour1, minute1= re.split("[:]", value)
-
-    time0 = f"{hour0}:{minute_correct0}"
-    time1 = f"{hour1}:{minute_correct1}"
-    print(f'{time0} to {time1}')
-
+        time0 = f"{hour0}:{minute_correct0}"             # Adjust the new string with 24h format
+        time1 = f"{hour1}:{minute_correct1}"
+        print(f'{time0} to {time1}')
+    except IndexError:
+        sys.exit()
 
 
 if __name__ == "__main__":
