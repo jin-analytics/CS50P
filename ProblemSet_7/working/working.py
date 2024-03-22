@@ -53,7 +53,7 @@ def convert(s):
 
     # Adjust hh:mm AM/PM to hh:00 AM/PM, so that the pair gets found in the dictionary "table"
     print(s[0][0])
-    vari
+    v = f"{hour}:00 {daytime}"
 
 
 
