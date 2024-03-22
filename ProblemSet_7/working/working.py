@@ -46,9 +46,9 @@ def convert(s):
 
     # This catches hh:mm AM/PM and gives each to a variable
     s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
-    hour,minute,daytime = re.split("[: ]",s[0][0])
+    hour,minute_correct,daytime = re.split("[: ]",s[0][0])
     print(hour)
-    print(minute)
+    print(minute_correct)
     print(daytime)
 
     # Adjust hh:mm AM/PM to hh:00 AM/PM, so that the pair gets found in the dictionary "table"
@@ -56,10 +56,11 @@ def convert(s):
         if f"{hour}:00 {daytime}" == key:
            print(f'{key} is equal to {value}')
            s = value # Get the 24h format
-           hour,minute = re.split("[:]", s)
+           hour,minute_false = re.split("[:]", s)
            break
 
-    print(hour,'...',minute)
+    print(hour,'...',minute_false)
+    print(f"{hour}:{minute_correct} {daytime}")
 
 
 
