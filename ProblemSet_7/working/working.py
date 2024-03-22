@@ -52,12 +52,13 @@ def convert(s):
     print(daytime)
 
     # Adjust hh:mm AM/PM to hh:00 AM/PM, so that the pair gets found in the dictionary "table"
-    #v = f"{hour}:00 {daytime}"
-    #print(v)
     for key,value in table.items():
         if f"{hour}:00 {daytime}" == key:
            print(f'{key} is equal to {value}')
+           s = value # Get the 24h format
            break
+
+    print(s)
 
 
 
