@@ -52,8 +52,12 @@ def convert(s):
     print(daytime)
 
     # Adjust hh:mm AM/PM to hh:00 AM/PM, so that the pair gets found in the dictionary "table"
-    print(s[0][0])
     v = f"{hour}:00 {daytime}"
+
+    for key,value in table.items():
+    #    if s[0][0] == key:
+    #       print(f'{key[0]} is equal to {value[0:2]}')
+
 
 
 
