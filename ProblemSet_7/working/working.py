@@ -46,20 +46,14 @@ def convert(s):
     # Adjust hh:mm AM/PM to hh:00 AM/PM, so that the hour pair gets found in the dictionary "table"
     # After finding the correct hour format, the correct minute gets assigned to the new hour format
     for key,value in table.items():
-        if f"{hour0}:00 {daytime0}" == key:     # If correct input format, the hour will be found in the dictionary
-           print(f'{key} is equal to {value}')  #
-           time0 = value                        # Get the 24h format
-           hour0, minute0= re.split("[:]", s)   #
-           minute0 = minute_correct0            #
+        if f"{hour0}:00 {daytime0}" == key:         # If correct input format, the hour will be found in the dictionary
+           hour0, minute0= re.split("[:]", value)   # split the assiged value at ":" to get the minute and hour
 
         elif f"{hour1}:00 {daytime1}" == key:
-           print(f'{key} is equal to {value}')
-           time1 = value # Get the 24h format
-           hour1, minute1= re.split("[:]", s)
-           minute1 = minute_correct1
+           hour1, minute1= re.split("[:]", value)
 
-    time0 = f"{hour0}:{minute0}"
-    time1 = f"{hour1}:{minute1}"
+    time0 = f"{hour0}:{minute_correct0}"
+    time1 = f"{hour1}:{minute_correct1}"
     print(f'{time0} to {time1}')
 
 
