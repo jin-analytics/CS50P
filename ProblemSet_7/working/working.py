@@ -31,6 +31,10 @@ table = {"12:00 AM": "00:00",
          "10:00 PM": "22:00",
          "11:00 PM": "23:00"}
 
+#ziel:
+# HH:MM -> MM Extrahieren
+# HH:MM -> Auf HH:00 bringen zum matchen
+
 
 def main():
     print(convert(input("Hours: ")))
