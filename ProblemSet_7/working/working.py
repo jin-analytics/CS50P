@@ -44,25 +44,25 @@ def convert(s):
                     hour0, minute0= re.split("[:]", value)   # split the assiged value at ":" to get the minute and hour from the 24h format
                     time0 = f"{hour0}:{minute_correct0}"     # Adjust the new string with 24h format
 
-        elif len(re.split("[: ]",s[0][1])) == 3:
-            hour1,minute_correct1,daytime1 = re.split("[: ]",s[0][1])
-            for key,value in table.items():
-                if f"{hour1}:00 {daytime1}" == key:
-                    hour1, minute1= re.split("[:]", value)
-                    time1 = f"{hour1}:{minute_correct1}"
+ #       if len(re.split("[: ]",s[0][1])) == 3:
+ #           hour1,minute_correct1,daytime1 = re.split("[: ]",s[0][1])
+ #           for key,value in table.items():
+ #               if f"{hour1}:00 {daytime1}" == key:
+ #                   hour1, minute1= re.split("[:]", value)
+ #                   time1 = f"{hour1}:{minute_correct1}"
 
 
-        elif len(re.split("[: ]",s[0][0])) == 2:
+        if len(re.split("[: ]",s[0][0])) == 2:
             hour0,daytime0 = re.split("[: ]",s[0][0])
             for key,value in table.items():
                 if f"{hour0}:00 {daytime0}" == key:
                     time0 = f"{key}"
 
-        elif len(re.split("[: ]",s[0][1])) == 2:
-            hour1,daytime1 = re.split("[: ]",s[0][1])
-            for key,value in table.items():
-                if f"{hour1}:00 {daytime1}" == key:
-                    time1 = f"{key}"
+#        if len(re.split("[: ]",s[0][1])) == 2:
+#            hour1,daytime1 = re.split("[: ]",s[0][1])
+#            for key,value in table.items():
+#                if f"{hour1}:00 {daytime1}" == key:
+#                    time1 = f"{key}"
 
         return f"{time0} to {time1}"
 
