@@ -51,9 +51,11 @@ def convert(s):
 
         time0 = f"{hour0}:{minute_correct0}"             # Adjust the new string with 24h format
         time1 = f"{hour1}:{minute_correct1}"
-        print(f'{time0} to {time1}')
+
+        return f"{time0} to {time1}"
+
     except IndexError:
-        sys.exit()
+        sys.exit(None)
 
 
 if __name__ == "__main__":
