@@ -3,9 +3,7 @@ import sys
 import csv
 import json
 
-# create csv file which has the 12-Hour and 24-Hour implemented
-# make a dict out of it
-
+# Dictionary which has the hours of 12h format assigned to hours of 24h format
 table = {"12:00 AM": "00:00",
          "1:00 AM": "01:00",
          "2:00 AM": "02:00",
@@ -31,10 +29,6 @@ table = {"12:00 AM": "00:00",
          "10:00 PM": "22:00",
          "11:00 PM": "23:00"}
 
-#ziel:
-# HH:MM AM -> MM Extrahieren
-# HH:MM AM-> Auf HH:00 bringen zum matchen
-
 
 def main():
     print(convert(input("Hours: ")))
@@ -46,33 +40,27 @@ def convert(s):
 
     # This catches hh:mm AM/PM and gives each to a variable
     s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
-    hour,minute_correct,daytime = re.split("[: ]",s[0][0])
-    print(hour)
-    print(minute_correct)
-    print(daytime)
+    hour0,minute_correct0,daytime0 = re.split("[: ]",s[0][0])
+    hour1,minute_correct1,daytime1 = re.split("[: ]",s[0][1])
 
-    # Adjust hh:mm AM/PM to hh:00 AM/PM, so that the pair gets found in the dictionary "table"
+    # Adjust hh:mm AM/PM to hh:00 AM/PM, so that the hour pair gets found in the dictionary "table"
+    # After finding the correct hour format, the correct minute gets assigned to the new hour format
     for key,value in table.items():
-        if f"{hour}:00 {daytime}" == key:
+        if f"{hour0}:00 {daytime0}" == key:     # If correct input format, the hour will be found in the dictionary
+           print(f'{key} is equal to {value}')  #
+           time0 = value                        # Get the 24h format
+           hour0, minute0= re.split("[:]", s)   #
+           minute0 = minute_correct0            #
+
+        elif f"{hour1}:00 {daytime1}" == key:
            print(f'{key} is equal to {value}')
-           s = value # Get the 24h format
-           hour= re.split("[:]", s, 1)
-           #minute = minute_correct
-           break
+           time1 = value # Get the 24h format
+           hour1, minute1= re.split("[:]", s)
+           minute1 = minute_correct1
 
-    print(f"{hour}:{minute_correct} {daytime}")
-
-
-
-
-    #print("{:02}".format(n))
-    #print(f"{n:02}")
-
-
-    #for key,value in table.items():
-    #    if s[0][0] == key:
-    #       print(f'{key[0]} is equal to {value[0:2]}')
-
+    time0 = f"{hour0}:{minute0}"
+    time1 = f"{hour1}:{minute1}"
+    print(f'{time0} to {time1}')
 
 
 
