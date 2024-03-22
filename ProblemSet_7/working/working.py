@@ -62,7 +62,7 @@ def convert(s):
             hour1,daytime1 = re.split("[: ]",s[0][0])
             for key,value in table.items():
                 if f"{hour1}:00 {daytime1}" == key:
-                    time0 = f"{key}"
+                    time1 = f"{key}"
 
         return f"{time0} to {time1}"
 
