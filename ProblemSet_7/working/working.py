@@ -56,10 +56,10 @@ def convert(s):
         if f"{hour}:00 {daytime}" == key:
            print(f'{key} is equal to {value}')
            s = value # Get the 24h format
-           hour,minute_false = re.split("[:]", s)
+           hour= re.split("[:]", s, 1)
+           #minute = minute_correct
            break
 
-    print(hour,'...',minute_false)
     print(f"{hour}:{minute_correct} {daytime}")
 
 
