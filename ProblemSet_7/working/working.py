@@ -37,6 +37,7 @@ def convert(s):
     try:
 # This catches hh:mm AM/PM and gives each to a variable
         s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
+        len(s[0][0], s[0][0])
         hour0,minute_correct0,daytime0 = re.split("[: ]",s[0][0])
         hour1,minute_correct1,daytime1 = re.split("[: ]",s[0][1])
 
