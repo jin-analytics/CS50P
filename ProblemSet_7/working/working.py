@@ -32,8 +32,8 @@ table = {"12:00 AM": "00:00",
          "11:00 PM": "23:00"}
 
 #ziel:
-# HH:MM -> MM Extrahieren
-# HH:MM -> Auf HH:00 bringen zum matchen
+# HH:MM AM -> MM Extrahieren
+# HH:MM AM-> Auf HH:00 bringen zum matchen
 
 
 def main():
@@ -44,13 +44,16 @@ def main():
 
 def convert(s):
 
+    # This catches hh:mm AM/PM and gives each to a variable
     s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
-    #print('Timeframe: ', s[0][0],'to', s[0][1])
-    #h,m, meridiem = s[0][0].split(': ')
     hour,minute,daytime = re.split("[: ]",s[0][0])
     print(hour)
     print(minute)
     print(daytime)
+
+    # Adjust hh:mm AM/PM to hh:00 AM/PM, so that the pair gets found in the dictionary "table"
+    print(s[0][0])
+    vari
 
 
 
