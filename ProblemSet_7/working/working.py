@@ -52,6 +52,12 @@ def convert(s):
                     hour1, minute1= re.split("[:]", value)
             time1 = f"{hour1}:{minute_correct1}"
 
+        if len(re.split("[: ]",s[0][1])) == 2:
+            for key,value in table.items():
+                if f"{hour1}:00 {daytime1}" == key:
+                    hour1, minute1= re.split("[:]", value)
+            time1 = f"{hour1}:{minute_correct1}"
+
 
 
 
