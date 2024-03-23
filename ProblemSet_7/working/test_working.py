@@ -4,7 +4,7 @@ import pytest
 def main():
     test_ante_end_post_meridiem()
     test_invalid_minutes_in_time()
-    #test_invalid_input()
+    test_invalid_input()
 
 # check if is possible to start at any timeframe the day/night
 def test_ante_end_post_meridiem():
