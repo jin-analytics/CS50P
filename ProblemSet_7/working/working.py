@@ -89,7 +89,7 @@ def convert(s):
         None
     except ValueError:
         #sys.exit(None)
-        None
+        return False
 
 
 if __name__ == "__main__":
