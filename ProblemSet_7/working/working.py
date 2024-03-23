@@ -88,7 +88,7 @@ def convert(s):
         #sys.exit(None)
         None
     except ValueError:
-        sys.exit(ValueError)
+        sys.exit(None)
 
 
 if __name__ == "__main__":
