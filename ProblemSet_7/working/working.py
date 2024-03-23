@@ -86,9 +86,9 @@ def convert(s):
 
     except EOFError:
         #sys.exit(None)
-        None
+        return None
     except ValueError:
-        sys.exit(None)
+        return None
 
 
 if __name__ == "__main__":
