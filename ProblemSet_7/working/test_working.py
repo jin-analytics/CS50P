@@ -10,13 +10,13 @@ def main():
 def test_ante_end_post_meridiem():
     meridiem = ['5:00 PM to 9:00 AM', '5:00 AM to 9:00 PM']
     assert convert(meridiem[0]) == "17:00 to 09:00"
- #   assert convert(meridiem[1]) == "05:00 to 21:00"
+    assert convert(meridiem[1]) == "05:00 to 21:00"
 
 # check if invalid minute input gets detected
-#def test_invalid_minutes_in_time():
-#    meridiem = ['5:60 PM to 9:00 AM', '5:00 AM to 9:60 PM']
-#    for entrees in meridiem:
-#        assert convert(entrees) == ValueError
+def test_invalid_minutes_in_time():
+    meridiem = ['5:60 PM to 9:00 AM', '5:00 AM to 9:60 PM']
+    for entrees in meridiem:
+        assert convert(entrees) == ValueError
 
 
 # check if invalid input gets detected...
