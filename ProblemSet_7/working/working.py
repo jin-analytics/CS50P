@@ -34,7 +34,6 @@ def main():
 
 
 def convert(s):
-    #try:
         # This catches hh:mm AM/PM and gives each to a variable
         s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
         # If re.findall() didn't foound something due to incorrect input
@@ -81,8 +80,6 @@ def convert(s):
 
         return f"{time0} to {time1}"    # returns the converted time from 12h to 24h format
 
-    #except ValueError:
-     #   return ValueError
 
 
 if __name__ == "__main__":

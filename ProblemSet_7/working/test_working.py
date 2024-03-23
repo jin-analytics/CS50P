@@ -17,14 +17,16 @@ def test_invalid_minutes_in_time():
     meridiem = ['5:60 PM to 9:00 AM', '5:00 AM to 9:60 PM']
     with pytest.raises(ValueError):
         convert(meridiem[0])
+        convert(meridiem[1])
 
 
 # check if invalid input gets detected...
 # correct input: "hh:mm AM/PM to hh:mm AM/PM" or "hh AM/PM to hh AM/PM"
-#def test_invalid_input():
-#    assert convert('5:00 PM - 9:00 AM') == ValueError
-#    assert convert('5:00 AM')           == ValueError
-#    assert convert('5:00 PM to 9:00 AM') != ValueError
+def test_invalid_input():
+    meridiem = ['5:00 PM - 9:00 AM', '5:00 AM']
+    with pytest.raises(ValueError):
+        convert(meridiem[0])
+        convert(meridiem[1])
 
 
 if __name__ == "__main__":
