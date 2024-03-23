@@ -34,9 +34,10 @@ def main():
 
 
 def convert(s):
-# This catches hh:mm AM/PM and gives each to a variable
+        # This catches hh:mm AM/PM and gives each to a variable
         s = re.findall(r'^(\d+\:*\d*\s+[AM]*[PM]*) to+ (\d+\:*\d*\s+[AM]*[PM]*)$', s) # THIS CATCHES THE REQUIRED STRING
 
+        print(len(s))
         if len(re.split("[: ]",s[0][0])) == 3:
             hour0,minute_correct0,daytime0 = re.split("[: ]",s[0][0])
             for key,value in table.items():
@@ -52,11 +53,11 @@ def convert(s):
  #                   time1 = f"{hour1}:{minute_correct1}"
 
 
-        if len(re.split("[: ]",s[0][0])) == 2:
-            hour0,daytime0 = re.split("[: ]",s[0][0])
-            for key,value in table.items():
-                if f"{hour0}:00 {daytime0}" == key:
-                    time0 = f"{key}"
+ #       if len(re.split("[: ]",s[0][0])) == 2:
+ #           hour0,daytime0 = re.split("[: ]",s[0][0])
+ #           for key,value in table.items():
+ #               if f"{hour0}:00 {daytime0}" == key:
+ #                   time0 = f"{key}"
 
 #        if len(re.split("[: ]",s[0][1])) == 2:
 #            hour1,daytime1 = re.split("[: ]",s[0][1])
@@ -64,7 +65,7 @@ def convert(s):
 #                if f"{hour1}:00 {daytime1}" == key:
 #                    time1 = f"{key}"
 
-        return f"{time0} to {time1}"
+ #       return f"{time0} to {time1}"
 
 
         #hour0,minute_correct0,daytime0 = re.split("[: ]",s[0][0])
