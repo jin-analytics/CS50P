@@ -69,7 +69,6 @@ def convert(s):
             hour0,daytime0 = re.split("[: ]",s[0][0])
             for key,value in table.items():
                 if f"{hour0}:00 {daytime0}" == key:
-                    hour0, minute0= re.split("[:]", value)
                     time0 = f"{value}"
                     break
 
@@ -77,7 +76,6 @@ def convert(s):
             hour1,daytime1 = re.split("[: ]",s[0][1])
             for key,value in table.items():
                 if f"{hour1}:00 {daytime1}" == key:
-                    hour1, minute1= re.split("[:]", value)
                     time1 = f"{value}"
                     break
 
