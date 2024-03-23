@@ -67,8 +67,6 @@ def convert(s):
         # If the input don't include minutes... for example: 10 AM
         if len(re.split("[: ]",s[0][0])) == 2:
             hour0,daytime0 = re.split("[: ]",s[0][0])
-            if int(minute_correct0) > 59:
-                raise ValueError
             for key,value in table.items():
                 if f"{hour0}:00 {daytime0}" == key:
                     time0 = f"{key}"
@@ -76,8 +74,6 @@ def convert(s):
 
         if len(re.split("[: ]",s[0][1])) == 2:
             hour1,daytime1 = re.split("[: ]",s[0][1])
-            if int(minute_correct0) > 59:
-                raise ValueError
             for key,value in table.items():
                 if f"{hour1}:00 {daytime1}" == key:
                     time1 = f"{key}"
