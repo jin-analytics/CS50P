@@ -43,6 +43,7 @@ def convert(s):
                 if f"{hour0}:00 {daytime0}" == key:          # If correct input format, the hour will be found in the dictionary
                     hour0, minute0= re.split("[:]", value)   # split the assiged value at ":" to get the minute and hour from the 24h format
                     time0 = f"{hour0}:{minute_correct0}"     # Adjust the new string with 24h format
+                    raise StopIteration
 
         if len(re.split("[: ]",s[0][1])) == 3:
             hour1,minute_correct1,daytime1 = re.split("[: ]",s[0][1])
