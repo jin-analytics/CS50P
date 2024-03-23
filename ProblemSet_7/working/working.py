@@ -41,7 +41,7 @@ def convert(s):
         # If the input includes minutes... for example: 10:30 AM
         if len(re.split("[: ]",s[0][0])) == 3:
             hour0,minute_correct0,daytime0 = re.split("[: ]",s[0][0])
-            if int(minute_correct0) > 60:
+            if int(minute_correct0) > 59:
                 sys.exit(None)
             for key,value in table.items():
                 if f"{hour0}:00 {daytime0}" == key:          # If correct input format, the hour will be found in the dictionary
@@ -51,7 +51,7 @@ def convert(s):
 
         if len(re.split("[: ]",s[0][1])) == 3:
             hour1,minute_correct1,daytime1 = re.split("[: ]",s[0][1])
-            if int(minute_correct1) > 60:
+            if int(minute_correct1) > 59:
                 sys.exit(None)
             for key,value in table.items():
                 if f"{hour1}:00 {daytime1}" == key:
@@ -63,7 +63,7 @@ def convert(s):
         # If the input don't include minutes... for example: 10 AM
         if len(re.split("[: ]",s[0][0])) == 2:
             hour0,daytime0 = re.split("[: ]",s[0][0])
-            if int(minute_correct0) > 60:
+            if int(minute_correct0) > 59:
                 sys.exit(None)
             for key,value in table.items():
                 if f"{hour0}:00 {daytime0}" == key:
@@ -72,7 +72,7 @@ def convert(s):
 
         if len(re.split("[: ]",s[0][1])) == 2:
             hour1,daytime1 = re.split("[: ]",s[0][1])
-            if int(minute_correct0) > 60:
+            if int(minute_correct0) > 59:
                 sys.exit(None)
             for key,value in table.items():
                 if f"{hour1}:00 {daytime1}" == key:
