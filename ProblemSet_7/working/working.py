@@ -30,10 +30,7 @@ table = {"12:00 AM": "00:00",
 # Input example:    10:30 PM to 8:50 AM
 
 def main():
-    if convert(input("Hours: ")) == ValueError:
-        sys.exit()
-    else:
-        print(convert(input("Hours: ")))
+    print(convert(input("Hours: ")))
 
 
 def convert(s):
@@ -84,10 +81,7 @@ def convert(s):
 
         return f"{time0} to {time1}"    # returns the converted time from 12h to 24h format
 
-    except EOFError:
-        sys.exit()
     except ValueError:
-        #sys.exit()
         return ValueError
 
 
