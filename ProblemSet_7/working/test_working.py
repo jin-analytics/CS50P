@@ -15,7 +15,8 @@ def test_ante_end_post_meridiem():
 # check if invalid minute input gets detected
 def test_invalid_minutes_in_time():
     meridiem = ['5:60 PM to 9:00 AM', '5:00 AM to 9:60 PM']
-    with
+    with pytest.raises(ValueError):
+        convert(meridiem[0])
 
 
 # check if invalid input gets detected...
