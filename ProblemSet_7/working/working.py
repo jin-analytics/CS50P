@@ -30,7 +30,10 @@ table = {"12:00 AM": "00:00",
 # Input example:    10:30 PM to 8:50 AM
 
 def main():
-    print(convert(input("Hours: ")))
+    if convert(input("Hours: ")) == ValueError:
+        sys.exit()
+    else:
+        print(convert(input("Hours: ")))
 
 
 def convert(s):
@@ -84,8 +87,8 @@ def convert(s):
     except EOFError:
         sys.exit()
     except ValueError:
-        sys.exit()
-        #return ValueError
+        #sys.exit()
+        return ValueError
 
 
 if __name__ == "__main__":
