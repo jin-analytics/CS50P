@@ -86,9 +86,9 @@ def convert(s):
         return f"{time0} to {time1}"    # returns the converted time from 12h to 24h format
 
     except EOFError:
-        sys.exit(None)
+        sys.exit()
     except ValueError:
-        sys.exit(None)
+        sys.exit()
 
 
 if __name__ == "__main__":
