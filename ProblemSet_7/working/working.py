@@ -70,7 +70,7 @@ def convert(s):
             for key,value in table.items():
                 if f"{hour0}:00 {daytime0}" == key:
                     hour0, minute0= re.split("[:]", value)
-                    time0 = f"{hour0}"
+                    time0 = f"{value}"
                     break
 
         if len(re.split("[: ]",s[0][1])) == 2:
@@ -78,7 +78,7 @@ def convert(s):
             for key,value in table.items():
                 if f"{hour1}:00 {daytime1}" == key:
                     hour1, minute1= re.split("[:]", value)
-                    time1 = f"{hour1}"
+                    time1 = f"{value}"
                     break
 
         return f"{time0} to {time1}"    # returns the converted time from 12h to 24h format
