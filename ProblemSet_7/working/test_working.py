@@ -22,9 +22,11 @@ def test_invalid_minutes_in_time():
 # check if invalid input gets detected...
 # correct input: "hh:mm AM/PM to hh:mm AM/PM" or "hh AM/PM to hh AM/PM"
 def test_invalid_input():
-    meridiem = ['5:00 PM - 9:00 AM', '5:00 AM']
-    for entrees in meridiem:
-        assert convert(entrees) == ValueError
+    #meridiem = ['5:00 PM - 9:00 AM', '5:00 AM']
+    #for entrees in meridiem:
+    assert convert('5:00 PM - 9:00 AM') == ValueError
+    assert convert('5:00 AM')           == ValueError
+    assert convert('5:00 PM to 9:00 AM') != ValueError
 
 
 if __name__ == "__main__":
