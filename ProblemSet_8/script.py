@@ -29,3 +29,14 @@ def get_student():
 # classes
 
 class Student:
+    ...
+
+def main():
+    student = get_student()
+    print(f'{student.name} is in {student.house}')
+
+def get_student():
+     student = Student()
+     student.name = input("Name: ")
+     student.house = input("House: ")
+     return student
