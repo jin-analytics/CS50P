@@ -7,6 +7,8 @@ def main():
 # test um
 
 def count(s):
+    s = re.split()
+
     if matches := re.search(r'^([um]*)$', s):
         print(f'...', matches.group())
 
