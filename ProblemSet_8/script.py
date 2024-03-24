@@ -31,7 +31,8 @@ def get_student():
 class Student:
     def __init__(self, name, house):
         if not name:
-            raise ValueError('')
+            raise ValueError('Missing name')
+        
         self.name = name
         self.house = house
 
