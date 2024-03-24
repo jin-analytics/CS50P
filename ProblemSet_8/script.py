@@ -43,7 +43,7 @@ def get_student():
      #student.house = input("House: ")   #   attribute
      name = input("Name: ")     #   attribute
      house = input("House: ")   #   attribute
-     student = Student(name, house)
-     return student
+     #student = Student(name, house)
+     return Student(name, house)
 
 # method: is a function, inside a class
