@@ -37,6 +37,12 @@ def main():
 
 def get_student():
      student = Student()                #   creates an object from a class
-     student.name = input("Name: ")     #   attribute
-     student.house = input("House: ")   #   attribute
+     #student.name = input("Name: ")     #   attribute
+     #student.house = input("House: ")   #   attribute
+
+     name = input("Name: ")     #   attribute
+     house = input("House: ")   #   attribute
+     student = Student(name, house)
+
+
      return student
