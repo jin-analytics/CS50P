@@ -37,6 +37,9 @@ class Student:
         self.name = name
         self.house = house
 
+    def __str__(self):
+        return f"{self.name} is in {self.house}"
+
 def main():
     student = get_student()
     print(f'{student.name} is in {student.house}')
