@@ -7,10 +7,8 @@ def main():
 
 
 def count(s):
-    re.findall()
-
-
-...
+    if matches := re.search(r'^/.+um*/.$', s):
+        print(f'...', matches.group(1))
 
 
 if __name__ == "__main__":
