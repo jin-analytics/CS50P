@@ -36,7 +36,7 @@ def main():
     print(f'{student.name} is in {student.house}')
 
 def get_student():
-     student = Student() #creates an object from a class
-     student.name = input("Name: ")
-     student.house = input("House: ")
+     student = Student()                #   creates an object from a class
+     student.name = input("Name: ")     #   attribute
+     student.house = input("House: ")   #   attribute
      return student
