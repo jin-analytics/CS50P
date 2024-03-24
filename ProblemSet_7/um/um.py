@@ -8,7 +8,7 @@ def main():
 
 def count(s):
     if matches := re.search(r'^.*([um]*).*$', s):
-        print(f'...', matches.group(1))
+        print(f'...', matches.group())
 
 
 if __name__ == "__main__":
