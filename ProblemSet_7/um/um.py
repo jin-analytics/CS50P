@@ -16,5 +16,9 @@ def count(s):
         #    print(f'...', matches.group())
 
 
+def counter():
+    counter = []
+    
+
 if __name__ == "__main__":
     main()
