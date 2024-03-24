@@ -10,4 +10,5 @@ def main():
 def get_student():
     name = input('Name:')
     house = input('House:')
-    return (name, house)
+    return (name, house) #is a tuple (is not mutable)
+    #return [name,house] #is a list (is mutable)
