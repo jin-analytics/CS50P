@@ -7,11 +7,13 @@ def main():
 # test um, if um gets detected
 
 def count(s):
-    s = re.split(r'\s+', s)
+    s = re.split(r'\W+', s) # this splits also the comma... "um," -> \W+ is better
     print(s)
-
-    if matches := re.search(r'^([um]*)$', s):
-        print(f'...', matches.group())
+    for entrees in s:
+        if entrees == "um":
+            print(entrees)
+        #if matches := re.search(r'^([um]*)$', s):
+        #    print(f'...', matches.group())
 
 
 if __name__ == "__main__":
