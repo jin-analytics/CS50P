@@ -3,13 +3,13 @@ import sys
 
 
 def main():
-    print(count(input("Text: ")))
+    print(count(input("Text: ").lower()))
 # test um, if um gets detected
 
 def count(s):
     # empty list, which gets filled through the for loop
     counter = []
-
+    
     s = re.split(r'\W+', s, re.IGNORECASE) # \s splits also the comma... "um," -> \W+ is better
 
     # appends the counter list with 1 for every "um"
