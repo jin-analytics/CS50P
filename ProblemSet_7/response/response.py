@@ -4,7 +4,7 @@ from validator_collection import validators, checkers, errors
 # Checkers:     is_email
 
 def main():
-    email_validation(input("What's your email adress "))
+    email_validation(input("What's your email adress? "))
 
 def email_validation(email_adress):
     try:
