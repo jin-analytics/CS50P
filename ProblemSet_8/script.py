@@ -5,7 +5,7 @@
 
 def main():
     student = get_student()
-    print(f'{student[]} is in {student[1]}')
+    print(f'{student["name"]} is in {student["house"]}')
 
 def get_student():
     name = input('Name:')
