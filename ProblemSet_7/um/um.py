@@ -7,7 +7,7 @@ def main():
 # test um, if um gets detected
 
 def count(s):
-    s = re.split(r'\w+', s)
+    s = re.split(r'\s+', s)
     print(s)
 
     if matches := re.search(r'^([um]*)$', s):
