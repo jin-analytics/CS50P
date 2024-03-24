@@ -14,7 +14,11 @@ def get_student():
     #return [name,house] #is a list (is mutable)
 
 def get_student():
-    student = {}
-    student['name'] = input('Name: ')
-    student['house'] = input('House: ')
-    return student
+    #student = {}
+    #student['name'] = input('Name: ')
+    #student['house'] = input('House: ')
+    #return student
+    name = input('Name:')
+    house = input('House:')
+    return {'name': name, 'house': house} #is a dict (is mutable)
+
