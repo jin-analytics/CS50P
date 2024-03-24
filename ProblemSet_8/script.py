@@ -32,7 +32,8 @@ class Student:
     def __init__(self, name, house):
         if not name:
             raise ValueError('Missing name')
-        
+        if house not in ['griffyndor','hufflepuff','ravenclaw','slytherin']:
+            raise ValueError['Invalid house']
         self.name = name
         self.house = house
 
