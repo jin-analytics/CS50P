@@ -10,7 +10,7 @@ def count(s):
     # empty list, which gets filled through the for loop
     counter = []
 
-    s = re.split(r'\W+', s, re=IGNORECASE) # \s splits also the comma... "um," -> \W+ is better
+    s = re.split(r'\W+', s, re.IGNORECASE) # \s splits also the comma... "um," -> \W+ is better
 
     # appends the counter list with 1 for every "um"
     for _ in s:
