@@ -1,5 +1,6 @@
 # Object-Oriented Programming
 
+#______________________________________________________________________
 # Tuple
 # (variable1, variable2) is a tuple
 
@@ -21,4 +22,9 @@ def get_student():
     name = input('Name:')
     house = input('House:')
     return {'name': name, 'house': house} #is a dict (is mutable)
+
+
+
+#______________________________________________________________________
+# classes
 
