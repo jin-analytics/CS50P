@@ -30,6 +30,8 @@ def get_student():
 
 class Student:
     def __init__(self, name, house):
+        if not name:
+            raise ValueError('')
         self.name = name
         self.house = house
 
@@ -47,3 +49,5 @@ def get_student():
      return Student(name, house)
 
 # method: is a function, inside a class
+
+# raise: creates an exception error... can be defined in a class
