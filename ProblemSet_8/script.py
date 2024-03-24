@@ -45,3 +45,5 @@ def get_student():
      house = input("House: ")   #   attribute
      student = Student(name, house)
      return student
+
+# method: is a function, inside a class
