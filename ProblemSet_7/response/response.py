@@ -1,4 +1,3 @@
-import sys
 from validator_collection import validators, checkers, errors
 # Validator:    email
 # Checkers:     is_email
@@ -8,17 +7,15 @@ def main():
 
 def email_validation(email_adress):
     try:
-        # The value of email_address will now be "test@domain.dev"
         email_address = validators.email(email_adress)
-        #email_address = validators.email("test@domain.dev")
         if checkers.is_email(email_address) == True:
             print('Valid')
 
-
     except errors.EmptyValueError:
-        sys.exit('Invalid')
+        print('Invalid')
+
     except errors.InvalidEmailError:
-        sys.exit('Invalid')
+        print('Invalid')
 
 if __name__ == "__main__":
     main()
