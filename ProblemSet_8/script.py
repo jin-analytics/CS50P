@@ -66,21 +66,16 @@ class Student:
         self.name = name
         self.house = house
 
-# option 1:
     def __str__(self):
         return f"{self.name} is in {self.house}"
 
 def main():
     student = get_student()
-    print(f'{student.name} is in {student.house}')
+    print(student)
 
 def get_student():
-     student = Student()                #   creates an object from a class
-     #student.name = input("Name: ")     #   attribute
-     #student.house = input("House: ")   #   attribute
      name = input("Name: ")     #   attribute
      house = input("House: ")   #   attribute
-     #student = Student(name, house)
      return Student(name, house)
 
 
