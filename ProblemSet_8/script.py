@@ -90,6 +90,7 @@ def get_student():
 #______________________________________________________________________
 # Getter
 # Gets some value
+@property
 def house(self):
     return self.house
 
@@ -97,7 +98,8 @@ def house(self):
 #______________________________________________________________________
 # Setter
 # Sets some value
-def house(self, house):
+@house.setter
+def house(self, house): #two arguments inside
     if house not in ['griffyndor','hufflepuff','ravenclaw','slytherin']:
         raise ValueError("Invalid house")
     self.house = house
