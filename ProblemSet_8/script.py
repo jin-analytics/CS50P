@@ -1,5 +1,10 @@
 # Object-Oriented Programming
 
+
+# method: is a function, inside a class
+
+# raise: creates an exception error... can be defined in a class
+
 #______________________________________________________________________
 # Tuple
 # (variable1, variable2) is a tuple
@@ -82,6 +87,4 @@ def get_student():
 
 
 
-# method: is a function, inside a class
 
-# raise: creates an exception error... can be defined in a class
