@@ -92,7 +92,7 @@ def get_student():
 # Gets some value
 @property
 def house(self):
-    return self.house
+    return self._house
 
 
 #______________________________________________________________________
@@ -102,7 +102,7 @@ def house(self):
 def house(self, house): #two arguments inside
     if house not in ['griffyndor','hufflepuff','ravenclaw','slytherin']:
         raise ValueError("Invalid house")
-    self.house = house
+    self._house = house
 
 
 
