@@ -84,6 +84,11 @@ def get_student():
      return Student(name, house)
 
 
+# Property
+# decorators
+
+
+
 
 
 
