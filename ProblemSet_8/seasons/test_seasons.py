@@ -11,7 +11,7 @@ def test_time_delta():
 
 
 def test_number_to_word():
-    assert test_time_delta("2024.01.04") == "Invalid date"
+    assert number_to_word(1) == "one"
 
 
 if __name__ == "__main__":
