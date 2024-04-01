@@ -5,4 +5,4 @@ import inflect
 
 
 date.today()
-print(timedelta())
+print(timedelta(days=3))
