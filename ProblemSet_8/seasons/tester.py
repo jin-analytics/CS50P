@@ -4,8 +4,7 @@ import inflect
 
 
 
-today = str(date.today())
 birthday = input()
-today = today.split("-")
-birthday = birthday.split("-")
 
+date = date.today() - birthday
+print(date)
