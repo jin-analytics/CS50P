@@ -4,5 +4,5 @@ import inflect
 
 
 
-
-print(timedelta(date.today()))
+date.today()
+print(timedelta())
