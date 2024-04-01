@@ -7,7 +7,7 @@ import inflect
 
 def main():
     delta = time_delta(input("Date of Birth: ")) #format YYYY-MM-DD
-    ...
+    print(number_to_word(delta))
 
 
 def time_delta(birthday):
@@ -16,11 +16,10 @@ def time_delta(birthday):
     passed_days = date.today() - birthday
     return passed_days.days
 
-def number_to_word():
-    ...
-    #p = inflect.engine()
-    #words = p.number_to_words(1111)
-    #print(words)
+def number_to_word(d):
+    p = inflect.engine()
+    return p.number_to_words(d)
+
 
 
 
