@@ -5,6 +5,7 @@ import inflect
 
 
 birthday = input()
+birthday = date.birthday
 
 date = date.today() - birthday
 print(date)
