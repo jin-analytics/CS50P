@@ -1,5 +1,7 @@
 from seasons import time_delta
 from seasons import number_to_word
+import pytest
+
 
 def main():
     test_time_delta()
@@ -7,7 +9,8 @@ def main():
 
 
 def test_time_delta():
-    assert test_time_delta("2024.01.04") == "Invalid date"
+    with pytest.raises(ValueError):
+        time_delta("2024.01.04")
 
 
 def test_number_to_word():
