@@ -2,6 +2,7 @@ from datetime import date
 import sys
 import datetime
 import inflect
+import re
 
 
 def main():
@@ -22,7 +23,8 @@ def number_to_word(d):
     p = inflect.engine()
     return p.number_to_words(d)
 
-def remove_and():
+def remove_and(d):
+    return re.sub(' and ',' ', d)
 
 
 
