@@ -6,7 +6,9 @@ import inflect
 
 def main():
     delta = time_delta(input("Date of Birth: ")) #format YYYY-MM-DD
-    print(number_to_word(delta).capitalize() + " minutes")
+    delta = number_to_word(delta)
+    #print(number_to_word(delta).capitalize() + " minutes")
+    print(remove_and(delta).capitalize() + " minutes")
 
 
 def time_delta(birthday):
@@ -19,6 +21,9 @@ def time_delta(birthday):
 def number_to_word(d):
     p = inflect.engine()
     return p.number_to_words(d)
+
+def remove_and():
+
 
 
 if __name__ == "__main__":
