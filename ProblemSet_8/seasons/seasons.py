@@ -4,10 +4,9 @@ import inflect
 
 
 def main():
-    ...
-
-
-...
+    p = inflect.engine()
+    words = p.number_to_words(1111, wantlist=True)
+    print (words)
 
 
 if __name__ == "__main__":
