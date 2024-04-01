@@ -1,22 +1,20 @@
 from datetime import date
 from datetime import timedelta
+import datetime
 import inflect
 
 
 
 def main():
-    delta = year_to_hours(input("Date of Birth: ")) #format YYYY-MM-DD
+    delta = time_delta(input("Date of Birth: ")) #format YYYY-MM-DD
     ...
 
-def year_to_hours(d):
-    d = d.split("-")
 
-
-
-def time_delta(d):
-     birthdate = d
-     today = date.today()
-     datetime.timedelta(today)
+def time_delta(birthday):
+    birthday = birthday.split('-')
+    birthday = datetime.date(int(birthday[0]), int(birthday[1]), int(birthday[2]))
+    passed_days = date.today() - birthday
+    return passed_days
 
 def number_to_word():
     ...
