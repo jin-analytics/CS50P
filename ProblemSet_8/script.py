@@ -105,7 +105,14 @@ def house(self, house): #two arguments inside
     self._house = house
 
 
+# class methods
+#______________________________________________________________________
+class Hat:
+    def sort(self, name):
+        
+        print(name, "is in", "")
 
-
+hat = Hat()
+hat.sort("Harry")
 
 
