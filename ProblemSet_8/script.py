@@ -105,12 +105,15 @@ def house(self, house): #two arguments inside
     self._house = house
 
 
+import random
 # class methods
 #______________________________________________________________________
 class Hat:
+    def __init__(self):
+        self.houses = ['griffyndor','hufflepuff','ravenclaw','slytherin']
+
     def sort(self, name):
-        
-        print(name, "is in", "")
+        print(name, "is in", random.choice(self.houses))
 
 hat = Hat()
 hat.sort("Harry")
