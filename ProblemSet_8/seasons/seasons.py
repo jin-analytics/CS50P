@@ -10,7 +10,8 @@ def main():
 
 def time_delta(d):
      birthdate = d
-     print(date.today())
+     today = date.today()
+     datetime.timedelta()
 
 def number_to_word():
     ...
