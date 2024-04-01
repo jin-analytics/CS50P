@@ -7,11 +7,11 @@ def main():
 
 
 def test_time_delta():
-    assert test_time_delta() == 
+    assert test_time_delta("2024.01.04") == "Invalid date"
 
 
 def test_number_to_word():
-    ...
+    assert test_time_delta("2024.01.04") == "Invalid date"
 
 
 if __name__ == "__main__":
