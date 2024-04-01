@@ -1,4 +1,5 @@
 from datetime import date
+from datetime import timedelta
 import inflect
 
 
@@ -11,7 +12,7 @@ def main():
 def time_delta(d):
      birthdate = d
      today = date.today()
-     datetime.timedelta()
+     datetime.timedelta(today)
 
 def number_to_word():
     ...
