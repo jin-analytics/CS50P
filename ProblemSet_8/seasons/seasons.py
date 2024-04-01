@@ -7,9 +7,7 @@ import re
 
 def main():
     delta = time_delta(input("Date of Birth: ")) #format YYYY-MM-DD
-    delta = number_to_word(delta)
-    #print(number_to_word(delta).capitalize() + " minutes")
-    print(remove_and(delta).capitalize() + " minutes")
+    print(remove_and(number_to_word(delta)).capitalize() + " minutes")
 
 
 def time_delta(birthday):
