@@ -5,8 +5,12 @@ import inflect
 
 
 def main():
-    delta = time_delta(input("Date of Birth: ")) #format YYYY-MM-DD
+    delta = year_to_hours(input("Date of Birth: ")) #format YYYY-MM-DD
     ...
+
+def year_to_hours(d):
+    d = d.split("-")
+
 
 
 def time_delta(d):

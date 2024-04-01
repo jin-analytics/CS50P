@@ -4,5 +4,8 @@ import inflect
 
 
 
-date.today()
-print(timedelta(days=3))
+today = str(date.today())
+birthday = input()
+today = today.split("-")
+birthday = birthday.split("-")
+
