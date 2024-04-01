@@ -1,5 +1,5 @@
 from datetime import date
-from datetime import timedelta
+import sys
 import datetime
 import inflect
 
@@ -17,7 +17,8 @@ def time_delta(birthday):
         passed_days = date.today() - birthday
         passed_minutes = int(passed_days.days)*24*60
         return passed_minutes
-    except :
+    except ValueError:
+        sys.exit("Invalid date")
 
 def number_to_word(d):
     p = inflect.engine()
