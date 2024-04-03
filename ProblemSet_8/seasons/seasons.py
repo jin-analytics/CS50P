@@ -14,6 +14,7 @@ def main():
 
 def time_delta(birthday):
     #try:
+
     birthday = birthday.split('-')
     birthday = datetime.date(int(birthday[0]), int(birthday[1]), int(birthday[2]))
     passed_days = date.today() - birthday
