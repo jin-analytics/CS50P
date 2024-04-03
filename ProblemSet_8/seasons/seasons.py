@@ -31,6 +31,5 @@ def remove_and(d):
     return re.sub(' and ',' ', d)
 
 
-
 if __name__ == "__main__":
     main()
