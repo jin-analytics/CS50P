@@ -3,8 +3,8 @@ from PIL import Image
 
 pdf = FPDF(orientation="P", unit="mm", format="A4")
 pdf.add_page()
-pdf.set_font("helvetica", "B", 16)
-pdf.cell(40, 10, "Hello World!")
+pdf.set_font("helvetica", "B", 24)
+pdf.cell(40, 10, "CS50 Shirtificate")
 
 img = Image.open("shirtificate.png")
 img = img.crop((0, 0, 593, 592)).resize((493, 492))
