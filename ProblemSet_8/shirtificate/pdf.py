@@ -8,7 +8,7 @@ pdf.cell(40, 10, "Hello World!")
 
 img = Image.open("shirtificate.png")
 img = img.crop((0, 0, 593, 592)).resize((493, 492))
-pdf.image(img, x=0, y=10, keep_aspect_ratio=True)
+pdf.image(img, x=20, y=40, keep_aspect_ratio=True)
 
 #pdf.image("https://cs50.harvard.edu/python/2022/psets/8/shirtificate/shirtificate.png", h=pdf.eph/2, w=pdf.epw/2)
 pdf.output("pdf-with-image.pdf")
