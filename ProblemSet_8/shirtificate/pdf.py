@@ -1,7 +1,7 @@
 from fpdf import FPDF
 
+
 pdf = FPDF()
 pdf.add_page()
-pdf.set_font("helvetica", "B", 16)
-pdf.cell(40, 10, "Hello World!")
-pdf.output("tuto1.pdf")
+pdf.image("docs/fpdf2-logo.png", x=20, y=60)
+pdf.output("pdf-with-image.pdf")
