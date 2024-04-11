@@ -9,7 +9,7 @@ pdf.cell(40, 50, "CS50 Shirtificate")
 img = Image.open("shirtificate.png")
 img = img.crop((0, 0, 593, 592)).resize((493, 492))
 pdf.image(img, x=20, y=90, keep_aspect_ratio=True)
-pdf.text(48, 150, "Jakob Niedenhoff took CS50")
+pdf.cell(48, 150, "Jakob Niedenhoff took CS50", new_x="LMARGIN", new_y="NEXT", align='C')
 
 #pdf.image("https://cs50.harvard.edu/python/2022/psets/8/shirtificate/shirtificate.png", h=pdf.eph/2, w=pdf.epw/2)
 pdf.output("pdf-with-image.pdf")
