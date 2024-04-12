@@ -26,7 +26,13 @@ class PDF(FPDF):
 
 
 def main():
-    ...
+    # Instantiation of inherited class
+    pdf = PDF()
+    pdf.add_page()
+    pdf.set_font("Times", size=12)
+    for i in range(1, 41):
+        pdf.cell(0, 10, f"Printing line number {i}", new_x="LMARGIN", new_y="NEXT")
+    pdf.output("new-tuto2.pdf")
 
 if __name__ == "__main__":
     main()
