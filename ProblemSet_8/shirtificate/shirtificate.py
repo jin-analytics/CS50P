@@ -23,7 +23,7 @@ class PDF(FPDF):
         # Printing page number:
         self.cell(0, 10, f"Page {self.page_no()}/{{nb}}", align="C")
 
-
+pdf = FPDF(orientation="P", unit="mm", format="A4")
 
 def main():
     # Instantiation of inherited class
