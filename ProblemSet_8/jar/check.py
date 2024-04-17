@@ -1,7 +1,7 @@
 class Jar:
-    def __init__(self, initial_amount, eating_amount):
+    def __init__(self, initial_amount, size):
         self.initial_amount = initial_amount
-        self.eating_amount = eating_amount
+        self.size = size
 
     def __str__(self):
         return f"At the beginning are {self.initial_amount} cookies in the jar..."
@@ -22,8 +22,8 @@ def main():
 
 def get_cookies():
     initial_amount = input("How many cookies to the jar?")
-    eating_amount = input("How many cookies will be eaten from the jar?")
-    return Jar(initial_amount, eating_amount)
+    size = input("How many cookies will be eaten from the jar?")
+    return Jar(initial_amount, size)
 
 if __name__ == "__main__":
     main()
