@@ -5,6 +5,17 @@ class Jar:
     def __str__(self):
         return f"At the beginning are {self.initial_amount} cookies in the jar..."
 
+
+    @property
+    def size(self):
+        ...
+
+    @size.setter
+    def size(self, size):
+        ...
+
+
+
 def main():
     print(get_cookies())
 
