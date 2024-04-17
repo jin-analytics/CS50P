@@ -37,6 +37,15 @@ class Jar:
         ...
 
 
-
 def main():
-    cookies_to_jar = input("How many cookies to the jar?")
+    print(get_cookies())
+
+
+def get_cookies():
+    in_jar = input("How many cookies to the jar?")
+    out_jar = input("How many cookies eating?")
+    jar = Jar(in_jar, out_jar)
+    return jar
+
+if __name__ == "__main__":
+    main()
