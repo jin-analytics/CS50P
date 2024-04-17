@@ -15,7 +15,7 @@ def main():
 def get_cookies():
     in_jar = input("How many cookies to the jar?")
     out_jar = input("How many cookies eating?")
-    jar = Jar(in_jar, out_jar)
+    jar = Jar(in_jar)
     return jar
 
 if __name__ == "__main__":
