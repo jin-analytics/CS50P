@@ -18,10 +18,13 @@ class Jar:
     def withdraw(self, n):
         ...
 
+    # returns the capacity of the cookie jar
     @property
     def capacity(self):
         ...
 
+    # size should return the actual amount of cookies in the jar
+    # initially 0 inside
     @property
     def size(self):
         ...
