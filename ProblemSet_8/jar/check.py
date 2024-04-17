@@ -12,7 +12,7 @@ class Jar:
 # Deposit of cookies
     @property
     def deposit(self):
-        return self.deposit
+        return self._deposit
     @deposit.setter
     def deposit(self, deposit):
         self._deposit = deposit
@@ -20,7 +20,7 @@ class Jar:
 # Withdraw of cookies
     @property
     def withdraw(self):
-        return self.withdraw
+        return self._withdraw
     @withdraw.setter
     def withdraw(self, withdraw):
         self._withdraw = withdraw
