@@ -3,7 +3,7 @@ class Jar:
          if int(capacity) < 0:
             raise ValueError('Negative capacity')
         #self.capacity = capacity
-        #self.initial = initial
+        self.initial = initial
 
 def main():
     print(get_cookies())
