@@ -15,7 +15,7 @@ class Jar:
     def size(self, size):
         if int(size) > int(self.initial_amount):
             raise ValueError
-        self.size = size
+        self._size = size
 
 def main():
     print(get_cookies())
