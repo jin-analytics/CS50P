@@ -8,7 +8,7 @@ class Jar:
 
     # __str__ returns a string with n times "🍪" in the jar
     def __str__(self):
-        ...
+        return f"{self.capacity} 🍪"
 
     # deposit should add n cookies to the cookie jar
     # if capacity gets exceeded, raise ValueError
