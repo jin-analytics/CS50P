@@ -8,13 +8,11 @@ class Jar:
 
     @property
     def size(self):
-        ...
+        return self.size
 
     @size.setter
     def size(self, size):
-        ...
-
-
+        self.size = size
 
 def main():
     print(get_cookies())
