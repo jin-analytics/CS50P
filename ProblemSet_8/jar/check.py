@@ -2,6 +2,9 @@ class Jar:
     def __init__(self, initial_amount):
         self.initial = initial_amount
 
+    def __str__(self):
+        return f"At the beginning are {self.initial_amount} cookies in the jar..."
+
 def main():
     print(get_cookies())
 
