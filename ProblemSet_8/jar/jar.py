@@ -21,7 +21,7 @@ class Jar:
 
     # withdraw removes n cookies from the cookie jar
     # if there are not enough cookies, raise ValueError
-    @property.setter
+    #@property.setter
     def withdraw(self, n):
         self._n = n
 
