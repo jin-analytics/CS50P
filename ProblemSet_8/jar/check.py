@@ -1,5 +1,5 @@
 class Jar:
-    def __init__(self, initial_amount, added_amount, size):
+    def __init__(self, initial_amount, deposit, withdraw):
         self.initial_amount = initial_amount
         self.capacity = added_amount
         self.size = size
@@ -8,17 +8,23 @@ class Jar:
         return f"At the beginning are {self.initial_amount} cookies in the jar..."
 
 
+# Deposit of cookies
     @property
-    def size(self):
-        return self.size
+    def deposit(self):
+        return self.deposit
+    @deposit.setter
+    def deposit(self, deposit):
+        self._deposit = deposit
 
-    @size.setter
-    def size(self, size):
-        if int(size) > int(self.initial_amount):
-            raise ValueError
-        self._size = size
+# Withdraw of cookies
+    @property
+    def withdraw(self):
+        return self.withdraw
+    @withdraw.setter
+    def size(self, withdraw):
+        self._withdraw = withdraw
 
-   
+
 
 def main():
     print(get_cookies())
