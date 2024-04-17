@@ -16,14 +16,14 @@ class Jar:
     @property.setter
     def deposit(self, n):
         put_cookies_to_jar = int(input("How many cookies to the jar?"))
-        return ja
+        self._n = n
 
 
     # withdraw removes n cookies from the cookie jar
     # if there are not enough cookies, raise ValueError
     @property.setter
     def withdraw(self, n):
-        ...
+        self._n = n
 
     # returns the capacity of the cookie jar
     @property
