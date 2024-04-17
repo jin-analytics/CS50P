@@ -13,7 +13,10 @@ class Jar:
     # deposit should add n cookies to the cookie jar
     # if capacity gets exceeded, raise ValueError
     def deposit(self, n):
-        ...
+        jar = Jar()
+        put_cookies_to_jar = int(input("How many cookies to the jar?"))
+        return ja
+
 
     # withdraw removes n cookies from the cookie jar
     # if there are not enough cookies, raise ValueError
