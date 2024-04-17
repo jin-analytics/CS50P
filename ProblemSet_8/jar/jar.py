@@ -33,3 +33,6 @@ class Jar:
     @property
     def size(self):
         ...
+
+
+
