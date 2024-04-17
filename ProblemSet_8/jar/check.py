@@ -12,6 +12,8 @@ class Jar:
 
     @size.setter
     def size(self, size):
+        if int(size) > int(self.initial_amount):
+            raise ValueError
         self.size = size
 
 def main():
