@@ -18,23 +18,14 @@ class Jar:
             raise ValueError
         self._size = size
 
-    @property
-    def capacity(self):
-        return self.capacity
-
-    @size.setter
-    def capacity(self, capacity):
-        if int(capacity) < 12 :
-            raise ValueError
-        self._capacity = capacity
-
+   
 
 def main():
     print(get_cookies())
 
 def get_cookies():
     initial_amount = 0
-    added_amount = input("How many cookies to the jar? ")
+    deposit = input("How many cookies to the jar? ")
     size = input("How many cookies will be eaten from the jar? ")
     return Jar(initial_amount, added_amount, size)
 
