@@ -22,7 +22,7 @@ class Jar:
     def withdraw(self):
         return self.withdraw
     @withdraw.setter
-    def size(self, withdraw):
+    def withdraw(self, withdraw):
         self._withdraw = withdraw
 
 
