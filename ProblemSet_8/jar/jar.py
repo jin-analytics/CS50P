@@ -10,10 +10,10 @@ class Jar:
     def __str__(self):
         return f"{self.capacity} 🍪"
 
+
     # deposit should add n cookies to the cookie jar
     # if capacity gets exceeded, raise ValueError
     def deposit(self, n):
-        jar = Jar()
         put_cookies_to_jar = int(input("How many cookies to the jar?"))
         return ja
 
@@ -36,3 +36,5 @@ class Jar:
 
 
 
+def main():
+    cookies_to_jar = input("How many cookies to the jar?")
