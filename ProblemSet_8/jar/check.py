@@ -1,14 +1,19 @@
 class Jar:
-    def __init__(self, initial_amount, deposit, withdraw):
+    def __init__(self, initial_amount, deposit, withdraw, capacity=12):
         self.initial_amount = initial_amount
         self.deposit = deposit
         self.withdraw = withdraw
+        self.capacity = capacity
 
     def __str__(self):
         cookies_left = int(self.deposit) - int(self.withdraw)
         s = str_append_list_join("🍪", cookies_left)
         #return f"Out of {self.deposit} cookies where {self.withdraw} cookies eaten... {cookies_left} left"
         return f"{s}"
+
+    @property
+    def capacity(self):
+        print(f"{self.capacity}")
 
 
 # Deposit of cookies
