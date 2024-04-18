@@ -6,13 +6,9 @@ class Jar:
 
     def __str__(self):
         cookies_left = int(self.deposit) - int(self.withdraw)
-        c  = []
-        for _ in range(cookies_left):
-
-            #c = "🍪"
-            c = c.append("🍪")
+        s = str_append_list_join("🍪", cookies_left)
         #return f"Out of {self.deposit} cookies where {self.withdraw} cookies eaten... {cookies_left} left"
-        return f"{c} 🍪"
+        return f"{s}"
 
 
 # Deposit of cookies
@@ -42,11 +38,11 @@ def get_cookies():
     withdraw = input("How many cookies will be eaten from the jar? ")
     return Jar(initial_amount, deposit, withdraw)
 
-def str_append_list_join("🍪", cookies_left):
+def str_append_list_join(add_sign, n):
     l1 = []
     i = 0
     while i < n:
-        l1.append(s)
+        l1.append(add_sign)
         i += 1
     return ''.join(l1)
 
