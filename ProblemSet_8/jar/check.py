@@ -5,8 +5,13 @@ class Jar:
         self.withdraw = withdraw
 
     def __str__(self):
-        cookies_eaten = int(self.deposit) - int(self.withdraw)
-        return f"Out of {self.deposit} cookies where {self.withdraw} cookies eaten... {cookies_eaten} left"
+        cookies_left = int(self.deposit) - int(self.withdraw)
+        for _ in str(cookies_left):
+            c = []
+            #c = "🍪"
+            c = c.append("🍪")
+        #return f"Out of {self.deposit} cookies where {self.withdraw} cookies eaten... {cookies_left} left"
+        return f"{c} 🍪"
 
 
 # Deposit of cookies
