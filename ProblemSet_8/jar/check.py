@@ -12,7 +12,7 @@ class Jar:
         self.size = int(self.deposit) - int(self.withdraw)
         s = str_append_list_join("🍪", self.size)
         #return f"Out of {self.deposit} cookies where {self.withdraw} cookies eaten... {cookies_left} left"
-        return f"{s}, capacity: {self.capacity}, init amount: {self.size}"
+        return f"{s}, capacity: {self.capacity}"
 
     @property
     def capacity(self):
@@ -48,7 +48,7 @@ class Jar:
 # Withdraw of cookies
     @property
     def withdraw(self):
-        return self.withdraw
+        return self._withdraw
     @withdraw.setter
     def withdraw(self, withdraw):
         self._withdraw = withdraw
