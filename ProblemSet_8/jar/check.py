@@ -32,7 +32,7 @@ class Jar:
         return self._size
     @size.setter
     def size(self, size):
-        size = int(self.deposit) - int(self.withdraw)
+        size = int(self._deposit) - int(self._withdraw)
         self._size = size
 
 
