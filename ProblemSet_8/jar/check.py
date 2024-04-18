@@ -9,6 +9,7 @@ class Jar:
 
     def __str__(self):
         #cookies_left = int(self.deposit) - int(self.withdraw)
+        self.size = int(self.deposit) - int(self.withdraw)
         s = str_append_list_join("🍪", self.size)
         #return f"Out of {self.deposit} cookies where {self.withdraw} cookies eaten... {cookies_left} left"
         return f"{s}, capacity: {self.capacity}, init amount: {self.size}"
@@ -32,7 +33,7 @@ class Jar:
         return self._size
     @size.setter
     def size(self, size):
-        size = int(self.deposit) - int(self.withdraw)
+        #size = int(self.deposit) - int(self.withdraw)
         self._size = size
 
 
@@ -47,7 +48,7 @@ class Jar:
 # Withdraw of cookies
     @property
     def withdraw(self):
-        return self._withdraw
+        return self.withdraw
     @withdraw.setter
     def withdraw(self, withdraw):
         self._withdraw = withdraw
