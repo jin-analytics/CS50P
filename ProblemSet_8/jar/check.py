@@ -9,7 +9,7 @@ class Jar:
         cookies_left = int(self.deposit) - int(self.withdraw)
         s = str_append_list_join("🍪", cookies_left)
         #return f"Out of {self.deposit} cookies where {self.withdraw} cookies eaten... {cookies_left} left"
-        return f"{s}"
+        return f"{s}, capacity: {self.capacity}"
 
     @property
     def capacity(self):
