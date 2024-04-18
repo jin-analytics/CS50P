@@ -1,16 +1,17 @@
 class Jar:
-    def __init__(self, deposit, withdraw, initial_amount=0, capacity=12, size):
-        self.initial_amount = initial_amount
+    def __init__(self,size, deposit, withdraw, capacity=12):
+        #self.initial_amount = initial_amount
+        self.size = size
         self.deposit = deposit
         self.withdraw = withdraw
         self.capacity = capacity
-        self.size = size
+
 
     def __str__(self):
         #cookies_left = int(self.deposit) - int(self.withdraw)
         s = str_append_list_join("🍪", self.size)
         #return f"Out of {self.deposit} cookies where {self.withdraw} cookies eaten... {cookies_left} left"
-        return f"{s}, capacity: {self.capacity}, init amount: {self.initial_amount}"
+        return f"{s}, capacity: {self.capacity}, init amount: {self.size}"
 
     @property
     def capacity(self):
@@ -19,16 +20,16 @@ class Jar:
     def capacity(self, capacity):
         self._capacity = capacity
 
-    @property
-    def initial_amount(self):
-        return self._initial_amount
-    @initial_amount.setter
-    def initial_amount(self, initial_amount):
-        self._initial_amount = initial_amount
+    #@property
+    #def initial_amount(self):
+    #    return self._initial_amount
+    #@initial_amount.setter
+    #def initial_amount(self, initial_amount):
+    #    self._initial_amount = initial_amount
 
     @property
     def size(self):
-        return Jar(self._size)
+        return self._size
     @size.setter
     def size(self, size):
         size = int(self.deposit) - int(self.withdraw)
@@ -57,10 +58,10 @@ def main():
     print(get_cookies())
 
 def get_cookies():
-    #initial_amount = 0
+    size = 0
     deposit = input("How many cookies to the jar? ")
     withdraw = input("How many cookies will be eaten from the jar? ")
-    return Jar(deposit, withdraw)
+    return Jar(size, deposit, withdraw)
 
 def str_append_list_join(add_sign, n):
     l1 = []
