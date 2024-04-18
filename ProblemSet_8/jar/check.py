@@ -28,9 +28,9 @@ class Jar:
     @property
     def size(self):
         return self._size
-    @initial_amount.setter
-    def initial_amount(self, initial_amount):
-        self._initial_amount = initial_amount
+    @size.setter
+    def size(self, size):
+        self._size = size
 
 
 # Deposit of cookies
