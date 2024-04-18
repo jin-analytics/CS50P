@@ -14,6 +14,9 @@ class Jar:
     @property
     def capacity(self):
         print(f"{self.capacity}")
+    @capacity.setter
+    def capacity(self, capacity):
+        self._capacity = capacity
 
 
 # Deposit of cookies
