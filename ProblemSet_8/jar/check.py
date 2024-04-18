@@ -1,9 +1,10 @@
 class Jar:
-    def __init__(self, deposit, withdraw, initial_amount=0, capacity=12):
+    def __init__(self, deposit, withdraw, initial_amount=0, capacity=12, size):
         self.initial_amount = initial_amount
         self.deposit = deposit
         self.withdraw = withdraw
         self.capacity = capacity
+        self.size = size
 
     def __str__(self):
         #cookies_left = int(self.deposit) - int(self.withdraw)
