@@ -13,7 +13,7 @@ class Jar:
 
     @property
     def capacity(self):
-        print(f"{self.capacity}")
+        return self._capacity
     @capacity.setter
     def capacity(self, capacity):
         self._capacity = capacity
