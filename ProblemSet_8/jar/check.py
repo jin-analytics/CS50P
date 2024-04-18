@@ -6,8 +6,9 @@ class Jar:
 
     def __str__(self):
         cookies_left = int(self.deposit) - int(self.withdraw)
-        for _ in str(cookies_left):
-            c = []
+        c  = []
+        for _ in range(cookies_left):
+
             #c = "🍪"
             c = c.append("🍪")
         #return f"Out of {self.deposit} cookies where {self.withdraw} cookies eaten... {cookies_left} left"
