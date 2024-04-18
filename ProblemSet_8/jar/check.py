@@ -42,5 +42,13 @@ def get_cookies():
     withdraw = input("How many cookies will be eaten from the jar? ")
     return Jar(initial_amount, deposit, withdraw)
 
+def str_append_list_join("🍪", cookies_left):
+    l1 = []
+    i = 0
+    while i < n:
+        l1.append(s)
+        i += 1
+    return ''.join(l1)
+
 if __name__ == "__main__":
     main()
