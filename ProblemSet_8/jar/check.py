@@ -1,5 +1,5 @@
 class Jar:
-    def __init__(self,size, deposit, withdraw, capacity=12):
+    def __init__(self, size, deposit, withdraw, capacity=12):
         #self.initial_amount = initial_amount
         self.size = size
         self.deposit = deposit
