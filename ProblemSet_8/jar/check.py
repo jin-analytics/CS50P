@@ -28,7 +28,7 @@ class Jar:
 
     @property
     def size(self):
-        return self._size
+        return Jar(self._size)
     @size.setter
     def size(self, size):
         size = int(self.deposit) - int(self.withdraw)
