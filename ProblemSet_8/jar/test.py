@@ -38,9 +38,10 @@ class Employee:
 class Developer(Employee):
     raise_amount = 1.22
 
-
-
-
+    def __init__(self, first, last, pay, prog_lang):
+        super().__init__(first, last, pay)
+        #Employee..__init__(self, first, last, pay)
+        self.prog_lang = prog_lang
 
 
 
@@ -79,5 +80,10 @@ employee2 = Employee('Loser','Mustermann',30000)
 #print(Employee.is_workday(my_date))
 
 
-print(Developer('vorname','nachname','100000').raise_amount)
+print(Developer('vorname','nachname','100000','python').raise_amount)
 #print(help(Developer))
+
+dev1=Developer('saida','chui','10', 'html')
+dev2=Developer('ranjid','kui','20', 'java')
+
+print(dev1.prog_lang)
