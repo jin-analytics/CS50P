@@ -7,6 +7,14 @@ class Jar:
         self.size = size #int(deposit - withdraw)
         self.capacity = capacity
 
+
+    def deposit(self, n):
+        ...
+
+    def withdraw(self, n):
+        ...
+
+
 def main():
     #get_cookies()
     cookies = Jar(5, 3)
