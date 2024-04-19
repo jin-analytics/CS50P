@@ -36,15 +36,10 @@ class Jar:
 
 
 def main():
-    #get_cookies()
     cookies = Jar()
-    print(cookies.size)
     cookies.deposit(5)
     cookies.withdraw(3)
-    print(cookies.size)
-    print(cookies.capacity)
-    cookies.capacity = '8'
-    print(cookies.capacity)
+    print(cookies)
 
 def str_append_list_join(add_sign, n):
     l1 = []

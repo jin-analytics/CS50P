@@ -1,70 +1,45 @@
 class Jar:
-    def __init__(self, size, deposit, withdraw, capacity=12):
-        #self.initial_amount = initial_amount
+    def __init__(self, size=0, capacity=12):
         if capacity < 0:
             raise ValueError
         self.size = size
-        self.deposit = deposit
-        self.withdraw = withdraw
         self.capacity = capacity
 
-
     def __str__(self):
-        #cookies_left = int(self.deposit) - int(self.withdraw)
-        #self.size = int(self.deposit) - int(self.withdraw)
-        s = str_append_list_join("🍪", Jar.size)
-        #return f"Out of {self.deposit} cookies where {self.withdraw} cookies eaten... {cookies_left} left"
+        s = str_append_list_join("🍪", self.size)
         return f"{s}"
+
+
+    def deposit(self, n):
+        self.size = self.size + n
+        #self.deposit = deposit
+
+    def withdraw(self, n):
+        self.size = self.size - n
+        #self.withdraw = withdraw
 
     @property
     def capacity(self):
         return self._capacity
     @capacity.setter
-    def capacity(self, capacity):
-        self._capacity = capacity
-
-    #@property
-    #def initial_amount(self):
-    #    return self._initial_amount
-    #@initial_amount.setter
-    #def initial_amount(self, initial_amount):
-    #    self._initial_amount = initial_amount
+    def capacity(self, new_capa):
+        self._capacity = new_capa
 
     @property
     def size(self):
         return self._size
     @size.setter
     def size(self, size):
-        size = int(Jar.deposit) - int(Jar.withdraw)
         self._size = size
-
-
-# Deposit of cookies
-    @property
-    def deposit(self, n):
-        return self._deposit
-    @deposit.setter
-    def deposit(self, deposit):
-        self._deposit = deposit
-
-# Withdraw of cookies
-    @property
-    def withdraw(self, n):
-        return self._withdraw
-    @withdraw.setter
-    def withdraw(self, withdraw):
-        self._withdraw = withdraw
-
+        if size < 0:
+            raise ValueError
 
 
 def main():
-    print(get_cookies())
-
-def get_cookies():
-    si = 0
-    dep = '5'
-    withd = '3'
-    return Jar(si, dep, withd)
+    cookies = Jar()
+    cookies.deposit(10)
+    cookies.withdraw(5)
+    print(cookies)
 
 def str_append_list_join(add_sign, n):
     l1 = []
@@ -76,3 +51,4 @@ def str_append_list_join(add_sign, n):
 
 if __name__ == "__main__":
     main()
+
