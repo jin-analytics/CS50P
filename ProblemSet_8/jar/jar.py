@@ -30,9 +30,9 @@ class Jar:
     @size.setter
     def size(self, size):
         self._size = size
-        if size < 0:
+        if (self._size) < 0:
             raise ValueError
-        elif size > self.capacity:
+        elif int(self._size) > (self.capacity):
             raise ValueError
 
 
