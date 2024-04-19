@@ -23,6 +23,11 @@ class Employee:
     def set_raise_amount(cls, amount):
         cls.raise_amount = amount
 
+    @classmethod
+    def emp_from_string(cls, emp_str)
+        first, last, pay = emp_str.split('-')
+        return cls(first, last, pay)
+
 
 #print('Number of Employees:', Employee.num_of_employees)
 
@@ -37,6 +42,9 @@ employee2 = Employee('Loser','Mustermann',30000)
 
 #print('Number of Employees:', Employee.num_of_employees)
 
-print(employee1.raise_amount)
-Employee.set_raise_amount(1.18)
-print(employee1.raise_amount)
+#print(employee1.raise_amount)
+#Employee.set_raise_amount(1.18)
+#print(employee1.raise_amount)
+
+emp_str = 'Jako-Ing-100'
+
