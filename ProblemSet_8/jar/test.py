@@ -16,7 +16,7 @@ class Employee:
 
 employee1 = Employee('Jakob','Ingwio',100000)
 
-print(Employee.__dict__)
+print(employee1.__dict__)
 
 print(employee1.pay)
 employee1.apply_raise() # applies the pay raise to __init__ self.pay
