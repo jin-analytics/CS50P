@@ -32,7 +32,7 @@ class Jar:
         self._size = size
         if (self._size) < 0:
             raise ValueError
-        elif int(self._size) > (self.capacity):
+        elif int(self._size) > int(self.capacity):
             raise ValueError
 
 
