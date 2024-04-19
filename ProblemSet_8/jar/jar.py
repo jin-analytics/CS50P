@@ -12,11 +12,11 @@ class Jar:
 
 
     def deposit(self, n):
-        self.size = self.size + n
+        self.size = self._size + n
         #self.deposit = deposit
 
     def withdraw(self, n):
-        self.size = self.size - n
+        self.size = self._size - n
         #self.withdraw = withdraw
 
     @property
