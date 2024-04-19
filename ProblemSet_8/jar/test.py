@@ -60,8 +60,8 @@ class Manager(Employee):
         if emp in self.employees:
             self.employees.remove(emp)
 
-    def print_emps(self):
-        for emp in self.amployees:
+    def print_emps(self,emp):
+        for emp in self.employees:
             print('-->'.emp.fullname())
 
 
