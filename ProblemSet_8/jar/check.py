@@ -26,7 +26,8 @@ class Jar:
         ...
 
 def main():
-    print(get_cookies())
+    get_cookies()
+    print(Jar.deposit())
 
 def get_cookies():
     return Jar(5, 3)
