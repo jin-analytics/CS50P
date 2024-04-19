@@ -1,7 +1,5 @@
 class Jar:
     def __init__(self, size=0, capacity=12):
-        if capacity < 0:
-            raise ValueError
         self.size = size
         self.capacity = capacity
 
@@ -22,8 +20,9 @@ class Jar:
     def capacity(self):
         return self._capacity
     @capacity.setter
-    def capacity(self, new_capa):
-        self._capacity = new_capa
+    def capacity(self, capacity):
+        if capacity < 0:
+            raise ValueError
 
     @property
     def size(self):
@@ -33,11 +32,13 @@ class Jar:
         self._size = size
         if size < 0:
             raise ValueError
+        elif size > self.capacity:
+            raise ValueError
 
 
 def main():
     cookies = Jar()
-    cookies.deposit(10)
+    cookies.deposit(30)
     cookies.withdraw(5)
     print(cookies)
 
