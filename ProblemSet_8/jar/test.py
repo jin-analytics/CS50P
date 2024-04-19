@@ -104,7 +104,10 @@ dev2=Developer('ranjid','kui','20', 'java')
 
 print(dev1.prog_lang)
 
-manager1 = Manager('john','smith','100000',dev2)
+manager1 = Manager('john','smith','100000')
 
 manager1.add_emp(dev1)
+manager1.add_emp(dev2)
+print(manager1.employees[0].first)
+manager1.remove_emp(dev1)
 print(manager1.employees[0].first)
