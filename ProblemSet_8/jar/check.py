@@ -34,7 +34,7 @@ def main():
     cookies.withdraw(3)
     print(cookies.size)
     print(cookies.capacity)
-    cookies.capacity(1)
+    Jar.capacity(1)
     print(cookies.capacity)
 
 
