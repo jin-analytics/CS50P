@@ -1,10 +1,10 @@
 class Jar:
-    def __init__(self,deposit, withdraw, size=0,  capacity=12):
+    def __init__(self, capacity=12):
          if capacity < 0:
             raise ValueError
-        self.deposit = deposit
-        self.withdraw = withdraw
-        self.size = size
+        #self.deposit = deposit
+        #self.withdraw = withdraw
+        #self.size = size
         self.capacity = capacity
 
 
@@ -28,7 +28,7 @@ class Jar:
 def main():
     #get_cookies()
     cookies = Jar(5, 3)
-    print(Jar.cookies)
+    print(cookies.deposit())
 
 def get_cookies():
     cookies = Jar(5, 3)
