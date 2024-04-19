@@ -20,8 +20,8 @@ class Jar:
     def capacity(self):
         return self._capacity
     @capacity.setter
-    def capacity(self, capa):
-        if capa < 0:
+    def capacity(self, capacity):
+        if int(capacity) < 0:
             raise ValueError
 
     @property
