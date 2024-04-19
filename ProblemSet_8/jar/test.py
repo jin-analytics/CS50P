@@ -103,3 +103,7 @@ dev1=Developer('saida','chui','10', 'html')
 dev2=Developer('ranjid','kui','20', 'java')
 
 print(dev1.prog_lang)
+
+manager1 = Manager('john','smith','100000',[])
+
+print(Manager.manager1.employees)
