@@ -19,6 +19,10 @@ class Employee:
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amount)
 
+    @classmethod
+    def set_raise_amount(cls, amount):
+        pass
+
 
 #print('Number of Employees:', Employee.num_of_employees)
 
