@@ -24,7 +24,7 @@ class Employee:
         cls.raise_amount = amount
 
     @classmethod
-    def emp_from_string(cls, emp_str)
+    def emp_from_str(cls, emp_str):
         first, last, pay = emp_str.split('-')
         return cls(first, last, pay)
 
@@ -47,4 +47,7 @@ employee2 = Employee('Loser','Mustermann',30000)
 #print(employee1.raise_amount)
 
 emp_str = 'Jako-Ing-100'
+print(emp_str)
+emp_str = Employee.emp_from_str(emp_str)
+print(emp_str)
 
