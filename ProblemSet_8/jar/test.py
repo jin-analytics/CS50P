@@ -39,8 +39,7 @@ class Developer(Employee):
     pass
 
 
-print(Developer('vorname','nachname','100000'))
-print(Developer.first)
+
 
 
 
@@ -78,3 +77,7 @@ employee2 = Employee('Loser','Mustermann',30000)
 #import datetime
 #my_date = datetime.date(2024, 4, 29)
 #print(Employee.is_workday(my_date))
+
+
+print(Developer('vorname','nachname','100000').email)
+print(help(Developer))
