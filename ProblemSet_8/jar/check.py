@@ -16,13 +16,14 @@ class Jar:
 
     @property
     def capacity(self):
-        ...
+        return self._capacity
     @capacity.setter
-    def
+    def capacity(self, new_capa):
+        self._capacity = new_capa
 
-    @property
-    def size(self):
-        ...
+   # @property
+    #def size(self):
+     #   ...
 
 
 def main():
@@ -32,6 +33,9 @@ def main():
     cookies.deposit(5)
     cookies.withdraw(3)
     print(cookies.size)
+    print(cookies.capacity)
+    Jar.capacity(1)
+    print(cookies.capacity)
 
 
 def str_append_list_join(add_sign, n):
