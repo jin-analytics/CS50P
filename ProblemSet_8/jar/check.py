@@ -7,32 +7,11 @@ class Jar:
         #self.size = size
         self.capacity = capacity
 
-
-    def __str__(self):
-        ...
-
-    #def deposit(self, n):
-    #    ...
-
-    def withdraw(self, n):
-        ...
-
-    @property
-    def capacity(self):
-        ...
-
-    @property
-    def size(self):
-        ...
-
 def main():
     #get_cookies()
     cookies = Jar(5, 3)
     print(cookies.deposit())
 
-def get_cookies():
-    cookies = Jar(5, 3)
-    return cookies
 
 def str_append_list_join(add_sign, n):
     l1 = []
