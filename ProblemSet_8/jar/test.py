@@ -36,7 +36,7 @@ class Employee:
 
 
 class Developer(Employee):
-    pass
+    raise_amount = 1.22
 
 
 
@@ -79,5 +79,5 @@ employee2 = Employee('Loser','Mustermann',30000)
 #print(Employee.is_workday(my_date))
 
 
-print(Developer('vorname','nachname','100000').email)
-print(help(Developer))
+print(Developer('vorname','nachname','100000').raise_amount)
+#print(help(Developer))
