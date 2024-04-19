@@ -12,11 +12,11 @@ class Jar:
 
 
     def deposit(self, n):
-        self.size = self._size + n
+        self.size = self.size + n
         #self.deposit = deposit
 
     def withdraw(self, n):
-        self.size = self._size - n
+        self.size = self.size - n
         #self.withdraw = withdraw
 
     @property
@@ -27,20 +27,12 @@ class Jar:
         if int(c) > 12:
             raise ValueError
 
-    @property
-    def size(self):
-        return self._size
-    @size.setter
-    def size(self, si):
-        if int(si) > int(si):
-            raise ValueError
-
 
 
 def main():
     cookies = Jar()
-    cookies.deposit(30)
-    cookies.withdraw(5)
+    cookies.deposit(12)
+    cookies.withdraw(13)
     print(cookies)
 
 def str_append_list_join(add_sign, n):
