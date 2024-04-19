@@ -21,7 +21,7 @@ class Employee:
 
     @classmethod
     def set_raise_amount(cls, amount):
-        pass
+        cls.raise_amount = amount
 
 
 #print('Number of Employees:', Employee.num_of_employees)
@@ -36,3 +36,7 @@ employee2 = Employee('Loser','Mustermann',30000)
 #print('After adjusting pay raise:',employee1.pay)
 
 #print('Number of Employees:', Employee.num_of_employees)
+
+print(employee1.raise_amount)
+Employee.set_raise_amount(1.18)
+print(employee1.raise_amount)
