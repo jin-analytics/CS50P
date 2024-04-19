@@ -41,7 +41,7 @@ class Jar:
 
 # Deposit of cookies
     @property
-    def deposit(self):
+    def deposit(self, n):
         return self._deposit
     @deposit.setter
     def deposit(self, deposit):
@@ -49,7 +49,7 @@ class Jar:
 
 # Withdraw of cookies
     @property
-    def withdraw(self):
+    def withdraw(self, n):
         return self._withdraw
     @withdraw.setter
     def withdraw(self, withdraw):
@@ -61,10 +61,10 @@ def main():
     print(get_cookies())
 
 def get_cookies():
-    size = 0
-    deposit = input("How many cookies to the jar? ")
-    withdraw = input("How many cookies will be eaten from the jar? ")
-    return Jar(size, deposit, withdraw)
+    si = 0
+    dep = '5'
+    withd = '3'
+    return Jar(si, dep, withd)
 
 def str_append_list_join(add_sign, n):
     l1 = []
