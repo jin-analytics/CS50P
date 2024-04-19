@@ -19,14 +19,16 @@ class Employee:
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amount)
 
+
+print('Number of Employees:', Employee.num_of_employees)
+
 employee1 = Employee('Jakob','Ingwio',100000)
 employee2 = Employee('Loser','Mustermann',30000)
 
 employee1.raise_amount = 1.07
-
 #print(employee1.__dict__)
-
 print('Before adjusting pay raise:',employee1.pay)
 employee1.apply_raise() # applies the pay raise to __init__ self.pay
 print('After adjusting pay raise:',employee1.pay)
+
 print('Number of Employees:', Employee.num_of_employees)
