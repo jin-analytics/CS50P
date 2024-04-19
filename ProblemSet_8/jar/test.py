@@ -14,6 +14,9 @@ class Employee:
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amount)
 
-empl_1 = Employee('Jakob','Ingwio',100000)
+employee1 = Employee('Jakob','Ingwio',100000)
 #print(empl_1.__dict__)
-print(Employee.apply_raise(empl_1))
+
+print(employee1.pay)
+employee1.apply_raise()
+print(employee1.pay)
