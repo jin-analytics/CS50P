@@ -35,6 +35,24 @@ class Employee:
         return True
 
 
+class Developer(Employee):
+    pass
+
+
+print(Developer('vorname','nachname','100000'))
+print(Developer.first)
+
+
+
+
+
+
+
+
+
+
+
+
 #print('Number of Employees:', Employee.num_of_employees)
 
 employee1 = Employee('Jakob','Ingwio',100000)
