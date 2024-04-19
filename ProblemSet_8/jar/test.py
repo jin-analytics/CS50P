@@ -28,6 +28,12 @@ class Employee:
         first, last, pay = emp_str.split('-')
         return cls(first, last, pay)
 
+    @staticmethod
+    def is_workday(day):
+        if day.weekday() == 5 or day.weekday() == 6:
+            return False
+        return True
+
 
 #print('Number of Employees:', Employee.num_of_employees)
 
@@ -46,8 +52,11 @@ employee2 = Employee('Loser','Mustermann',30000)
 #Employee.set_raise_amount(1.18)
 #print(employee1.raise_amount)
 
-emp_str = 'Jako-Ing-100'
-print(emp_str)
-emp_str = Employee.emp_from_str(emp_str)
-print(emp_str.first, emp_str.last, emp_str.pay)
+#emp_str = 'Jako-Ing-100'
+#print(emp_str)
+#emp_str = Employee.emp_from_str(emp_str)
+#print(emp_str.first, emp_str.last, emp_str.pay)
 
+#import datetime
+#my_date = datetime.date(2024, 4, 29)
+#print(Employee.is_workday(my_date))
