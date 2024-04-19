@@ -49,5 +49,5 @@ employee2 = Employee('Loser','Mustermann',30000)
 emp_str = 'Jako-Ing-100'
 print(emp_str)
 emp_str = Employee.emp_from_str(emp_str)
-print(emp_str)
+print(emp_str.first, emp_str.last, emp_str.pay)
 
