@@ -25,8 +25,10 @@ class Jar:
     def size(self):
         return self._size
     @size.setter
-    def size(self, new_capa):
-        self._size = new_capa
+    def size(self, size):
+        self._size = size
+        if size < 0:
+            raise ValueError
 
 
 def main():
