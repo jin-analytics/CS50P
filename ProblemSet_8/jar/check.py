@@ -26,11 +26,13 @@ class Jar:
         ...
 
 def main():
-    get_cookies()
-    print(Jar.deposit())
+    #get_cookies()
+    cookies = Jar(5, 3)
+    print(Jar.cookies)
 
 def get_cookies():
-    return Jar(5, 3)
+    cookies = Jar(5, 3)
+    return cookies
 
 def str_append_list_join(add_sign, n):
     l1 = []
