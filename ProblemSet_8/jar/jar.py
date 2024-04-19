@@ -3,6 +3,9 @@ class Jar:
         self.size = size
         self.capacity = capacity
 
+        c = capacity
+        si = size
+
     def __str__(self):
         s = str_append_list_join("🍪", self.size)
         return f"{s}"
@@ -20,19 +23,18 @@ class Jar:
     def capacity(self):
         return self._capacity
     @capacity.setter
-    def capacity(self, capacity):
-        ...
+    def capacity(self, c):
+        if int(c) > 12:
+            raise ValueError
 
     @property
     def size(self):
         return self._size
     @size.setter
-    def size(self, size):
-        self._size = size
-        if (self._size) < 0:
+    def size(self, si):
+        if int(si) > int(si):
             raise ValueError
-        elif int(self._size) > int(self.capacity):
-            raise ValueError
+
 
 
 def main():
