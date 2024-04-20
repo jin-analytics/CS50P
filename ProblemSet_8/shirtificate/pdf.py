@@ -10,7 +10,7 @@ h = 297 #A4 height
 
 pdf.set_font("Helvetica", "B", 16)
 pdf.add_page() # creates page nr. 1
-pdf.cell(80,30,"CS50 Shirtificate", 'C')
+pdf.cell(0,30,"CS50 Shirtificate", border = 0,ln = 1, align = 'C')
 
 
 
