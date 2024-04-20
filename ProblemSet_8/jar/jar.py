@@ -40,7 +40,7 @@ class Jar:
 
 
 def main():
-    cookies = Jar()
+    cookies = Jar(0,9)
     cookies.capacity = 10
     cookies.deposit(12)
     cookies.withdraw(10)
