@@ -26,7 +26,8 @@ print(width, height)
 img = img.crop((0, 0, 593, 592)).resize((493, 492))
 # 1 pixel = 0.2645833333 mm
 # 493 pixel = 130.4395833169 mm
-pdf.image(img, x=20, y=90, keep_aspect_ratio=True)
+# (210mm - 130.43958mm)/2 = 39.78mm
+pdf.image(img, x=19, y=90, keep_aspect_ratio=True)
 
 pdf.cell(0, 30, f"{name} took CS50", new_x="LMARGIN", new_y="NEXT", border = 1, align = 'C') # cell nr.3
 
