@@ -17,4 +17,4 @@ pdf.set_text_color(255, 255, 255)
 pdf.cell(0, 200, f"{name} took CS50", new_x="LMARGIN", new_y="NEXT", border = 0, align = 'C') # cell nr.3
 
 #pdf.image("https://cs50.harvard.edu/python/2022/psets/8/shirtificate/shirtificate.png", h=pdf.eph/2, w=pdf.epw/2)
-pdf.output("pdf-with-image.pdf")
+pdf.output("shirtificate.pdf")
