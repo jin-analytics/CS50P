@@ -20,7 +20,7 @@ pdf.cell(0,30,"CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", border = 1, al
 
 pdf.image("shirtificate.png", Align.C, y=100, w=180) #when just one param. (w or h) setted, the other gets autom. calculated
 
-pdf.set_
+pdf.set_text_color(0, 50, 50)
 pdf.cell(0, 30, f"{name} took CS50", new_x="LMARGIN", new_y="NEXT", border = 1, align = 'C') # cell nr.3
 
 #pdf.image("https://cs50.harvard.edu/python/2022/psets/8/shirtificate/shirtificate.png", h=pdf.eph/2, w=pdf.epw/2)
