@@ -2,7 +2,7 @@ class Jar:
     def __init__(self, size=0, capacity=12):
         self.size = size
         #self.capacity = capacity
-        self._capacity = capacity
+        self.capacity = capacity
         #c = capacity
         #si = size
 
@@ -32,10 +32,10 @@ class Jar:
     def size(self):
         return self._size
     @size.setter
-    def size(self, c):
-       # if int(c) < 0:
-        #    raise ValueError
-        self._size = c
+    def size(self, s):
+        if int(s) < 0:
+            raise ValueError
+        self._size = s
 
 
 
