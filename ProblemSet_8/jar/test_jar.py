@@ -5,7 +5,8 @@ import pytest
 
 
 def test_init():
-    ...
+    jar = Jar()
+    assert init(jar) == ""
 
 
 def test_str():
