@@ -6,7 +6,8 @@ import pytest
 
 def test_init():
     jar = Jar()
-    assert init(jar) == ""
+    assert jar.capacity == 12
+    assert jar.size == 0
 
 
 def test_str():
