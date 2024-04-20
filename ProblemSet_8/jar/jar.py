@@ -41,7 +41,7 @@ class Jar:
 
 def main():
     cookies = Jar()
-    cookies.capacity = -10
+    #cookies.capacity = -10
     cookies.deposit(12)
     cookies.withdraw(10)
     print(cookies)
