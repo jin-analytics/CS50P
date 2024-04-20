@@ -8,12 +8,10 @@ pdf = FPDF(orientation="P", unit="mm", format="A4")
 w = 210 #A4 width
 h = 297 #A4 height
 
+pdf.set_font("Helvetica", "B", 16)
 pdf.add_page() # creates page nr. 1
+pdf.cell(80,30,"CS50 Shirtificate", 'C')
 
-pdf.set_font("helvetica", "B", 16)
-pdf.cell(0,0,"CS50 Shirtificate", 'C')
-#pdf.cell("CS50 Shirtificate")
-#pdf.XPos(Center)
 
 
 img = Image.open("shirtificate.png")
