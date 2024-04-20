@@ -4,7 +4,7 @@ from PIL import Image
 
 name = input("Name: ")
 
-class PDF(FPDF(orientation="P", unit="mm", format="A4")):
+class PDF(FPDF):
     def header(self):
         self.set_font("helvetica", "B", 16)
         self.set_draw_color(0, 80, 180)
