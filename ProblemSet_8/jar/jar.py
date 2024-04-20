@@ -1,10 +1,7 @@
 class Jar:
     def __init__(self, size=0, capacity=12):
-        self.size = size
-        #self.capacity = capacity
-        self.capacity = capacity
-        #c = capacity
-        #si = size
+        self._size = size
+        self._capacity = capacity
 
     def __str__(self):
         s = str_append_list_join("🍪", self.size)
