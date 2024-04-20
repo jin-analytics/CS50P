@@ -14,8 +14,8 @@ pdf.add_page() # creates page nr. 1
 pdf.cell(0,30,"CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", border = 1, align = 'C') #cell nr.1
 # Abstandshalter zwischen Cell Nr 1 und Cell Nr 3
 
-#pdf.cell(0,90,"", new_x="LMARGIN", new_y="NEXT", border = 1, align = 'C') #cell nr.2
-pdf.set_xy(0, h/2.5)
+pdf.cell(0,90,"", new_x="LMARGIN", new_y="NEXT", border = 1, align = 'C') #cell nr.2
+#pdf.set_xy(0, h/2.5)
 
 
 img = Image.open("shirtificate.png")
