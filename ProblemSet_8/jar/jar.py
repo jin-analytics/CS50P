@@ -24,7 +24,7 @@ class Jar:
         return self._capacity
     @capacity.setter
     def capacity(self, c):
-        if int(c) > 12:
+        if int(c) < 0:
             raise ValueError
         self._capacity = c
 
@@ -33,8 +33,8 @@ class Jar:
         return self._size
     @size.setter
     def size(self, c):
-        if int(c) < 0:
-            raise ValueError
+       # if int(c) < 0:
+        #    raise ValueError
         self._size = c
 
 
@@ -44,7 +44,7 @@ def main():
     cookies.deposit(12)
     cookies.withdraw(13)
     print(cookies)
-    cookies.capacity = 12
+    cookies.capacity = -1
     print(cookies.capacity)
 
 def str_append_list_join(add_sign, n):
