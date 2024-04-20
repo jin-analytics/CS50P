@@ -1,38 +1,19 @@
 from fpdf import FPDF
+from fpdf import Align
 
-
-
-class PDF(FPDF):
-    def header(self):
-        # Rendering logo:
-        self.image("shirtificate.png", 10, 8, 33)
-        # Setting font: helvetica bold 15
-        self.set_font("helvetica", "B", 15)
-        # Moving cursor to the right:
-        self.cell(80)
-        # Printing title:
-        self.cell(30, 10, "Title", border=1, align="C")
-        # Performing a line break:
-        self.ln(20)
-
-    def footer(self):
-        # Position cursor at 1.5 cm from bottom:
-        self.set_y(-15)
-        # Setting font: helvetica italic 8
-        self.set_font("helvetica", "I", 8)
-        # Printing page number:
-        self.cell(0, 10, f"Page {self.page_no()}/{{nb}}", align="C")
+name = input("Name: ")
 
 pdf = FPDF(orientation="P", unit="mm", format="A4")
 
-def main():
-    # Instantiation of inherited class
-    pdf = PDF()
-    pdf.add_page()
-    pdf.set_font("Times", size=12)
-    for i in range(1, 41):
-        pdf.cell(0, 10, f"Printing line number {i}", new_x="LMARGIN", new_y="NEXT")
-    pdf.output("new-tuto2.pdf")
+pdf.set_font("Helvetica", "B", 16)
+pdf.add_page() # creates page nr. 1
 
-if __name__ == "__main__":
-    main()
+pdf.cell(0,30,"CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", border = 1, align = 'C') #cell nr.1
+
+pdf.image("shirtificate.png", Align.C, y=90, w=180) #when just one param. (w or h) setted, the other gets autom. calculated
+
+
+pdf.cell(0, 30, f"{name} took CS50", new_x="LMARGIN", new_y="NEXT", border = 1, align = 'C') # cell nr.3
+
+#pdf.image("https://cs50.harvard.edu/python/2022/psets/8/shirtificate/shirtificate.png", h=pdf.eph/2, w=pdf.epw/2)
+pdf.output("pdf-with-image.pdf")
