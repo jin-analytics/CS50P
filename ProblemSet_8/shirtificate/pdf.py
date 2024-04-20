@@ -4,7 +4,12 @@ from PIL import Image
 name = input("Name: ")
 
 pdf = FPDF(orientation="P", unit="mm", format="A4")
-pdf.add_page()
+
+w = 210 #A4 width
+h = 297 #A4 height
+
+pdf.add_page() # creates page nr. 1
+
 pdf.set_font("helvetica", "B", 16)
 pdf.cell(0,0,"CS50 Shirtificate", 'C')
 #pdf.cell("CS50 Shirtificate")
