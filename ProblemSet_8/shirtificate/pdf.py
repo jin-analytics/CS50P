@@ -10,9 +10,9 @@ h = 297 #A4 height
 
 pdf.set_font("Helvetica", "B", 16)
 pdf.add_page() # creates page nr. 1
-pdf.cell(0,30,"CS50 Shirtificate", align = 'C', )
+pdf.cell(0,30,"CS50 Shirtificate", align = 'C', new_x="Center", new_y="NEXT")
 
-pdf.cell(0,30,"____________", border = 1 , align = 'C')
+pdf.cell(0,300,"____________", border = 1 , align = 'C')
 
 
 img = Image.open("shirtificate.png")
