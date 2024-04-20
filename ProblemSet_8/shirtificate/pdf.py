@@ -17,8 +17,8 @@ pdf.cell(0,90,"", new_x="LMARGIN", new_y="NEXT", border = 1, align = 'C') #cell 
 
 
 img = Image.open("shirtificate.png")
-#img = img.crop((0, 0, 593, 592)).resize((493, 492))
-pdf.image(img, x=0, y=90, keep_aspect_ratio=True)
+img = img.crop((0, 0, 593, 592)).resize((493, 492))
+pdf.image(img, x=20, y=90, keep_aspect_ratio=True)
 
 pdf.cell(0, 30, f"{name} took CS50", new_x="CENTER", new_y="NEXT", border = 1, align = 'C') # cell nr.3
 
