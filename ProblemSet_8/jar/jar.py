@@ -4,8 +4,7 @@ class Jar:
         self.capacity = capacity
 
     def __str__(self):
-        s = str_append_list_join("🍪", self.size)
-        return f"{s}"
+        return str_append_list_join("🍪", self.size)
 
 
     def deposit(self, n):
