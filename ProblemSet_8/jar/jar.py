@@ -43,6 +43,7 @@ def main():
     cookies.deposit(12)
     cookies.withdraw(10)
     print(cookies)
+    cookies.capacity = -1
 
 def str_append_list_join(add_sign, n):
     l1 = []
