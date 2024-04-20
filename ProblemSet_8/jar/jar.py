@@ -1,13 +1,10 @@
 class Jar:
-    def __init__(self, size=0, capacity=12):
-        self.size = size
+    def __init__(self, capacity=12):
+        self.size = 0
         self.capacity = capacity
-        #if int(capacity) < 0:
-        #    raise ValueError
 
     def __str__(self):
         return str_append_list_join("🍪", self.size)
-
 
     def deposit(self, n):
         self.size = self.size + n
@@ -38,10 +35,8 @@ class Jar:
         self._size = s
 
 
-
 def main():
-    cookies = Jar(0,9)
-    cookies.capacity = 10
+    cookies = Jar()
     cookies.deposit(12)
     cookies.withdraw(10)
     print(cookies)
