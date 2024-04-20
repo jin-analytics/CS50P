@@ -17,7 +17,7 @@ pdf.cell(0,30,"CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", border = 1, al
 pdf.cell(0,90,"", new_x="LMARGIN", new_y="NEXT", border = 1, align = 'C') #cell nr.2
 #pdf.set_xy(0, h/2.5)
 
-pdf.image("shirtificate.png", x=Align.C, y=90) #when just one param. (w or h) setted, the other gets autom. calculated
+pdf.image("shirtificate.png", align = 'C', y=90) #when just one param. (w or h) setted, the other gets autom. calculated
 
 #img = Image.open("shirtificate.png")
 #width, height = img.size   # Get dimensions
