@@ -33,7 +33,7 @@ class Jar:
         return self._size
     @size.setter
     def size(self, c):
-        if int(c) > 12:
+        if int(c) < 0:
             raise ValueError
         self._size = c
 
