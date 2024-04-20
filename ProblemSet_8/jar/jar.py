@@ -14,7 +14,7 @@ class Jar:
 
     def withdraw(self, n):
         self.size = self.size - n
-        if int(n) > int(self.size):
+        if int(self.size) < 0:
             raise ValueError
 
     @property
