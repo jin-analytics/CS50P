@@ -6,7 +6,7 @@ name = input("Name: ")
 pdf = FPDF(orientation="P", unit="mm", format="A4")
 pdf.add_page()
 pdf.set_font("helvetica", "B", 16)
-pdf.cell("CS50 Shirtificate", 'C')
+pdf.cell(0,0,"CS50 Shirtificate", 'C')
 #pdf.cell("CS50 Shirtificate")
 #pdf.XPos(Center)
 
