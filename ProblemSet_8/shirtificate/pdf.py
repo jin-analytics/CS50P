@@ -17,17 +17,17 @@ pdf.cell(0,30,"CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", border = 1, al
 pdf.cell(0,90,"", new_x="LMARGIN", new_y="NEXT", border = 1, align = 'C') #cell nr.2
 #pdf.set_xy(0, h/2.5)
 
-#pdf.image("shirtificate.png", w=180) #when just one param. (w or h) setted, the other gets autom. calculated
+pdf.image("shirtificate.png", x=Align.C, y=90) #when just one param. (w or h) setted, the other gets autom. calculated
 
-img = Image.open("shirtificate.png")
-width, height = img.size   # Get dimensions
-print(width, height)
+#img = Image.open("shirtificate.png")
+#width, height = img.size   # Get dimensions
+#print(width, height)
 
-img = img.crop((0, 0, 593, 592)).resize((493, 492))
+#img = img.crop((0, 0, 593, 592)).resize((493, 492))
 # 1 pixel = 0.2645833333 mm
 # 493 pixel = 130.4395833169 mm
 # (210mm - 130.43958mm)/2 = 39.78mm
-pdf.image(img, x=19, y=90, keep_aspect_ratio=True)
+#pdf.image(img, x=19, y=90, keep_aspect_ratio=True)
 
 pdf.cell(0, 30, f"{name} took CS50", new_x="LMARGIN", new_y="NEXT", border = 1, align = 'C') # cell nr.3
 
