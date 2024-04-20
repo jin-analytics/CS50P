@@ -4,7 +4,23 @@ from PIL import Image
 
 name = input("Name: ")
 
-pdf = FPDF(orientation="P", unit="mm", format="A4")
+class PDF(FPDF(orientation="P", unit="mm", format="A4")):
+    def header(self):
+        self.set_font("helvetica", "B", 16)
+        self.set_draw_color(0, 80, 180)
+        self.set_fill_color(230, 230, 0)
+        self.set_text_color(220, 50, 50)
+        self.set_line_width(1)
+        self.cell(
+            width,
+            9,
+            self.title,
+            border=1,
+            new_x="LMARGIN",
+            new_y="NEXT",
+            align="C",
+            fill=True,
+        )
 
 
 pdf.set_font("Helvetica", "B", 16)
