@@ -20,6 +20,9 @@ pdf.cell(0,90,"", new_x="LMARGIN", new_y="NEXT", border = 1, align = 'C') #cell 
 #pdf.image("shirtificate.png", w=180) #when just one param. (w or h) setted, the other gets autom. calculated
 
 img = Image.open("shirtificate.png")
+width, height = img.size   # Get dimensions
+print(width, height)
+
 img = img.crop((0, 0, 593, 592)).resize((493, 492))
 pdf.image(img, x=20, y=90, keep_aspect_ratio=True)
 
