@@ -4,8 +4,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def main():
-    plot_data()
+    #plot_data()
     #get_data()
+    x = np.linspace(0, 2 * np.pi, 200)
+    y = np.sin(x)
+
+    fig, ax = plt.subplots()
+    ax.plot(x, y)
+    plt.show()
 
 # first, use random data... later arduino
 def get_data():
