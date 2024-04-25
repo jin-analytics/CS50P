@@ -5,7 +5,7 @@ import numpy as np
 
 def main():
     plot_data()
-    get_data()
+    #get_data()
 
 # first, use random data... later arduino
 def get_data():
