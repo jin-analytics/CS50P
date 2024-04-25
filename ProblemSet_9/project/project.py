@@ -1,14 +1,13 @@
-
 main():
 ...
 
 read_data_from_arduino():
 ...
 
-function2():
+create_window_for_data_plot():
 ...
 
-function3():
+plot_data():
 ...
 
 
