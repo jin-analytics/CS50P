@@ -1,7 +1,10 @@
+import random
 main():
 ...
 
-read_data_from_arduino():
+# first, use random data
+get_data():
+
 ...
 
 create_window_for_data_plot():
