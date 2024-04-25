@@ -6,15 +6,12 @@ def main():
 
 # first, use random data... later arduino
 def get_data():
-    try:
-        while True:
-            temp = random.randrange(15, 25,)
-            #if temp == 18:
-             #   return False
-            print(temp)
-            time.sleep(1)
-    except EOFError:
+    while True:
+        temp = random.randrange(15, 25,)
+        print(temp)
+        time.sleep(1)
         exit()
+
 
 def create_window_for_data_plot():
     ...
