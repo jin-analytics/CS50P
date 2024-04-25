@@ -1,9 +1,10 @@
 import random
 main():
-...
+    get_data():
 
 # first, use random data
 get_data():
+    temp = random.randrange(15, 25, 0.2)
 
 ...
 
