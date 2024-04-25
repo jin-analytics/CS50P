@@ -10,6 +10,7 @@ def get_data():
             #if temp == 18:
              #   return False
             print(temp)
+            pause(1)
     except EOFError:
         exit()
 
