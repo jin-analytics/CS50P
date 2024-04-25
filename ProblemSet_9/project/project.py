@@ -1,7 +1,8 @@
+
 main():
 ...
 
-function1():
+read_data_from_arduino():
 ...
 
 function2():
