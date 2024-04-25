@@ -4,11 +4,14 @@ def main():
 
 # first, use random data... later arduino
 def get_data():
-    while True:
-        temp = random.randrange(15, 25)
-        if temp == 18:
-            return False
-        print(get_data())
+    try:
+        while True:
+            temp = random.randrange(15, 25,)
+            #if temp == 18:
+             #   return False
+            print(temp)
+    except EOFError:
+        exit()
 
 def create_window_for_data_plot():
     ...
