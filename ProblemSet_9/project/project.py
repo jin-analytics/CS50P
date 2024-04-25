@@ -1,4 +1,6 @@
 import random
+import time
+
 def main():
     get_data()
 
@@ -10,7 +12,7 @@ def get_data():
             #if temp == 18:
              #   return False
             print(temp)
-            pause(1)
+            time.sleep(1)
     except EOFError:
         exit()
 
