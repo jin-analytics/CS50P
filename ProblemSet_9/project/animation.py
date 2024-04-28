@@ -4,11 +4,12 @@ import random
 import matplotlib
 from matplotlib import FuncAnimation
 
-def main():
-    i = input("Number of data points: ")
-    plot_animated_data(i, get_data(i))
 
-# first, use random data... later arduino data
+x = []
+y = []
+
+index = count()
+
 def get_data(i):
     templist = []
     for _ in range(int(i)):
@@ -20,8 +21,6 @@ def get_data(i):
 def plot_animated_data(i, tempdata):
     # evenly spaced values with given stepwidth (default stepwidth: 1)
     x = np.arange(0, int(i))
-    # evenly spaced values with given a number of steps
-    x_float = np.linspace(0, int(i), int(i)+1)
 
     #Figure settings
     fig, ax = plt.subplots(figsize=(5, 3))
@@ -33,4 +32,3 @@ def plot_animated_data(i, tempdata):
 
     plt.savefig('data.png', bbox_inches='tight') #fits figure with less whitespace around the image
 
-main()
