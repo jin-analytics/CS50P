@@ -11,7 +11,7 @@ def main():
 def get_data(i):
     templist = []
     for _ in range(int(i)):
-        temp = random.randrange(15, 25,)
+        temp = random.randrange(15, 25)
         templist.append(temp)
         #time.sleep(1)
     return templist
@@ -29,7 +29,7 @@ def plot_data(i, tempdata):
     ax.set_xlabel('Datapoint [Nr.]')
     ax.set_ylabel('Temprature [°C]')
     ax.set_title('Temperature data from Arduino', loc='center')
-    
+
     plt.savefig('data.png', bbox_inches='tight') #fits figure with less whitespace around the image
 
 main()
