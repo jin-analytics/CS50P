@@ -20,14 +20,7 @@ def create_window_for_data_plot():
     ...
 
 def plot_data():
-    x = np.linspace(0, 2 * np.pi, 200)
-    y = np.sin(x)
-
-    fig, ax = plt.subplots()
-    ax.plot(x, y)
-    #plt.show()
-    with open('plot.png', 'w') as file:
-        file.write(plt.show())
+ ...
 
 
 if __name__ == "__main__":
