@@ -14,6 +14,7 @@ def plot_animated_data(i):
 
     plt.cla()
     plt.plot(x,y)
-    plt.savefig('data.png', bbox_inches='tight') #fits figure with less whitespace around the image
+
 
 ani = animation.FuncAnimation(plt.gcf(), plot_animated_data, interval=1000)
+#ani.savefig('data.png', bbox_inches='tight') #fits figure with less whitespace around the image
