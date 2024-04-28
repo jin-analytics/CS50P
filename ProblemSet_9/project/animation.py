@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random
 import matplotlib
-from matplotlib import FuncAnimation
+from matplotlib import animation
+import count
 
 
 x = []
@@ -24,4 +25,4 @@ def plot_animated_data(i, tempdata):
 
     plt.savefig('data.png', bbox_inches='tight') #fits figure with less whitespace around the image
 
-ani = FuncAnimation(plt.gcf(), animate, interval=1000)
+ani = animation.FuncAnimation(plt.gcf(), animate, interval=1000)
