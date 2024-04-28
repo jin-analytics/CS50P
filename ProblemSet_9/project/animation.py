@@ -12,6 +12,7 @@ def plot_animated_data(i):
     x.append(next(index))
     y.append(random.randrange(17, 22))
 
+    plt.cla()
     plt.plot(x,y)
     plt.savefig('data.png', bbox_inches='tight') #fits figure with less whitespace around the image
 
