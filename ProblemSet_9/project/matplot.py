@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 def main():
+    print('ww')
     get_data()
     #plot_data()
 
@@ -10,5 +11,5 @@ def get_data():
     for _ in range(10):
         temp = random.randrange(15, 25,)
         templs.append(temp)
-        #print(templs)
+        print(templs)
         #time.sleep(1)
