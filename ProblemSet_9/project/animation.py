@@ -10,17 +10,9 @@ y = []
 
 index = count()
 
-def get_data(i):
-    templist = []
-    for _ in range(int(i)):
-        temp = random.randrange(17, 22)
-        templist.append(temp)
-        #time.sleep(1)
-    return templist
-
 def plot_animated_data(i, tempdata):
-    # evenly spaced values with given stepwidth (default stepwidth: 1)
-    x = np.arange(0, int(i))
+    x.append(next(index))
+    y.append(random.randrange(17, 22))
 
     #Figure settings
     fig, ax = plt.subplots(figsize=(5, 3))
