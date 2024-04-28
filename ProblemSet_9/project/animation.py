@@ -1,23 +1,22 @@
-import matplotlib.pyplot as plt
 import random
-from matplotlib import animation
-import itertools
-import time
+from itertools import count
+#import pandas as pd
+import matplotlib.pyplot as plt
 
-x = []
-y = []
+plt.style.use('fivethirtyeight')
 
-index = itertools.count() ## count(2.5, 0.5) → 2.5 3.0 3.5 ...
+x_vals = [0, 1, 2, 3, 4, 5]
+y_vals = [0, 1, 3, 2, 3, 5]
 
-def plot_animated_data(i):
-    x.append(next(index))
-    y.append(random.randrange(17, 22))
-
-    plt.cla()
-    plt.plot(x,y)
+plt.plot(x_vals, y_vals)
 
 
-ani = animation.Animation(plt.gcf(), plot_animated_data)
-plt.savefig('data.png', bbox_inches='tight') #fits figure with less whitespace around the image
+index = count()
 
-time(1)
+def animate(i):
+    x_vals.append(next(index))
+    y_vals.append(random.randint(0, 5))
+
+
+plt.tight_layout()
+plt.savefig('pic.png')
