@@ -7,7 +7,7 @@ from itertools import count
 x = []
 y = []
 
-index = count()
+index = count() ## count(2.5, 0.5) → 2.5 3.0 3.5 ...
 
 def plot_animated_data(i, tempdata):
     x.append(next(index))
