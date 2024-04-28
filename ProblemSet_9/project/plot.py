@@ -1,11 +1,12 @@
 import matplotlib.pyplot as plt
+import numpy as np
 import random
 
 def main():
     get_data()
-    #plot_data()
+    plot_data()
 
-# first, use random data... later arduino
+# first, use random data... later arduino data
 def get_data():
     #while True:
     templist = []
@@ -17,6 +18,10 @@ def get_data():
     return templist
 
 def plot_data():
-    
+    # evenly spaced values with given stepwidth (default stepwidth: 1)
+    y = np.arange(0, 10)
+    # evenly spaced values with given a number of steps
+    y_float = np.linspace(0, 10, 11)
+    print(y)
 
 main()
