@@ -3,7 +3,7 @@ import numpy as np
 import random
 
 def main():
-    i = input("number of data points")
+    i = input("Number of data points: ")
     get_data(i)
     plot_data(i)
 
@@ -13,7 +13,7 @@ def get_data(i):
     templist = []
     for _ in range(int(i)):
         temp = random.randrange(15, 25,)
-        templist.append(temp)
+        templist.append(temp+1)
         #print(templs)
         #time.sleep(1)
     return templist
