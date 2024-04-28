@@ -26,7 +26,6 @@ def plot_data(i, x):
     #print(y)
     #print(y_float)
 
-    plt.plot(x, y)
-    plt.show()
+    fig = plt.plot(x, y)
 
 main()
