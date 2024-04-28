@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random
 import matplotlib
+from matplotlib import FuncAnimation
 
 def main():
     i = input("Number of data points: ")
