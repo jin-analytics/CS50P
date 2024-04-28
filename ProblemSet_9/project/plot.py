@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import random
+import matplotlib
 
 def main():
     i = input("Number of data points: ")
@@ -20,6 +21,12 @@ def plot_data(i, tempdata):
     x = np.arange(0, int(i))
     # evenly spaced values with given a number of steps
     x_float = np.linspace(0, int(i), int(i)+1)
+
+    #Figure settings
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    fig.subplots_adjust(top=0.85)
+
     plt.plot(x, tempdata)
     #plt.savefig('data.png')
     plt.savefig('data.png', bbox_inches='tight') #fits figure with less whitespace around the image
