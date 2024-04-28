@@ -30,7 +30,9 @@ def plot_data():
 
     fig, ax = plt.subplots()
     ax.plot(x, y)
-    plt.show()
+    #plt.show()
+    with open('plot.png', 'w') as file:
+        file.write(plt.show())
 
 
 if __name__ == "__main__":
