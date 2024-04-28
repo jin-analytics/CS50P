@@ -9,7 +9,7 @@ y = []
 
 index = count() ## count(2.5, 0.5) → 2.5 3.0 3.5 ...
 
-def plot_animated_data(i, tempdata):
+def plot_animated_data(i):
     x.append(next(index))
     y.append(random.randrange(17, 22))
 
