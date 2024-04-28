@@ -11,7 +11,7 @@ def main():
 def get_data(i):
     templist = []
     for _ in range(int(i)):
-        temp = random.randrange(15, 25)
+        temp = random.randrange(17, 22)
         templist.append(temp)
         #time.sleep(1)
     return templist
