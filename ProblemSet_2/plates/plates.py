@@ -58,7 +58,7 @@ def sign_detection(plate_input):
     for signs in plate_input:
         # detects: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ in the input
         # isspace() detects: characters space and tab
-        if signs in "!#$%&' ()*+,-./:;<=>?@[\]^_`{|}~" or signs.isspace() == True:
+        if signs in "!#$%&' ()*+,-./:;<=>?@[]^_`{|}~" or signs.isspace() == True:
             #print("detected")
             return False
             break
