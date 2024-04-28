@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import random
 from matplotlib import animation
 import itertools
+import time
 
 x = []
 y = []
@@ -19,3 +20,4 @@ def plot_animated_data(i):
 ani = animation.Animation(plt.gcf(), plot_animated_data)
 plt.savefig('data.png', bbox_inches='tight') #fits figure with less whitespace around the image
 
+time(1)
