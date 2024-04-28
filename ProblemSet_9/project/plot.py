@@ -26,8 +26,8 @@ def plot_data(i, tempdata):
     fig, ax = plt.subplots(figsize=(5, 3))
     fig.subplots_adjust(bottom=0.15, left=0.2)
     ax.plot(x, tempdata)
-    ax.set_xlabel('Time [s]')
-    ax.set_ylabel('Damped oscillation [V]')
+    ax.set_xlabel('Datapoints [Nr.]')
+    ax.set_ylabel('Temprature [°C]')
 
 
     plt.savefig('data.png', bbox_inches='tight') #fits figure with less whitespace around the image
