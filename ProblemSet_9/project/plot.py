@@ -13,7 +13,7 @@ def get_data(i):
     templist = []
     for _ in range(int(i)):
         temp = random.randrange(15, 25,)
-        templist.append(temp+1)
+        templist.append(temp)
         #print(templs)
         #time.sleep(1)
     return templist
