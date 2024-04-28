@@ -2,6 +2,7 @@ import random
 from itertools import count
 #import pandas as pd
 import matplotlib.pyplot as plt
+import time
 
 plt.style.use('fivethirtyeight')
 
@@ -15,8 +16,9 @@ index = count()
 
 def animate(i):
     x_vals.append(next(index))
-    y_vals.append(random.randint(0, 5))
+    y_vals.append(random.randint(0, 20))
 
 
 plt.tight_layout()
 plt.savefig('pic.png')
+time.sleep(1)
