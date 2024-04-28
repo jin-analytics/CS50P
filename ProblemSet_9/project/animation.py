@@ -10,6 +10,7 @@ plt.style.use('fivethirtyeight')
 x_vals = []
 y_vals = []
 
+plt.cla()
 plt.plot(x_vals, y_vals)
 
 
