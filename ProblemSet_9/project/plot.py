@@ -26,7 +26,7 @@ def plot_data(i, tempdata):
     fig, ax = plt.subplots(figsize=(5, 3))
     fig.subplots_adjust(bottom=0.15, left=0.2)
     ax.plot(x, tempdata)
-    ax.set_xlabel('Datapoints [Nr.]')
+    ax.set_xlabel('Datapoint [Nr.]')
     ax.set_ylabel('Temprature [°C]')
 
 
