@@ -20,7 +20,6 @@ def plot_data(i, tempdata):
     x = np.arange(0, int(i))
     # evenly spaced values with given a number of steps
     x_float = np.linspace(0, int(i), int(i)+1)
-
     plt.plot(x, tempdata)
     #plt.savefig('data.png')
     plt.savefig('data.png', bbox_inches='tight') #fits figure with less whitespace around the image
