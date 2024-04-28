@@ -9,7 +9,8 @@ def main():
 
 # first, use random data... later arduino
 def get_data():
-    while _ in range(10):
+    #while True:
+    for _ in range(10):
         temp = random.randrange(15, 25,)
         print(temp)
         time.sleep(1)
