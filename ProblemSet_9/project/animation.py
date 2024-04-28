@@ -12,14 +12,7 @@ def plot_animated_data(i):
     x.append(next(index))
     y.append(random.randrange(17, 22))
 
-    #Figure settings
-    fig, ax = plt.subplots(figsize=(5, 3))
-    fig.subplots_adjust(bottom=0.15, left=0.2)
-    ax.plot(x, y)
-    ax.set_xlabel('Datapoint [Nr.]')
-    ax.set_ylabel('Temprature [°C]')
-    ax.set_title('Temperature data from Arduino', loc='center')
-
+    plt.plot(x,y)
     plt.savefig('data.png', bbox_inches='tight') #fits figure with less whitespace around the image
 
 ani = animation.FuncAnimation(plt.gcf(), plot_animated_data, interval=1000)
