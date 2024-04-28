@@ -4,8 +4,8 @@ import random
 
 def main():
     i = input("Number of data points: ")
-    get_data(i)
-    plot_data(i)
+    #x = get_data(i)
+    plot_data(i, get_data(i))
 
 # first, use random data... later arduino data
 def get_data(i):
@@ -18,12 +18,15 @@ def get_data(i):
         #time.sleep(1)
     return templist
 
-def plot_data(i):
+def plot_data(i, x):
     # evenly spaced values with given stepwidth (default stepwidth: 1)
     y = np.arange(0, int(i))
     # evenly spaced values with given a number of steps
     y_float = np.linspace(0, int(i), int(i)+1)
-    print(y)
-    print(y_float)
+    #print(y)
+    #print(y_float)
+
+    plt.plot(x, y)
+    plt.show()
 
 main()
