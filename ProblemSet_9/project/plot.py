@@ -27,6 +27,6 @@ def plot_data(i, x):
     #print(y_float)
 
     plt.plot(x, y)
-    plt.savefig('foo.png')
+    plt.savefig('data.png')
 
 main()
