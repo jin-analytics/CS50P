@@ -18,15 +18,15 @@ def get_data(i):
         #time.sleep(1)
     return templist
 
-def plot_data(i, x):
+def plot_data(i, tempdata):
     # evenly spaced values with given stepwidth (default stepwidth: 1)
-    y = np.arange(0, int(i))
+    x = np.arange(0, int(i))
     # evenly spaced values with given a number of steps
     y_float = np.linspace(0, int(i), int(i)+1)
     #print(y)
     #print(y_float)
 
-    plt.plot(x, y)
+    plt.plot(x, tempdata)
     plt.savefig('data.png')
 
 main()
