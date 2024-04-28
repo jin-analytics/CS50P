@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import random
 from matplotlib import animation
 import count
-
+from itertools import count
 
 x = []
 y = []
