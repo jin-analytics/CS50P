@@ -48,19 +48,6 @@ ax1.legend(lines, labels, loc="upper right")
 (animated_plot_C,) = ax1.plot([], [], "ro-", markersize=4)
 (animated_plot_F,) = ax2.plot([], [], "bo-", markersize=4)
 
-def main():
-    serial_data(sPort, Baud)
-    csv_header(fieldnames)
-    # FuncAnimation is used to create the animation:
-    ani1 = FuncAnimation(
-        fig=fig,  # fig is the figure to animate
-        func=animation,  # update is the function to call at each frame
-        frames=1000,  # frames specifies the number of frames in the animation.
-        save_count=None,  # then there is no error message
-        interval=1000,  # interval is the delay between frames in milliseconds.
-    )
-    plt.show()
-
 
 # * - - - Animated plot
 def animation(frame):
@@ -144,4 +131,14 @@ def serial_data(s, b):
 
 # * - - - Start
 if __name__ == "__main__":
-    main()
+    serial_data(sPort, Baud)
+    csv_header(fieldnames)
+    # FuncAnimation is used to create the animation:
+    ani1 = FuncAnimation(
+        fig=fig,  # fig is the figure to animate
+        func=animation,  # update is the function to call at each frame
+        frames=1000,  # frames specifies the number of frames in the animation.
+        save_count=None,  # then there is no error message
+        interval=1000,  # interval is the delay between frames in milliseconds.
+    )
+    plt.show()

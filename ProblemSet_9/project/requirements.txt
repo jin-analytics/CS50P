@@ -1,2 +1,8 @@
-#Any pip-installable libraries that your project requires must be listed,...
-#one per line, in a file called requirements.txt in the root of your project.
+# For this project, you need the following libraries installed
+pip install random
+pip install re
+pip install csv
+pip install time
+pip install matplotlib
+pip install datetime
+pip install serial

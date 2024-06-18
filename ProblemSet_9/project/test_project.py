@@ -6,10 +6,9 @@ def test_init():
     #assert jar.size == 0
 
 
-def test_str():
-    #jar = Jar()
-    #assert str(jar) == ""
-    ...
+def test_serial_data():
+    assert sData[0].isdigit == True
+    assert sData[1].isdigit == True
 
 def test_function_1():
     ...

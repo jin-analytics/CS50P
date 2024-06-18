@@ -1,14 +1,8 @@
-import re
 import csv
-import time
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+import random
 from datetime import datetime
-import serial.tools.list_ports
-
-# * - - - Define USB Modem and Baudrate for the connected Arduino
-sPort = "/dev/cu.usbmodem101"
-Baud = 9600
 
 # * - - - Creates the headername for the file 'data.csv'
 fieldnames = ["Date", "Time", "Datapoint [No.]", "Temperature [˚C]", "Humidity [%]"]
@@ -48,13 +42,13 @@ ax1.legend(lines, labels, loc="upper right")
 (animated_plot_C,) = ax1.plot([], [], "ro-", markersize=4)
 (animated_plot_F,) = ax2.plot([], [], "bo-", markersize=4)
 
+
 def main():
-    serial_data(sPort, Baud)
     csv_header(fieldnames)
     # FuncAnimation is used to create the animation:
-    ani1 = FuncAnimation(
+    ani = FuncAnimation(
         fig=fig,  # fig is the figure to animate
-        func=animation,  # update is the function to call at each frame
+        func=animation_random,  # update is the function to call at each frame
         frames=1000,  # frames specifies the number of frames in the animation.
         save_count=None,  # then there is no error message
         interval=1000,  # interval is the delay between frames in milliseconds.
@@ -63,30 +57,28 @@ def main():
 
 
 # * - - - Animated plot
-def animation(frame):
-    # Get data from Serial Device and safe it into two variables
-    temp, humid = serial_data("/dev/cu.usbmodem101", 9600)
+def animation_random(frame):
 
     # Set the moving x-axis through interval
     ax1.set_xlim(left=frame - 3, right=frame + 1)
 
     # Append data for x-axis and y-axis for both plots
     x_values.append(frame)
-    yTemp_values.append(temp)
-    yHumid_values.append(humid)
+    yTemp_values.append(random.randint(15, 25))  # Example random y value for plot C
+    yHumid_values.append(random.randint(40, 60))  # Example random y value for plot F
 
     # Update plot data
-    animated_plot_C.set_data(x_values[1:], yTemp_values[1:])
+    animated_plot_C.set_data(x_values[1:], yTemp_values[1:])  # Update plot C
     animated_plot_F.set_data(x_values[1:], yHumid_values[1:])
 
-    # Gets current date and time
+    ##### Safe Data To CSV-File #####
+    # Gets current date and time... for example: 2024-06-11 18:06:31.689454
     currentDateAndTime = datetime.now()
     # Gets current date... for example 2024-06-11
     currentDate = currentDateAndTime.date()
     # Gets current time in hours:minute:seconds... for example: 18:22:52
     currentTime = currentDateAndTime.strftime("%H:%M:%S")
-
-    # Safe Data To CSV-File
+    # Opens function which safes the data in the csv-file
     csv_file(
         fieldnames,
         currentDate,
@@ -129,19 +121,7 @@ def csv_file(fieldnames, currentDate, currentTime, datapoint, temperature, humid
         return csv_file
 
 
-# * - - - Get serial data from the arduino and return temperature and humidity
-def serial_data(s, b):
-    aSerialData = serial.Serial(s, b)
-    time.sleep(0.5)
-    if aSerialData.inWaiting():
-        sData = str(aSerialData.readline())
-        # RegEx pattern to remove the unwanted signs and letters from databyte
-        pattern = r"b'|\\r|\\n'"
-        sData = re.sub(pattern, "", sData)
-        sData = sData.split(",")
-        return int(sData[0]), int(sData[1])
-
-
 # * - - - Start
 if __name__ == "__main__":
     main()
+
