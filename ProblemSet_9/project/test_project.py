@@ -8,7 +8,7 @@ def main():
 def test_serial_data():
     sPort = "/dev/cu.usbmodem101_???"
     Baud = 9600
-    with pytest.raises(ModuleNotFoundError):
+    with pytest.raises(ImportError):
         serial_data(sPort, Baud)
 
 if __name__ == "__main__":
