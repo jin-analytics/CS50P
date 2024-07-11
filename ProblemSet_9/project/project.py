@@ -49,8 +49,7 @@ ax1.legend(lines, labels, loc="upper right")
 (animated_plot_F,) = ax2.plot([], [], "bo-", markersize=4)
 
 def main():
-    use_serialport()
-    serial_data(sPort, Baud)
+    serial_data(use_serialport(), Baud)
     csv_header(fieldnames)
     # FuncAnimation is used to create the animation:
     ani1 = FuncAnimation(
