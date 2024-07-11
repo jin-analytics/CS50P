@@ -6,7 +6,7 @@ def main():
 
 def test_use_serialport():
     with pytest.raises(ConnectionError):
-        sPort = "default"
+        use_serialport()
 
 if __name__ == "__main__":
     main()
