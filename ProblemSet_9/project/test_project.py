@@ -1,4 +1,4 @@
-from project import serial_data
+import project
 import pytest
 
 def main():
