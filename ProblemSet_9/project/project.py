@@ -49,6 +49,7 @@ ax1.legend(lines, labels, loc="upper right")
 (animated_plot_F,) = ax2.plot([], [], "bo-", markersize=4)
 
 def main():
+    use_serialport()
     serial_data(sPort, Baud)
     csv_header(fieldnames)
     # FuncAnimation is used to create the animation:
@@ -141,6 +142,27 @@ def serial_data(s, b):
         sData = sData.split(",")
         return int(sData[0]), int(sData[1])
 
+def use_serialport():
+    ports = serial.tools.list_ports.comports()
+    serialInst = serial.Serial()
+    sPort = str("default")  # Mac - find usb connections using >ls /dev/cu.usb*
+    portsList = []
+
+    for _ in ports:
+        portsList.append(str(_))
+
+    for i in range(len(portsList)):
+        if portsList[i].startswith(str("/dev/cu.usbmodem")):
+            sPort = str("/dev/cu.usbmodem")  # On Mac - find this using >ls /dev/cu.usb*
+            break
+        else:
+            sPort = str("default")  # Mac - find usb connections using >ls /dev/cu.usb*
+
+    if sPort == "default":
+        raise ConnectionError("No USB Port connected")
+        # sys.exit("No USB Port connected")
+    else:
+        return sPort
 
 # * - - - Start
 if __name__ == "__main__":
