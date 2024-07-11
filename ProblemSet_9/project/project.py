@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from datetime import datetime
 import serial
-from serial import tools
+import serial.tools.list_ports
 
 # * - - - Define USB Modem and Baudrate for the connected Arduino
 sPort = "/dev/cu.usbmodem101"

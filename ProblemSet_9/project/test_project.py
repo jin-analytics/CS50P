@@ -1,12 +1,11 @@
-from project import csv_header
+from project import use_serialport
 import pytest
 
 def main():
-    test_csv_header()
+    test_use_serialport()
 
-def test_csv_header():
-    fieldnames = ["Date", "Time", "Datapoint [No.]", "Temperature [˚C]", "Humidity [%]"]
-
+def test_use_serialport():
+    if 
 
 if __name__ == "__main__":
     main()
