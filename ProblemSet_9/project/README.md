@@ -1,5 +1,5 @@
 # Plot serial data dynamically from an serial device and safe it into an csv-file
-    #### Video Demo:  <https://youtu.be/E77XgQzNAdQ>
+    #### Video Demo:  <https://youtu.be/pZOBmfT52fg>
     #### Description:
 
     My final project has the purpose to plot sensor data in realtime from an Arduino and safe it
