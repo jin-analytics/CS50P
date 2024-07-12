@@ -6,7 +6,7 @@
     into an csv-file. The Data comes from a Sensor DHT11, this sensor is cappable of measuring the
     temperature and the humidity. The Arduino Portenta H7 reads the data from the sensor and writes
     it to the serial connection (USB cable to the computer). The program will use this data to plot
-    it live and safes each datapoint to the csv-file. Both parameters will be stored inside my
+    it live and safes each datapoint to the csv-file. Both parameters (temperature, humidity) will be stored inside my
     python programm. The parameters will be used to be plotted in an animated plot. The x-axis moves
     for each datapoint to the right. The y-axis on the left is for the temperature in Celsius [˚C],
     the y-axis on the right is for the humidity in Percent [%]. The animated plot will pop up in an
