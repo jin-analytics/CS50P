@@ -1,4 +1,4 @@
-# Plot serial data dynamicly from an serial device and safe it into an csv-file
+# Plot serial data dynamically from an serial device and safe it into an csv-file
     #### Video Demo:  <https://youtu.be/E77XgQzNAdQ>
     #### Description:
 
